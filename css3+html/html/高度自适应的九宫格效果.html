@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>高度自适应的九宫格效果</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            width: 100%;/*内容再多都不会产生滚动条*/
+        }
+        main{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+        /*----------------------------------------*/
+        /*法一*/
+        /*main div {*/
+            /*float: left;*/
+            /*width: 33.3%;*/
+            /*height: 33.3%;*/
+            /*border: 10px solid white;*/
+            /*box-sizing: border-box; /!*包含10px的边框，若有padding也会包含其中，默认的的是content-box*!/*/
+            /*border-radius: 50px;*/
+            /*position: relative;*/
+            /*background-color: dodgerblue;*/
+        /*}*/
+
+        /*--------------------------------*/
+        /*法二*/
+
+        main div{
+        float: left;
+        width: 33.3%;
+        height: 33.3%;
+        position: relative;
+        }
+        main div:before{
+            position: absolute;
+            content: '';
+            top: 15px;
+            left: 15px;
+            right: 15px;
+            bottom: 15px;
+            background-color: aquamarine;
+            border-radius: 50px;
+
+        }
+        /*------------------------------------------*/
+        main div:after{
+            position: absolute;
+            content: attr(data-index);
+            height: 40px;
+            font-size: 40px;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<main>
+    <div data-index="1"></div>
+    <div data-index="2"></div>
+    <div data-index="3"></div>
+    <div data-index="4"></div>
+    <div data-index="5"></div>
+    <div data-index="6"></div>
+    <div data-index="7"></div>
+    <div data-index="8"></div>
+    <div data-index="9"></div>
+</main>
+
+</body>
+</html>

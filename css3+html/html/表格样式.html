@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表格样式</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: darkseagreen;
+        }
+        div.container{
+            width: 50%;
+            margin: 50px auto;
+        }
+        div.container label{
+            display: block;
+            font-size: 18px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #9a9a9a;
+            position: relative;
+        }
+        div.container label:after{
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 1px;
+            left: 0;
+            top: 33px;
+            background-color: white;
+        }
+        div.container label input{
+            height: 20px;
+            width: 40%;
+        }
+
+
+        div.container table{
+            width: 100%;
+            border: 1px solid #0b2c89;
+            border-radius: 5px;
+            background-color: white;
+            line-height: 40px;
+            text-align: center;
+
+        }
+        div.container table caption{
+            font:26px/3 'microsoft yahei';
+            letter-spacing: 15px;
+
+        }
+        div.container table th{
+            background-color:cadetblue;
+        }
+        div.container table th:first-child{
+            border-top-left-radius: 5px;
+        }
+        div.container table th:last-child{
+            border-top-right-radius: 5px;
+        }
+        div.container table tr.parent{
+            background-color: #22aadd;
+            color: white;
+        }
+        div.container table tr.parent span{
+            position: absolute;
+            width: 0;
+            height: 0;
+            border: 8px solid transparent;
+            margin-top: 7px;
+            margin-left: 0;
+        }
+        div.container table tr.parent span:first-child{
+            border-bottom: 8px solid #ffcc00;
+        }
+        div.container table tr.parent span:last-child{
+            border-top: 8px solid #ffcc00;
+            margin-top: 18px;
+            display: none;
+        }
+        div.container tbody tr:not(.parent):nth-child(2n){
+            background-color: #68babb;
+        }
+        div.container tbody tr:last-child td:first-child{
+            border-radius:0 0 0 5px;
+        }
+        div.container tbody tr:last-child td:last-child{
+            border-radius: 0 0 5px 0;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <label>
+        筛查（输入表中任意信息可查询员工情况）
+        <input>
+    </label>
+    <table>
+        <caption>职工基本信息表</caption>
+        <thead>
+        <tr>
+            <th>姓名</th>
+            <th>性别</th>
+            <th>暂住地</th>
+            <th>所属组</th>
+            <th>选择</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr id="group1" class="parent">
+                <td colspan="5">前台设计组（点击可展开或收起）<span></span><span></span></td>
+            </tr>
+            <tr class="group1_child">
+                <td>高敏雪</td>
+                <td>女</td>
+                <td>重庆</td>
+                <td>web专班</td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr class="group1_child">
+                <td>高敏雪</td>
+                <td>女</td>
+                <td>重庆</td>
+                <td>web专班</td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr class="group1_child">
+                <td>高敏雪</td>
+                <td>女</td>
+                <td>重庆</td>
+                <td>web专班</td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr id="group2" class="parent">
+                <td colspan="5">前端设计组（点击可展开或收起）<span></span><span></span></td>
+            </tr>
+            <tr class="group2_child">
+                <td>高敏雪</td>
+                <td>女</td>
+                <td>重庆</td>
+                <td>web专班</td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr class="group2_child">
+                <td>高敏雪</td>
+                <td>女</td>
+                <td>重庆</td>
+                <td>web专班</td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr class="group2_child">
+                <td>高敏雪</td>
+                <td>女</td>
+                <td>重庆</td>
+                <td>web专班</td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr id="group3" class="parent">
+                <td colspan="5">后台开发组（点击可展开或收起）<span></span><span></span></td>
+            </tr>
+            <tr class="group3_child">
+                <td>高敏雪</td>
+                <td>女</td>
+                <td>重庆</td>
+                <td>web专班</td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr class="group3_child">
+                <td>高敏雪</td>
+                <td>女</td>
+                <td>重庆</td>
+                <td>web专班</td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr class="group3_child">
+                <td>高敏雪</td>
+                <td>女</td>
+                <td>重庆</td>
+                <td>web专班</td>
+                <td><input type="checkbox"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

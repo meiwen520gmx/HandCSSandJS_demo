@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    margin: 0 auto;
+    background: black;
+}
+header{
+    width: 100%;
+    height: 250px;
+    background:gainsboro;
+}
+header nav ul{
+    list-style: none;
+}
+header nav ul li{
+    text-align: center;
+    line-height: 40px;
+    width: 20%;
+    height: 40px;
+    float: left;
+    background: #fff;
+}
+header nav ul li a{
+    display: block;
+    text-decoration: none;
+    background: url("../images/nav.PNG");
+}
+header nav ul li a:link,header nav ul li a:visited{
+    color: #fff;
+}
+header nav ul li a:hover{
+    background: url("../images/nav1.PNG");
+}
+header h2{
+    color: #fff;
+    height: 250px;
+    background: url("../images/nav3.jpg") no-repeat;
+}
+
+main{
+    padding: 50px 300px;
+}
+main aside{
+    width: 40%;
+    margin: 0 50px 0 0;
+    float: left;
+}
+main  h2{
+    color: #fff;
+}
+main  ul{
+    list-style: none;
+}
+main aside ul li{
+    padding:5px;
+    color: #fff;
+}
+main aside ul li a{
+    text-decoration: none;
+}
+main aside h3{
+    width: 200px;
+    height:150px;
+    background: url("../images/aside2.jpg") no-repeat;
+}
+.asideli{
+    color:purple;
+}
+.li_top{
+    padding-top: 20px;
+}
+
+main section{
+    width: 50%;
+    float: left;
+}
+main section .ul li{
+    padding: 20px 0;
+}
+main section .ul li a{
+    text-decoration: none;
+    color: darkgray;
+}
+.tip{
+    padding-top: 30px;
+}
+section .ull li{
+    padding: 20px 0;
+}
+section .ull li img{
+    margin-right: 20px;
+    float: left;
+    width: 100px;
+    height: 100px;
+}
+section .ull li a{
+    display: block;
+    padding-top: 20px;
+    text-decoration: none;
+}
+section .ull li a p{
+    color: #fff;
+}
+
+footer{
+    clear: both;
+    background: deeppink;
+}
+footer h3{
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+footer h3 a{
+    text-decoration: none;
+}
+
+
+
+
+

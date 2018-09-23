@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>响应式栅格布局实现原理</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div.container{
+            width: 1200px;
+            margin: 0 auto;
+        }
+        div.row{
+            /*height: 100px;*/
+            margin-bottom: 30px;
+            line-height: 100px;
+            text-align: center;
+            font-size: 30px;
+            color: white;
+        }
+        div.header,div.footer{
+            background-color: green;
+        }
+        .clearFloat:after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+        div.main{
+            /*往两边走*/
+            margin-left: -15px;
+            margin-right: -15px;
+        }
+        div.main div{
+            float: left;
+            margin: 0 15px;
+            background-color: #3c97ff;
+            height: 100%;
+        }
+        div.main div.col_left,div.main div.col_right{
+            width: calc(100% / 6 - 30px);
+        }
+        div.main div.col_middle{
+            width: calc(100% * 2 /3 - 30px);
+        }
+        /*媒体查询*/
+        /*屏幕大于1200，固定宽度为1200*/
+        @media (min-width:1200px){
+           div.container{
+               width: 1200px;
+           }
+        }
+        /*平板*/
+        @media (max-width:1199px) and (min-width: 768px){
+            div.container{
+                width: 768px;
+            }
+        }
+        /*手机*/
+        @media (max-width:767px){
+            div.container{
+                width: 100%;
+                margin: 0;
+            }
+            div.main{
+                margin:0;
+            }
+            div.main div{
+                float: none;
+                margin: 30px 0;
+                width: 100% !important;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row header">
+            header
+        </div>
+        <div class="row main clearFloat">
+            <div class="col_left">left</div>
+            <div class="col_middle">middle</div>
+            <div class="col_right">right</div>
+        </div>
+        <div class="row footer">
+            footer
+        </div>
+    </div>
+
+</body>
+</html>

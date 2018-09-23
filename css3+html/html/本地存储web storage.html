@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>本地存储web storage</title>
+    <script type="text/javascript" rel="stylesheet" src="../js/jquery-1.4.4.min.js"></script>
+    <style>
+        textarea{
+            width: 400px;
+            height: 200px;
+        }
+    </style>
+    <script>
+        //使用HTML5 WEB存储的sessionstorage方式进行编写一个web页面
+        //功能室一个简易的web留言板，留言板信息可以永久保存，并能清除留言板内容，参考页面如下：
+        function addInfo(){
+            var info=document.getElementById("content1");
+            var storage=window.localStorage;//获取locakstorage对象
+            //判断对象中是否有myboard键
+            if(storage.myboard){
+                var date=new Date();
+                //获取原先键所对应的值再加上文本框中所输入的留言信息，键所对应的值做累加
+                storage.myboard+=content1.value+"\n发表时间"+date.toLocaleString()+"\n";
+            }
+            else{
+                var date=new Date();
+                //获取原先键所对应的值加上文本框中所对应的留言信息，键所对应的值做累加
+                storage.myboard=content1.value+"\n发表时间"+date.toLocaleString()+"\n";
+            }
+            upInfo();
+        }
+        //取出键所对应的值显示在多行文本框中
+        function upInfo(){
+            var storage=window.localStorage;
+            var show=document.getElementById("show");
+            if(window.localStorage.myboard){
+                show.value=window.localStorage.getItem("myboard");
+            }else{
+                show.value ="还没有留言";
+            }
+        }
+        //清除留言信息
+      function  clearInfo(){
+          window.localStorage.removeItem("myboard");
+          upInfo();
+      }
+    </script>
+</head>
+<body>
+<h2>简单的web存储留言板</h2>
+<textarea id="content1" ></textarea><br/>
+<input type="button" class="button" onclick="addInfo()" value="留言">
+<input type="button" class="button" onclick="clearInfo()" value="清除留言"><br/><br/>
+<hr/>
+<textarea id="show" readonly></textarea>
+
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css3渐变效果</title>
+    <style>
+        #container{
+            height:200px;
+            background: pink;
+        }
+        #container div{
+            width: 100px;
+            height: 100px;
+            border: 1px solid yellow;
+            float: left;
+            margin-left: 20px;
+        }
+        #gra1{
+            background-image: linear-gradient(red,yellow);
+        }
+        #gra2{
+            background-image: -webkit-linear-gradient(left,red,yellow);
+        }
+        #gra3{
+            background-image: -webkit-linear-gradient(45deg,red 25%,yellow 25%,aqua 50%);
+        }
+        #gra4{
+            background-image: -webkit-linear-gradient(25deg,red,white,yellow);
+        }
+        #gra5{
+            background-image: radial-gradient(yellow,red);
+        }
+        #gra6{
+            background-image: -webkit-radial-gradient(left bottom,red,green,blue);
+        }
+        #contaiter2{
+            height:200px;
+            background: aquamarine;
+        }
+        #contaiter2 div{
+            width: 150px;
+            height: 100px;
+            border: 1px solid yellow;
+            float: left;
+            margin-left: 20px;
+        }
+        #gra7{
+            background-image: -webkit-radial-gradient(red 5%,green 15%,blue 60%);
+        }
+        #gra8{
+            background-image: -webkit-radial-gradient(circle,red 5%,green 15%,blue 60%);
+        }
+        #gra9{
+            background-image: -webkit-radial-gradient(60% 50%,closest-side,blue,red,green);
+        }
+        #gra10{
+            background-image: -webkit-radial-gradient(0 0,blue,red,green);
+        }
+        #gra11{
+            background-image: -webkit-radial-gradient(60% 55%, farthest-corner,blue,green,yellow,black);
+        }
+        #gra12{
+            background-image: -webkit-repeating-linear-gradient(45deg,red 0px,red 5px,blue 5px,blue 10px);
+        }
+        #contaiter3{
+           height: 600px;
+            background: darkgreen;
+        }
+        #contaiter3 div{
+            border: 2px solid yellow;
+            float: left;
+            margin-left: 20px;
+            width: 200px;
+            height: 200px;
+        }
+        #gra13{
+            display: inline-block;
+            background-size: 50px 50px;
+            background-position: 0px 30px;
+            background-repeat: no-repeat;
+            background-image: -webkit-linear-gradient(45deg,red 25%,yellow 25%,aqua 50%);
+        }
+        #gra14{
+            display: inline-block;
+            background-size: 50px 50px;
+            background-position: 0px center;
+            background-repeat: repeat-x;
+            background-image: -webkit-linear-gradient(45deg,red 25%,yellow 25%,aqua 50%);
+        }
+        #gra15{
+            display: inline-block;
+            background-size: 50px 50px;
+            background-position:center 0;
+            background-repeat: repeat-y;
+            background-image: -webkit-linear-gradient(45deg,red 25%,yellow 25%,aqua 50%);
+        }
+        #gra16{
+            display: inline-block;
+            background-color: #fff;
+            background-size: 50px 50px;
+            background-position:center 0;
+            background-image:
+            -webkit-linear-gradient(45deg,#555 25%,transparent 25%),
+            -webkit-linear-gradient(135deg,#555 25%,transparent 25%),
+            -webkit-linear-gradient(225deg,#555 25%,transparent 25%),
+            -webkit-linear-gradient(315deg,#555 25%,transparent 25%);
+
+        }
+        #gra17{
+            display: inline-block;
+            padding: 10px;
+            background-size: 100px 100px;
+            border: 20px solid black !important;
+            background-position: left center;
+            background-repeat: no-repeat;
+            background-image:
+            -webkit-linear-gradient(45deg,red 25%,green 25%,yellow 50%);
+            background-origin: padding-box;
+        }
+        #gra18{
+            display: inline-block;
+            padding: 20px;
+            background-size: 100px 100px;
+            background-position: left center;
+            background-repeat: no-repeat;
+            background-image:
+            -webkit-linear-gradient(45deg,red 25%,green 25%,yellow 50%);
+            background-origin:content-box;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="gra1"></div>
+        <div id="gra2"></div>
+        <div id="gra3"></div>
+        <div id="gra4"></div>
+        <div id="gra5"></div>
+        <div id="gra6"></div>
+    </div>
+    <div id="contaiter2">
+        <div id="gra7"></div>
+        <div id="gra8"></div>
+        <div id="gra9"></div>
+        <div id="gra10"></div>
+        <div id="gra11"></div>
+        <div id="gra12"></div>
+    </div>
+    <div id="contaiter3">
+        <div id="gra13"></div>
+        <div id="gra14"></div>
+        <div id="gra15"></div>
+        <div id="gra16"></div>
+        <div id="gra17"></div>
+        <div id="gra18"></div>
+    </div>
+</body>
+</html>

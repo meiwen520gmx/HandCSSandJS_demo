@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>英文变换导航条</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+            background: #daeeff;
+            border-bottom: 2px solid #005AA7;
+            display: flex;
+            justify-content: center;
+            margin-top:100px;
+            overflow: hidden;
+        }
+
+        ul li{
+
+            float: left;
+        }
+
+        ul a,ul a:visited{
+            display: block;
+            padding: 5px 10px 2px;
+            text-decoration: none;
+            color: #123456;
+            background-color:#DDD;
+            border-left: 1px solid blue;
+            border-right: 1px solid blue;
+            box-shadow: 0 0 3px 0 rgba(0,0,0,.3);
+        }
+        ul li:not(:last-child) a{
+            margin-right: 15px;
+
+        }
+        ul span{
+            display: none;
+        }
+        ul a:hover{
+            margin-top: -26px;
+            background-color: #22aadd;
+            color: white;
+        }
+        ul a:hover span{
+            text-align: center;
+            display: block;
+            margin-top: 5px;
+
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>
+            <a href="#">首页<span>home</span></a>
+        </li>
+        <li>
+            <a href="#">课堂大厅<span>course</span></a>
+        </li>
+        <li>
+            <a href="#">学习中心<span>learn</span></a>
+        </li>
+        <li>
+            <a href="#">关于我们<span>about</span></a>
+        </li>
+    </ul>
+
+
+</body>
+</html>

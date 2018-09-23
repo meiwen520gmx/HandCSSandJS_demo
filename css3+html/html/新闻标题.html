@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>新闻标题</title>
+    <style>
+        form{
+            width: 500px;
+            margin: 10px auto;
+        }
+        label{
+            display: block;
+            margin: 10px 0;
+        }
+        i{
+            color: red;
+        }
+        p{
+            text-align: center;
+            padding-left: 200px;
+        }
+
+    </style>
+</head>
+<body>
+    <form action="#">
+        <fieldset>
+            <legend>发布新闻</legend>
+            <label>
+                新闻标题：<input><i>*</i>
+            </label>
+            <label>
+                发布日期：<input type="date"><i>*</i>
+            </label>
+            <label>
+                新闻图片：<input type="file">
+            </label>
+            <label>
+                新闻内容：<textarea rows="6" cols="40"></textarea><i>*</i>
+            </label>
+            <p>
+                <button>提交</button>
+                <button type="reset">重置</button>
+            </p>
+        </fieldset>
+    </form>
+</body>
+</html>

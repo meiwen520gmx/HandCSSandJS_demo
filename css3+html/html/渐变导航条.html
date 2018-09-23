@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>渐变导航条</title>
+    <style>
+        a:link,a:visited{
+            text-decoration: none;
+            color: darkblue;
+        }
+        nav{
+            margin-top: 150px;
+            display: flex;
+            justify-content:center;
+        }
+        nav a{
+            padding: 8px 10px;
+            border: 1px solid black;
+            border-right: none;
+            background-image: -webkit-linear-gradient(#333,#eee 65%,#333);
+        }
+        nav a:last-child{
+            border-right:  1px solid black;
+        }
+        nav a:hover{
+            background-size: 5px 5px;
+            background-color: #31938f;
+            color: white;
+            background-image: -webkit-linear-gradient(45deg,#478480 25%,transparent 25%,transparent 75%,#478588 25%,#478480 25%);
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#">首页</a>
+        <a href="#">结构设计</a>
+        <a href="#">组织人事</a>
+        <a href="#">教学管理</a>
+        <a href="#">人才培养</a>
+        <a href="#">学科专业</a>
+        <a href="#">培训部</a>
+
+    </nav>
+</body>
+</html>

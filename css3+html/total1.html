@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>total1</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+
+        html,body{
+            height: 100%;
+            overflow: hidden;
+            font: 15px/2 "Arail";
+        }
+        main{
+            height: 100%;
+            position: relative;
+        }
+        main aside{
+            position: absolute;
+            left: -280px;
+            top:0;
+            height:100%;
+            background-color:rgba(91,178,232,.6);
+            z-index: 10;
+           /*在aside中的z轴产生滚动条*/
+        }
+        main aside:hover{
+            left: 0;
+            overflow-y:auto;
+        }
+        main iframe{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            border: none;
+        }
+        main aside a{
+            display: block;
+            padding: 5px 50px;
+
+        }
+        a,a:visited{
+            text-decoration: none;
+            color: white;
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <aside>
+            <a href="html/css3-animation动画.html" target="main">1.animation动画</a>
+            <a href="html/css3-transitions动画.html" target="main">2.transitions动画</a>
+            <a href="html/css3渐变效果.html" target="main">3.css3渐变效果</a>
+            <a href="html/css32d变换.html" target="main">4.css32D变换</a>
+            <a href="html/css驱动的左右半区翻图浏览效果1.html" target="main">5.css驱动的左右半区翻图</a>
+            <a href="html/form.html" target="main">6.form表单</a>
+            <a href="html/HTML5_DIV_CSS.html" target="main">7.星空之html5</a>
+            <a href="html/iframe.html" target="main">8.iframe</a>
+            <a href="html/index.html" target="main">9.div+ul页面</a>
+            <a href="html/table.html" target="main">10.table表格之内联样式</a>
+            <a href="html/ul.html" target="main">11.ul</a>
+            <a href="html/两级下拉菜单.html" target="main">12.两级下拉菜单dl</a>
+            <a href="html/内容分列.html" target="main">13.内容分列</a>
+            <a href="html/响应式栅格布局实现原理.html" target="main">14.响应式栅格布局</a>
+            <a href="html/商品分类导航实现.html" target="main">15.商品分类导航实现</a>
+            <a href="html/手风琴式下拉导航条.html" target="main">16.手风琴式下拉导航条</a>
+            <a href="html/新闻标题.html" target="main">17.新闻标题fieldset</a>
+            <a href="html/曲线和卷边阴影.html" target="main">18.曲线和卷边阴影</a>
+            <a href="html/本地存储web%20storage.html" target="main">19.本地存储web storage</a>
+            <a href="html/横向选项卡-滑过.html" target="main">20.横向选项卡</a>
+            <a href="html/渐变导航条.html" target="main">21.渐变导航条</a>
+            <a href="html/直接分类导航实现.html" target="main">22.直接分类导航实现</a>
+            <a href="html/简单删格系统原理1.html" target="main">23.简单删格系统</a>
+            <a href="html/纵向选项卡.html" target="main">24.纵向选项卡</a>
+            <a href="html/英文变换导航条.html" target="main">25.英文变换导航条</a>
+            <a href="html/表格样式.html" target="main">26.表格样式</a>
+            <a href="html/高度自适应的九宫格效果.html" target="main">27.高度自适应的九宫格效果</a>
+            <a href="html/绝对定位主窗口自适应布局.html" target="main">28.绝对定位主窗口自适应布局</a>
+        </aside>
+        <iframe src="http://www.cqwu.edu.cn" name="main">div</iframe>
+    </main>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <span>用户注册</span>
+    <form action="http://www.baidu.com" name="form" method="post">
+        用户名：<input type="text" name="username" id="username"/><br/>
+        密&nbsp;&nbsp;&nbsp;码：<input type="password" name="password" id="password"/><br/>
+        隐藏域：<input type="hidden" name="hidden" id="hidden"/><br/>
+        性&nbsp;&nbsp;&nbsp;别：<input type="radio" name="sex" id="male"/>男
+                            <input type="radio" name="sex" id="female"/>女<br/>
+        爱&nbsp;&nbsp;&nbsp;好：<input type="checkbox" name="hobby" value="1" id="zuqiu"/>足球
+                            <input type="checkbox" name="hobby" value="2" id="lanqiu"/>篮球
+                            <input type="checkbox" name="hobby" value="3" id="changge"/>唱歌<br/>
+        图像域：<input type="image" src="../images/dongman.jpg" width="100px" height="100px" /><br/>
+        文件上传域：<input type="file" name="file"/><br/>
+        提&nbsp;&nbsp;&nbsp;交：<input type="submit" name="submit" value="提交"/><br/>
+        重&nbsp;&nbsp;&nbsp;置：<input type="reset" name="reset" value="重置"/><br/>
+        普通按钮：<input type="button" name="button" value="普通"/>
+    </form><br/>
+
+    <span>下拉菜单</span><br/>
+    <select id="city" name="city">
+        <option>北京</option>
+        <option selected value="1">上海</option>
+        <option>广州</option>
+    </select><br/>
+
+    <span>列表框</span><br/>
+    <select name="list" size="3">
+        <option value="beijing">北京</option>
+        <option value="shanghai">上海</option>
+        <option value="guangzhou">广州</option>
+        <option value="chongqing">重庆</option>
+        <option value="tianjin">天津</option>
+    </select><br/>
+
+    <span>选项组</span><br/>
+    <select name="selectgroup">
+        <optgroup label="一线城市">
+            <option>北京</option>
+            <option>上海</option>
+            <option>广州</option>
+        </optgroup>
+        <optgroup label="二线城市">
+            <option>杭州</option>
+            <option>大庆</option>
+        </optgroup>
+    </select>
+</body>
+</html>

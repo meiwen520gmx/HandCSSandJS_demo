@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>横向选项卡-滑过</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        nav{
+            width: 600px;
+            margin: 80px auto 0;
+            display: flex;
+            position: relative;
+        }
+        nav dl{
+            flex: 1;
+        }
+        nav dl dt{
+            text-align: center;
+            line-height: 60px;/*行高会往下继承*/
+           cursor: pointer; /*手型光标*/
+        }
+        nav dd{
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 60px;
+            border: 1px solid gray;
+            height: 300px;
+            padding: 15px;
+            background-color: white;
+        }
+        nav dd a,nav dd a:visited{
+           display: inline-block;
+
+            color: #999;
+            text-decoration: none;
+            padding: 3px 15px;
+        }
+        nav dl:not(:last-child):hover,nav dl:last-child{
+            border: 1px solid gray;
+            border-bottom: none;
+            border-radius: 3px 3px 0 0;
+            z-index: 10; /*滑过dl的时候把z轴加高，然后dd也加高，没有滑过的dd都在下层，然而滑过的dl中的dd浮上来了,实现了切换效果*/
+        }
+        nav dl:last-child{
+            z-index: 1;
+        }
+        nav dl:not(:last-child):hover~dl:last-child{
+            border: none;
+        }
+        nav dl:not(:last-child):hover:after,nav dl:last-child:after{
+            position: absolute;
+            content: "";
+            width: calc(100% / 4 - 1px);
+            height: 3px;
+            margin-top: -2px;
+            background-color: white;
+            z-index: 20;
+        }
+        nav dl:last-child:after{
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <dl>
+            <dt>电子产品</dt>
+            <dd>
+                <a href="#">CPU1</a><a href="#">g固态硬盘</a><a href="#">显示器</a><a href="#">显卡</a>
+                <a href="#">CPU</a><a href="#">g固态硬盘</a><a href="#">显示器</a><a href="#">显卡</a>
+                <a href="#">小说</a><a href="#">免费</a><a href="#">文学</a><a href="#">软件</a>
+                <a href="#">CPU</a><a href="#">g固态硬盘</a><a href="#">显示器</a><a href="#">显卡</a>
+                <a href="#">CPU</a><a href="#">g固态硬盘</a><a href="#">显示器</a><a href="#">显卡</a>
+                <a href="#">小说</a><a href="#">免费</a><a href="#">文学</a><a href="#">软件</a>
+            </dd>
+        </dl>
+        <dl>
+            <dt>儿童用品</dt>
+            <dd>
+                <a href="#">CPU2</a><a href="#">g固态硬盘</a><a href="#">显示器</a><a href="#">屏幕</a>
+                <a href="#">CPU</a><a href="#">g固态硬盘</a><a href="#">显示器</a><a href="#">屏幕</a>
+                <a href="#">小说</a><a href="#">免费</a><a href="#">文学</a><a href="#">软件</a>
+                <a href="#">CPU</a><a href="#">g固态硬盘</a><a href="#">显示器</a><a href="#">显卡</a>
+                <a href="#">CPU</a><a href="#">g固态硬盘</a><a href="#">显示器</a><a href="#">显卡</a>
+                <a href="#">小说</a><a href="#">免费</a><a href="#">文学</a><a href="#">软件</a>
+            </dd>
+        </dl>
+        <dl>
+            <dt>书记资料</dt>
+            <dd>
+                <a href="#">CPU3</a><a href="#">g固态硬盘</a><a href="#">显示器</a><a href="#">屏幕</a>
+                <a href="#">CPU</a><a href="#">g固态硬盘</a><a href="#">显示器</a><a href="#">屏幕</a>
+                <a href="#">小说</a><a href="#">免费</a><a href="#">文学</a><a href="#">软件</a>
+                <a href="#">CPU</a><a href="#">g固态硬盘</a><a href="#">显示器</a><a href="#">显卡</a>
+                <a href="#">CPU</a><a href="#">g固态硬盘</a><a href="#">显示器</a><a href="#">显卡</a>
+                <a href="#">小说</a><a href="#">免费</a><a href="#">文学</a><a href="#">软件</a>
+            </dd>
+        </dl>
+        <dl>
+            <dt>床上用品</dt>
+            <dd>
+                <a href="#">CPU4</a><a href="#">免费</a><a href="#">显示器</a><a href="#">屏幕</a>
+                <a href="#">CPU</a><a href="#">g固态硬盘</a><a href="#">显示器</a><a href="#">屏幕</a>
+                <a href="#">小说</a><a href="#">免费</a><a href="#">文学</a><a href="#">软件</a>
+                <a href="#">CPU</a><a href="#">g固态硬盘</a><a href="#">显示器</a><a href="#">显卡</a>
+                <a href="#">CPU</a><a href="#">g固态硬盘</a><a href="#">显示器</a><a href="#">显卡</a>
+                <a href="#">小说</a><a href="#">免费</a><a href="#">文学</a><a href="#">软件</a>
+            </dd>
+        </dl>
+    </nav>
+
+
+</body>
+</html>

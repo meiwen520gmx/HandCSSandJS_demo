@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css32D变换</title>
+    <style>
+
+        .container{
+            margin: 0 auto;
+            width: 500px;
+        }
+        .container ul{
+            list-style: none;
+        }
+        .container ul li{
+            text-align: center;
+            line-height: 50px;
+            margin: 20px;
+            float: left;
+
+        }
+        .container ul li a{
+            display: block;
+            background: #ff0000;
+            width: 100px;
+            height: 50px;
+            text-decoration: none;
+            color: #fff;
+            border: 1px solid  #ff0000;
+        }
+        .translate a:hover{        /*沿着x和y轴移动*/
+            transform: translate(10px,10px);
+        }
+        .translateX a:hover{     /*沿着x轴移动*/
+            transform: translateX(20px);
+        }
+        .translateY a:hover{    /*沿着y轴移动*/
+            transform: translateY(20px);
+        }
+        .scale a:hover{     /*改变元素的宽度和高度*/
+            transform: scale(0.5);
+        }
+        .scaleX a:hover{    /*沿着x轴改变元素的宽度*/
+            transform: scaleX(0.5);
+        }
+        .scaleY a:hover{    /*沿着y轴改变元素的高度*/
+            transform: scaleY(0.5);
+        }
+        .rotate a:hover{    /* 旋转元素*/
+            transform: rotate(25deg);
+        }
+        .skew a:hover{      /* 倾斜元素*/
+            transform: skew(25deg,45deg);
+        }
+        .skewX a:hover{      /* 沿着x轴倾斜元素*/
+            transform: skewX(25deg);
+        }
+        .skewY a:hover{     /* 沿着y轴倾斜元素*/
+            transform: skewY(45deg);
+        }
+        .origin a{           /* 改变元素的中心点*/
+            transform-origin: left top;
+        }
+        .origin a:hover{
+            transform:rotate(45deg);
+            background: blue;
+        }
+        .mutil a:hover{
+            transform: rotate(25deg) scale(0.5);
+        }
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <ul>
+        <li class="translate"><a href="#">translate</a></li>
+        <li class="translateX"><a href="#">translateX</a></li>
+        <li class="translateY"><a href="#">translateY</a></li>
+        <li class="scale"><a href="#">scale</a></li>
+        <li class="scaleX"><a href="#">scaleX</a></li>
+        <li class="scaleY"><a href="#">scaleY</a></li>
+        <li class="rotate"><a href="#">rotate</a></li>
+        <li class="skew"><a href="#">skew</a></li>
+        <li class="skewX"><a href="#">skewX</a></li>
+        <li class="skewY"><a href="#">skewY</a></li>
+        <li class="origin"><a href="#">origin</a></li>
+        <li class="mutil"><a href="#">mutil</a></li>
+    </ul>
+</div>
+
+</body>
+</html>

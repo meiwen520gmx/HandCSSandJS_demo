@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>直接分类导航实现</title>
+    <style>
+
+        nav{
+            width: 500px;
+            margin: 100px auto 0;
+            border: 1px solid blue;
+            padding:0 10px;
+        }
+
+        dt{
+            width: 100px;
+            float: left;
+        }
+        dd{
+        /*//取消环绕*/
+            overflow: auto;
+
+        }
+        dl:not(:last-child){
+            border-bottom: 1px solid darkgray;
+            padding-bottom: 5px;
+        }
+        dt a,dt a:visited{
+            text-decoration: none;
+            font-family: "micosoft yahei";
+            font-weight: bold;
+            font-size: 14px;
+            color: red;
+        }
+       dd a,dd a:visited{
+           text-decoration: none;
+           font-family: Arial;
+           font-size: 13px;
+           /*//保持不换行，不中断，汉语就是一句话，英语就是一个单词*/
+           word-break: keep-all;
+           margin-right: 5px;
+           line-height: 23px;
+           /*letter-spacing: -1px;*/
+       }
+        a:hover{
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <dl>
+            <dt><a href="#">家用电器</a></dt>
+            <dd>
+                <a href="#">电视机 |</a>
+                <a href="#">电视机 |</a>
+                <a href="#">电视机 |</a>
+                <a href="#">电视机 |</a>
+                <a href="#">电视机 |</a>
+                <a href="#">电视机 |</a>
+                <a href="#">电视机 |</a>
+                <a href="#">电视机 |</a>
+                <a href="#">电视机 |</a>
+                <a href="#">电视机 |</a>
+                <a href="#">电视机 |</a>
+                <a href="#">电视机 |</a>
+                <a href="#">电视机 |</a>
+            </dd>
+        </dl>
+        <dl>
+            <dt><a href="#">家用电器</a></dt>
+            <dd>
+                <a href="#">电视机 |</a>
+                <a href="#">电视机 |</a>
+                <a href="#">电视机 |</a>
+                <a href="#">电视机 |</a>
+                <a href="#">电视机 |</a>
+                <a href="#">电视机 |</a>
+                <a href="#">电视机 |</a>
+                <a href="#">电视机 |</a>
+                <a href="#">电视机 |</a>
+                <a href="#">电视机 |</a>
+                <a href="#">电视机 |</a>
+                <a href="#">电视机 |</a>
+                <a href="#">电视机 |</a>
+            </dd>
+        </dl>
+        <dl>
+            <dt><a href="#">家用电器</a></dt>
+            <dd>
+                <a href="#">电视机 |</a>
+                <a href="#">电视机 |</a>
+                <a href="#">电视机 |</a>
+                <a href="#">电视机 |</a>
+                <a href="#">电视机 |</a>
+                <a href="#">电视机 |</a>
+                <a href="#">电视机 |</a>
+                <a href="#">电视机 |</a>
+                <a href="#">电视机 |</a>
+                <a href="#">电视机 |</a>
+                <a href="#">电视机 |</a>
+                <a href="#">电视机 |</a>
+                <a href="#">电视机 |</a>
+            </dd>
+        </dl>
+        <dl>
+            <dt><a href="#">家用电器</a></dt>
+            <dd>
+                <a href="#">电视机 |</a>
+                <a href="#">电视机 |</a>
+                <a href="#">电视机 |</a>
+                <a href="#">电视机 |</a>
+                <a href="#">电视机 |</a>
+                <a href="#">电视机 |</a>
+                <a href="#">电视机 |</a>
+                <a href="#">电视机 |</a>
+                <a href="#">电视机 |</a>
+                <a href="#">电视机 |</a>
+                <a href="#">电视机 |</a>
+                <a href="#">电视机 |</a>
+                <a href="#">电视机 |</a>
+            </dd>
+        </dl>
+
+    </nav>
+</body>
+</html>

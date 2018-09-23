@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css驱动的左右半区翻图浏览效果1</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: rosybrown;
+        }
+        div.box{
+            width: 500px;
+            height: 300px;
+            margin: 50px auto 0;
+            position: relative;
+        }
+        div.box span:first-child{
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 50%;
+        }
+        div.box span:first-child:hover{
+            background-color: rgba(255,255,255,.3);
+            cursor: url("../images/zuo.png"), auto;
+        }
+        div.box span:last-of-type{
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: 50%;
+        }
+        div.box span:last-of-type:hover{
+            background-color: rgba(255,255,255,.3);
+            cursor: url("../images/you.png"), auto;
+        }
+
+        div.box img{
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <span></span>
+        <span></span>
+        <img src="../images/fantu2.png" alt="">
+    </div>
+
+</body>
+</html>

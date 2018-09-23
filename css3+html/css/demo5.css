@@ -1,0 +1,164 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+#container{
+    width: 1000px;
+    height: 900px;
+    background-color: #123456;
+    margin:0px auto;
+}
+#banner{
+    width: 100%;
+    height: 200px;
+    background: red url("../images/banner.PNG") no-repeat;
+}
+#globlink{
+    width: 100%;
+    height: 40px;
+    background-color: aquamarine;
+}
+#globlink ul{
+    list-style: none;
+}
+#globlink ul li{
+    float: left;
+    text-align: center;
+    width: 125px;
+    line-height: 40px;
+}
+#globlink ul li a{
+    display: block;
+    background: url("../images/link.PNG");
+    text-decoration: none;
+}
+#globlink ul li a:link,#globlink ul li a:visited{
+    color: #fff;
+}
+#globlink ul li a:hover{
+    color: blue;
+    background: url("../images/glob.PNG");
+}
+
+#left{
+    padding: 1px 0;
+    width: 298px;
+    height: 720px;
+    background-color: cornflowerblue;
+    float: left;
+}
+#left #weather{
+    background: url("../images/weather.PNG") no-repeat;
+}
+#left h3{
+    padding:5px 10px 5px 30px;
+    color: #fff;
+}
+#weather ul{
+    margin: 0 5px 0 20px;
+    padding: 5px 0 5px;
+    list-style: none;
+}
+#weather ul li{
+    background: url("../images/icon2.png") no-repeat;
+    padding: 0 20px;
+}
+#recommend h3{
+    background: url("../images/icon3.png") no-repeat 10px 8px;
+}
+#recommend ul{
+    list-style: none;
+    margin-top: -5px;
+}
+#recommend ul li{
+    text-align: center;
+}
+#recommend ul li img{
+    border: 1px solid #fff;
+    margin: 0px;
+}
+#recommend ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+#middle{
+    width: 400px;
+    height: 720px;
+    background-color: #fff;
+    float: left;
+    padding: 2px;
+}
+#middlebeauty h3{
+    height: 30px;
+    background: url("../images/caiyun.PNG") no-repeat;
+}
+#middle ul{
+    list-style: none;
+}
+#middlebeauty ul li{
+    float: left;
+    text-align: center;
+    padding: 4px;
+}
+#middlebeauty ul li img{
+    width: 92px;
+    height: 150px;
+}
+#lyzx h3{
+    clear: both;
+    height: 30px;
+    background: url("../images/middle-tip.PNG") no-repeat;
+}
+#lyzx{
+    font-size: 12px;
+}
+#lyzx ul li{
+    padding: 5px;
+}
+#right{
+    width:298px;
+    height:720px;
+    background-color: cornflowerblue;
+    float: left;
+}
+#right h3{
+    margin: 1px;
+    color: #fff;
+    padding: 0 30px;
+    background: aquamarine url("../images/icon3.png") no-repeat 8px 8px;
+}
+#right ul{
+    list-style: none;
+}
+
+ #xv ul li{
+    padding: 2px 0;
+    text-align: center;
+}
+#xv ul li img{
+    border: 1px solid #fff;
+    width: 290px;
+    height: 150px;
+}
+#eat ul,#hotel ul{
+    padding: 5px;
+}
+#eat ul li,#hotel ul li{
+    padding: 5px 0 0 30px;
+    background: url("../images/icon3.png") no-repeat 10px 8px;
+    border-bottom: 1px dashed #fff;
+}
+#footer{
+    width: 100%;
+    height:60px;
+    background-color:blue;
+    clear: both;
+}
+#footer p{
+    text-align: center;
+    padding: 20px 5px;
+}
+#footer p a{
+    color: #fff;
+    text-decoration: none;
+}

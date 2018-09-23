@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css3 animation动画</title>
+    <script type="text/javascript" src="../js/jquery-1.4.4.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(".btn-pause").click(function(){
+                $(".pic").addClass("paused");
+            });
+            $("a").click(function(e){
+                $("#js").removeClass("paused");
+                $("#js").attr("class","pic"+" "+$(e.target).attr("class").split("-")[1]);
+            })
+        });
+    </script>
+    <style>
+
+        h2{
+            text-align: center;
+        }
+        .container{
+            width: 200px;
+            height: 300px;
+            background: paleturquoise;
+            text-align: center;
+            margin: 20px auto;
+            /*margin-left: 180px;*/
+            /*margin-bottom: 40px;*/
+        }
+        .pic{
+            height: 300px;
+            width: 180px;
+            background: url("../images/animation.png") no-repeat;
+            animation: myframes 1s infinite linear;
+            -webkit-animation: myframes 1s linear infinite ;
+            -webkit-animation-timing-function: step-end;
+        }
+        .paused{
+            -webkit-animation-play-state: paused;
+        }
+        a,.btn-pause{
+            display: block;
+            width: 50px;
+            color: #000;
+            text-decoration: none;
+            text-align: center;
+            padding: 5px;
+            margin-left: 200px;
+            border: 1px solid #ccc;
+            float: left;
+        }
+        @-webkit-keyframes myframes{
+            0%{
+               background-position: 0,0;
+            }
+            14.28%{
+              background-position-x:-180px;
+            }
+            28.56%{
+                background-position-x:-360px;
+            }
+            42.84%{
+                background-position-x:-540px;
+            }
+            57.12%{
+                background-position-x:-720px;
+            }
+            71.39%{
+                background-position-x:-900px;
+            }
+            85.67%{
+                background-position-x:-1080px;
+            }
+            100%{
+                background-position-x:-1080px;
+            }
+        }
+        .mfast{
+            -webkit-animation-duration: 200ms;
+        }
+        .fast{
+            -webkit-animation-duration: 400ms;
+        }
+        .normal{
+            -webkit-animation-duration: 800ms;
+        }
+        .slow{
+            -webkit-animation-duration: 1200ms;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>animation动画</h2>
+    <div class="container">
+        <div class="pic" id="js"></div>
+    </div>
+    <div>
+        <a class="run-mfast" href="#">最快</a>
+        <a class="run-fast" href="#">快</a>
+        <a class="run-normal" href="#">正常</a>
+        <a class="run-slow" href="#">慢</a>
+        <button class="btn-pause">暂停</button>
+    </div>
+
+</body>
+</html>

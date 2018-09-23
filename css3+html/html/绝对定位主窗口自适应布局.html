@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>绝对定位主窗口自适应布局</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+        html,body{
+            height: 100%;
+            overflow: hidden;
+            font: 15px/2 "Arail";
+        }
+        header,footer{
+            height: 100px;
+            background-color: green;
+            color: white;
+            font-size: 30px;
+            line-height: 100px;
+            text-align: center;
+        }
+        main{
+            height: calc(100% - 200px);
+            position: relative;
+        }
+        main aside{
+            position: absolute;
+            left: 0;
+            top:0;
+            height:100%;
+            width: 20%;
+            background-color: #3c97ff;
+            color: #060b11;
+            /*overflow-y: hidden;/!*在aside中的z轴产生滚动条*!/*/
+        }
+        main iframe{
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 80%;
+            height: 100%;
+            overflow: auto;
+            border: none;
+        }
+        main aside a{
+            display: block;
+            padding: 20px 30px;
+
+        }
+        a,a:visited{
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>header</header>
+    <main>
+        <aside>
+            <a href="http://www.cqwu.edu.cn" target="main">重庆文理学院</a>
+            <a href="http://www.baidu.com" target="main">百度</a>
+        </aside>
+        <iframe src="http://www.cqwu.edu.cn" name="main">div</iframe>
+    </main>
+    <footer>footer</footer>
+</body>
+</html>

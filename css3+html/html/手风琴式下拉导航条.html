@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>手风琴式下拉导航条</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div.menu{
+            width: 160px;
+            margin: 80px auto 0;
+            border: 1px solid #0086b3;
+        }
+       .menu dd{
+            display: none;
+        }
+        .menu h4{
+            background-color: #0086b3;
+            color: white;
+            padding: 5px 0 5px 15px;
+        }
+        .menu dl{
+            margin: 10px;
+            padding-bottom: 3px;
+
+        }
+        .menu dl:not(:last-child){
+            border-bottom: 1px dashed #ddd;
+        }
+        /*div.sj{*/
+            /*width: 0;*/
+            /*height: 0;*/
+            /*border: 30px solid transparent;*/
+            /*margin: auto;*/
+            /*border-top-color:red;*/
+
+        /*}*/
+        .menu dt{
+            position: relative;
+            cursor: default;
+        }
+        .menu dt:after{
+            position: absolute;
+            content:"";
+            width: 0;
+            height: 0;
+            border: 5px solid transparent;
+            border-top-color: gray;
+            right: 3px;
+            top: 6px;
+        }
+        .menu dl:hover dd{
+            display: block;
+            margin-left: 25px;
+            font-size: 14px;
+            line-height: 25px;
+            position: relative;
+        }
+        .menu dl:hover a{
+            text-decoration: none;
+        }
+        .menu dl:hover dd:before{
+            position: absolute;
+            content: "";
+            width: 0;
+            height: 0;
+            border: 4px solid transparent;
+            border-left-color:darkslategray;
+            left: -10px;
+            top: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="sj"></div>
+    <div class="menu">
+        <h4>商品分类信息列表</h4>
+        <dl>
+            <dt>日用百货</dt>
+            <dd><a href="#">这是二级名称</a></dd>
+            <dd><a href="#">这是二级名称</a></dd>
+            <dd><a href="#">这是二级名称</a></dd>
+            <dd><a href="#">这是二级名称</a></dd>
+            <dd><a href="#">这是二级名称</a></dd>
+            <dd><a href="#">这是二级名称</a></dd>
+        </dl>
+        <dl>
+            <dt>日用百货</dt>
+            <dd><a href="#">这是二级名称</a></dd>
+            <dd><a href="#">这是二级名称</a></dd>
+            <dd><a href="#">这是二级名称</a></dd>
+            <dd><a href="#">这是二级名称</a></dd>
+            <dd><a href="#">这是二级名称</a></dd>
+            <dd><a href="#">这是二级名称</a></dd>
+        </dl>
+        <dl>
+            <dt>日用百货</dt>
+            <dd><a href="#">这是二级名称</a></dd>
+            <dd><a href="#">这是二级名称</a></dd>
+            <dd><a href="#">这是二级名称</a></dd>
+            <dd><a href="#">这是二级名称</a></dd>
+            <dd><a href="#">这是二级名称</a></dd>
+            <dd><a href="#">这是二级名称</a></dd>
+        </dl>
+        <dl>
+            <dt>日用百货</dt>
+            <dd><a href="#">这是二级名称</a></dd>
+            <dd><a href="#">这是二级名称</a></dd>
+            <dd><a href="#">这是二级名称</a></dd>
+            <dd><a href="#">这是二级名称</a></dd>
+            <dd><a href="#">这是二级名称</a></dd>
+            <dd><a href="#">这是二级名称</a></dd>
+        </dl>
+        <dl>
+            <dt>日用百货</dt>
+            <dd><a href="#">这是二级名称</a></dd>
+            <dd><a href="#">这是二级名称</a></dd>
+            <dd><a href="#">这是二级名称</a></dd>
+            <dd><a href="#">这是二级名称</a></dd>
+            <dd><a href="#">这是二级名称</a></dd>
+            <dd><a href="#">这是二级名称</a></dd>
+        </dl>
+    </div>
+</body>
+</html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商品分类导航实现</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        a,a:visited{
+            text-decoration: none;
+            color: darkred;
+        }
+        nav>dl>dd{
+            display: none;
+        }
+        nav{
+            width: 220px;
+            border: 1px solid red;
+            margin: 80px 0 0 80px;
+            background-color: #FCFCFC;
+            position: relative;
+        }
+        nav h3{
+            background: red;
+            color: white;
+            padding: 5px 0;
+            text-align: center;
+        }
+        nav>dl{
+            padding: 8px 0 8px 10px;
+        }
+        nav>dl>dt{
+            position: relative;
+            background: url("../images/right_arrow.PNG") no-repeat right center;
+        }
+        nav>dl:hover{
+            padding: 7px 0 7px 10px;
+            background-color: darkgrey;
+            border-top:1px solid red;
+            border-bottom: 1px solid red;
+        }
+        nav>dl:last-child:hover{
+            border-bottom: none;
+            padding-bottom: 7px;
+        }
+        nav>dl:hover>dt>a{
+            /*把a变成块级，使整个行都是超级链接，光标手掌*/
+            color: white;
+            display: block;
+            position: relative;
+
+        }
+        nav>dl:hover>dt>a:after{
+            position: absolute;
+            content: "";
+            width: 26px;
+            height: 34px;
+            right:-4px;
+            top:-6px;
+            color: white;
+             z-index:100;
+            background-color: darkgrey;
+        }
+        nav>dl:hover>dd{
+            width: 600px;
+            position: absolute;
+            left: 220px;
+            top: 36px;
+            border: 1px solid red;
+            background-color: darkgrey;
+            padding: 10px;
+           display: flex;
+
+        }
+        div.left dl:not(:last-child){
+            border-bottom: 1px dashed #ddd;
+        }
+        div.left{
+            line-height: 30px;
+        }
+        div.left dl dt{
+            float: left;
+            width: 80px;
+        }
+        div.left dl dt a,div.left dl dt a:visited{
+            color: red;
+        }
+        div.left dl dd{
+            /*清除环绕*/
+            overflow: hidden;
+            font-size: 15px;
+        }
+        div.left dl dd a{
+           margin-right: 15px;
+        }
+        div.left dl dd a:hover{
+            text-decoration: underline;
+        }
+        div.left dl{
+            margin-bottom: 15px;
+        }
+        div.right{
+            margin-left: 20px;
+        }
+        .right img{
+            width: 250px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <h3>全部商品分类</h3>
+        <dl>
+            <dt><a href="#">图书、音响、数字商品</a></dt>
+            <dd>
+                <div class="left">
+                    <dl>
+                        <dt><a href="#">护肤品</a></dt>
+                        <dd>
+                            <a href="#">爽肤水</a> <a href="#">爽肤水</a><a href="#">爽肤水</a><a href="#">爽肤水</a>
+                            <a href="#">爽肤水</a> <a href="#">爽肤水</a><a href="#">爽肤水</a><a href="#">爽肤水</a>
+                            <a href="#">爽肤水</a><a href="#">爽肤水</a><a href="#">爽肤水</a><a href="#">爽肤水</a>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><a href="#">电子书</a></dt>
+                        <dd>
+                            <a href="#">爽肤水</a> <a href="#">爽肤水</a><a href="#">爽肤水</a><a href="#">爽肤水</a>
+                            <a href="#">爽肤水</a> <a href="#">爽肤水</a><a href="#">爽肤水</a><a href="#">爽肤水</a>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><a href="#">电子书</a></dt>
+                        <dd>
+                            <a href="#">爽肤水</a> <a href="#">爽肤水</a><a href="#">爽肤水</a><a href="#">爽肤水</a>
+                            <a href="#">爽肤水</a> <a href="#">爽肤水</a><a href="#">爽肤水</a><a href="#">爽肤水</a>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><a href="#">电子书</a></dt>
+                        <dd>
+                            <a href="#">爽肤水</a> <a href="#">爽肤水</a><a href="#">爽肤水</a><a href="#">爽肤水</a>
+                            <a href="#">爽肤水</a> <a href="#">爽肤水</a><a href="#">爽肤水</a><a href="#">爽肤水</a>
+                        </dd>
+                    </dl>
+                </div>
+
+                <div class="right">
+                    <img src="../images/today1.PNG">
+                    <img src="../images/today2.PNG">
+                    <dl>
+                        <dt>旅游售票</dt>
+                        <dd>
+                            <a href="#">免费</a>
+                            <a href="#">免费</a>
+                            <a href="#">免费</a>
+                            <a href="#">免费</a>
+                        </dd>
+                    </dl>
+                    <img src="../images/today3.PNG">
+                </div>
+            </dd>
+        </dl>
+        <dl>
+            <dt><a href="#">图书、音响、数字商品</a></dt>
+            <dd>
+                <div class="left">
+                    <dl>
+                        <dt><a href="#">电子书</a></dt>
+                        <dd>
+                            <a href="#">电脑，手机</a> <a href="#">电脑，手机</a><a href="#">电脑，手机</a><a href="#">电脑，手机</a>
+                            <a href="#">电脑，手机</a> <a href="#">电脑，手机</a><a href="#">电脑，手机</a><a href="#">电脑，手机</a>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><a href="#">电子书</a></dt>
+                        <dd>
+                            <a href="#">电脑，手机</a> <a href="#">电脑，手机</a><a href="#">电脑，手机</a><a href="#">电脑，手机</a>
+                            <a href="#">电脑，手机</a> <a href="#">电脑，手机</a><a href="#">电脑，手机</a><a href="#">电脑，手机</a>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><a href="#">补水护肤品</a></dt>
+                        <dd>
+                            <a href="#">电脑，手机</a> <a href="#">电脑，手机</a><a href="#">电脑，手机</a><a href="#">电脑，手机</a>
+                            <a href="#">电脑，手机</a> <a href="#">电脑，手机</a><a href="#">电脑，手机</a><a href="#">电脑，手机</a>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><a href="#">美妆</a></dt>
+                        <dd>
+                            <a href="#">电脑，手机</a> <a href="#">电脑，手机</a><a href="#">电脑，手机</a><a href="#">电脑，手机</a>
+                            <a href="#">电脑，手机</a> <a href="#">电脑，手机</a><a href="#">电脑，手机</a><a href="#">电脑，手机</a>
+                        </dd>
+                    </dl>
+                </div>
+
+                <div class="right">
+                    <img src="../images/today1.PNG">
+                    <img src="../images/today2.PNG">
+                    <dl>
+                        <dt>旅游售票</dt>
+                        <dd>
+                            <a href="#">免费</a>
+                            <a href="#">免费</a>
+                            <a href="#">免费</a>
+                            <a href="#">免费</a>
+                        </dd>
+                    </dl>
+                    <img src="../images/today3.PNG">
+                </div>
+            </dd>
+        </dl>
+        <dl>
+            <dt><a href="#">图书、音响、数字商品</a></dt>
+            <dd>
+                <div class="left">
+                    <dl>
+                        <dt><a href="#">美妆</a></dt>
+                        <dd>
+                            <a href="#">MAC口红</a> <a href="#">MAC口红</a><a href="#">MAC口红</a><a href="#">MAC口红</a>
+                            <a href="#">MAC口红</a> <a href="#">MAC口红</a><a href="#">MAC口红</a><a href="#">MAC口红</a>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><a href="#">电子书</a></dt>
+                        <dd>
+                            <a href="#">MAC口红</a> <a href="#">MAC口红</a><a href="#">MAC口红</a><a href="#">MAC口红</a>
+                            <a href="#">MAC口红</a> <a href="#">MAC口红</a><a href="#">MAC口红</a><a href="#">MAC口红</a>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><a href="#">电子书</a></dt>
+                        <dd>
+                            <a href="#">MAC口红</a> <a href="#">MAC口红</a><a href="#">MAC口红</a><a href="#">MAC口红</a>
+                            <a href="#">MAC口红</a> <a href="#">MAC口红</a><a href="#">MAC口红</a><a href="#">MAC口红</a>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><a href="#">电子书</a></dt>
+                        <dd>
+                            <a href="#">MAC口红</a> <a href="#">MAC口红</a><a href="#">MAC口红</a><a href="#">MAC口红</a>
+                            <a href="#">MAC口红</a> <a href="#">MAC口红</a><a href="#">MAC口红</a><a href="#">MAC口红</a>
+                        </dd>
+                    </dl>
+                </div>
+
+                <div class="right">
+                    <img src="../images/today1.PNG">
+                    <img src="../images/today2.PNG">
+                    <dl>
+                        <dt>旅游售票</dt>
+                        <dd>
+                            <a href="#">免费</a>
+                            <a href="#">免费</a>
+                            <a href="#">免费</a>
+                            <a href="#">免费</a>
+                        </dd>
+                    </dl>
+                    <img src="../images/today3.PNG">
+                </div>
+            </dd>
+        </dl>
+    </nav>
+</body>
+</html>

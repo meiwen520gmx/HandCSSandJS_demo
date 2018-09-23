@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>两级下拉菜单</title>
+    <style>
+        *{
+                margin: 0;
+               padding: 0;
+            }
+        a,a:visited{
+            color: #C7CAD6;
+            text-decoration: none;
+        }
+        nav{
+            background-color: #012269;
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+        }
+        nav dl dd{
+            display: none;
+        }
+        nav dl dt{
+            padding: 4px 15px;
+        }
+        nav dl:hover dd{
+            display: block;
+            position: absolute;
+            border: 1px solid #C7CAD6;
+            padding: 5px 0;
+            line-height: 30px;
+            margin-left:5px;
+            background-color: #22aadd;
+            box-shadow: 1px 1px 3px rgba(0,0,0,.3);
+        }
+        nav dd a,nav dd a:visited{
+            color:blue;
+        }
+        nav  div{
+            padding:5px 10px;
+        }
+        nav  div:hover{
+            background-color: #005599;
+        }
+        nav  div a:hover{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <dl>
+            <dt><a href="#">首页</a></dt>
+        </dl>
+        <dl>
+            <dt><a href="#">新闻中心</a></dt>
+            <dd>
+                <div><a href="#">重庆文理学院</a></div>
+                <div><a href="#">重庆文理学院</a></div>
+                <div><a href="#">重庆文理学院</a></div>
+                <div><a href="#">重庆文理学院</a></div>
+                <div><a href="#">重庆文理学院</a></div>
+                <div><a href="#">重庆文理学院</a></div>
+                <div><a href="#">重庆文理学院</a></div>
+            </dd>
+        </dl>
+        <dl>
+            <dt><a href="#">新闻中心</a></dt>
+            <dd>
+                <div><a href="#">二级菜单</a></div>
+                <div><a href="#">二级菜单</a></div>
+                <div><a href="#">二级菜单</a></div>
+                <div><a href="#">二级菜单</a></div>
+                <div><a href="#">二级菜单</a></div>
+                <div><a href="#">二级菜单</a></div>
+                <div><a href="#">二级菜单</a></div>
+            </dd>
+        </dl>
+        <dl>
+            <dt><a href="#">新闻中心</a></dt>
+            <dd>
+                <div><a href="#">二级菜单</a></div>
+                <div><a href="#">二级菜单</a></div>
+                <div><a href="#">二级菜单</a></div>
+                <div><a href="#">二级菜单</a></div>
+                <div><a href="#">二级菜单</a></div>
+                <div><a href="#">二级菜单</a></div>
+                <div><a href="#">二级菜单</a></div>
+            </dd>
+        </dl>
+        <dl>
+            <dt><a href="#">新闻中心</a></dt>
+            <dd>
+                <div><a href="#">二级菜单</a></div>
+                <div><a href="#">二级菜单</a></div>
+                <div><a href="#">二级菜单</a></div>
+                <div><a href="#">二级菜单</a></div>
+                <div><a href="#">二级菜单</a></div>
+                <div><a href="#">二级菜单</a></div>
+                <div><a href="#">二级菜单</a></div>
+            </dd>
+        </dl>
+        <dl>
+            <dt><a href="#">新闻中心</a></dt>
+            <dd>
+                <div><a href="#">二级菜单</a></div>
+                <div><a href="#">二级菜单</a></div>
+                <div><a href="#">二级菜单</a></div>
+                <div><a href="#">二级菜单</a></div>
+                <div><a href="#">二级菜单</a></div>
+                <div><a href="#">二级菜单</a></div>
+                <div><a href="#">二级菜单</a></div>
+            </dd>
+        </dl>
+        <dl>
+            <dt><a href="#">新闻中心</a></dt>
+            <dd>
+                <div><a href="#">二级菜单</a></div>
+                <div><a href="#">二级菜单</a></div>
+                <div><a href="#">二级菜单</a></div>
+                <div><a href="#">二级菜单</a></div>
+                <div><a href="#">二级菜单</a></div>
+                <div><a href="#">二级菜单</a></div>
+                <div><a href="#">二级菜单</a></div>
+            </dd>
+        </dl>
+    </nav>
+</body>
+</html>

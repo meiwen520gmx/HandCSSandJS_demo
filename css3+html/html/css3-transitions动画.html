@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css3 transitions动画</title>
+    <style>
+        .trans_box{
+            height: 800px;
+        }
+        .trans_box div{
+            width: 80px;
+            height: 80px;
+            background: #ff0000;
+            margin: 20px;
+            text-align: center;
+        }
+        .test{
+            width: 80px;
+            height: 80px;
+            background: #ff0000;
+            transition-property: all;
+            transition-duration: 2s;
+        }
+        .test:hover{
+            width: 300px;
+            height: 300px;
+        }
+        .trans_box:hover div{
+            margin-left: 80%;
+            background: blue;
+            color:#fff;
+            border-radius: 25px;
+            transform: rotate(360deg);
+        }
+        .linear{
+            transition: all 4s linear;
+        }
+        .ease{
+            transition: all 4s ease;
+        }
+        .ease-in{
+            transition: all 4s ease-in;
+        }
+        .ease-out{
+            transition: all 4s ease-out;
+        }
+        .ease-in-out{
+            transition: all 4s ease-in-out;
+        }
+        .cubic-bezier{
+            transition: all 4s cubic-bezier(0.5,0,0.45,0.2);
+        }
+
+    </style>
+</head>
+<body>
+    <h3>transitions动画</h3>
+    <div class="test">test</div>
+<div class="trans_box">
+    <div class="linear">linear</div>
+    <div class="ease">ease</div>
+    <div class="ease-in">ease-in</div>
+    <div class="ease-out">ease-out</div>
+    <div class="ease-in-out">ease-in-out</div>
+    <div class="cubic-bezier">cubic-bezier</div>
+</div>
+</body>
+</html>
