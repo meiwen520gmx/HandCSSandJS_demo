@@ -1,0 +1,78 @@
+@media all and (max-width: 1200px) and (min-width: 900px){
+    .top{
+        height:516px;
+        margin-top:106px;
+    }
+    .top .t-main{
+        width:400px;
+        height:115px;
+    }
+}
+@media all and (max-width: 900px) {
+    .container .c-top {
+        background: url("../img/case/line.png") no-repeat center bottom;
+    }
+}
+@media all and (max-width: 900px) and (min-width: 600px){
+    .top{
+        height:400px;
+        margin-top:106px;
+    }
+    .top .t-main{
+        width:275px;
+        height:90px;
+    }
+    .container .c-top {
+        width:376px;
+    }
+    .footer{
+        height:130px;
+    }
+    .footer .f-p{
+        width:244px;
+        height:100%;
+        line-height: 40px;
+    }
+    .footer .f-p p{
+        float: none;
+    }
+}
+@media all and (max-width: 600px) {
+    .top {
+        height: 210px;
+    }
+
+    .top .t-main {
+        width: 155px;
+        height: 60px;
+        left: 5px;
+    }
+
+    .container .c-top {
+        width: 315px;
+    }
+
+    .container .c-main {
+        font-size: 12px;
+    }
+
+    .container .title {
+        font-size: 16px;
+        text-align: center;
+    }
+    .container .img{
+        width:100%;
+    }
+    .footer{
+        height:120px;
+    }
+    .footer .f-p{
+        width:244px;
+        height:100%;
+        line-height: 35px;
+    }
+    .footer .f-p p{
+        float: none;
+        font-size: 12px;
+    }
+}

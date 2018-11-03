@@ -1,0 +1,141 @@
+@media all and (max-width: 1500px) and (min-width: 1200px) {
+    .container .c-map{
+        right:-10%;
+        top:-20%;
+    }
+}
+@media all and (max-width: 1200px) and (min-width: 900px) {
+    .top .t-bg {
+        height: 585px;
+    }
+    .container .c-main{
+        width:900px;
+    }
+    .container .c-main ul li{
+        margin:10px 0;
+    }
+    .container .c-map{
+        right:-8%;
+        top:-15%;
+    }
+}
+@media all and (max-width: 900px) {
+    .top{
+        margin-top:110px;
+    }
+    .container .c-map{
+        display:none;
+    }
+}
+@media all and (max-width: 900px) and (min-width: 600px) {
+    .top .t-bg{
+        height:465px;
+    }
+    .top .t-bg .bg-title{
+        padding-top: 20px;
+    }
+    .top .t-bg .bg-title img{
+        width:70%;
+    }
+    .top .t-bg .bg-wx .wx-img{
+        width:100px;
+    }
+    .top .t-bg ul{
+        width:650px;
+        margin:5% auto;
+    }
+    .top .t-bg ul li{
+        margin:0 10px;
+        font-size: 14px;
+    }
+    .top .t-bg ul li .li-bg{
+        width:40px;
+    }
+    .container .c-main{
+        width:600px;
+    }
+    .container .c-main ul li{
+        margin:10px auto;
+        width:90%;
+        font-size: 14px;
+    }
+    .footer{
+        height:130px;
+    }
+    .footer .f-p{
+        width:244px;
+        height:100%;
+        line-height: 40px;
+    }
+    .footer .f-p p{
+        float: none;
+    }
+
+}
+@media all and (max-width: 600px) {
+    .top .t-bg{
+        height:500px;
+    }
+    .top .t-bg .bg-wx .wx-img{
+        width:100px;
+    }
+    .top .t-bg ul{
+        width:300px;
+        margin:5% auto;
+    }
+    .top .t-bg ul li{
+        clear:both;
+        float:none;
+        margin:10px auto;
+        font-size: 14px;
+        overflow: hidden;
+    }
+    .top .t-bg ul li .li-bg{
+        width:40px;
+        float:left;
+        margin-right: 20px;
+    }
+    .top .t-bg ul li.bg-email{
+        width:230px;
+    }
+    .top .t-bg ul li.bg-phone{
+        width:230px;
+    }
+    .top .t-bg ul li.bg-location{
+        width:239px;
+    }
+    .top .t-bg ul li span{
+        float:left;
+        margin-top: 10px;
+        font-size: 16px;
+    }
+    .container .c-main{
+        width:320px;
+        padding:50px 0;
+    }
+    .container .c-main ul li{
+        margin:10px auto;
+        width:90%;
+        font-size: 12px;
+    }
+    .footer{
+        height:120px;
+    }
+    .footer .f-p{
+        width:244px;
+        height:100%;
+        line-height: 35px;
+    }
+    .footer .f-p p{
+        float: none;
+        font-size: 12px;
+    }
+    .container .c-main{
+        width:80%;
+        font-size: 13px;
+    }
+    .container .c-main .c-list p{
+        font-size: 16px;
+        text-align: center;
+    }
+}

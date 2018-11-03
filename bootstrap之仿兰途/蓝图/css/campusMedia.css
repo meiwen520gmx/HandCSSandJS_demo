@@ -1,0 +1,314 @@
+@media all and (max-width: 1200px) and (min-width: 900px) {
+    .part2 .wrap{
+        width:840px;
+    }
+    .part3 .wrap{
+        width:825px;
+    }
+    .part4 .wrap,.part5 .wrap,.part6 .wrap{
+        width:825px;
+    }
+    .part6 .second{
+        width:500px;
+        height:320px;
+    }
+}
+@media all and (max-width: 900px){
+    .content{
+        margin-top:106px;
+    }
+    .part .btn{
+        display:none;
+    }
+    .content .bg{
+        height:300px;
+        background-attachment: scroll;
+    }
+    .part2 .wrap,.par3 .wrap,.part4 .wrap,.part5 .wrap,.part6 .wrap{
+        width:100%;
+    }
+    .part2 .wrap .left{
+        position:static;
+        margin:0 auto;
+        padding-top: 20px;
+        text-align: center;
+    }
+    .part2 .wrap .right{
+        position:relative;
+        width: 400px;
+        height: 343px;
+        margin: 0 auto;
+    }
+    .part2 .wrap .right .p2{
+        right: 27px;
+    }
+    .part2 .wrap .right .p1 img{
+        width:400px;
+        height:265px;
+    }
+    .part2 .wrap .right .p2 img{
+        width:350px;
+        height:327px;
+    }
+    .part3 .wrap .first{
+        float: none;
+        margin:0 auto;
+        padding-top: 30px;
+    }
+    .part3 .wrap .second{
+        margin-top:0;
+    }
+    .part3 .wrap .three{
+        margin-top:0;
+    }
+    .part4 .wrap .first{
+        float:none;
+        margin:0 auto;
+        padding-top:30px;
+    }
+    .part4 .wrap .second{
+        float:none;
+        margin:0 auto;
+    }
+    .part5 .wrap .first{
+        float:none;
+        margin:0 auto;
+        padding-top:30px;
+    }
+    .part5 .wrap .second{
+        float:none;
+        margin:0 auto;
+    }
+    .part6 .wrap .first{
+        float:none;
+        margin:0 auto;
+        padding-top:30px;
+    }
+    .part6 .wrap .second{
+        float:none;
+        margin:0 auto;
+    }
+}
+@media all and (max-width: 900px) and (min-width: 600px) {
+    .part1 .title{
+        width:200px;
+        height:120px;
+        padding:10% 0 0 20%;
+    }
+    .part1 .title .p1{
+        font-size: 30px;
+    }
+    .part1 .title .p2{
+        font-size: 16px;
+    }
+    .part1 .bottom{
+        height:50px;
+        line-height: 50px;
+        font-size: 12px;
+    }
+    .part3 .wrap{
+        width: 600px;
+    }
+    .part4 .wrap{
+        width:530px;
+    }
+    .part4 .wrap .first{
+        width:100%;
+        height:80px;
+        text-align: center;
+    }
+    .part4 .wrap .second{
+        width: 400px;
+    }
+    .part4 .wrap .second .p2{
+        top: 82px;
+        left: 163px;
+        width: 116px;
+    }
+    .part5 .wrap{
+        width:530px;
+    }
+    .part5 .wrap .first{
+        width:100%;
+        height:80px;
+        text-align: center;
+    }
+    .part5 .wrap .second{
+        width: 300px;
+        height:300px;
+        margin-top:60px;
+    }
+    .part6 .wrap{
+        width:530px;
+    }
+    .part6 .wrap .first{
+        width:100%;
+        height:80px;
+        text-align: center;
+    }
+    .part6 .wrap .first .p3{
+        width:250px;
+        height:70px;
+        margin:0 auto;
+    }
+    .part6 .wrap .first .p1{
+        font-style: 24px;
+    }
+    .part6 .wrap .first .p2,.part6 .wrap .first .p3{
+        line-height: 40px;
+    }
+    .part6 .wrap .first .p3 ul li{
+        margin:0 15px;
+    }
+    .part6 .wrap .second{
+        width: 393px;
+        margin-top:146px;
+    }
+    .footer{
+        height:130px;
+    }
+    .footer .f-p{
+        width:244px;
+        height:100%;
+        line-height: 40px;
+    }
+    .footer .f-p p{
+        float: none;
+    }
+}
+@media all and (max-width: 600px) {
+    .part1 .title{
+        width:150px;
+        height:70px;
+        padding:10% 0 0 20%;
+    }
+    .part1 .title .p1{
+        font-size: 24px;
+    }
+    .part1 .title .p2{
+        line-height: 20px;
+        font-size: 12px;
+    }
+    .part1 .bottom{
+        height:40px;
+        line-height: 40px;
+        font-size: 12px;
+    }
+    .part2 .wrap .left{
+        height:100px;
+    }
+    .part2 .wrap .left .p1{
+        font-size: 24px;
+    }
+    .part2 .wrap .left .p2,.part2 .wrap .left .p3{
+        font-size: 14px;
+    }
+    .part2 .wrap .right{
+        width: 300px;
+        height: 270px;
+    }
+    .part2 .wrap .right .p1 img{
+        width: 300px;
+        height: 200px;
+    }
+    .part2 .wrap .right .p2{
+        right: 14px;
+    }
+    .part2 .wrap .right .p2 img{
+        width: 270px;
+        height: 253px;
+    }
+    .content .part3,.content .part4,.content .prat5{
+        height: 650px;
+    }
+    .part3 .wrap,.part5 .wrap{
+        width:100%;
+    }
+    .part3 .wrap .first,.part5 .wrap .first{
+        text-align: center;
+        font-size: 14px;
+    }
+    .part3 .wrap .first .p1 ,.part5 .wrap .first .part1{
+        font-size: 24px;
+    }
+    .part3 .wrap .second{
+        float: none;
+        width:280px;
+        height: 280px;
+        margin:0 auto;
+    }
+    .part3 .wrap .three{
+        float: none;
+        width:300px;
+        height:100px;
+        margin:25px auto 0;
+    }
+    .part3 .wrap .three ul li{
+        float:left;
+        margin:0 18px;
+    }
+    .part3 .wrap .three ul li span{
+        font-size:16px;
+    }
+    .part3 .wrap .three ul li.active span{
+        font-size: 16px;
+        color:#b6d230;!important;
+    }
+    .content .part4{
+        height:480px;
+    }
+    .part4 .wrap{
+        width:250px;
+    }
+    .part4 .wrap .first{
+        text-align: center;
+        font-size: 14px;
+    }
+    .part4 .wrap .first .p1{
+        font-size: 24px;
+    }
+    .part4 .wrap .second{
+        width:300px;
+        height:237px;
+    }
+    .part4 .wrap .second .p2{
+        top: 66px;
+        left: 124px;
+        width: 80px;
+    }
+    .content .part5{
+        height:480px;
+    }
+    .part5 .wrap .second{
+        width:240px;
+        height:240px;
+    }
+    .content .part6{
+        height:480px;
+    }
+    .part6 .wrap .first{
+        width:206px;
+        height:104px;
+        text-align: center;
+        font-size: 14px;
+    }
+    .part6 .wrap .first .p1{
+        font-size: 24px;
+    }
+    .part6 .wrap .second{
+        width:300px;
+        margin-top:100px;
+    }
+    .footer{
+        height:120px;
+    }
+    .footer .f-p{
+        width:244px;
+        height:100%;
+        line-height: 35px;
+    }
+    .footer .f-p p{
+        float: none;
+        font-size: 12px;
+    }
+}
