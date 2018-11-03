@@ -1,0 +1,179 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  /*引入字体文件*/
+  font-family: "Raphaelicons";/*字体名称*/
+  src: url('fonts/raphaelicons-webfont.eot') format('eot'),
+  url('fonts/raphaelicons-webfont.ttf') format('truetype'),
+  url('fonts/raphaelicons-webfont.woff') format('woff'),
+  url('fonts/raphaelicons-webfont.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;/*不倾斜*/
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: "Microsoft YaHei";
+}
+
+.my_select(@num:2,@y:-100%) {
+  &:nth-of-type(@{num}):checked ~ section {
+    transform: translateY(@y);
+    .art@{num} {
+      h4 {
+        animation: mydown 1s ease 1s backwards;
+      }
+      p {
+        animation: myup 1s ease 1s backwards;
+      }
+    }
+  }
+}
+
+div.container {
+  height: 100%;
+  position: relative;
+  text-align: center;
+  h3, input {
+    position: absolute;
+    bottom: 0;
+    width: 20%;
+    height: 35px;
+    line-height: 35px;
+    background-color: #E23A6E;
+    color: white;
+    z-index: 10;
+  }
+  input {
+    z-index: 100;
+    opacity: 0;
+    &:checked + h3 {
+      background-color: #821134;
+    }
+    &:checked + h3:after {
+      position: absolute;
+      content: "";
+      height: 0;
+      width: 0;
+      border: 20px solid transparent;
+      border-bottom-color: #821134;
+      left: ~'calc(50% - 20px)';
+      bottom: 100%;
+    }
+    &:hover + h3 {
+      background-color: #b2113b;
+    }
+    .my_select(@num:1,@y:0);
+    .my_select();
+    .my_select(@num:3,@y:-200%);
+    .my_select(@num:4,@y:-300%);
+    .my_select(@num:5,@y:-400%)
+  }
+    h3:nth-of-type(1), input:nth-of-type(1) {
+      left: 0;
+    }
+    h3:nth-of-type(2), input:nth-of-type(2) {
+      left: 20%;
+    }
+    h3:nth-of-type(3), input:nth-of-type(3) {
+      left: 40%;
+    }
+    h3:nth-of-type(4), input:nth-of-type(4) {
+      left: 60%;
+    }
+    h3:nth-of-type(5), input:nth-of-type(5) {
+      left: 80%;
+    }
+    section, article {
+      height: 100%;
+    }
+    section {
+      transition: all 1s;
+      font-size: 4vh;
+      color: #eeeeee;
+      line-height: 7vh;
+      article {
+        padding: 5vh;
+        border: 2px solid #E23A6E;
+        box-sizing: border-box;
+        background-color: #174747;
+        text-align: justify;
+        overflow: hidden;
+        position: relative;
+        h4 {
+          margin-top: 10vh;
+          text-align: center;
+          color: white;
+          font-size: 7vh;
+          font-weight: 500;
+          margin-bottom: 3vh;
+          text-shadow: 1px 1px 2px rgba(0, 0, 0, .7);
+        }
+        p {
+          text-indent: 2em;
+          font-weight: 200;
+          font-family: "宋体";
+        }
+        i {
+          position: absolute;
+          width: 20vh;
+          height: 20vh;
+          background-color: #E23A6E;
+          left: ~'calc(50% - 10vh)';
+          top: -10vh;
+          transform: rotateZ(45deg);
+          &:after {
+            content: attr(data-icon);
+            position: absolute;
+            font-family: "Raphaelicons";
+            font-size: 8vh;
+            font-style: normal;
+            width: 20vh;
+            height: 20vh;
+            line-height: 20vh;
+            top: 4vh;
+            left: 4vh;
+            text-align: center;
+            animation: myrotate 2s infinite;
+          }
+        }
+      }
+    }
+  }
+
+  @keyframes myrotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(-360deg);
+    }
+
+  }
+
+  @keyframes mydown {
+    0% {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes myup {
+    0% {
+      opacity: 0;
+      transform: translateY(100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }

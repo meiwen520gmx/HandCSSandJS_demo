@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/ctr.css">
+</head>
+
+<body>
+<nav class="navbar navbar-default navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">某管理系统</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">首页</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">功能<span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li class="dropdown-header">业务功能</li>
+                        <li><a href="#">信息建立</a></li>
+                        <li><a href="#">信息查询</a></li>
+                        <li><a href="#">信息管理</a></li>
+                        <li class="divider"></li>
+                        <li class="dropdown-header">系统功能</li>
+                        <li><a href="#">设置</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">帮助</a></li>
+            </ul>
+            <form class="navbar-form navbar-right" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="用户名...">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="密码...">
+                </div>
+                <button type="submit" class="btn btn-default">登录</button>
+            </form>
+        </div>
+    </div>
+</nav>
+<main class="container-fluid">
+    <div class="row">
+        <div class="col-sm-2 hidden-xs left">
+            <div class="panel panel-primary lcj-panel">
+                <div class="panel-heading">
+                    <h3>管理控制台</h3>
+                </div>
+                <ul class="list-unstyled">
+                    <li><a href="#link-1">职工基本信息</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#link-2">信息建立</a></li>
+                    <li><a href="#link-3">信息查询</a></li>
+                    <li><a href="#link-4">信息管理</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#link-5">设置</a></li>
+                    <li><a href="#link-6">帮助</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-sm-10 col-sm-offset-2 right">
+            <div id="link-1" class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">职工基本信息</h3>
+                </div>
+                <div class="panel-body">
+                    <p>
+                        <!―一组按钮控件-->
+                        <button type="button" class="btn btn-lg btn-default">操作1</button>
+                        <button type="button" class="btn btn-lg btn-primary">操作2</button>
+                        <button type="button" class="btn btn-lg btn-success">操作3</button>
+                        <button type="button" class="btn btn-lg btn-info">操作4</button>
+                        <button type="button" class="btn btn-lg btn-warning">操作5</button>
+                        <button type="button" class="btn btn-lg btn-danger">操作6</button>
+                    </p>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <!―panel面板，里面放置一些控件，下同-->
+                            <div class="panel panel-primary">
+                                <!―panel面板的标题，下同-->
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">最新提醒</h3>
+                                </div>
+                                <!―panel面板的内容，下同-->
+                                <div class="panel-body">
+                                    <div class="alert alert-success" role="alert">
+                                        <strong>提示</strong>您的订单（2014001）已经审批通过！
+                                    </div>
+                                    <div class="alert alert-danger" role="alert">
+                                        <strong>提示</strong>您的订单（2014002）被打回！
+                                    </div>
+                                    <div class="alert alert-warning" role="alert">
+                                        <strong>提示</strong>您的订单（2013001）客户付款延迟！
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">我的任务</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <ul class="nav nav-pills nav-stacked" role="tablist">
+                                        <li role="presentation">
+                                            <a href="#" class="alert alert-info">
+                                                <span class="badge pull-right">42</span>
+                                                订单审批
+                                            </a>
+                                        </li>
+                                        <li role="presentation">
+                                            <a href="#" class="alert alert-info">
+                                                <span class="badge pull-right">20</span>
+                                                收款确认
+                                            </a>
+                                        </li>
+                                        <li role="presentation">
+                                            <a href="#" class="alert alert-info">
+                                                <span class="badge pull-right">10</span>
+                                                付款确认
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">最新订单</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <table class="table table-striped">
+                                        <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>产品</th>
+                                            <th>数量</th>
+                                            <th>总金额</th>
+                                            <th>业务员</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Apple Macbook air</td>
+                                            <td>10</td>
+                                            <td>80000</td>
+                                            <td>王小贱</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Apple iPad air</td>
+                                            <td>20</td>
+                                            <td>65000</td>
+                                            <td>尹开花</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Apple Macbook pro</td>
+                                            <td>5</td>
+                                            <td>50000</td>
+                                            <td>刘老根</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                    <p><a class="btn btn-primary" href="#" role="button">查看详细&raquo;</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">工程进度</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <h3><span class="label label-primary">水井挖掘工程</span></h3>
+
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="80"
+                                             aria-valuemin="0" aria-valuemax="100" style="width: 60%"><span class="sr-only">80% Complete</span>
+                                        </div>
+                                    </div>
+                                    <h3><span class="label label-danger">基建工程</span></h3>
+
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="30"
+                                             aria-valuemin="0" aria-valuemax="100" style="width: 80%"><span class="sr-only">30% Complete (danger)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="link-2" class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">信息建立</h3>
+                </div>
+                <div class="panel-body">
+                    <p>Veniam marfa mustache skateboard, adipisicing fugiat velit pitchfork beard. Freegan beard aliqua
+                        cupidatat mcsweeney's vero.Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr
+                        enim lo-fi
+                        before they sold out
+                        qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+                        mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie
+                        minim
+                        qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes andersonAd
+                        leggings
+                        keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out
+                        qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+                        mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie
+                        minim
+                        qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson
+                        Cupidatat four
+                        loko nisi, ea helvetica nulla carles. Tattooed cosby
+                        sweater food truck, mcsweeney's quis non freegan vinyl. Lo-fi wes anderson +1 sartorial. Carles
+                        non
+                        aesthetic exercitation quis gentrify. Brooklyn adipisicing craft beer vice keytar deserunt.
+                    </p>
+                    <p>Veniam marfa mustache skateboard, adipisicing fugiat velit pitchfork beard. Freegan beard aliqua
+                        cupidatat mcsweeney's vero.Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr
+                        enim lo-fi
+                        before they sold out
+                        qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+                        mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie
+                        minim
+                        qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes andersonAd
+                        leggings
+                        keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out
+                        qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+                        mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie
+                        minim
+                        qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson
+                        Cupidatat four
+                        loko nisi, ea helvetica nulla carles. Tattooed cosby
+                        sweater food truck, mcsweeney's quis non freegan vinyl. Lo-fi wes anderson +1 sartorial. Carles
+                        non
+                        aesthetic exercitation quis gentrify. Brooklyn adipisicing craft beer vice keytar deserunt.
+                    </p>
+                    <p>Veniam marfa mustache skateboard, adipisicing fugiat velit pitchfork beard. Freegan beard aliqua
+                        cupidatat mcsweeney's vero.Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr
+                        enim lo-fi
+                        before they sold out
+                        qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+                        mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie
+                        minim
+                        qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes andersonAd
+                        leggings
+                        keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out
+                        qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+                        mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie
+                        minim
+                        qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson
+                        Cupidatat four
+                        loko nisi, ea helvetica nulla carles. Tattooed cosby
+                        sweater food truck, mcsweeney's quis non freegan vinyl. Lo-fi wes anderson +1 sartorial. Carles
+                        non
+                        aesthetic exercitation quis gentrify. Brooklyn adipisicing craft beer vice keytar deserunt.
+                    </p>
+                    <p>Veniam marfa mustache skateboard, adipisicing fugiat velit pitchfork beard. Freegan beard aliqua
+                        cupidatat mcsweeney's vero.Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr
+                        enim lo-fi
+                        before they sold out
+                        qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+                        mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie
+                        minim
+                        qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes andersonAd
+                        leggings
+                        keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out
+                        qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+                        mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie
+                        minim
+                        qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson
+                        Cupidatat four
+                        loko nisi, ea helvetica nulla carles. Tattooed cosby
+                        sweater food truck, mcsweeney's quis non freegan vinyl. Lo-fi wes anderson +1 sartorial. Carles
+                        non
+                        aesthetic exercitation quis gentrify. Brooklyn adipisicing craft beer vice keytar deserunt.
+                    </p>
+                    <p>Veniam marfa mustache skateboard, adipisicing fugiat velit pitchfork beard. Freegan beard aliqua
+                        cupidatat mcsweeney's vero.Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr
+                        enim lo-fi
+                        before they sold out
+                        qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+                        mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie
+                        minim
+                        qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes andersonAd
+                        leggings
+                        keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out
+                        qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+                        mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie
+                        minim
+                        qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson
+                        Cupidatat four
+                        loko nisi, ea helvetica nulla carles. Tattooed cosby
+                        sweater food truck, mcsweeney's quis non freegan vinyl. Lo-fi wes anderson +1 sartorial. Carles
+                        non
+                        aesthetic exercitation quis gentrify. Brooklyn adipisicing craft beer vice keytar deserunt.
+                    </p>
+                    <p>Veniam marfa mustache skateboard, adipisicing fugiat velit pitchfork beard. Freegan beard aliqua
+                        cupidatat mcsweeney's vero.Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr
+                        enim lo-fi
+                        before they sold out
+                        qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+                        mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie
+                        minim
+                        qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes andersonAd
+                        leggings
+                        keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out
+                        qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+                        mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie
+                        minim
+                        qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson
+                        Cupidatat four
+                        loko nisi, ea helvetica nulla carles. Tattooed cosby
+                        sweater food truck, mcsweeney's quis non freegan vinyl. Lo-fi wes anderson +1 sartorial. Carles
+                        non
+                        aesthetic exercitation quis gentrify. Brooklyn adipisicing craft beer vice keytar deserunt.
+                    </p>
+                    <p>Veniam marfa mustache skateboard, adipisicing fugiat velit pitchfork beard. Freegan beard aliqua
+                        cupidatat mcsweeney's vero.Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr
+                        enim lo-fi
+                        before they sold out
+                        qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+                        mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie
+                        minim
+                        qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes andersonAd
+                        leggings
+                        keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out
+                        qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+                        mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie
+                        minim
+                        qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson
+                        Cupidatat four
+                        loko nisi, ea helvetica nulla carles. Tattooed cosby
+                        sweater food truck, mcsweeney's quis non freegan vinyl. Lo-fi wes anderson +1 sartorial. Carles
+                        non
+                        aesthetic exercitation quis gentrify. Brooklyn adipisicing craft beer vice keytar deserunt.
+                    </p>
+                </div>
+            </div>
+            <div id="link-3" class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">信息查询</h3>
+                </div>
+                <div class="panel-body">
+                    <p>Veniam marfa mustache skateboard, adipisicing fugiat velit pitchfork beard. Freegan beard aliqua
+                        cupidatat mcsweeney's vero.Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr
+                        enim lo-fi
+                        before they sold out
+                        qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+                        mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie
+                        minim
+                        qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes andersonAd
+                        leggings
+                        keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out
+                        qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+                        mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie
+                        minim
+                        qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson
+                        Cupidatat four
+                        loko nisi, ea helvetica nulla carles. Tattooed cosby
+                        sweater food truck, mcsweeney's quis non freegan vinyl. Lo-fi wes anderson +1 sartorial. Carles
+                        non
+                        aesthetic exercitation quis gentrify. Brooklyn adipisicing craft beer vice keytar deserunt.
+                    </p>
+                    <p>Veniam marfa mustache skateboard, adipisicing fugiat velit pitchfork beard. Freegan beard aliqua
+                        cupidatat mcsweeney's vero.Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr
+                        enim lo-fi
+                        before they sold out
+                        qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+                        mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie
+                        minim
+                        qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes andersonAd
+                        leggings
+                        keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out
+                        qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+                        mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie
+                        minim
+                        qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson
+                        Cupidatat four
+                        loko nisi, ea helvetica nulla carles. Tattooed cosby
+                        sweater food truck, mcsweeney's quis non freegan vinyl. Lo-fi wes anderson +1 sartorial. Carles
+                        non
+                        aesthetic exercitation quis gentrify. Brooklyn adipisicing craft beer vice keytar deserunt.
+                    </p>
+                    <p>Veniam marfa mustache skateboard, adipisicing fugiat velit pitchfork beard. Freegan beard aliqua
+                        cupidatat mcsweeney's vero.Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr
+                        enim lo-fi
+                        before they sold out
+                        qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+                        mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie
+                        minim
+                        qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes andersonAd
+                        leggings
+                        keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out
+                        qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+                        mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie
+                        minim
+                        qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson
+                        Cupidatat four
+                        loko nisi, ea helvetica nulla carles. Tattooed cosby
+                        sweater food truck, mcsweeney's quis non freegan vinyl. Lo-fi wes anderson +1 sartorial. Carles
+                        non
+                        aesthetic exercitation quis gentrify. Brooklyn adipisicing craft beer vice keytar deserunt.
+                    </p>
+                    <p>Veniam marfa mustache skateboard, adipisicing fugiat velit pitchfork beard. Freegan beard aliqua
+                        cupidatat mcsweeney's vero.Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr
+                        enim lo-fi
+                        before they sold out
+                        qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+                        mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie
+                        minim
+                        qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes andersonAd
+                        leggings
+                        keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out
+                        qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+                        mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie
+                        minim
+                        qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson
+                        Cupidatat four
+                        loko nisi, ea helvetica nulla carles. Tattooed cosby
+                        sweater food truck, mcsweeney's quis non freegan vinyl. Lo-fi wes anderson +1 sartorial. Carles
+                        non
+                        aesthetic exercitation quis gentrify. Brooklyn adipisicing craft beer vice keytar deserunt.
+                    </p>
+                    <p>Veniam marfa mustache skateboard, adipisicing fugiat velit pitchfork beard. Freegan beard aliqua
+                        cupidatat mcsweeney's vero.Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr
+                        enim lo-fi
+                        before they sold out
+                        qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+                        mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie
+                        minim
+                        qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes andersonAd
+                        leggings
+                        keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out
+                        qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+                        mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie
+                        minim
+                        qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson
+                        Cupidatat four
+                        loko nisi, ea helvetica nulla carles. Tattooed cosby
+                        sweater food truck, mcsweeney's quis non freegan vinyl. Lo-fi wes anderson +1 sartorial. Carles
+                        non
+                        aesthetic exercitation quis gentrify. Brooklyn adipisicing craft beer vice keytar deserunt.
+                    </p>
+                    <p>Veniam marfa mustache skateboard, adipisicing fugiat velit pitchfork beard. Freegan beard aliqua
+                        cupidatat mcsweeney's vero.Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr
+                        enim lo-fi
+                        before they sold out
+                        qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+                        mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie
+                        minim
+                        qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes andersonAd
+                        leggings
+                        keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out
+                        qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+                        mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie
+                        minim
+                        qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson
+                        Cupidatat four
+                        loko nisi, ea helvetica nulla carles. Tattooed cosby
+                        sweater food truck, mcsweeney's quis non freegan vinyl. Lo-fi wes anderson +1 sartorial. Carles
+                        non
+                        aesthetic exercitation quis gentrify. Brooklyn adipisicing craft beer vice keytar deserunt.
+                    </p>
+                    <p>Veniam marfa mustache skateboard, adipisicing fugiat velit pitchfork beard. Freegan beard aliqua
+                        cupidatat mcsweeney's vero.Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr
+                        enim lo-fi
+                        before they sold out
+                        qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+                        mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie
+                        minim
+                        qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes andersonAd
+                        leggings
+                        keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out
+                        qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+                        mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie
+                        minim
+                        qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson
+                        Cupidatat four
+                        loko nisi, ea helvetica nulla carles. Tattooed cosby
+                        sweater food truck, mcsweeney's quis non freegan vinyl. Lo-fi wes anderson +1 sartorial. Carles
+                        non
+                        aesthetic exercitation quis gentrify. Brooklyn adipisicing craft beer vice keytar deserunt.
+                    </p>
+                </div>
+            </div>
+            <div id="link-4" class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">信息管理</h3>
+                </div>
+                <div class="panel-body">
+                    <p>Veniam marfa mustache skateboard, adipisicing fugiat velit pitchfork beard. Freegan beard aliqua
+                        cupidatat mcsweeney's vero.Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr
+                        enim lo-fi
+                        before they sold out
+                        qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+                        mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie
+                        minim
+                        qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes andersonAd
+                        leggings
+                        keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out
+                        qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+                        mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie
+                        minim
+                        qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson
+                        Cupidatat four
+                        loko nisi, ea helvetica nulla carles. Tattooed cosby
+                        sweater food truck, mcsweeney's quis non freegan vinyl. Lo-fi wes anderson +1 sartorial. Carles
+                        non
+                        aesthetic exercitation quis gentrify. Brooklyn adipisicing craft beer vice keytar deserunt.
+                    </p>
+                    <p>Veniam marfa mustache skateboard, adipisicing fugiat velit pitchfork beard. Freegan beard aliqua
+                        cupidatat mcsweeney's vero.Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr
+                        enim lo-fi
+                        before they sold out
+                        qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+                        mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie
+                        minim
+                        qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes andersonAd
+                        leggings
+                        keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out
+                        qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+                        mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie
+                        minim
+                        qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson
+                        Cupidatat four
+                        loko nisi, ea helvetica nulla carles. Tattooed cosby
+                        sweater food truck, mcsweeney's quis non freegan vinyl. Lo-fi wes anderson +1 sartorial. Carles
+                        non
+                        aesthetic exercitation quis gentrify. Brooklyn adipisicing craft beer vice keytar deserunt.
+                    </p>
+                    <p>Veniam marfa mustache skateboard, adipisicing fugiat velit pitchfork beard. Freegan beard aliqua
+                        cupidatat mcsweeney's vero.Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr
+                        enim lo-fi
+                        before they sold out
+                        qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+                        mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie
+                        minim
+                        qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes andersonAd
+                        leggings
+                        keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out
+                        qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+                        mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie
+                        minim
+                        qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson
+                        Cupidatat four
+                        loko nisi, ea helvetica nulla carles. Tattooed cosby
+                        sweater food truck, mcsweeney's quis non freegan vinyl. Lo-fi wes anderson +1 sartorial. Carles
+                        non
+                        aesthetic exercitation quis gentrify. Brooklyn adipisicing craft beer vice keytar deserunt.
+                    </p>
+                    <p>Veniam marfa mustache skateboard, adipisicing fugiat velit pitchfork beard. Freegan beard aliqua
+                        cupidatat mcsweeney's vero.Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr
+                        enim lo-fi
+                        before they sold out
+                        qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+                        mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie
+                        minim
+                        qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes andersonAd
+                        leggings
+                        keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out
+                        qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+                        mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie
+                        minim
+                        qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson
+                        Cupidatat four
+                        loko nisi, ea helvetica nulla carles. Tattooed cosby
+                        sweater food truck, mcsweeney's quis non freegan vinyl. Lo-fi wes anderson +1 sartorial. Carles
+                        non
+                        aesthetic exercitation quis gentrify. Brooklyn adipisicing craft beer vice keytar deserunt.
+                    </p>
+                    <p>Veniam marfa mustache skateboard, adipisicing fugiat velit pitchfork beard. Freegan beard aliqua
+                        cupidatat mcsweeney's vero.Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr
+                        enim lo-fi
+                        before they sold out
+                        qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+                        mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie
+                        minim
+                        qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes andersonAd
+                        leggings
+                        keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out
+                        qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+                        mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie
+                        minim
+                        qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson
+                        Cupidatat four
+                        loko nisi, ea helvetica nulla carles. Tattooed cosby
+                        sweater food truck, mcsweeney's quis non freegan vinyl. Lo-fi wes anderson +1 sartorial. Carles
+                        non
+                        aesthetic exercitation quis gentrify. Brooklyn adipisicing craft beer vice keytar deserunt.
+                    </p>
+                    <p>Veniam marfa mustache skateboard, adipisicing fugiat velit pitchfork beard. Freegan beard aliqua
+                        cupidatat mcsweeney's vero.Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr
+                        enim lo-fi
+                        before they sold out
+                        qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+                        mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie
+                        minim
+                        qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes andersonAd
+                        leggings
+                        keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out
+                        qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+                        mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie
+                        minim
+                        qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson
+                        Cupidatat four
+                        loko nisi, ea helvetica nulla carles. Tattooed cosby
+                        sweater food truck, mcsweeney's quis non freegan vinyl. Lo-fi wes anderson +1 sartorial. Carles
+                        non
+                        aesthetic exercitation quis gentrify. Brooklyn adipisicing craft beer vice keytar deserunt.
+                    </p>
+                    <p>Veniam marfa mustache skateboard, adipisicing fugiat velit pitchfork beard. Freegan beard aliqua
+                        cupidatat mcsweeney's vero.Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr
+                        enim lo-fi
+                        before they sold out
+                        qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+                        mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie
+                        minim
+                        qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes andersonAd
+                        leggings
+                        keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out
+                        qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+                        mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie
+                        minim
+                        qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson
+                        Cupidatat four
+                        loko nisi, ea helvetica nulla carles. Tattooed cosby
+                        sweater food truck, mcsweeney's quis non freegan vinyl. Lo-fi wes anderson +1 sartorial. Carles
+                        non
+                        aesthetic exercitation quis gentrify. Brooklyn adipisicing craft beer vice keytar deserunt.
+                    </p>
+                </div>
+            </div>
+            <div id="link-5" class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">设置</h3>
+                </div>
+                <div class="panel-body">
+                    <p>Veniam marfa mustache skateboard, adipisicing fugiat velit pitchfork beard. Freegan beard aliqua
+                        cupidatat mcsweeney's vero.Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr
+                        enim lo-fi
+                        before they sold out
+                        qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+                        mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie
+                        minim
+                        qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes andersonAd
+                        leggings
+                        keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out
+                        qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+                        mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie
+                        minim
+                        qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson
+                        Cupidatat four
+                        loko nisi, ea helvetica nulla carles. Tattooed cosby
+                        sweater food truck, mcsweeney's quis non freegan vinyl. Lo-fi wes anderson +1 sartorial. Carles
+                        non
+                        aesthetic exercitation quis gentrify. Brooklyn adipisicing craft beer vice keytar deserunt.
+                    </p>
+                    <p>Veniam marfa mustache skateboard, adipisicing fugiat velit pitchfork beard. Freegan beard aliqua
+                        cupidatat mcsweeney's vero.Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr
+                        enim lo-fi
+                        before they sold out
+                        qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+                        mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie
+                        minim
+                        qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes andersonAd
+                        leggings
+                        keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out
+                        qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+                        mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie
+                        minim
+                        qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson
+                        Cupidatat four
+                        loko nisi, ea helvetica nulla carles. Tattooed cosby
+                        sweater food truck, mcsweeney's quis non freegan vinyl. Lo-fi wes anderson +1 sartorial. Carles
+                        non
+                        aesthetic exercitation quis gentrify. Brooklyn adipisicing craft beer vice keytar deserunt.
+                    </p>
+                    <p>Veniam marfa mustache skateboard, adipisicing fugiat velit pitchfork beard. Freegan beard aliqua
+                        cupidatat mcsweeney's vero.Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr
+                        enim lo-fi
+                        before they sold out
+                        qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+                        mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie
+                        minim
+                        qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes andersonAd
+                        leggings
+                        keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out
+                        qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+                        mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie
+                        minim
+                        qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson
+                        Cupidatat four
+                        loko nisi, ea helvetica nulla carles. Tattooed cosby
+                        sweater food truck, mcsweeney's quis non freegan vinyl. Lo-fi wes anderson +1 sartorial. Carles
+                        non
+                        aesthetic exercitation quis gentrify. Brooklyn adipisicing craft beer vice keytar deserunt.
+                    </p>
+                    <p>Veniam marfa mustache skateboard, adipisicing fugiat velit pitchfork beard. Freegan beard aliqua
+                        cupidatat mcsweeney's vero.Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr
+                        enim lo-fi
+                        before they sold out
+                        qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+                        mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie
+                        minim
+                        qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes andersonAd
+                        leggings
+                        keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out
+                        qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+                        mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie
+                        minim
+                        qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson
+                        Cupidatat four
+                        loko nisi, ea helvetica nulla carles. Tattooed cosby
+                        sweater food truck, mcsweeney's quis non freegan vinyl. Lo-fi wes anderson +1 sartorial. Carles
+                        non
+                        aesthetic exercitation quis gentrify. Brooklyn adipisicing craft beer vice keytar deserunt.
+                    </p>
+                    <p>Veniam marfa mustache skateboard, adipisicing fugiat velit pitchfork beard. Freegan beard aliqua
+                        cupidatat mcsweeney's vero.Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr
+                        enim lo-fi
+                        before they sold out
+                        qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+                        mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie
+                        minim
+                        qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes andersonAd
+                        leggings
+                        keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out
+                        qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+                        mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie
+                        minim
+                        qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson
+                        Cupidatat four
+                        loko nisi, ea helvetica nulla carles. Tattooed cosby
+                        sweater food truck, mcsweeney's quis non freegan vinyl. Lo-fi wes anderson +1 sartorial. Carles
+                        non
+                        aesthetic exercitation quis gentrify. Brooklyn adipisicing craft beer vice keytar deserunt.
+                    </p>
+                    <p>Veniam marfa mustache skateboard, adipisicing fugiat velit pitchfork beard. Freegan beard aliqua
+                        cupidatat mcsweeney's vero.Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr
+                        enim lo-fi
+                        before they sold out
+                        qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+                        mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie
+                        minim
+                        qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes andersonAd
+                        leggings
+                        keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out
+                        qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+                        mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie
+                        minim
+                        qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson
+                        Cupidatat four
+                        loko nisi, ea helvetica nulla carles. Tattooed cosby
+                        sweater food truck, mcsweeney's quis non freegan vinyl. Lo-fi wes anderson +1 sartorial. Carles
+                        non
+                        aesthetic exercitation quis gentrify. Brooklyn adipisicing craft beer vice keytar deserunt.
+                    </p>
+                    <p>Veniam marfa mustache skateboard, adipisicing fugiat velit pitchfork beard. Freegan beard aliqua
+                        cupidatat mcsweeney's vero.Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr
+                        enim lo-fi
+                        before they sold out
+                        qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+                        mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie
+                        minim
+                        qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes andersonAd
+                        leggings
+                        keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out
+                        qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+                        mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie
+                        minim
+                        qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson
+                        Cupidatat four
+                        loko nisi, ea helvetica nulla carles. Tattooed cosby
+                        sweater food truck, mcsweeney's quis non freegan vinyl. Lo-fi wes anderson +1 sartorial. Carles
+                        non
+                        aesthetic exercitation quis gentrify. Brooklyn adipisicing craft beer vice keytar deserunt.
+                    </p>
+                </div>
+            </div>
+            <div id="link-6" class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">帮助</h3>
+                </div>
+                <div class="panel-body">
+                    <p>Veniam marfa mustache skateboard, adipisicing fugiat velit pitchfork beard. Freegan beard aliqua
+                        cupidatat mcsweeney's vero.Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr
+                        enim lo-fi
+                        before they sold out
+                        qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+                        mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie
+                        minim
+                        qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes andersonAd
+                        leggings
+                        keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out
+                        qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+                        mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie
+                        minim
+                        qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson
+                        Cupidatat four
+                        loko nisi, ea helvetica nulla carles. Tattooed cosby
+                        sweater food truck, mcsweeney's quis non freegan vinyl. Lo-fi wes anderson +1 sartorial. Carles
+                        non
+                        aesthetic exercitation quis gentrify. Brooklyn adipisicing craft beer vice keytar deserunt.
+                    </p>
+                    <p>Veniam marfa mustache skateboard, adipisicing fugiat velit pitchfork beard. Freegan beard aliqua
+                        cupidatat mcsweeney's vero.Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr
+                        enim lo-fi
+                        before they sold out
+                        qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+                        mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie
+                        minim
+                        qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes andersonAd
+                        leggings
+                        keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out
+                        qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+                        mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie
+                        minim
+                        qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson
+                        Cupidatat four
+                        loko nisi, ea helvetica nulla carles. Tattooed cosby
+                        sweater food truck, mcsweeney's quis non freegan vinyl. Lo-fi wes anderson +1 sartorial. Carles
+                        non
+                        aesthetic exercitation quis gentrify. Brooklyn adipisicing craft beer vice keytar deserunt.
+                    </p>
+                    <p>Veniam marfa mustache skateboard, adipisicing fugiat velit pitchfork beard. Freegan beard aliqua
+                        cupidatat mcsweeney's vero.Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr
+                        enim lo-fi
+                        before they sold out
+                        qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+                        mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie
+                        minim
+                        qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes andersonAd
+                        leggings
+                        keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out
+                        qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+                        mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie
+                        minim
+                        qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson
+                        Cupidatat four
+                        loko nisi, ea helvetica nulla carles. Tattooed cosby
+                        sweater food truck, mcsweeney's quis non freegan vinyl. Lo-fi wes anderson +1 sartorial. Carles
+                        non
+                        aesthetic exercitation quis gentrify. Brooklyn adipisicing craft beer vice keytar deserunt.
+                    </p>
+                    <p>Veniam marfa mustache skateboard, adipisicing fugiat velit pitchfork beard. Freegan beard aliqua
+                        cupidatat mcsweeney's vero.Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr
+                        enim lo-fi
+                        before they sold out
+                        qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+                        mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie
+                        minim
+                        qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes andersonAd
+                        leggings
+                        keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out
+                        qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+                        mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie
+                        minim
+                        qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson
+                        Cupidatat four
+                        loko nisi, ea helvetica nulla carles. Tattooed cosby
+                        sweater food truck, mcsweeney's quis non freegan vinyl. Lo-fi wes anderson +1 sartorial. Carles
+                        non
+                        aesthetic exercitation quis gentrify. Brooklyn adipisicing craft beer vice keytar deserunt.
+                    </p>
+                    <p>Veniam marfa mustache skateboard, adipisicing fugiat velit pitchfork beard. Freegan beard aliqua
+                        cupidatat mcsweeney's vero.Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr
+                        enim lo-fi
+                        before they sold out
+                        qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+                        mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie
+                        minim
+                        qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes andersonAd
+                        leggings
+                        keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out
+                        qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+                        mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie
+                        minim
+                        qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson
+                        Cupidatat four
+                        loko nisi, ea helvetica nulla carles. Tattooed cosby
+                        sweater food truck, mcsweeney's quis non freegan vinyl. Lo-fi wes anderson +1 sartorial. Carles
+                        non
+                        aesthetic exercitation quis gentrify. Brooklyn adipisicing craft beer vice keytar deserunt.
+                    </p>
+                    <p>Veniam marfa mustache skateboard, adipisicing fugiat velit pitchfork beard. Freegan beard aliqua
+                        cupidatat mcsweeney's vero.Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr
+                        enim lo-fi
+                        before they sold out
+                        qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+                        mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie
+                        minim
+                        qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes andersonAd
+                        leggings
+                        keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out
+                        qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+                        mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie
+                        minim
+                        qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson
+                        Cupidatat four
+                        loko nisi, ea helvetica nulla carles. Tattooed cosby
+                        sweater food truck, mcsweeney's quis non freegan vinyl. Lo-fi wes anderson +1 sartorial. Carles
+                        non
+                        aesthetic exercitation quis gentrify. Brooklyn adipisicing craft beer vice keytar deserunt.
+                    </p>
+                    <p>Veniam marfa mustache skateboard, adipisicing fugiat velit pitchfork beard. Freegan beard aliqua
+                        cupidatat mcsweeney's vero.Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr
+                        enim lo-fi
+                        before they sold out
+                        qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+                        mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie
+                        minim
+                        qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes andersonAd
+                        leggings
+                        keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out
+                        qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+                        mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie
+                        minim
+                        qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson
+                        Cupidatat four
+                        loko nisi, ea helvetica nulla carles. Tattooed cosby
+                        sweater food truck, mcsweeney's quis non freegan vinyl. Lo-fi wes anderson +1 sartorial. Carles
+                        non
+                        aesthetic exercitation quis gentrify. Brooklyn adipisicing craft beer vice keytar deserunt.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<footer class="navbar-fixed-bottom text-center">
+    Copyright © YCKU 瓢城旅行社 | 苏ICP备120110119号<span class="sm-hidden"> | 旅行社经营许可证：L-YC-BK12345</span>
+</footer>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
+

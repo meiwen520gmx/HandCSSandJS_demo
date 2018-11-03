@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <!--<script type="text/javascript效果案例" src="jQuery/jquery-1.11.2.js"></script>-->
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #warp {
+            width: 400px;
+            margin: 40px auto;
+            border: 1px solid #000;
+            background-color: #def;
+            border-radius: 5px;
+            box-shadow: 3px 2px 6px #ccc;
+        }
+
+        #warp h3 {
+            background-image: linear-gradient(to bottom, #f00, #a00);
+            height: 50px;
+            text-align: center;
+            border-radius: 5px;
+            line-height: 50px;
+            color: #CCCCCC;
+            font-size: 30px;
+            text-shadow: 2px 2px 6px #555;
+        }
+
+        #box {
+            height: 400px;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        ol > li {
+            list-style-position: inside;
+            height: 40px;
+            line-height: 40px;
+            font-size: 15pt;
+            color: #555
+        }
+    </style>
+</head>
+<body>
+<div id="warp">
+    <h3>无缝滑动实现</h3>
+
+    <div id="box">
+        <ol id="one">
+            <li><a href="#"> 长江之星客轮失事特大新闻报道</a></li>
+            <li><a href="#"> 长江之星客轮失事特大新闻报道</a></li>
+            <li><a href="#"> 长江之星客轮失事特大新闻报道</a></li>
+            <li>长江之星客轮失事特大新闻报道</li>
+            <li>长江之星客轮失事特大新闻报道</li>
+            <li>长江之星客轮失事特大新闻报道</li>
+            <li>长江之星客轮失事特大新闻报道</li>
+            <li>长江之星客轮失事特大新闻报道</li>
+            <li>长江之星客轮失事特大新闻报道</li>
+            <li>长江之星客轮失事特大新闻报道</li>
+            <li>长江之星客轮失事特大新闻报道</li>
+            <li>长江之星客轮失事特大新闻报道</li>
+            <li>长江之星客轮失事特大新闻报道</li>
+            <li>长江之星客轮失事特大新闻报道</li>
+            <li>长江之星客轮失事特大新闻报道</li>
+        </ol>
+        <ol id="two"></ol>
+    </div>
+</div>
+<script type="text/javascript">
+    var area = document.getElementById('box');
+    var one = document.getElementById('one');
+    var two = document.getElementById('two');
+    two.innerHTML = one.innerHTML;
+//    利用BOX盒子内部的内容可滚动的特点实现无缝滚动,将box的overflow设为auto即可看出;
+    area.scrollTop = 0;
+    var time = 30;
+    var myScroll = setInterval(scrollUp, time);
+    area.onmouseover = function () {
+        clearInterval(myScroll);
+    }
+    area.onmouseout = function () {
+        myScroll = setInterval(scrollUp, time);
+    }
+    function scrollUp() {
+        if (area.scrollTop >= one.offsetHeight) {
+            area.scrollTop = 0;
+        } else {
+            area.scrollTop++;
+        }
+    }
+</script>
+</body>
+</html>

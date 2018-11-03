@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <!--Bootstrap的必须要求，网页适应多种设备，下面这代码很重要，让网页视口自动适应设备宽度，缩放比例我1-->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <style>
+        footer {
+            margin-top: 50px;
+            border-top: 1px solid #ccc;
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+<div class="navbar navbar-inverse navbar-static-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            　<!-- .navbar-toggle样式用于toggle收缩的内容，即nav-collapse collapse样式所在元素 -->
+            <button class="navbar-toggle" type="button" data-toggle="collapse"
+                    data-target=".lcj-collapse">
+                <span class="sr-only">Toggle Navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <!-- 确保无论是宽屏还是窄屏，navbar-brand都显示 -->
+            <a href="##" class="navbar-brand">陶宝网</a>
+        </div>
+        <!-- 屏幕宽度小于768px时，div.navbar-responsive-collapse容器里的内容都会隐藏，显示icon-bar图标，当点击icon-bar图标时，再展开。屏幕大于768px时，默认显示。 -->
+        <div class="collapse navbar-collapse lcj-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="##">网站首页</a></li>
+                <li><a href="##">系列教程</a></li>
+                <li><a href="##">名师介绍</a></li>
+                <li><a href="##">成功案例</a></li>
+                <li><a href="##">关于我们</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+            <p class="pull-right visible-xs">
+                <button class="btn-xs btn btn-primary">Toggle</button>
+            </p>
+            <div class="jumbotron">
+                <h1>Hello, world!</h1>
+
+                <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to
+                    featured content or
+                    information.</p>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-md-6 col-lg-4">
+                    <h2>Hello, world!</h2>
+
+                    <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to
+                        featured content or
+                        information.</p>
+                    <a class="btn btn-default" href="#" role="button">Learn more</a>
+
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-4">
+                    <h2>Hello, world!</h2>
+
+                    <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to
+                        featured content or
+                        information.</p>
+                    <a class="btn btn-default" href="#" role="button">Learn more</a>
+
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-4">
+                    <h2>Hello, world!</h2>
+
+                    <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to
+                        featured content or
+                        information.</p>
+                    <a class="btn btn-default" href="#" role="button">Learn more</a>
+
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-4">
+                    <h2>Hello, world!</h2>
+
+                    <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to
+                        featured content or
+                        information.</p>
+                    <a class="btn btn-default" href="#" role="button">Learn more</a>
+
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-4">
+                    <h2>Hello, world!</h2>
+
+                    <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to
+                        featured content or
+                        information.</p>
+                    <a class="btn btn-default" href="#" role="button">Learn more</a>
+
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-4">
+                    <h2>Hello, world!</h2>
+
+                    <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to
+                        featured content or
+                        information.</p>
+                    <a class="btn btn-default" href="#" role="button">Learn more</a>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <ul class="list-group">
+                <li class="list-group-item active">图解CSS3</li>
+                <li class="list-group-item">Sass教程</li>
+                <li class="list-group-item">Sass教程</li>
+                <li class="list-group-item">Sass教程</li>
+                <li class="list-group-item">玩转Bootstrap</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<footer class="footer ">
+    <div class="container">
+        <p class="pull-right">
+            <button class="btn-xs btn btn-primary">Toggle</button>
+        </p>
+        <div class="row footer-top">
+            <div class="col-md-6 col-lg-6">
+                <h4>
+                    <img src="images/logo.png">
+                </h4>
+                <p>本网站所列开源项目的中文版文档全部由<a href="http://www.bootcss.com/">Bootstrap中文网</a>成员翻译整理，并全部遵循 <a
+                        href="http://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a>协议发布。</p>
+            </div>
+            <div class="col-md-6  col-lg-5 col-lg-offset-1">
+                <div class="row about">
+                    <div class="col-xs-3 text-center">
+                        <h4>关于</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="/about/">关于我们</a></li>
+                            <li><a href="/ad/">广告合作</a></li>
+                            <li><a href="/links/">友情链接</a></li>
+                            <li><a href="/hr/">招聘</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-3 text-center">
+                        <h4>联系方式</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="http://weibo.com/bootcss" title="Bootstrap中文网官方微博" target="_blank">新浪微博</a>
+                            </li>
+                            <li><a href="http://weibo.com/bootcss" title="Bootstrap中文网官方微博" target="_blank">新浪微博</a>
+                            </li>
+                            <li><a href="http://weibo.com/bootcss" title="Bootstrap中文网官方微博" target="_blank">新浪微博</a>
+                            </li>
+                            <li><a href="mailto:admin@bootcss.com">电子邮件</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-3 text-center">
+                        <h4>旗下网站</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="http://www.golaravel.com/" target="_blank">Laravel</a></li>
+                            <li><a href="http://www.ghostchina.com/" target="_blank">Ghost中国</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-3 text-center">
+                        <h4>赞助商</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="http://www.ucloud.cn/" target="_blank">UCloud</a></li>
+                            <li><a href="https://www.upyun.com" target="_blank">又拍云</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row footer-bottom text-center"><!--以上两类中选一即可-->
+            <p>新加坡报业控股总机：63196319　订阅热线：63883838　早报网广告联系：63192036　早报新闻热线：1800-7418383</p>
+
+            <p>新加坡报业控股版权所有（公司登记号：198402868E）提醒：新加坡网络业者若未经许可，擅自引用本网内容将面对法律行动。</p>
+
+            <p>第三方公司可能在早报网站宣传他们的产品或服务。不过您跟第三方公司的任何交易与早报网站无关，早报网将不会对可能引起的任何损失负责。</p>
+            <ul class="list-inline">
+                <li><a href="http://www.miibeian.gov.cn/" target="_blank">京ICP备11008151号</a></li>
+                <li>京公网安备11010802014853</li>
+            </ul>
+        </div>
+    </div>
+</footer>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            padding: 30px 0 0 200px;
+        }
+
+        tabs {
+            display: block;
+            width: 122px;
+            position: relative;
+        }
+
+        tabs input {
+            position: absolute;
+            width: 100%;
+            height: 88px;
+            left: 0;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        tabs input:nth-of-type(1) {
+            top: 0;
+        }
+
+        tabs input:nth-of-type(2) {
+            top: 25%;
+        }
+
+        tabs input:nth-of-type(3) {
+            top: 50%;
+        }
+
+        tabs input:nth-of-type(4) {
+            top: 75%;
+        }
+
+        tabs item {
+            display: block;
+            width: 100%;
+            font-size: 18px;
+            padding: 34px 0 34px 15px;
+            height: 88px;
+            font-weight: bold;
+            border-left: 1px solid #000033;
+            background-color: lightsteelblue;
+            box-sizing: border-box;
+            clear: both;
+        }
+
+        tabs item:first-of-type {
+            border-top: 1px solid #000033;
+            border-radius: 10px 0 0 0;
+        }
+
+        tabs item:last-child {
+            border-bottom: 1px solid #000033;
+            border-radius: 0 0 0 10px;
+        }
+
+        tabs input:checked + item {
+            float: left;
+            background-color: #eee;
+            border-top: 1px solid #000033;
+            border-bottom: 1px solid #000033;
+            color: #000;
+            box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.5);
+            z-index: 10;
+        }
+
+        tabs input:checked + item:last-of-type {
+            float: none;
+        }
+
+        tabs input:checked + item title1 {
+            display: inline-block;
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        tabs input:checked + item title1:after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 86px;
+            right: -4px;
+            top: -34px;
+            background-color: #eee;
+            z-index: 100;
+        }
+
+        tabs item content {
+            position: absolute;
+            left: 100%;
+            top: 0;
+            border: 1px solid #000033;
+            border-radius: 0 10px 10px 0;
+            box-shadow: -2px 0 1px 1px rgba(0, 0, 0, 0.5);
+            width: 400px;
+            height: 330px;
+            padding: 10px;
+            background-color: #eee;
+            display: none;
+        }
+
+        tabs input:checked + item content {
+            display: block;
+        }
+
+        tabs content dl {
+            margin: 6px 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        tabs content dl:last-child {
+            border-bottom: none;
+        }
+
+        tabs content dl dt {
+            float: left;
+            width: 62px;
+            font-size: 15px;
+            margin: 5px 6px;
+        }
+
+        tabs content dl dt a {
+            color: brown;
+        }
+
+        tabs content dl dd {
+            overflow: auto;
+        }
+
+        tabs content dl dd a {
+            display: inline-block;
+            font-size: 13px;
+            margin: 6px 0;
+            padding: 0 8px;
+            border-left: 1px solid #555555;
+            color: coral;
+        }
+
+        tabs a {
+            text-decoration: none;
+        }
+
+        tabs a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+`
+<body>
+<tabs>
+    <input type="radio" checked name="tabs">
+    <item><title1>图书、音像</title1>
+        <content>
+            <dl>
+                <dt><a href="#">电子书</a></dt>
+                <dd>
+                    <a href="#">免费</a> <a href="#">小说</a> <a href="#">励志与成功</a> <a href="#">婚恋/两性</a>
+                    <a href="#">文学</a> <a href="#">经管</a> <a href="#">畅读VIP</a>
+                </dd>
+            </dl>
+            <dl>
+                <dt><a href="#">数字音乐</a></dt>
+                <dd>
+                    <a href="#">通俗流行</a> <a href="#">古典音乐</a> <a href="#">摇滚说唱</a> <a href="#">爵士蓝调</a>
+                    <a href="#">乡村民谣</a> <a href="#">有声读物</a>
+                </dd>
+            </dl>
+            <dl>
+                <dt><a href="#">音像</a></dt>
+                <dd>
+                    <a href="#">音乐</a> <a href="#">影视</a> <a href="#">教育音像</a> <a href="#">游戏</a>
+                </dd>
+            </dl>
+            <dl>
+                <dt><a href="#">文艺</a></dt>
+                <dd>
+                    <a href="#">小说</a> <a href="#">文学</a> <a href="#">青春文学</a> <a href="#">传记</a> <a
+                        href="#">艺术</a>
+                </dd>
+            </dl>
+        </content>
+    </item>
+    <input type="radio" name="tabs">
+    <item><title1>家用电器</title1>
+        <content>
+            <dl>
+                <dt><a href="#">大 家 电</a></dt>
+                <dd>
+                    <a href="#">平板电视</a> <a href="#">空调</a> <a href="#">冰箱</a> <a href="#">洗衣机</a> <a
+                        href="#">家庭影院</a> <a href="#">DVD</a> <a href="#">迷你音响</a> <a href="#">烟机/灶具</a>
+                    <a href="#">热水器</a> <a href="#">消毒柜/洗碗机</a> <a href="#">酒柜/冷柜</a> <a href="#">家电配件</a>
+                </dd>
+            </dl>
+            <dl>
+                <dt><a href="#">生活电器</a></dt>
+                <dd>
+                    <a href="#">电风扇</a> <a href="#">冷风扇</a> <a href="#">净化器</a> <a href="#">饮水机</a>
+                    <a href="#">净水设备</a> <a href="#">挂烫机/熨斗</a> <a href="#">吸尘器</a> <a href="#">电话机</a>
+                    <a href="#">插座</a> <a href="#">收录/音机</a> <a href="#">清洁机</a> <a href="#">加湿器</a>
+                    <a href="#">除湿/干衣机</a> <a href="#">取暖电器</a> <a href="#">其它生活电器</a>
+                </dd>
+            </dl>
+        </content>
+    </item>
+    <input type="radio" name="tabs">
+    <item><title1>电脑、办公</title1>
+        <content>
+            <dl>
+                <dt><a href="#">电脑整机</a></dt>
+                <dd>
+                    <a href="#">笔记本</a> <a href="#">超极本</a> <a href="#">游戏本</a> <a href="#">平板电脑</a>
+                    <a href="#">平板电脑配件</a> <a href="#">台式机</a> <a href="#">服务器/工作站</a> <a href="#">笔记本配件</a>
+                </dd>
+            </dl>
+            <dl>
+                <dt><a href="#">电脑配件</a></dt>
+                <dd>
+                    <a href="#">CPU</a> <a href="#">主板</a> <a href="#">显卡</a> <a href="#">硬盘</a> <a href="#">
+                    SSD固态硬盘</a> <a href="#">内存</a> <a href="#">机箱</a> <a href="#">电源</a> <a href="#">显示器</a>
+                    <a href="#">刻录机/光驱</a> <a href="#">声卡/扩展卡</a> <a href="#">散热器</a> <a href="#">装机配件</a>
+                    <a href="#">组装电脑</a>
+                </dd>
+            </dl>
+            <dl>
+                <dt><a href="#">外设产品</a></dt>
+                <dd>
+                    <a href="#">鼠标</a> <a href="#">键盘</a> <a href="#">游戏设备</a> <a href="#">U盘</a> <a
+                        href="#">移动硬盘</a> <a href="#">鼠标垫</a> <a href="#">摄像头</a> <a href="#">线缆</a>
+                    <a href="#">电玩</a> <a href="#">手写板</a> <a href="#">外置盒</a> <a href="#">电脑工具</a>
+                    <a href="#">电脑清洁</a> <a href="#">UPS</a> <a href="#">插座</a>
+                </dd>
+            </dl>
+        </content>
+    </item>
+    <input type="radio" name="tabs">
+    <item><title1>手机、数码</title1>
+        <content>
+            <dl>
+                <dt><a href="#">手机通讯</a></dt>
+                <dd>
+                    <a href="#">手机</a> <a href="#">对讲机</a>
+                </dd>
+            </dl>
+            <dl>
+                <dt><a href="#">京东通信</a></dt>
+                <dd>
+                    <a href="#">选号中心</a> <a href="#">自助服务</a>
+                </dd>
+            </dl>
+            <dl>
+                <dt><a href="#">运营商</a></dt>
+                <dd>
+                    <a href="#">购机送费</a> <a href="#">0元购机</a> <a href="#">选号入网</a>
+                </dd>
+            </dl>
+            <dl>
+                <dt><a href="#">手机配件</a></dt>
+                <dd>
+                    <a href="#">电池</a> <a href="#">蓝牙耳机</a> <a href="#">充电器/数据线</a> <a href="#">手机耳机</a>
+                    <a href="#">贴膜</a> <a href="#">存储卡</a> <a href="#">保护套</a> <a href="#">车载</a> <a
+                        href="#">iPhone配件</a> <a href="#">创意配件</a> <a href="#">便携/无线音箱</a> <a href="#">手机饰品</a>
+                </dd>
+            </dl>
+        </content>
+    </item>
+</tabs>
+</body>
+</html>

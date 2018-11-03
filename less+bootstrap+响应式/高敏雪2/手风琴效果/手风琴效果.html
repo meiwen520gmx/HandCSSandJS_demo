@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>手风琴效果</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div.box{
+            width: 1200px;
+            margin: 50px auto;
+            height: 160px;
+            border: 1px solid darkgrey;
+            display: flex;
+        }
+        div.box figure{
+            flex: 1;
+            line-height: 24px;
+            position: relative;
+            padding: 5px;
+        }
+
+        div.box figure:not(:last-child){
+            border-right:1px solid darkgrey;
+        }
+        div.box figure figcaption aside{
+           display: none;
+
+        }
+        div.box aside a,div.box aside a:visited{
+            text-decoration: none;
+        }
+
+      div.box figure figcaption h3,
+      div.box figure:not(:last-child):hover ~figure:last-child h3{  /*初态*/
+            font-size: 16px;
+            font-weight: normal;
+            transition:all 0.5s;
+        }
+        div.box figure:hover figcaption h3,
+        div.box figure:last-child h3{  /*终态*/
+            font-size: 20px;
+            font-weight: 700;
+        }
+        div.box figure figcaption p,
+        div.box figure:not(:last-child):hover ~figure:last-child p{  /*初态*/
+            font-size: 14px;
+            transition:all 0.5s;
+        }
+        div.box figure:hover figcaption p,
+        div.box figure:last-child p{  /*终态*/
+            font-size: 16px;
+        }
+
+        div.box figure figcaption i{
+            font-size: 12px;
+            font-weight: normal;
+            color: red;
+        }
+        div.box figure img,div.box figure:not(:last-child):hover ~ figure:last-child img{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 70px;
+            transition:all .5s;
+        }
+        div.box figure:hover  img,
+        div.box figure:last-child img{
+            width: 130px;
+        }
+        div.box figure:not(:last-child):hover,
+        div.box figure:last-child
+        {
+           flex: 2;
+        }
+        div.box figure:not(:last-child):hover ~ figure:last-child{
+            flex: 1;
+
+        }
+        div.box figure:not(:last-child):not(:hover):after,
+        div.box figure:not(:last-child):hover ~ figure:last-child:after{
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0,0,0,.3);
+        }
+        div.box figure:not(:last-child):hover aside,
+        div.box  figure:last-child aside{
+            display: block;
+        }
+        div.box figure:not(:last-child):hover ~ figure:last-child aside{
+            display: none;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <figure>
+            <figcaption>
+                <h3>baby</h3>
+                <p>宝宝该换装了，新品抢购</p>
+                <i>2.5折起</i>
+                <aside><a href="#">进入专题网站</a></aside>
+            </figcaption>
+            <img src="images/img1.jpg" alt="">
+        </figure>
+        <figure>
+            <figcaption>
+                <h3>baby</h3>
+                <p>宝宝该换装了，新品抢购</p>
+                <i>2.5折起</i>
+                <aside><a href="#"> 进入专题网站</a></aside>
+            </figcaption>
+            <img src="images/img2.jpg" alt="">
+        </figure>
+        <figure>
+            <figcaption>
+                <h3>baby</h3>
+                <p>宝宝该换装了，新品抢购</p>
+                <i>2.5折起</i>
+                <aside><a href="#">进入专题网站</a></aside>
+            </figcaption>
+            <img src="images/img3.jpg" alt="">
+        </figure>
+        <figure>
+            <figcaption>
+                <h3>baby</h3>
+                <p>宝宝该换装了，新品抢购</p>
+                <i>2.5折起</i>
+                <aside><a href="#">进入专题网站</a></aside>
+            </figcaption>
+            <img src="images/img4.jpg" alt="">
+        </figure>
+        <figure>
+            <figcaption>
+                <h3>baby</h3>
+                <p>宝宝该换装了，新品抢购</p>
+                <i>2.5折起</i>
+                <aside><a href="#">进入专题网站</a></aside>
+            </figcaption>
+            <img src="images/img5.jpg" alt="">
+        </figure>
+
+    </div>
+
+
+</body>
+</html>

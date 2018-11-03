@@ -1,0 +1,181 @@
+@charset "utf-8";
+.bcenter {
+  width: 1000px;
+  margin: 0 auto;
+}
+div.adv {
+  width: 1000px;
+  margin: 0 auto;
+}
+.borderbg {
+  border: 1px solid gainsboro;
+  background-color: white;
+}
+main {
+  width: 1000px;
+  margin: 0 auto;
+  margin: 15px auto;
+  display: flex;
+  justify-content: space-between;
+}
+main header {
+  line-height: 40px;
+  border-bottom: 1px solid gainsboro;
+  padding: 0 30px 0 20px;
+  display: flex;
+  justify-content: space-between;
+}
+main header i {
+  color: gainsboro;
+}
+main header i:after {
+  content: attr(data-icon);
+  position: absolute;
+  font-family: my_icon;
+  color: #ddd;
+  font-size: 14px;
+  margin-left: 8px;
+}
+main header i:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+main > div.one {
+  flex: 1.5;
+  margin-right: 30px;
+}
+main > div.one div {
+  border: 1px solid gainsboro;
+  background-color: white;
+}
+main > div.one div.up {
+  margin-bottom: 15px;
+}
+main > div.one div figure {
+  padding: 5px;
+  display: flex;
+}
+main > div.one div figure figcaption {
+  margin-left: 5px;
+  line-height: 20px;
+  font-size: 12px;
+}
+main > div.one div figure figcaption h4 {
+  color: #a10000;
+}
+main > div.one div figure figcaption h4:hover {
+  text-decoration: underline;
+}
+main > div.one div figure figcaption p {
+  color: #666;
+}
+main > div.one div figure figcaption a,
+main > div.one div figure figcaption a:visited {
+  color: #a10000;
+  text-decoration: none;
+}
+main > div.one div figure figcaption a:hover,
+main > div.one div figure figcaption a:visited:hover {
+  text-decoration: underline;
+}
+main > div.one div ul {
+  padding: 5px;
+  list-style: none;
+  line-height: 20px;
+}
+main > div.one div ul li {
+  padding-left: 7px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dashed #999;
+}
+main > div.one div ul li:before {
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-bottom-color: red;
+  transform: rotate(-45deg);
+  margin-left: -9px;
+  margin-top: 3px;
+}
+main > div.one div ul li:last-child {
+  border-bottom: none;
+}
+main > div.one div ul li a,
+main > div.one div ul li a:visited {
+  text-decoration: none;
+  font-size: 13px;
+  color: #666;
+}
+main > div.one div ul li a:hover,
+main > div.one div ul li a:visited:hover {
+  text-decoration: underline;
+}
+main > div.one div ul li span {
+  font-size: 12px;
+  color: #999;
+}
+main > div.two {
+  flex: 1.5;
+  margin-right: 30px;
+}
+main > div.two div {
+  border: 1px solid gainsboro;
+  background-color: white;
+}
+main > div.two div.up {
+  margin-bottom: 15px;
+}
+main > div.two div figure {
+  padding: 5px;
+  display: flex;
+}
+main > div.two div figure figcaption {
+  font-size: 12px;
+  margin-left: 5px;
+  line-height: 20px;
+}
+main > div.two div figure figcaption h4 {
+  color: #ab0000;
+}
+main > div.two div figure figcaption p {
+  text-indent: 2em;
+  text-align: justify;
+}
+main > div.two div ul {
+  list-style: none;
+  padding: 5px;
+  display: flex;
+  line-height: 30px;
+}
+main > div.two div ul a,
+main > div.two div ul a:visited {
+  display: block;
+  margin-right: 12px;
+  text-decoration: none;
+  color: red;
+  font-size: 14px;
+}
+main > div.three {
+  flex: 1;
+}
+main > div.three div {
+  border: 1px solid gainsboro;
+  background-color: white;
+}
+main > div.three div img {
+  width: 100%;
+  margin-top: 5px;
+}
+main > div.three div.up {
+  margin-bottom: 15px;
+}
+main > div.three div.up video {
+  width: 100%;
+}
+main > div.three div.down audio {
+  width: 100%;
+  margin: 45px 0;
+}

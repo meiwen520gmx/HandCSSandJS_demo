@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div#container{
+            width: 1189px;
+            margin: 0 auto;
+        }
+        #container div{
+            float: left;
+        }
+    </style>
+</head>
+<body>
+<div  id="container">
+    <div id="left">
+        <img src="../images/left.png" width="764">
+    </div>
+    <div id="right">
+        <img src="../images/right.png" width="425">
+    </div>
+</div>
+</body>
+<script>
+    window.onload= function () {
+        var oBox=document.getElementById('container');
+        var oDivR=document.getElementById('right');
+        window.onscroll= function () {
+            if(document.documentElement.scrollTop+window.innerHeight>=oDivR.offsetHeight){
+                var right=(document.documentElement.offsetWidth-oBox.offsetWidth)/2+'px';
+                oDivR.style.cssText='position:fixed;bottom:0;right:'+right;
+            }
+            else{
+                oDivR.style.position='static';
+            }
+        }
+    }
+</script>
+</html>

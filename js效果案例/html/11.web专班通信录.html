@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>web专班通讯录</title>
+    <style>
+        body{
+            background-color:gainsboro;
+        }
+        input{
+           position: absolute;
+            top: 50px;
+            right:80px;
+            border: none;
+            background-color: green;
+            padding: 10px 20px;
+            color: white;
+        }
+    </style>
+    <script src="../js/ajax.js"></script>
+    <script>
+        window.onload= function () {
+            var oBton=document.getElementById('btn1');
+            var oTab=document.getElementById('tab1');
+            var id=0;
+            oBton.onclick= function () {
+                getAjaxData("get","../js/a.txt?id=3&stu='abc'",function(result){
+                    for(var i=0;i<result.length;i++){
+                        var oTr=document.createElement('tr');
+                        var oTd=document.createElement('td');
+                        oTd.innerHTML=++id;
+                        oTr.appendChild(oTd);
+                        var oTd=document.createElement('td');
+                        oTd.innerHTML=result[i].number;
+                        oTr.appendChild(oTd);
+                        var oTd=document.createElement('td');
+                        oTd.innerHTML=result[i].name;
+                        oTr.appendChild(oTd);
+                        var oTd=document.createElement('td');
+                        oTd.innerHTML=result[i].sex;
+                        oTr.appendChild(oTd);
+                        var oTd=document.createElement('td');
+                        oTd.innerHTML=result[i].tel;
+                        oTr.appendChild(oTd);
+                        var oTd=document.createElement('td');
+                        oTd.innerHTML=result[i].QQ;
+                        oTr.appendChild(oTd);
+                        oTab.tBodies[0].appendChild(oTr);
+                    }
+                    //隔行变色
+                    for(var i= 0;i<oTab.tBodies[0].rows.length;i++){
+                        if(i%2){
+                            oTab.tBodies[0].rows[i].style.background='#7092BE';
+                        }
+                        oTab.tBodies[0].rows[i].onmouseover= function () {
+                            oldColor=this.style.background;
+                            this.style.background='yellow'
+                        }
+                        oTab.tBodies[0].rows[i].onmouseout= function () {
+                            this.style.background=oldColor;
+                        }
+                    }
+                    console.log(result);
+                });
+
+
+            }
+        }
+    </script>
+</head>
+<body>
+<input id="btn1" type="button" value="提交">
+<table id="tab1" border="1" width="1000px" style="margin: 50px auto 0;text-align: center">
+    <thead>
+            <th>序号</th>
+            <th>学号</th>
+            <th>姓名</th>
+            <th>性别</th>
+            <th>电话号码</th>
+            <th>QQ</th>
+    </thead>
+    <tbody>
+
+    </tbody>
+</table>
+
+</body>
+</html>

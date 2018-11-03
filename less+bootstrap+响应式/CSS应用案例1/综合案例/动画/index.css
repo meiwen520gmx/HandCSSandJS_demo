@@ -1,0 +1,75 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Microsoft YaHei";
+}
+nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  text-align: center;
+}
+nav dl {
+  margin-right: 1px;
+}
+nav dl dd {
+  display: none;
+}
+nav dl a,
+nav dl a:visited {
+  display: block;
+  padding: 10px 15px;
+  font-size: 18px;
+  text-decoration: none;
+  position: relative;
+}
+nav dl a menu,
+nav dl a:visited menu,
+nav dl a div.front,
+nav dl a:visited div.front,
+nav dl a div.bottom,
+nav dl a:visited div.bottom {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 10px 15px;
+}
+nav dl a menu,
+nav dl a:visited menu {
+  transform: translateZ(-19px);
+  transform-style: preserve-3d;
+  transition: all 0.3s;
+}
+nav dl a menu div.front,
+nav dl a:visited menu div.front {
+  transform: translateZ(19px);
+  background-color: black;
+  color: white;
+}
+nav dl a menu div.bottom,
+nav dl a:visited menu div.bottom {
+  transform: rotateX(-90deg) translateZ(19px);
+  background-color: #d09328;
+  color: black;
+}
+nav dl a:hover menu,
+nav dl a:visited:hover menu {
+  transform: rotateX(90deg);
+}
+nav dl > a {
+  background-color: black;
+  color: white;
+}
+nav dl:hover dd {
+  display: block;
+  position: absolute;
+}
+nav dl:hover dd a {
+  margin-top: 1px;
+}
+nav dl:last-child {
+  margin-right: 0;
+}

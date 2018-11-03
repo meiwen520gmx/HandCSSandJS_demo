@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        nav{
+            margin-top: 200px;
+            display: flex;
+            justify-content: center;
+        }
+        a,a:visited{
+            font-size: 30px;
+            padding: 10px 20px;
+            background-color: rgba(193, 240, 255, 0.7);
+            border-radius: 5px;
+            box-shadow: 0 0 10px 1px rgba(0,0,0,.3);
+            text-decoration: none;
+            color: black;
+            position: relative;
+        }
+        a:before{
+            content: "";
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            background: url("images/logo.png");
+            left: calc(50% - 40px);
+            top: -90px;
+            perspective: 500px;
+            transition: all 1s;
+            opacity: 0;
+        }
+        a:first-child:before{
+            transform-origin:center bottom ;
+            transform: rotateZ(45deg) translateY(-10px);
+        }
+        a:nth-child(2):before{
+            transform: translateY(10px);
+        }
+        a:hover:before{
+            opacity: 1;
+        }
+        a:nth-child(2):hover:before{
+            transform: translateY(-10px);
+        }
+        a:nth-child(3):before{
+            transform: rotateY(90deg);
+        }
+        a:nth-child(3):hover:before{
+            transform: rotateY(0deg);
+        }
+        a:nth-child(4):before{
+            transform: translateY(-50px);
+        }
+        a:nth-child(4):hover:before{
+            transform: translateY(0px);
+        }
+        a:nth-child(5):hover:before{
+            opacity: 1;
+        }
+        a:first-child:hover:before{
+            transform-origin:center bottom ;
+            transform: rotateZ(0deg);
+        }
+        a:not(:last-child){
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <a href="#">Home
+    </a>
+    <a href="#">About me
+    </a>
+    <a href="#">Photography
+    </a>
+    <a href="#">Work
+    </a>
+    <a href="#">Contact
+    </a>
+</nav>
+</body>
+</html>

@@ -1,0 +1,42 @@
+@charset "UTF-8";
+main ul.nav-one {
+  border: none;
+  top: 40px;
+}
+main ul.nav-one ul {
+  display: none;
+  margin-left: 10px;
+}
+main ul.nav-one ul li {
+  padding-left: 10px;
+}
+main ul.nav-one > li.active {
+  border-left: 2px solid black;
+}
+main ul.nav-one > li.active a,
+main ul.nav-one > li.active a:hover {
+  border: none;
+}
+main ul.nav-one > li.active ul {
+  display: block;
+}
+main ul.nav-one > li.active.nav-two {
+  border: none;
+}
+main ul.nav-one > li.active.nav-two:before {
+  content: '';
+  position: absolute;
+  height: 35px;
+  width: 2px;
+  background-color: black;
+  z-index: 100;
+}
+main ul.nav-one > li.active.nav-two ul li.active {
+  border-left: 1px solid black;
+}
+main ul.nav-one > li.nav-two:hover ul {
+  display: block;
+}
+main footer {
+  background-color: #ccc;
+}

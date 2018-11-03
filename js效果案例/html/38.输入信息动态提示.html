@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{margin: 0; padding: 0}
+        body{
+            background-color: #fff;
+        }
+        h2{
+            text-align: center;
+            margin-top: 20px;
+         }
+        div.box{
+            width: 800px;
+            height: 40px;
+            margin: 50px auto 0;
+            position: relative;
+        }
+        div.box div.search{
+            display: flex;
+            height: 40px;
+            border: 1px solid #2aaaff;
+        }
+        div.box input,div.box button{
+            height: 40px;
+            outline: none;
+            border: none;
+        }
+        div.box input{
+            flex: 9;
+            font-size: 18px;
+        }
+        div.box button{
+            color: white;
+            flex: 1;
+            background-color: #2aaaff;
+        }
+        ul{
+            position: absolute;
+            list-style: none;
+            line-height: 30px;
+            margin-top: 5px;
+            margin-left: 15px;
+            display: none;
+        }
+        ul li{
+            color: #b2b0b6;
+            cursor: default;
+        }
+    </style>
+</head>
+<body>
+<h2>搜索框</h2>
+<div class="box" id="box">
+    <div class="search">
+        <input type="text">
+        <button>搜索</button>
+    </div>
+    <ul id="ul">
+        <!--<li data-id='021'>习近平成功访问美国等欧美国家</li>-->
+    </ul>
+</div>
+</body>
+<script>
+    var arr = [];
+    arr[arr.length] = {id: '021', con: '习近平成功访问美国等欧美国家'};
+    arr[arr.length] = {id: '031', con: '李克强成功访问美国等欧美国家'};
+    arr[arr.length] = {id: '041', con: '刘云山成功访问美国等欧美国家'};
+    arr[arr.length] = {id: '051', con: '热烈欢迎李克强总理到重庆视察工作'};
+    arr[arr.length] = {id: '061', con: '热烈欢迎刘云山常委重庆视察工作'};
+    arr[arr.length] = {id: '071', con: '热烈欢迎习近平总书记到重庆视察工作'};
+    arr[arr.length] = {id: '081', con: '重庆文理学院在创新工作中获得第一名'};
+    var oBox=document.getElementById('box');
+    var oInput=oBox.querySelector('input');
+    var oBtn=oBox.querySelector('button');
+    var oUl=document.getElementById('ul');
+    oInput.onkeyup=function(){
+        var _this=this;
+        var sHtml='';
+        var keyVal=_this.value.trim();
+        arr.forEach(function (el) {
+            if(keyVal!='' && el.con.indexOf(keyVal)>=0){
+                sHtml+='<li data-id='+el.id+'>'+el.con+'</li>';
+            }
+        });
+        if(sHtml!=''){
+            oUl.innerHTML=sHtml;
+            oUl.style.display='block';
+        }
+        else{
+            oUl.style.display='none';
+        }
+    }
+    oUl.onclick= function (ev) {
+        var e=ev || event;
+        var target= e.target || e.srcElement;
+        if(target.nodeName=='LI'){
+            oInput.value=target.innerText;
+            oInput['data-id']=target.getAttribute('data-id');
+            //oInput.setAttribute('data-id',target.getAttribute('data-id'));
+        }
+    }
+    oBtn.onclick= function () {
+        window.open('http://www.baidu.com?id='+oInput.getAttribute('data-id'),'_blank');
+    }
+    document.onclick= function () {
+        oUl.style.display='none';
+    }
+
+</script>
+</html>

@@ -1,0 +1,200 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "myicon";
+  src: url("../fonts/icomoon.eot"); /* IE9 兼容模式 */
+  src: url("../fonts/icomoon.eot?#iefix") format("embedded-opentype"),
+  url("../fonts/icomoon.woff") format("woff"),
+  url("../fonts/icomoon.ttf") format("truetype"),
+  url("../fonts/icomoon.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body{
+  padding-top: 40px;
+}
+
+nav.lcj_nav{
+  min-height: 40px;
+  button{
+    margin-top: 3px;
+    margin-bottom: 3px;
+  }
+  a{
+    padding-top:10px ;
+    padding-bottom:10px ;
+  }
+}
+div.jumbotron{
+  background: url(../images/bs-docs-masthead-pattern.png) center center,linear-gradient(30deg,#030131,#662F4D);
+  margin-bottom: 0;
+  div.container{
+    >a{
+      font-size: 14px;
+      color: #938898;
+      transition: all .3s;
+      &:hover{
+        color: white;
+      }
+    }
+  }
+  h1{
+    font-size: 100px;
+    font-weight: 700;
+    color: white;
+    letter-spacing: -2px;
+    margin-top: 40px;
+  }
+  h2{
+    font-size: 30px;
+    line-height: 1.25;
+    font-weight: 200;
+    color: white;
+  }
+  p{
+    margin-top: 20px;
+    margin-bottom: 5px;
+    a{
+      background-color: #337AB7;
+      padding: 13px 35px 17px;
+      color: white;
+      font-size: 18px;
+      text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.075);
+      box-shadow: 0 4px 0 0 #2A6496;
+      border: none;
+    }
+  }
+}
+.myicon(@icon:"\f086"){
+  content: @icon;
+  display: inline-block;
+  font-family: "myicon";
+  font-size: 16px;
+
+}
+ul.lcj_ul{
+  background-color: #F5F5F5;
+  line-height: 50px;
+  border-bottom: 1px solid #ddd;
+  li{
+    a{
+      color: #555;
+      display: inline-block;
+    }
+    &:first-child{
+      a{
+        margin-right: 10px;
+      }
+      &:before{
+        .myicon()
+      }
+      span{
+        color: #CCCFD8;
+      }
+    }
+    &:last-child:before{
+      .myicon("\f18a")
+    }
+  }
+}
+div.lcj_main{
+  text-align: center;
+  color: #333;
+  h2{
+    font-size: 42px;
+    margin-top: 50px;
+  }
+  hr{
+    width: 60%;
+    margin-bottom: 40px;
+  }
+  figure{
+    height: 335px;
+    border: 1px solid #ddd;
+    padding: 3px;
+    margin-bottom: 30px;
+    overflow: hidden;
+    img{
+      width: 100%;
+    }
+    figcaption{
+      h3{
+        margin-top: 30px;
+      }
+      a{
+        text-decoration: none;
+        span{
+          color: #778CBD;
+        }
+      }
+      p{
+        margin: 15px 10px 20px;
+      }
+    }
+  }
+}
+footer{
+  border-top:1px solid #E5E5E5;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  p{
+    margin-top: 12px;
+  }
+  hr{
+    margin-top: 0;
+  }
+  div.lcj_foot{
+    dl{
+      margin-top: 0;
+      dt{
+        color: #563D7C;
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 7px;
+      }
+      dd{
+        a{
+          color: #777;
+        }
+      }
+    }
+  }
+}
+small.lcj_top{
+  position: fixed;
+  right: 20px;
+  bottom: 100px;
+  width: 50px;
+  height: 50px;
+  background-color: #929292;
+  text-align: center;
+  a{
+    font-size: 25px;
+    line-height: 50px;
+    text-decoration: none;
+    color: white;
+  }
+  &:hover{
+    background-color: #4c4c4c;
+  }
+}
+@media (min-width:768px) and (max-width: 991px){
+  div.jumbotron{
+    h1{
+      font-size: 90px;
+    }
+    h2{
+      font-size: 24px;
+    }
+  }
+}
+@media (max-width:767px) {
+  div.jumbotron{
+    h1{
+      font-size: 60px;
+    }
+    h2{
+      font-size: 18px;
+    }
+  }
+}

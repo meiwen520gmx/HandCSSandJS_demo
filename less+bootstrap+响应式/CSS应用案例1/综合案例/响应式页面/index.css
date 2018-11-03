@@ -1,0 +1,207 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+@font-face {
+  font-family: "Raphaelicons";
+  src: url('fonts/raphaelicons-webfont.eot') format('eot'), url('fonts/raphaelicons-webfont.ttf') format('truetype'), url('fonts/raphaelicons-webfont.woff') format('woff'), url('fonts/raphaelicons-webfont.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  
+  /*引入字体文件*/
+  /*字体名称*/
+  /*不倾斜*/
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: "Microsoft YaHei";
+}
+div.container {
+  height: 100%;
+  position: relative;
+  text-align: center;
+}
+div.container h3,
+div.container input {
+  position: absolute;
+  bottom: 0;
+  width: 20%;
+  height: 35px;
+  line-height: 35px;
+  background-color: #E23A6E;
+  color: white;
+  z-index: 10;
+}
+div.container input {
+  z-index: 100;
+  opacity: 0;
+}
+div.container input:checked + h3 {
+  background-color: #821134;
+}
+div.container input:checked + h3:after {
+  position: absolute;
+  content: "";
+  height: 0;
+  width: 0;
+  border: 20px solid transparent;
+  border-bottom-color: #821134;
+  left: calc(50% - 20px);
+  bottom: 100%;
+}
+div.container input:hover + h3 {
+  background-color: #b2113b;
+}
+div.container input:nth-of-type( 1):checked ~ section {
+  transform: translateY(0);
+}
+div.container input:nth-of-type( 1):checked ~ section .art1 h4 {
+  animation: mydown 1s ease 1s backwards;
+}
+div.container input:nth-of-type( 1):checked ~ section .art1 p {
+  animation: myup 1s ease 1s backwards;
+}
+div.container input:nth-of-type( 2):checked ~ section {
+  transform: translateY(-100%);
+}
+div.container input:nth-of-type( 2):checked ~ section .art2 h4 {
+  animation: mydown 1s ease 1s backwards;
+}
+div.container input:nth-of-type( 2):checked ~ section .art2 p {
+  animation: myup 1s ease 1s backwards;
+}
+div.container input:nth-of-type( 3):checked ~ section {
+  transform: translateY(-200%);
+}
+div.container input:nth-of-type( 3):checked ~ section .art3 h4 {
+  animation: mydown 1s ease 1s backwards;
+}
+div.container input:nth-of-type( 3):checked ~ section .art3 p {
+  animation: myup 1s ease 1s backwards;
+}
+div.container input:nth-of-type( 4):checked ~ section {
+  transform: translateY(-300%);
+}
+div.container input:nth-of-type( 4):checked ~ section .art4 h4 {
+  animation: mydown 1s ease 1s backwards;
+}
+div.container input:nth-of-type( 4):checked ~ section .art4 p {
+  animation: myup 1s ease 1s backwards;
+}
+div.container input:nth-of-type( 5):checked ~ section {
+  transform: translateY(-400%);
+}
+div.container input:nth-of-type( 5):checked ~ section .art5 h4 {
+  animation: mydown 1s ease 1s backwards;
+}
+div.container input:nth-of-type( 5):checked ~ section .art5 p {
+  animation: myup 1s ease 1s backwards;
+}
+div.container h3:nth-of-type(1),
+div.container input:nth-of-type(1) {
+  left: 0;
+}
+div.container h3:nth-of-type(2),
+div.container input:nth-of-type(2) {
+  left: 20%;
+}
+div.container h3:nth-of-type(3),
+div.container input:nth-of-type(3) {
+  left: 40%;
+}
+div.container h3:nth-of-type(4),
+div.container input:nth-of-type(4) {
+  left: 60%;
+}
+div.container h3:nth-of-type(5),
+div.container input:nth-of-type(5) {
+  left: 80%;
+}
+div.container section,
+div.container article {
+  height: 100%;
+}
+div.container section {
+  transition: all 1s;
+  font-size: 4vh;
+  color: #eeeeee;
+  line-height: 7vh;
+}
+div.container section article {
+  padding: 5vh;
+  border: 2px solid #E23A6E;
+  box-sizing: border-box;
+  background-color: #174747;
+  text-align: justify;
+  overflow: hidden;
+  position: relative;
+}
+div.container section article h4 {
+  margin-top: 10vh;
+  text-align: center;
+  color: white;
+  font-size: 7vh;
+  font-weight: 500;
+  margin-bottom: 3vh;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+div.container section article p {
+  text-indent: 2em;
+  font-weight: 200;
+  font-family: "宋体";
+}
+div.container section article i {
+  position: absolute;
+  width: 20vh;
+  height: 20vh;
+  background-color: #E23A6E;
+  left: calc(50% - 10vh);
+  top: -10vh;
+  transform: rotateZ(45deg);
+}
+div.container section article i:after {
+  content: attr(data-icon);
+  position: absolute;
+  font-family: "Raphaelicons";
+  font-size: 8vh;
+  font-style: normal;
+  width: 20vh;
+  height: 20vh;
+  line-height: 20vh;
+  top: 4vh;
+  left: 4vh;
+  text-align: center;
+  animation: myrotate 2s infinite;
+}
+@keyframes myrotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+@keyframes mydown {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes myup {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

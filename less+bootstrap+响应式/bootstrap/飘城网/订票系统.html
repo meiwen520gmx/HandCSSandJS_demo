@@ -1,0 +1,449 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>飘城网/订票系统</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <style>
+        body {
+            padding-top: 50px;
+            background-color: #ccc;
+        }
+        nav a.navbar-brand {
+            padding: 0;
+        }
+        nav a.navbar-brand img {
+            height: 50px;
+        }
+        div.jumbotron{
+            background: url("img/adver.jpg") no-repeat center center;
+            background-size: 100% 100%;
+            height:25.5vw;
+            color: white;
+            margin-bottom: 30px;
+            padding: 0;
+        }
+        div.jumbotron div.container{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        div.jumbotron h1{
+            font-size:calc(15px + 3vw);
+            margin: 0;
+        }
+        div.jumbotron h1 small{
+            font-size:calc(12px + 1vw);
+        }
+        main dd.hot_city a{
+            margin-right: 15px;
+        }
+        main table th{
+            text-align: center;
+        }
+        main dd.hot_city a.active{
+            padding:0 3px;
+            background-color: green;
+            color: white;
+            border-radius: 3px;
+        }
+        main div.jingdian,main div.hot_sale,main div.baby{
+            padding-right: 11px;
+        }
+        main div.jingdian a{
+            display: inline-block;
+            width:calc(33.3% - 4px);
+            padding:5px 0;
+            line-height: 30px;
+            text-align: center;
+            background-color:#EEEEEE;
+            margin-bottom:10px;
+            border-radius: 2px;
+        }
+        main div.jingdian a:hover{
+            background-color: #0081c2;
+            color: white;
+        }
+        main div.hot_sale a{
+            display: inline-block;
+            width:calc(50% - 4px);
+            text-align: center;
+            margin-bottom:10px;
+        }
+        main div.baby a{
+            display: inline-block;
+            width:calc(50% - 4px);
+            padding: 5px 0 5px 10px;
+            background-color:#EEE;
+            margin-bottom:15px;
+        }
+        main div.baby a span{
+            margin-right: 5px;
+        }
+
+
+        footer{
+            border-top: 2px solid #fff;
+            background-color: #222222;
+        }
+        footer a{
+            display: block;
+            color: #666666;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+        footer dt{
+            color: #CCCCCC;
+            font-size: 18px;
+            margin: 20px 0;
+        }
+        footer div.down{
+            text-align: center;
+            line-height:40px;
+            font-size: 16px;
+            color: #777777;
+            background-color: #000000;
+        }
+        @media (max-width: 991px) and (min-width:768px) {
+            nav ul.navbar-right{
+                float:left !important;
+            }
+        }
+
+        @media (max-width: 767px) {
+
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex8-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand hidden-sm" href="#">
+                <img src="img/logo.png" alt="">
+            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex8-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">首页</a></li>
+                <li><a href="#">旅游资讯</a></li>
+                <li><a href="#">机票订购</a></li>
+                <li><a href="#">风景欣赏</a></li>
+                <li><a href="#">关于公司</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="jumbotron">
+    <div class="container">
+        <h1>票务订购<br/><small style="color:#f9f9f9">各种飞机票、火车票、汽车票和轮渡票的订购服务</small></h1>
+    </div>
+</div>
+<main class="container">
+    <div class="row">
+        <div class="col-md-8 col-xs-12">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">机票预定</h3>
+                </div>
+                <div class="panel-body">
+                    <form action="#" class="form-horizontal" role="form">
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">航程类型：</label>
+                            <div class="col-sm-10">
+                                <label class="radio-inline">
+                                    <input type="radio" name="Radios" checked>
+                                    单程
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="Radios">
+                                    往返
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label  class="col-sm-2 control-label" for="start_city">出发城市</label>
+                            <div class="col-sm-4"><input type="text" class="form-control" id="start_city" placeholder="城市名"></div>
+                            <label class="col-sm-2 control-label" for="start_time">出发时间</label>
+                            <div class="col-sm-4"><input type="date" class="form-control" id="start_time"></div>
+                        </div>
+                        <div class="form-group">
+                            <label  class="col-sm-2 control-label" for="end_city">返回城市</label>
+                            <div class="col-sm-4"><input type="text" class="form-control" id="end_city" placeholder="城市名"></div>
+                            <label class="col-sm-2 control-label" for="end_time">返回时间</label>
+                            <div class="col-sm-4"><input type="date" class="form-control" id="end_time"></div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-10 col-sm-offset-2">
+                                <button class="btn btn-primary hidden-xs">订 票</button>
+                                <button class="btn btn-primary btn-sm btn-block visible-xs">订 票</button>
+                            </div>
+                        </div>
+
+
+                    </form>
+                </div>
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">最新机票</h3>
+                </div>
+                <div class="panel-body">
+                    <dl class="dl-horizontal">
+                        <dt>热门城市：</dt>
+                        <dd class="hot_city">
+                            <a href="#" class="active">北京</a>
+                            <a href="#">上海</a>
+                            <a href="#">广州</a>
+                            <a href="#">深圳</a>
+                            <a href="#">重庆</a>
+                            <a href="#">成都</a>
+                            <a href="#">杭州</a>
+                            <a href="#">南京</a>
+                        </dd>
+                    </dl>
+                </div>
+                <table class="table table-striped table-bordered table-hover table-condensed text-center">
+                    <thead>
+                    <tr>
+                        <th>路线</th>
+                        <th>日期</th>
+                        <th>价格</th>
+                        <th class="hidden-xs">税费</th>
+                        <th class="hidden-xs">餐食</th>
+                        <th>航班</th>
+                        <th>预定</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>北京-成都</td>
+                        <td>10-15</td>
+                        <td class="price">¥745</td>
+                        <td class="hidden-xs">¥50</td>
+                        <td class="hidden-xs">有</td>
+                        <td>春秋航空</td>
+                        <td><a href="###" class="btn btn-warning btn-xs">预定</a></td>
+                    </tr>
+                    <tr>
+                        <td>北京-上海</td>
+                        <td>10-15</td>
+                        <td class="price">¥479</td>
+                        <td class="hidden-xs">¥45</td>
+                        <td class="hidden-xs">无</td>
+                        <td>南方航空</td>
+                        <td><a href="###" class="btn btn-warning btn-xs">预定</a></td>
+                    </tr>
+                    <tr>
+                        <td>北京-深圳</td>
+                        <td>10-15</td>
+                        <td class="price">¥561</td>
+                        <td class="hidden-xs">¥52</td>
+                        <td class="hidden-xs">有</td>
+                        <td>西部航空</td>
+                        <td><a href="###" class="btn btn-warning btn-xs">预定</a></td>
+                    </tr>
+                    <tr>
+                        <td>北京-杭州</td>
+                        <td>10-15</td>
+                        <td class="price">¥378</td>
+                        <td class="hidden-xs">¥36</td>
+                        <td class="hidden-xs">无</td>
+                        <td>天津航空</td>
+                        <td><a href="###" class="btn btn-warning btn-xs">预定</a></td>
+                    </tr>
+                    <tr>
+                        <td>北京-广州</td>
+                        <td>10-15</td>
+                        <td class="price">¥612</td>
+                        <td class="hidden-xs">¥44</td>
+                        <td class="hidden-xs">有</td>
+                        <td>首都航空</td>
+                        <td><a href="###" class="btn btn-warning btn-xs">预定</a></td>
+                    </tr>
+                    <tr>
+                        <td>北京-重庆</td>
+                        <td>10-15</td>
+                        <td class="price">¥428</td>
+                        <td class="hidden-xs">¥62</td>
+                        <td class="hidden-xs">有</td>
+                        <td>东方航空</td>
+                        <td><a href="###" class="btn btn-warning btn-xs">预定</a></td>
+                    </tr>
+                    <tr>
+                        <td>北京-昆明</td>
+                        <td>10-15</td>
+                        <td class="price">¥509</td>
+                        <td class="hidden-xs">¥35</td>
+                        <td class="hidden-xs">无</td>
+                        <td>厦门航空</td>
+                        <td><a href="###" class="btn btn-warning btn-xs">预定</a></td>
+                    </tr>
+                    <tr>
+                        <td>北京-厦门</td>
+                        <td>10-15</td>
+                        <td class="price">¥893</td>
+                        <td class="hidden-xs">¥73</td>
+                        <td class="hidden-xs">有</td>
+                        <td>深圳航空</td>
+                        <td><a href="###" class="btn btn-warning btn-xs">预定</a></td>
+                    </tr>
+                    <tr>
+                        <td>北京-长沙</td>
+                        <td>10-15</td>
+                        <td class="price">¥663</td>
+                        <td class="hidden-xs">¥46</td>
+                        <td class="hidden-xs">无</td>
+                        <td>四川航空</td>
+                        <td><a href="###" class="btn btn-warning btn-xs">预定</a></td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><a href="###">加载更多航班...</a></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-md-4 hidden-xs hidden-sm">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">景点推荐</h3>
+                </div>
+                <div class="panel-body jingdian">
+                       <a href="###">曼谷(12)</a>
+                       <a href="###">东京(5)</a>
+                       <a href="###">西双版纳(8)</a>
+                       <a href="###">漓江(16)</a>
+                       <a href="###">呼伦贝尔(4)</a>
+                       <a href="###">首尔(9)</a>
+                       <a href="###">巴厘岛(15)</a>
+                       <a href="###">土耳其(22)</a>
+                       <a href="###">夏威夷(5)</a>
+                       <a href="###">巴厘岛(11)</a>
+                       <a href="###">毛里求斯(7)</a>
+                       <a href="###">吉普岛(4)</a>
+                       <a href="###">希腊(18)</a>
+                       <a href="###">法瑞意(8)</a>
+                       <a href="###">马尔代夫(9)</a>
+                       <a href="###">新西兰(16)</a>
+                       <a href="###">埃及(11)</a>
+                       <a href="###">迪拜(14)</a>
+                       <a href="###">斯里兰卡(7)</a>
+                       <a href="###">麦哈顿(3)</a>
+                       <a href="###">大阪(15)</a>
+                </div>
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">热卖旅游</h3>
+                </div>
+                <div class="panel-body hot_sale">
+                    <a href="#" class="thumbnail">
+                        <img src="img/hot1.jpg" alt="曼谷-芭提雅6日游">
+                        曼谷-芭提雅6日游
+                    </a>
+                    <a href="#" class="thumbnail">
+                        <img src="img/hot2.jpg" alt="曼谷-芭提雅6日游">
+                        曼谷-芭提雅6日游
+                    </a>
+                    <a href="#" class="thumbnail">
+                        <img src="img/hot3.jpg" alt="曼谷-芭提雅6日游">
+                        曼谷-芭提雅6日游
+                    </a>
+                    <a href="#" class="thumbnail">
+                        <img src="img/hot4.jpg" alt="曼谷-芭提雅6日游">
+                        曼谷-芭提雅6日游
+                    </a>
+                    <a href="#" class="thumbnail">
+                        <img src="img/hot5.jpg" alt="曼谷-芭提雅6日游">
+                        曼谷-芭提雅6日游
+                    </a>
+                    <a href="#" class="thumbnail">
+                        <img src="img/hot6.jpg" alt="曼谷-芭提雅6日游">
+                        曼谷-芭提雅6日游
+                    </a>
+                    <a href="#" class="thumbnail">
+                        <img src="img/hot7.jpg" alt="曼谷-芭提雅6日游">
+                        曼谷-芭提雅6日游
+                    </a>
+                    <a href="#" class="thumbnail">
+                        <img src="img/hot8.jpg" alt="曼谷-芭提雅6日游">
+                        曼谷-芭提雅6日游
+                    </a>
+                </div>
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">旅游百宝箱</h3>
+                </div>
+                <div class="panel-body baby">
+                    <a href="##"><span class="glyphicon glyphicon-cloud"></span>天气预报</a>
+                    <a href="##"><span class="glyphicon glyphicon-barcode"></span>火车票查询</a>
+                    <a href="##"><span class="glyphicon glyphicon-apple"></span>航空查询</a>
+                    <a href="##"><span class="glyphicon glyphicon-bell"></span>地铁线路查询</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+
+
+<footer>
+    <div class="container">
+        <div class="row text-center hidden-xs">
+            <div class="col-md-4">
+                <dl>
+                    <dt>合作伙伴</dt>
+                    <dd>
+                        <a href="#">途牛旅游网</a>
+                        <a href="#">驴妈妈旅游网</a>
+                        <a href="#">携程旅游</a>
+                        <a href="#">中国青年旅行社</a>
+                    </dd>
+                </dl>
+            </div>
+            <div class="col-md-4">
+                <dl>
+                    <dt>旅游FAQ</dt>
+                    <dd>
+                        <a href="#">旅游合同签订方式？</a>
+                        <a href="#">儿童价是基于什么制定的？</a>
+                        <a href="#">旅游的线路品质怎么界定的？</a>
+                        <a href="#">单房差是什么？</a>
+                        <a href="#">旅游保险有那些种类？</a>
+                    </dd>
+                </dl>
+            </div>
+            <div class="col-md-4">
+                <dl>
+                    <dt>联系方式</dt>
+                    <dd>
+                        <a href="#">微博：weibo.com/ycku</a>
+                        <a href="#">邮件：ycku@ycku.com</a>
+                        <a href="#">地址：江苏盐城无名路123号</a>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+
+    </div>
+    <div class="down">
+        Copyright © YCKU 瓢城旅行社 | 苏ICP备120110119号 | 旅行社经营许可证：L-YC-BK12345
+    </div>
+</footer>
+<script src="../js/jquery.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</html>

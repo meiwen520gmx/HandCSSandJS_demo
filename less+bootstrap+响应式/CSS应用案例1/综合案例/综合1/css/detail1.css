@@ -1,0 +1,92 @@
+.w_center {
+  width: 1000px;
+  margin: 0 auto;
+}
+body {
+  background-color: #00a5c3;
+}
+div.adv {
+  width: 1000px;
+  margin: 0 auto;
+}
+div.adv img {
+  width: 1000px;
+  vertical-align: top;
+}
+main {
+  width: 1000px;
+  margin: 0 auto;
+  margin-top: 20px;
+  display: flex;
+}
+main div.left {
+  width: 200px;
+  margin-right: 20px;
+  border: 1px solid #E8E8E8;
+  box-sizing: border-box;
+  background-color: white;
+}
+main div.left ul.pub {
+  margin: 15px 8px;
+  padding-left: 10px;
+  line-height: 35px;
+}
+main div.left ul.pub a,
+main div.left ul.pub a:visited {
+  font-size: 13px;
+  color: #666;
+}
+main div.left ul.pub a:before,
+main div.left ul.pub a:visited:before {
+  content: "\f0da\ ";
+  font-family: "myicon";
+  font-size: 13px;
+}
+main div.left ul.pub li:hover a {
+  color: #24b3de;
+}
+main div.left ul.pub li:hover a:before {
+  color: red;
+}
+main div.right {
+  width: 780px;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #666;
+  background-color: white;
+  text-align: center;
+}
+main div.right h4 {
+  justify-content: center;
+  letter-spacing: 5px;
+}
+main div.right article h3 {
+  text-align: center;
+  font-weight: 500;
+  margin: 20px 0;
+}
+main div.right article aside {
+  color: #A7A7A7;
+  font-size: 13px;
+  padding-bottom: 5px;
+  border-bottom: 1px dashed #CACACA ;
+}
+main div.right article aside span.author,
+main div.right article aside span.time {
+  margin-right: 10px;
+}
+main div.right article h5 {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 15px;
+}
+main div.right article div.img {
+  text-align: center;
+  margin: 5px;
+}
+main div.right article p {
+  line-height: 25px;
+  font-size: 14px;
+  text-indent: 2em;
+  text-align: justify;
+}

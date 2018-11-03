@@ -1,0 +1,202 @@
+.center {
+  width: 1000px;
+  margin: 0 auto;
+}
+div.adv {
+  width: 1000px;
+  margin: 0 auto;
+}
+ul {
+  list-style: none;
+}
+.main_c figure {
+  display: flex;
+  padding: 5px;
+}
+.main_c figure figcaption {
+  font-size: 12px;
+  line-height: 20px;
+  margin-left: 5px;
+}
+.main_c figure figcaption a {
+  color: #CC0000;
+}
+main {
+  width: 1000px;
+  margin: 0 auto;
+}
+main > div {
+  margin: 10px 0;
+  display: flex;
+}
+main > div section.left {
+  background-color: white;
+  width: 350px;
+  border: 1px solid #E8E8E8;
+}
+main > div section.left:not(:last-child) {
+  margin-right: 20px;
+}
+main > div section.left header {
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 20px 0 15px;
+  border-bottom: 1px solid #E8E8E8;
+  font-size: 14px;
+}
+main > div section.left header h3 {
+  font-weight: 400;
+}
+main > div section.left header a {
+  color: #999999;
+  font-size: 13px;
+}
+main > div section.left header a:after {
+  content: attr(data-icon);
+  font-family: "myicon";
+  position: absolute;
+  margin-left: 1px;
+  margin-top: 1px;
+}
+main > div section.left figure {
+  display: flex;
+  padding: 5px;
+}
+main > div section.left figure figcaption {
+  font-size: 12px;
+  line-height: 20px;
+  margin-left: 5px;
+}
+main > div section.left figure figcaption a {
+  color: #CC0000;
+}
+main > div section.left ul {
+  margin: 5px;
+  line-height: 24px;
+}
+main > div section.left ul li {
+  display: flex;
+  justify-content: space-between;
+}
+main > div section.left ul li:not(:last-child) {
+  border-bottom: 1px dashed #ccc;
+}
+main > div section.left ul li a {
+  font-size: 13px;
+  color: #000;
+}
+main > div section.left ul li span {
+  font-size: 10px;
+  color: #ccc;
+}
+main > div section.left ul li:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 4px solid transparent;
+  border-bottom-color: red;
+  transform: rotate(-45deg);
+  margin-left: -5px;
+  margin-top: 5px;
+}
+main > div section.mid {
+  background-color: white;
+  width: 350px;
+  border: 1px solid #E8E8E8;
+}
+main > div section.mid:not(:last-child) {
+  margin-right: 20px;
+}
+main > div section.mid header {
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 20px 0 15px;
+  border-bottom: 1px solid #E8E8E8;
+  font-size: 14px;
+}
+main > div section.mid header h3 {
+  font-weight: 400;
+}
+main > div section.mid header a {
+  color: #999999;
+  font-size: 13px;
+}
+main > div section.mid header a:after {
+  content: attr(data-icon);
+  font-family: "myicon";
+  position: absolute;
+  margin-left: 1px;
+  margin-top: 1px;
+}
+main > div section.mid figure {
+  display: flex;
+  padding: 5px;
+}
+main > div section.mid figure figcaption {
+  font-size: 12px;
+  line-height: 20px;
+  margin-left: 5px;
+}
+main > div section.mid figure figcaption a {
+  color: #CC0000;
+}
+main > div section.mid p {
+  text-indent: 2em;
+  text-align: justify;
+}
+main > div section.mid ul {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15px;
+}
+main > div section.mid ul a {
+  font-size: 14px;
+  color: red;
+}
+main > div section.right {
+  background-color: white;
+  width: 350px;
+  border: 1px solid #E8E8E8;
+  flex: 1;
+}
+main > div section.right:not(:last-child) {
+  margin-right: 20px;
+}
+main > div section.right header {
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 20px 0 15px;
+  border-bottom: 1px solid #E8E8E8;
+  font-size: 14px;
+}
+main > div section.right header h3 {
+  font-weight: 400;
+}
+main > div section.right header a {
+  color: #999999;
+  font-size: 13px;
+}
+main > div section.right header a:after {
+  content: attr(data-icon);
+  font-family: "myicon";
+  position: absolute;
+  margin-left: 1px;
+  margin-top: 1px;
+}
+main > div section.right video,
+main > div section.right audio {
+  width: 100%;
+}
+main > div section.right img {
+  width: 100%;
+}
+main > div.down audio {
+  margin: 50px 0;
+}

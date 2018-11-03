@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <style>
+        div.lcj-slide img{  /*轮播图片的大小由所在容器的大小决定*/
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<!--slider：滚动之物，ride：穿越等，carousel：旋转木马，interval：时间間隔,indicators:指示-->
+<div class="container">
+    <div id="slidershow" class="carousel slide lcj-slide" data-ride="carousel">
+        <!-- 设置图片轮播的顺序 -->
+        <ol class="carousel-indicators">
+            <li data-target="#slidershow" data-slide-to="0" class="active"></li>
+            <li data-target="#slidershow" data-slide-to="1"></li>
+            <li data-target="#slidershow" data-slide-to="2"></li>
+            <li data-target="#slidershow" data-slide-to="3"></li>
+        </ol>
+        <!-- 设置轮播图片,须保证所有图片的宽高保持一致 -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <a href="##"><img src="../jquery效果实现/动态瀑布流案例/images/35.jpg" alt=""></a>
+                <div class="carousel-caption">
+                    <h3>图片标题1</h3>
+                    <p>描述内容1...</p>
+                </div>
+            </div>
+            <div class="item">
+                <a href="##"><img src="../jquery效果实现/动态瀑布流案例/images/38.jpg" alt=""></a>
+                <div class="carousel-caption">
+                    <h3>图片标题2</h3>
+                    <p>描述内容2...</p>
+                </div>
+            </div>
+            <div class="item">
+                <a href="##"><img src="../jquery效果实现/动态瀑布流案例/images/39.jpg" alt=""></a>
+                <div class="carousel-caption">
+<!--
+                    <h3>图片标题3</h3>
+                    <p>描述内容3...</p>
+-->
+                </div>
+            </div>
+            <div class="item">
+                <a href="##"><img src="../jquery效果实现/动态瀑布流案例/images/40.jpg" alt=""></a>
+                <div class="carousel-caption">
+                    <h3>图片标题4</h3>
+                    <p>描述内容4...</p>
+                </div>
+            </div>
+        </div>
+        <a class="left carousel-control" href="#slidershow"  role="button">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="right carousel-control" href="#slidershow"  role="button">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+    </div>
+</div>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+    $(function(){
+        $("#slidershow").carousel({
+            interval:1500
+        });
+        $("#slidershow a.left").click(function(){
+            $(".carousel").carousel("prev");
+        });
+        $("#slidershow a.right").click(function(){
+            $(".carousel").carousel("next");
+        })
+    })
+</script>
+</body>
+</html>

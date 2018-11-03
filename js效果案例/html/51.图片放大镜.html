@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            background-color: #1b6d85;
+        }
+        div.box{
+            width: 1020px;
+            margin: 50px auto 0;
+            display: flex;
+        }
+        div.left{
+            width: 402px;
+            height: 252px;
+            border: 1px solid #fff;
+            position: relative;
+            margin-right: 15px;
+        }
+        div.left span{
+            position: absolute;
+            border: 1px solid white;
+            background-color: rgba(155, 155, 155, 0.7);
+            box-sizing: border-box;
+            width: 100px;
+            height: 62px;
+            top: 0;
+            left: 0;
+            display: none;
+            cursor: default;
+        }
+        div.box div.right{
+            width: 602px;
+            height: 372px;
+            border: 1px solid #fff;
+            position: relative;
+            overflow: hidden;
+            display: none;
+        }
+        div.box div.right img{
+            position: absolute;
+        }
+
+    </style>
+</head>
+<body>
+<div class="box" id="box">
+    <div class="left">
+        <img src="../images/small.jpg" alt="">
+        <span></span>
+    </div>
+    <div class="right">
+        <img src="../images/big.jpg" alt="">
+    </div>
+</div>
+</body>
+<script>
+    window.onload= function () {
+        var oBox=document.getElementById('box');
+        var oLeft=oBox.querySelector('div.left');
+        var oSpan=oBox.querySelector('span');
+        var oRight=oBox.querySelector('div.right');
+        var oImg=oRight.querySelector('div.right img');
+        var l,t;
+        oLeft.onmouseover= function (e) {
+            oSpan.style.display='block';
+            oRight.style.display='block';
+            var scaleX=(oImg.offsetWidth-oRight.offsetWidth)/(oLeft.offsetWidth-oSpan.offsetWidth);
+            var scaleY=(oImg.offsetHeight-oRight.offsetHeight)/(oLeft.offsetHeight-oSpan.offsetHeight);
+            this.onmousemove= function (e) {
+                l=Math.min(Math.max(e.pageX-this.offsetLeft-oSpan.offsetWidth/2,0),this.offsetWidth-oSpan.offsetWidth);
+                t=Math.min(Math.max(e.pageY-this.offsetTop-oSpan.offsetHeight/2,0),this.offsetHeight-oSpan.offsetHeight);
+                oSpan.style.left= l+'px';
+                oSpan.style.top= t+'px';
+                oImg.style.left=-l*scaleX+'px';
+                oImg.style.top=-t*scaleY+'px';
+            }
+        }
+        oLeft.onmouseout= function () {
+            oSpan.style.display='none';
+            oRight.style.display='none';
+            this.onmousemove=null;//清除动态事件
+            //还原为初态
+            oImg.style.left='';
+            oImg.style.top=-'';
+        }
+
+    }
+</script>
+</html>

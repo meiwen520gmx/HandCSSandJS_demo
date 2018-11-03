@@ -1,0 +1,98 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+div.container {
+  width: 1200px;
+  margin: 50px auto;
+  border: 1px solid #a5a5a5;
+  border-radius: 3px;
+  box-sizing: border-box;
+  display: flex;
+}
+div.container figure {
+  padding: 5px;
+  width: 200px;
+  height: 160px;
+  line-height: 25px;
+  border-right: solid 1px #a5a5a5;
+  box-sizing: border-box;
+  position: relative;
+}
+div.container figure figcaption {
+  font-size: 14px;
+  transition: all 0.5s ease-in;
+}
+div.container figure figcaption h3 {
+  font-size: 16px;
+  font-weight: 500;
+}
+div.container figure figcaption i {
+  color: red;
+}
+div.container figure a {
+  display: none;
+}
+div.container figure img {
+  width: 80px;
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  transition: all 0.5s ease-in;
+}
+div.container figure:last-child {
+  border-right: none;
+}
+div.container figure:last-child,
+div.container figure:hover {
+  width: 400px;
+}
+div.container figure:last-child figcaption,
+div.container figure:hover figcaption {
+  font-size: 16px;
+}
+div.container figure:last-child figcaption h3,
+div.container figure:hover figcaption h3 {
+  font-size: 18px;
+  font-weight: 700;
+}
+div.container figure:last-child a,
+div.container figure:hover a,
+div.container figure:last-child a:visited,
+div.container figure:hover a:visited {
+  display: block;
+  color: #676abb;
+  font-size: 16px;
+}
+div.container figure:last-child img,
+div.container figure:hover img {
+  width: 160px;
+}
+div.container figure:not(:last-child):hover ~ :last-child {
+  width: 200px;
+}
+div.container figure:not(:last-child):hover ~ :last-child figcaption {
+  font-size: 14px;
+}
+div.container figure:not(:last-child):hover ~ :last-child figcaption h3 {
+  font-size: 16px;
+  font-weight: 500;
+}
+div.container figure:not(:last-child):hover ~ :last-child a {
+  display: none;
+}
+div.container figure:not(:last-child):hover ~ :last-child img {
+  width: 80px;
+}
+div.container figure:not(:hover):not(:last-child):before,
+div.container figure:not(:last-child):hover ~ :last-child:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  left: 0;
+  top: 0;
+}

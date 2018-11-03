@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        div.container {
+            width: 1000px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        div.adv {
+            position: absolute;
+            top: 100px;
+            left: -143px;
+            width: 123px;
+            height: 300px;
+        }
+
+        div.close {
+            height: 30px;
+            background-color: #0A246A;
+            color: white;
+            text-align: center;
+            cursor: default;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="adv" id="adv">
+        <img src="../images/leftAdv.jpg" alt="">
+        <div class="close">关闭</div>
+    </div>
+    <div class="main">
+        <img src="../images/tb_bg.jpg" alt="">
+    </div>
+</div>
+</body>
+<script>
+    window.onload= function () {
+        var oDiv=document.getElementById('adv');
+        var oBtn=oDiv.querySelector('div.close');
+        var startTop=oDiv.offsetTop;
+        var timer=null;
+        window.onscroll= function () {
+            clearInterval(timer);
+            timer=setInterval(function(){
+                var endTop=oDiv.offsetTop;
+                var scrollTop=document.documentElement.scrollTop;
+                var step=(scrollTop+startTop-endTop)/10;
+                step=step>0?Math.ceil(step):Math.floor(step);
+                if(step!=0){
+                    oDiv.style.top=endTop+step+'px';
+                }
+                else{
+                    clearInterval(timer);
+                }
+            },30);
+        }
+        oBtn.onclick= function () {
+            oDiv.style.display='none';
+        }
+    }
+
+</script>
+</html>

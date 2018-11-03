@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>调整块状元素大小，添加外轮廓</title>
+    <style type="text/css">
+        div {
+            padding: 20px;
+            margin: 0 auto;
+            width: 400px;
+            height: 400px;
+            outline: 5px solid red ; /*给元素加外轮廓,不占布局空间*/
+            border: 6px solid green;
+            border-radius: 10px;
+        }
+        textarea {
+            resize: both; /*默认调整两个方向大小both，horizontal只能横向，vertical只能纵向，inherit继继承父元素的resize属性值*/
+        }
+    </style>
+</head>
+<body>
+
+<div>
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+</div>
+</body>
+</html>

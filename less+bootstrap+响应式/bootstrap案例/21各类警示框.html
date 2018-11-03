@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <style>
+        .container{
+            width: 500px;
+        }
+        .container .alert{
+            padding: 5px;
+            padding-right: 25px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <h2>默认警示框</h2>
+    <div class="alert alert-success" role="alert">恭喜您操作成功！</div>
+    <div class="alert alert-info" role="alert">请输入正确的密码</div>
+    <div class="alert alert-warning" role="alert">您已操作失败两次，还有最后一次机会</div>
+    <div class="alert alert-danger" role="alert">对不起，您输入的密码有误</div>
+
+    <h2>可关闭的警示框</h2>
+    <div class="alert alert-success alert-dismissable" role="alert">
+        <button class="close" type="button" data-dismiss="alert">&times;</button><!--&times;转义字符，显示为关闭符号-->
+        恭喜您操作成功！
+    </div>
+    <div class="alert alert-info alert-dismissable" role="alert">
+        <button class="close" type="button" data-dismiss="alert">&times;</button>
+        请输入正确的密码
+    </div>
+    <div class="alert alert-warning alert-dismissable" role="alert">
+        <button class="close" type="button" data-dismiss="alert">&times;</button>
+        您已操作失败两次，还有最后一次机会
+    </div>
+    <div class="alert alert-danger alert-dismissable" role="alert">
+        <button class="close" type="button" data-dismiss="alert">&times;</button>
+        对不起，您输入的密码有误
+    </div>
+
+    <h2>警示框中带链接</h2>
+    <div class="alert alert-success" role="alert">
+        <strong>Well done!</strong>
+        You successfully read
+        <a href="#" class="alert-link">this important alert message</a>
+    </div>
+    <div class="alert alert-info" role="alert">
+        <strong>Heads up!</strong>
+        This
+        <a href="#" class="alert-link">alert needs your attention</a>
+        , but it's not super important.
+    </div>
+    <div class="alert alert-warning" role="alert">
+        <strong>Warning!</strong>
+        Better check yourself, you're
+        <a href="#" class="alert-link">not looking too good</a>
+        .
+    </div>
+    <div class="alert alert-danger" role="alert">
+        <strong>Oh snap!</strong>
+        <a href="#" class="alert-link">Change a few things up</a>
+        and try submitting again.
+    </div>
+
+    <h2>警告框（Alert）</h2>
+    <h3>使用a标签作为关闭按钮</h3>
+    <div class="alert alert-warning" role="alert">
+        <h4>谨防被骗</h4>
+        <p>请确认您转账的信息是你的亲朋好友，不要轻意相信不认识的人...</p>
+        <a href="#" class="btn btn-danger"  data-dismiss="alert">关闭</a>
+    </div>
+    <h3>使用button按钮作为关闭按钮</h3>
+    <div class="alert alert-warning" role="alert" id="myAlert">
+        <h4>谨防被骗</h4>
+        <p>请确认您转账的信息是你的亲朋好友，不要轻意相信不认识的人...</p>
+        <button type="button" data-target="#myAlert" class="btn btn-danger" data-dismiss="alert" >关闭</button>
+    </div>
+</div>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

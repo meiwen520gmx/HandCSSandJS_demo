@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自定义右键菜单</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        body{
+            background-color: darkgrey;
+        }
+        #div1{
+            position: absolute;
+            font-size: 13px;
+            width: 260px;
+            background-color: white;
+            box-shadow:2px 2px 5px 2px rgba(34, 34, 34, 0.45);
+            display: none;
+        }
+        #div1 ul li{
+            line-height: 18px;
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 20px;
+        }
+        #div1 ul li:hover{
+            background-color: #d1d1d1;
+            cursor: pointer;
+        }
+        #div1 ul li:hover span{
+            color: black;
+        }
+        #div1 ul li:nth-child(1):hover,#div1 ul li:nth-child(2):hover{
+            background-color: #fff;
+        }
+        #div1 ul li:nth-child(1):hover span,#div1 ul li:nth-child(2):hover span{
+            color:#c2c2c2;
+        }
+        #div1 ul li span{
+            color:#c2c2c2;
+        }
+        #div1 ul li:nth-child(1),#div1 ul li:nth-child(2){
+            color: #c2c2c2;
+
+        }
+        #div1 ul li:nth-child(3),#div1 ul li:nth-child(7){
+            border-bottom: 1px solid #ddd;
+        }
+    </style>
+    <script>
+        document.oncontextmenu= function (ev) {
+            var oEvent=ev || event;
+            var oDiv=document.getElementById('div1');
+            oDiv.style.display='block';
+            oDiv.style.left=oEvent.clientX+'px';
+            oDiv.style.top=oEvent.clientY+'px';
+            return false;
+        }
+        document.onclick= function () {
+            var oDiv=document.getElementById('div1');
+            oDiv.style.display='none';
+        }
+    </script>
+</head>
+<body>
+<div id="div1">
+    <ul>
+        <li>返回(B)<span>Alt+向左箭头</span></li>
+        <li>前进(F)<span>Alt+向右箭头</span></li>
+        <li>重新加载(R)<span>Ctrl+R</span></li>
+        <li>另存为(A)...<span>Ctrl+S</span></li>
+        <li>打印(P)...<span>Ctrl+P</span></li>
+        <li>投射(C)...</li>
+        <li>翻成中文（简体）（T）</li>
+        <li>查看网页源代码（V)...<span>Ctrl+U</span></li>
+        <li>检查(N)...<span>Ctrl+Shift+I</span></li>
+    </ul>
+</div>
+
+</body>
+</html>

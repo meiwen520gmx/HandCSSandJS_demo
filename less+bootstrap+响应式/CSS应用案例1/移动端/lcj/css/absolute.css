@@ -1,0 +1,372 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+@font-face {
+  font-family: "Rap";
+  src: url('../fonts/raphaelicons-webfont.eot') format('eot'), url('../fonts/raphaelicons-webfont.ttf') format('truetype'), url('../fonts/raphaelicons-webfont.woff') format('woff'), url('../fonts/raphaelicons-webfont.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  
+  /*引入字体文件*/
+  /*字体名称*/
+  /*不倾斜*/
+}
+body {
+  font-family: "microsoft yahei";
+  user-select: none;
+  font-size: 1.5vh;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+a {
+  text-decoration: none;
+  /*苹果手持设备的浏览器属性，意思是：点击它，它就会出现一个半透明的灰色背景。webkit是苹果浏览器引擎，tap点击，highlight背景高亮，color颜色，颜色用数值调节。*/
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.flex_center {
+  display: flex;
+  justify-content: center;
+}
+header,
+div.adv,
+main,
+footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+header {
+  top: 0;
+  background-color: #012269;
+}
+header nav.small {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5px;
+  color: white;
+  height: 48px;
+}
+header nav.small a {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  background: url("search-add.png") center -107px no-repeat;
+  text-indent: -99em;
+}
+header nav.small h1 {
+  line-height: 48px;
+  font-size: 2.5vh;
+  font-weight: 400;
+}
+header nav.small aside a:first-child {
+  background-position: center 13px;
+}
+header nav.small aside a:last-child {
+  background-position: center -48px;
+}
+header nav {
+  display: none;
+}
+div.adv {
+  top: 48px;
+}
+div.adv img {
+  width: 100%;
+  height: 30vw;
+}
+main {
+  top: calc( 48px + 30vw );
+  bottom: 53px;
+  overflow: auto;
+  padding: 10px;
+}
+main h3 {
+  font-size: 16px;
+  line-height: 23px;
+  font-weight: 500;
+}
+main h3 span {
+  border: 1px solid #83cbff;
+  color: #74b3e7;
+}
+main a {
+  display: block;
+  height: 48px;
+  line-height: 24px;
+  padding: 5px 15px 5px 53px;
+  background: url("icon2.jpg") left 5px no-repeat;
+}
+main a:not(:last-child) {
+  border-bottom: 1px solid #e6e6e6;
+}
+main a h4 {
+  color: #333;
+  font-weight: 400;
+  display: flex;
+  justify-content: space-between;
+}
+main a h4 span {
+  color: #b3b3b3;
+}
+main a p {
+  color: #a3a3a3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+footer {
+  bottom: 0;
+}
+footer div.small {
+  height: 52px;
+  background-color: #FCFCFC;
+  display: flex;
+  justify-content: space-around;
+}
+footer div.small a {
+  height: 52px;
+  line-height: 17px;
+  color: #A29999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer div.small a i {
+  width: 35px;
+  height: 35px;
+  background: url("icons.png");
+}
+footer div.small a:nth-child(1).active i {
+  background-position: 0 -245px;
+}
+footer div.small a:nth-child(2) i {
+  background-position: 0 -72px;
+}
+footer div.small a:nth-child(3) i {
+  background-position: 0 -142px;
+}
+footer div.small a:nth-child(4) i {
+  background-position: 0 -5px;
+}
+footer div.big {
+  display: none;
+}
+@media (min-width: 1200px) {
+  .main_center {
+    width: 1200px;
+    margin: 0 auto;
+  }
+  header nav.small {
+    display: none;
+  }
+  header nav.big {
+    display: flex;
+    justify-content: center;
+  }
+  header nav.big dl {
+    flex: 1;
+    line-height: 58px;
+    text-align: center;
+    color: #C7CAD6;
+    font-size: 22px;
+    cursor: pointer;
+  }
+  header nav.big dl dt a,
+  header nav.big dl dt a:visited {
+    color: white;
+  }
+  header nav.big dl dd {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    line-height: 40px;
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 10;
+  }
+  header nav.big dl dd a,
+  header nav.big dl dd a:visited {
+    display: inline-block;
+    font-size: 15px;
+    margin: 0 20px;
+    color: black;
+  }
+  header nav.big dl:hover dd {
+    display: block;
+    text-align: center;
+  }
+  header nav.big form {
+    flex: 1.5;
+  }
+  header nav.big form label {
+    display: block;
+    margin-top: 18px;
+  }
+  header nav.big form label input {
+    height: 23px;
+    width: 200px;
+    background-color: #8091B4;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    color: #fdf5f2;
+  }
+  header nav.big form label span {
+    position: absolute;
+    margin-left: 8px;
+    font-family: "Rap";
+    font-size: 25px;
+    color: #C7CAD6;
+  }
+  header nav.big {
+    width: 1200px;
+    margin: 0 auto;
+  }
+  div.adv {
+    top: 58px;
+    background: url("top_bg.jpg") center top #d1e8ff;
+  }
+  div.adv img {
+    display: block;
+    width: 1200px;
+    margin: 0 auto;
+    height: 270px;
+  }
+  main {
+    top: calc( 58px + 270px );
+    bottom: 110px;
+    width: 1200px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    background-color: #f2fdff;
+    box-sizing: border-box;
+  }
+  main h3 {
+    text-indent: 2em;
+  }
+  footer div.small {
+    display: none;
+  }
+  footer div.big {
+    display: block;
+    height: 110px;
+    padding-top: 10px;
+    box-sizing: border-box;
+    background: url("footer_bg.jpg") center top #2187d3;
+    text-align: center;
+    color: #c5c5c5;
+    font-weight: 300;
+    line-height: 25px;
+  }
+  footer div.big ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+  }
+  footer div.big ul li:first-child {
+    margin-right: 10px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  header nav.small {
+    display: none;
+  }
+  header nav.big {
+    display: flex;
+    justify-content: center;
+  }
+  header nav.big dl {
+    flex: 1;
+    line-height: 48px;
+    text-align: center;
+    color: #C7CAD6;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  header nav.big dl dt a,
+  header nav.big dl dt a:visited {
+    color: white;
+  }
+  header nav.big dl dd {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    line-height: 40px;
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 10;
+  }
+  header nav.big dl dd a,
+  header nav.big dl dd a:visited {
+    display: inline-block;
+    font-size: 15px;
+    margin: 0 20px;
+    color: black;
+  }
+  header nav.big dl:hover dd {
+    display: block;
+    text-align: center;
+  }
+  header nav.big form {
+    flex: 1.5;
+  }
+  header nav.big form label {
+    display: block;
+    margin-top: 13px;
+  }
+  header nav.big form label input {
+    height: 23px;
+    width: 200px;
+    background-color: #8091B4;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    color: #fdf5f2;
+  }
+  header nav.big form label span {
+    position: absolute;
+    margin-left: 8px;
+    font-family: "Rap";
+    font-size: 25px;
+    color: #C7CAD6;
+  }
+  div.adv img {
+    height: 25vw;
+  }
+  main {
+    top: calc( 48px + 25vw );
+    bottom: 80px;
+    background-color: #f2fdff;
+  }
+  main h3 {
+    text-indent: 2em;
+  }
+  footer div.small {
+    display: none;
+  }
+  footer div.big {
+    display: block;
+    height: 80px;
+    padding-top: 5px;
+    box-sizing: border-box;
+    background: url("footer_bg.jpg") center top #2187d3;
+    text-align: center;
+    color: #c5c5c5;
+    font-weight: 300;
+    line-height: 19px;
+  }
+  footer div.big ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+  }
+  footer div.big ul li:first-child {
+    margin-right: 10px;
+  }
+}

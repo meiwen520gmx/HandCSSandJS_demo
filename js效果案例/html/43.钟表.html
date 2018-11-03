@@ -1,0 +1,82 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div.box{
+            width: 700px;
+            height: 700px;
+            margin: 50px auto 0;
+            position: relative;
+            background: url("../images/timg.jpg")center center no-repeat;
+            background-size: cover;
+        }
+        div.box span{
+            position: absolute;
+            left: 330px;
+            /*top: 80px;*/
+            width: 12px;
+            height: 360px;
+            transform-origin: 6px 350px;
+            background-color: black;
+        }
+        div.box span:nth-child(1){
+            height: 165px;
+            top:195px;
+            transform-origin: 6px 155px;
+            transform: rotate(30deg);
+            background-color: black;
+        }
+        div.box span:nth-child(2){
+            height: 240px;
+            top:120px;
+            transform-origin: 6px 230px;
+            background-color:black;
+            transform: rotate(60deg);
+        }
+        div.box span:nth-child(3){
+            height: 260px;
+            top:100px;
+            transform-origin: 6px 250px;
+            transform: rotate(60deg);
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<div class="box" id="box">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+</body>
+<script>
+    var oBox=document.getElementById('box');
+    var aSpan=oBox.querySelectorAll('span');
+    var now;
+    var h, m,s;
+    setInterval(move,1000);
+    move();
+    function move(){
+        now = new Date();
+        h = now.getHours();
+        m = now.getMinutes();
+        s = now.getSeconds();
+        aSpan[0].style.transform="rotate("+h*30+"deg)";
+        aSpan[1].style.transform="rotate("+m*6+"deg)";
+        aSpan[2].style.transform="rotate("+s*6+"deg)";
+    }
+//    function currentTime() {
+//        var now = new Date();
+//        var h = now.getHours();
+//        var m = now.getMinutes();
+//        var s = now.getSeconds();
+//        spans[0].style.transform="rotate("+h*30+"deg)";
+//        spans[1].style.transform="rotate("+m*6+"deg)";
+//        spans[2].style.transform="rotate("+s*6+"deg)";
+//    }
+//    setInterval(currentTime, 1000);
+
+</script>
+</html>

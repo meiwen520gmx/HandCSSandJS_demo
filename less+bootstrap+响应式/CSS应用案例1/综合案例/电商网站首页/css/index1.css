@@ -1,0 +1,480 @@
+.w-center {
+  width: 1000px;
+  margin: 0 auto;
+}
+.h4 h4 {
+  line-height: 46px;
+  padding-left: 60px;
+  background: url("h_icon.png") left center no-repeat;
+  font-size: 24px;
+  font-weight: 500;
+  margin: 15px 25px 15px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.h4 h4 a,
+.h4 h4 a:visited {
+  color: #000;
+  font-size: 13px;
+  line-height: 0;
+  margin-top: 33px;
+}
+.h4 h4 a:after,
+.h4 h4 a:visited:after {
+  content: "\f101";
+  position: absolute;
+  font-size: 13px;
+  margin-left: 2px;
+  margin-top: 0;
+  color: #000000;
+  font-family: "myicon";
+}
+.aside aside {
+  width: 192px;
+  padding-left: 15px;
+  box-sizing: border-box;
+}
+.aside aside h5 {
+  font-size: 23px;
+  color: white;
+  margin-top: 240px;
+}
+.aside aside h5 p {
+  font-size: 16px;
+  font-weight: normal;
+}
+.aside aside a,
+.aside aside a:visited {
+  display: inline-block;
+  margin: 10px 0 60px;
+  line-height: 30px;
+  background-color: white;
+  width: 100px;
+  padding-left: 15px;
+  font-size: 12px;
+  box-sizing: border-box;
+  color: black;
+}
+.aside aside a:after,
+.aside aside a:visited:after {
+  content: "\f0a9";
+  position: absolute;
+  font-size: 15px;
+  margin-left: 10px;
+  margin-top: 0;
+  color: #303030;
+  font-family: "myicon";
+}
+main {
+  width: 1000px;
+  margin: 0 auto;
+}
+main div.up {
+  display: flex;
+}
+main div.up ul {
+  width: 190px;
+  box-sizing: border-box;
+  border: 1px solid #4593FD;
+  background-color: #4593FD;
+  position: relative;
+}
+main div.up ul menu {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 570px;
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 10px 15px;
+  font-size: 12px;
+}
+main div.up ul menu dl {
+  border-bottom: 1px solid #ddd;
+  line-height: 25px;
+  margin: 10px 0;
+}
+main div.up ul menu dl dt {
+  float: left;
+  color: #4B88DA;
+  margin-right: 10px;
+  font-weight: 600;
+}
+main div.up ul menu dl dt a,
+main div.up ul menu dl dt a:visited {
+  color: #4B88DA;
+}
+main div.up ul menu dl dd {
+  overflow: hidden;
+}
+main div.up ul menu dl dd a,
+main div.up ul menu dl dd a:visited {
+  color: #666;
+}
+main div.up ul menu aside {
+  margin: 15px 0 5px;
+}
+main div.up ul menu aside a {
+  padding: 10px 25px 10px 10px;
+  background-color: #2785E6;
+  color: white;
+}
+main div.up ul menu aside a:first-child {
+  margin-right: 5px;
+}
+main div.up ul menu aside a:after {
+  content: "\f0da";
+  position: absolute;
+  font-size: 12px;
+  margin-left: 10px;
+  margin-top: 0;
+  color: #ffffff;
+  font-family: "myicon";
+}
+main div.up ul li {
+  padding: 15px 0 15px 10px;
+  line-height: 25px;
+}
+main div.up ul li:not(:last-child) {
+  border-bottom: 1px solid #3487F2;
+}
+main div.up ul li:not(:first-child) {
+  border-top: 1px solid #579FFE;
+}
+main div.up ul li h5 {
+  color: white;
+  font-size: 14px;
+}
+main div.up ul li h5 a,
+main div.up ul li h5 a:visited {
+  color: white;
+  font-size: 11px;
+  padding: 3px 5px;
+  background-color: #106AC0;
+  border-radius: 30%;
+  font-weight: 500;
+}
+main div.up ul li > a,
+main div.up ul li > a:visited {
+  font-size: 11px;
+  color: #C2D9F8;
+}
+main div.up ul li:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-left-color: #D5E8FF;
+  right: 5px;
+}
+main div.up ul li:nth-child( 1):after {
+  top: 20px;
+}
+main div.up ul li:nth-child( 2):after {
+  top: 105px;
+}
+main div.up ul li:nth-child( 3):after {
+  top: 191px;
+}
+main div.up ul li:nth-child( 4):after {
+  top: 272px;
+}
+main div.up ul li:hover {
+  background-color: white;
+}
+main div.up ul li:hover menu {
+  display: block;
+}
+main div.up ul li:hover h5 {
+  color: #262626;
+}
+main div.up ul li:hover > a,
+main div.up ul li:hover > a:visited {
+  color: black;
+}
+main div.up ul li:hover:after {
+  border-left-color: white;
+}
+main div.up section {
+  width: 570px;
+}
+main div.up aside {
+  width: 240px;
+}
+main div.mid h4 {
+  line-height: 46px;
+  padding-left: 60px;
+  background: url("h_icon.png") left center no-repeat;
+  font-size: 24px;
+  font-weight: 500;
+  margin: 15px 25px 15px 0;
+  display: flex;
+  justify-content: space-between;
+}
+main div.mid h4 a,
+main div.mid h4 a:visited {
+  color: #000;
+  font-size: 13px;
+  line-height: 0;
+  margin-top: 33px;
+}
+main div.mid h4 a:after,
+main div.mid h4 a:visited:after {
+  content: "\f101";
+  position: absolute;
+  font-size: 13px;
+  margin-left: 2px;
+  margin-top: 0;
+  color: #000000;
+  font-family: "myicon";
+}
+main div.mid section {
+  display: flex;
+}
+main div.mid section aside {
+  width: 192px;
+  padding-left: 15px;
+  box-sizing: border-box;
+}
+main div.mid section aside h5 {
+  font-size: 23px;
+  color: white;
+  margin-top: 240px;
+}
+main div.mid section aside h5 p {
+  font-size: 16px;
+  font-weight: normal;
+}
+main div.mid section aside a,
+main div.mid section aside a:visited {
+  display: inline-block;
+  margin: 10px 0 60px;
+  line-height: 30px;
+  background-color: white;
+  width: 100px;
+  padding-left: 15px;
+  font-size: 12px;
+  box-sizing: border-box;
+  color: black;
+}
+main div.mid section aside a:after,
+main div.mid section aside a:visited:after {
+  content: "\f0a9";
+  position: absolute;
+  font-size: 15px;
+  margin-left: 10px;
+  margin-top: 0;
+  color: #303030;
+  font-family: "myicon";
+}
+main div.mid section aside {
+  background: url("bg1.png") 15px 60px no-repeat, linear-gradient(to right, #0153a5, #0888c5);
+}
+main div.mid section aside span {
+  display: inline-block;
+  width: 20px;
+  height: 5px;
+  background-color: white;
+  margin: 0 5px 15px 0;
+}
+main div.mid section aside span:last-of-type {
+  background-color: #FF7700;
+}
+main div.mid section div.right {
+  width: 808px;
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 3px solid #FF7201;
+}
+main div.mid section div.right figure {
+  width: 202px;
+  border-top: 1px solid #ccc ;
+  border-right: 1px solid #ccc ;
+  box-sizing: border-box;
+}
+main div.mid section div.right figure.before {
+  text-align: center;
+}
+main div.mid section div.right figure.before img {
+  margin: 45px 0 25px;
+}
+main div.mid section div.right figure.before figcaption h5 {
+  font-size: 17px;
+}
+main div.mid section div.right figure.before figcaption span {
+  display: block;
+  font-family: "Microsoft Yahei";
+  font-size: 16px;
+  color: #FF7F26;
+  margin: 10px 0 20px;
+}
+main div.mid section div.right figure.after {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 0;
+}
+main div.mid section div.right figure.after a {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+main div.mid section div.right figure.after figcaption {
+  width: 90px;
+}
+main div.mid section div.right figure.after figcaption p {
+  font-size: 11px;
+}
+main div.mid section div.right figure.after figcaption span {
+  font-size: 14px;
+  font-family: "microsoft yahei";
+  padding-left: 15px;
+  color: #de9b5a;
+}
+main div.mid section div.right figure.after figcaption span:before {
+  content: "\f157";
+  position: absolute;
+  font-size: 14px;
+  margin-left: -10px;
+  margin-top: 3px;
+  color: #181818;
+  font-family: "myicon";
+}
+main div.down h4 {
+  line-height: 46px;
+  padding-left: 60px;
+  background: url("h_icon.png") left center no-repeat;
+  font-size: 24px;
+  font-weight: 500;
+  margin: 15px 25px 15px 0;
+  display: flex;
+  justify-content: space-between;
+}
+main div.down h4 a,
+main div.down h4 a:visited {
+  color: #000;
+  font-size: 13px;
+  line-height: 0;
+  margin-top: 33px;
+}
+main div.down h4 a:after,
+main div.down h4 a:visited:after {
+  content: "\f101";
+  position: absolute;
+  font-size: 13px;
+  margin-left: 2px;
+  margin-top: 0;
+  color: #000000;
+  font-family: "myicon";
+}
+main div.down section {
+  display: flex;
+}
+main div.down section aside {
+  width: 192px;
+  padding-left: 15px;
+  box-sizing: border-box;
+}
+main div.down section aside h5 {
+  font-size: 23px;
+  color: white;
+  margin-top: 240px;
+}
+main div.down section aside h5 p {
+  font-size: 16px;
+  font-weight: normal;
+}
+main div.down section aside a,
+main div.down section aside a:visited {
+  display: inline-block;
+  margin: 10px 0 60px;
+  line-height: 30px;
+  background-color: white;
+  width: 100px;
+  padding-left: 15px;
+  font-size: 12px;
+  box-sizing: border-box;
+  color: black;
+}
+main div.down section aside a:after,
+main div.down section aside a:visited:after {
+  content: "\f0a9";
+  position: absolute;
+  font-size: 15px;
+  margin-left: 10px;
+  margin-top: 0;
+  color: #303030;
+  font-family: "myicon";
+}
+main div.down section aside {
+  background: #53c7f8 url("bg2.png") 11px 67px no-repeat;
+  padding-bottom: 100px;
+}
+main div.down section div.right {
+  width: 808px;
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 3px solid #FF7201;
+}
+main div.down section div.right figure {
+  width: 202px;
+  border-top: 1px solid #ccc ;
+  border-right: 1px solid #ccc ;
+  box-sizing: border-box;
+}
+main div.down section div.right figure.before {
+  text-align: center;
+}
+main div.down section div.right figure.before img {
+  margin: 45px 0 25px;
+}
+main div.down section div.right figure.before figcaption h5 {
+  font-size: 17px;
+}
+main div.down section div.right figure.before figcaption span {
+  display: block;
+  font-family: "Microsoft Yahei";
+  font-size: 16px;
+  color: #FF7F26;
+  margin: 10px 0 20px;
+}
+main div.down section div.right figure.after {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0;
+}
+main div.down section div.right figure.after a {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+main div.down section div.right figure.after figcaption {
+  width: 90px;
+}
+main div.down section div.right figure.after figcaption p {
+  font-size: 11px;
+}
+main div.down section div.right figure.after figcaption span {
+  font-size: 14px;
+  font-family: "microsoft yahei";
+  padding-left: 15px;
+  color: #de9b5a;
+}
+main div.down section div.right figure.after figcaption span:before {
+  content: "\f157";
+  position: absolute;
+  font-size: 14px;
+  margin-left: -10px;
+  margin-top: 3px;
+  color: #181818;
+  font-family: "myicon";
+}

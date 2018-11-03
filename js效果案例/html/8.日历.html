@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            background-color:grey;
+        }
+        #div1{
+            margin: 100px auto 0;
+            background-color:#EAE9E8;
+            padding: 15px;
+            width:280px;
+        }
+        #div1 ul{
+            width:280px;
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            justify-content: center;
+        }
+        #div1 ul li{
+            text-align: center;
+            padding:5px 10px;
+            margin: 6px;
+            background-color: #404240;
+            border: 1px solid #787a78;
+            box-sizing: border-box;
+            color: white;
+            width: 28%;
+        }
+        #text{
+            width: 260px;
+            background-color: #EFF0EF;
+            padding: 10px;
+        }
+        #text p{
+            font-size: 15px;
+        }
+        .active{
+            background-color: #FDFEFD !important;
+            color: #e67e98 !important;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var atext=['快过年了，大家可以商量去哪玩','我闺蜜生日，我们给她个surprice吧！','3月份的活动待定','4月份我们去吃小龙虾吧','五一大家一起去植树吧',
+                '六一儿童节我们和弟弟妹妹一起去玩','该学习了，7月java','8月html，跟着老师学','9月学习css，学会布局','10月学习js，自己找几个案例做',
+                '在11月，应该学习ajax','12月约朋友出去旅游'];
+            var oDiv=document.getElementById('div1');
+            var oUl=oDiv.getElementsByTagName('ul')[0];
+            var aLi=oUl.getElementsByTagName('li');
+            var oDiv1=document.getElementById('text');
+            for(var i=0;i<aLi.length;i++){
+                aLi[i].index=i;
+                aLi[i].onmouseover=function(){
+                    for(var j=0;j<aLi.length;j++){
+                        aLi[j].className='';
+                    }
+                    this.className='active';
+                    oDiv1.innerHTML='<h3>'+(this.index+1)+'月份活动</h3> <p>'+atext[this.index]+'</p>'
+                }
+            }
+
+        }
+    </script>
+</head>
+<body>
+<div id="div1">
+    <ul>
+        <li class="active"><h3>1</h3><p>JAN</p></li>
+        <li><h3>2</h3><p>FER</p></li>
+        <li><h3>3</h3><p>MAR</p></li>
+        <li><h3>4</h3><p>APR</p></li>
+        <li><h3>5</h3><p>MAY</p></li>
+        <li><h3>6</h3><p>JUN</p></li>
+        <li><h3>7</h3><p>JUL</p></li>
+        <li><h3>8</h3><p>AUG</p></li>
+        <li><h3>9</h3><p>SEP</p></li>
+        <li><h3>10</h3><p>OCT</p></li>
+        <li><h3>11</h3><p>NOV</p></li>
+        <li><h3>12</h3><p>DEC</p></li>
+    </ul>
+    <div id="text">
+        <h3>1月份活动</h3>
+        <p>快过年了，大家可以商量去哪玩</p>
+    </div>
+</div>
+</body>
+</html>

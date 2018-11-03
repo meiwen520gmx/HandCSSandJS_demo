@@ -1,0 +1,225 @@
+@charset "utf-8";
+*{
+  margin: 0;
+  padding: 0;
+}
+@font-face {
+  font-family: "my_font";
+  src: url("../fonts1/icomoon.eot") format("eot"),
+  url("../fonts1/icomoon.woff") format("woff"),
+  url("../fonts1/icomoon.svg") format("svg"),
+  url("../fonts1/icomoon.ttf") format("ttf");
+  font-style: normal;
+  font-weight: normal;
+}
+.bcenter{
+  width: 1000px;
+  margin: 0 auto;
+}
+header{
+  div{
+    img{
+      width: 1599px;
+      height: 300px;
+    }
+    &:before{
+      position: absolute;
+      content: '';
+      background: url("../images/demo10_biankaung.PNG");
+      width:1599px;
+      height: 15px;
+    }
+  }
+  nav{
+    background-color: #EBEBEB;
+    border-top:2px solid #4B4A4B;
+    border-bottom: 2px solid #4B4A4B;
+    >ul{
+      padding:0 300px;
+      list-style: none;
+      display: flex;
+      justify-content: space-around;
+      li{
+        padding: 8px 10px;
+        a{
+          text-decoration: none;
+          color: #515151;
+          font-weight: bold;
+        }
+        &:hover,&:hover a{
+          background-color: #515151;
+          color: white;
+        }
+      }
+    }
+  }
+}
+.pubfont{
+  color: #686868;
+  font-size: 14px;
+}
+.pubhover(@colo:black){
+  color: @colo;
+  text-decoration: underline;
+}
+main{
+  display: flex;
+  .bcenter;
+  margin-top: 10px;
+  section.left{
+    width: 70%;
+    margin-right: 10px;
+     >h4{
+       margin-bottom: 20px;
+       padding: 5px 5px 5px 40px;
+       background-color: #EFEFEF;
+       display: flex;
+       color: #686868;
+       justify-content: space-between;
+       i{
+         font-size: 12px;
+         font-style: normal;
+         font-weight: normal;
+         &:hover{
+           color: black;
+         }
+       }
+       &:before{
+         position: absolute;
+         content: '\f19c';
+         font-family: my_font;
+         color: #686868;
+         margin-left: -25px;
+       }
+     }
+    figure{
+      border-bottom: 2px dashed #ddd;
+      display: flex;
+      padding:10px;
+      img{
+        width: 300px !important;
+        height: 150px;
+        margin-right: 5px;
+      }
+      figcaption{
+        margin-top: 15px;
+        h4{
+          color:#11296A;
+          margin-bottom: 10px;
+          &:hover{
+            .pubhover(blue);
+          }
+        }
+        p{
+          .pubfont;
+          text-align: justify;
+          text-indent: 2em;
+          line-height: 30px;
+          &:hover{
+            .pubhover();
+          }
+        }
+        span{
+          display: block;
+          text-align: right;
+          .pubfont;
+          margin-top: 10px;
+          color: #0060BF;
+          &:hover{
+            .pubhover();
+          }
+        }
+      }
+    }
+  }
+  section.right{
+    width: 30%;
+    >h4{
+      background: url("../images/demo10_bg.JPG") no-repeat left  top;
+      padding: 5px 5px 5px 15px;
+      background-color: #F2F2F2;
+      color: white;
+      margin-bottom: 15px;
+      &:nth-of-type(2){
+        margin: 20px 0 10px 0;
+      }
+    }
+    button{
+      width: 250px;
+      height: 35px;
+      background-image:-webkit-linear-gradient(top,#E7E7E9,#CFD0D2);
+      margin: 10px 30px;
+      padding:5px 50px;
+      color: #686868;
+      border: none;
+      font-size: 15px;
+      font-weight: bold;
+      &:hover{
+        .pubhover();
+      }
+    }
+    div.mid{
+      background-color: #EDEDED;
+      text-align: center;
+      padding: 10px;
+      img{
+        width:260px;
+        height: 150px;
+        margin: 5px 0;
+      }
+      p{
+        font-size: 14px;
+        color: #3B5074;
+      }
+      ul{
+        border-bottom: 1px solid #ddd;
+        padding: 10px 10px 10px 30px;
+        li{
+          line-height: 30px;
+          a{
+            .pubfont;
+            overflow: hidden;
+            text-decoration: none;
+            &:hover{
+              .pubhover();
+            }
+          }
+        }
+      }
+      >span{
+        .pubfont;
+        padding: 10px 10px 10px 0;
+        display: block;
+        text-align: right;
+      }
+    }
+  }
+}
+footer{
+  text-align: center;
+  font-size: 14px;
+  padding-top:10px;
+  dl{
+    background-color: #333333;
+    display: flex;
+    justify-content: center;
+    dd{
+      padding: 10px 0;
+      a{
+        padding: 0 20px;
+        color:white;
+        text-decoration: none;
+        border-right: 1px solid #fff;
+        &:hover{
+          color:blue;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  p{
+    margin: 15px 0;
+    color: #686868;
+  }
+
+}

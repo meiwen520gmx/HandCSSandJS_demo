@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 500px;
+            height: 300px;
+            border: 2px solid #c3d1df;
+            margin: auto;
+            overflow: auto; /*内容多时会产生滚动条*/
+        }
+        /*滚动条伪类：槽宽*/
+        ::-webkit-scrollbar{
+            width: 15px;
+        }
+        /*滚动条伪类：拖动条*/
+        ::-webkit-scrollbar-thumb{
+            background-color: rgba(255,0,0,0.7);
+            border-radius: 6px;
+        }
+        /*滚动条伪类：背景条*/
+        ::-webkit-scrollbar-track{
+            background-color: rgba(0,100,100,0.3);
+            /*border-radius: 16px;*/
+        }
+        p{
+            font-size: 30px;
+            line-height: 2;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <p>
+        中华人民共和国中华人民共和国中华人民共和国中华人民共和国中华人民共和国
+        中华人民共和国中华人民共和国中华人民共和国中华人民共和国中华人民共和国
+        中华人民共和国中华人民共和国中华人民共和国中华人民共和国中华人民共和国
+        中华人民共和国中华人民共和国中华人民共和国中华人民共和国中华人民共和国
+        中华人民共和国中华人民共和国中华人民共和国中华人民共和国中华人民共和国
+        中华人民共和国中华人民共和国中华人民共和国中华人民共和国中华人民共和国
+        中华人民共和国中华人民共和国中华人民共和国中华人民共和国中华人民共和国
+    </p>
+</div>
+</body>
+</html>

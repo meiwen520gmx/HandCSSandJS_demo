@@ -1,0 +1,64 @@
+@charset "UTF-8";
+div {
+  width: 500px;
+  height: 300px;
+  margin: 40px auto;
+  background-color: antiquewhite;
+  border: 2px solid red;
+  border-radius: 10px;
+  span {
+    display: block;
+    margin: 20px auto;
+    width: 100px;
+    height: 50px;
+    border: 1px solid black;
+    padding-left: 20px;
+    position: relative;
+    &:after {
+      position: absolute;
+      left: -40px;
+      content: '';
+      display: inline-block;
+      border: 20px solid transparent;
+      border-bottom-color: green;
+    }
+  }
+}
+
+lcj {
+  display: block;
+  width: 360px;
+  background-color: antiquewhite;
+  margin: 20px auto;
+  anage {
+    display: block;
+    margin-right: -30px;
+    cicle {
+      display: block;
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      border-radius: 50%;
+      float: left;
+      margin-right: 30px;
+    }
+    &:after {
+      display: table;
+      content: '';
+      clear: left;
+    }
+  }
+  cicle1 {
+    display: list-item;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border-radius: 50%;
+    margin: 0 auto;
+  }
+}
+
+iframe {
+  width: 400px;
+  height: 300px;
+}

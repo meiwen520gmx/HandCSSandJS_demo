@@ -1,0 +1,198 @@
+@charset "UTF-8";
+body {
+  background-color: #174747;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+@font-face {
+  font-family: "myicon";
+  src: url('fonts/raphaelicons-webfont.eot') format('eot'), url('fonts/raphaelicons-webfont.ttf') format('truetype'), url('fonts/raphaelicons-webfont.woff') format('woff'), url('fonts/raphaelicons-webfont.svg') format('svg');
+  font-style: normal;
+  font-weight: normal;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+div {
+  height: 100%;
+}
+div input,
+div span {
+  position: absolute;
+  bottom: 0;
+  height: 40px;
+  width: 20%;
+}
+div input:nth-of-type(2),
+div span:nth-of-type(2) {
+  left: 20%;
+}
+div input:nth-of-type(3),
+div span:nth-of-type(3) {
+  left: 40%;
+}
+div input:nth-of-type(4),
+div span:nth-of-type(4) {
+  left: 60%;
+}
+div input:nth-of-type(5),
+div span:nth-of-type(5) {
+  left: 80%;
+}
+div span {
+  background-color: #E23A6E;
+  color: white;
+  line-height: 40px;
+  text-align: center;
+  font-weight: 600;
+}
+div input {
+  z-index: 10;
+  opacity: 0;
+}
+div input:hover + span {
+  background-color: #c63d66;
+}
+div input:checked + span {
+  background-color: #97344c;
+}
+div input:checked + span:before {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border: 20px solid transparent;
+  border-bottom-color: #97344c;
+  top: -40px;
+  left: calc(50% - 20px);
+}
+div input:nth-of-type(1):checked ~ section {
+  transform: translateY(0);
+}
+div input:nth-of-type(1):checked ~ section .a1 h3 {
+  animation: my_down 1s linear 1s backwards;
+}
+div input:nth-of-type(1):checked ~ section .a1 p {
+  animation: my_up 1s linear 1s backwards;
+}
+div input:nth-of-type(2):checked ~ section {
+  transform: translateY(-100%);
+}
+div input:nth-of-type(2):checked ~ section .a2 h3 {
+  animation: my_down 1s linear 1s backwards;
+}
+div input:nth-of-type(2):checked ~ section .a2 p {
+  animation: my_up 1s linear 1s backwards;
+}
+div input:nth-of-type(3):checked ~ section {
+  transform: translateY(-200%);
+}
+div input:nth-of-type(3):checked ~ section .a3 h3 {
+  animation: my_down 1s linear 1s backwards;
+}
+div input:nth-of-type(3):checked ~ section .a3 p {
+  animation: my_up 1s linear 1s backwards;
+}
+div input:nth-of-type(4):checked ~ section {
+  transform: translateY(-300%);
+}
+div input:nth-of-type(4):checked ~ section .a4 h3 {
+  animation: my_down 1s linear 1s backwards;
+}
+div input:nth-of-type(4):checked ~ section .a4 p {
+  animation: my_up 1s linear 1s backwards;
+}
+div input:nth-of-type(5):checked ~ section {
+  transform: translateY(-400%);
+}
+div input:nth-of-type(5):checked ~ section .a5 h3 {
+  animation: my_down 1s linear 1s backwards;
+}
+div input:nth-of-type(5):checked ~ section .a5 p {
+  animation: my_up 1s linear 1s backwards;
+}
+div section,
+div article {
+  height: 100%;
+}
+div section {
+  transition: all 1s;
+}
+div article {
+  text-align: center;
+  position: relative;
+  border: 2px solid #E23A6E;
+  padding: 0 15px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+div article h3 {
+  font-size: 7vh;
+  color: white;
+  font-weight: 500;
+  margin-top: 100px;
+}
+div article p {
+  margin-top: 2vh;
+  font-size: 4vh;
+  line-height: 7vh;
+  color: #ddd;
+  text-align: justify;
+  text-indent: 2em;
+  font-family: "宋体";
+}
+div article b {
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  background-color: #E23A6E;
+  transform: rotate(45deg);
+  left: calc(50% - 80px);
+  top: -80px;
+}
+div article b:before {
+  content: attr(data-icon);
+  font-family: "myicon";
+  position: absolute;
+  color: white;
+  font-size: 60px;
+  top: 70px;
+  animation: my_ani 2s linear infinite;
+}
+@keyframes my_up {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes my_down {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes my_ani {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}

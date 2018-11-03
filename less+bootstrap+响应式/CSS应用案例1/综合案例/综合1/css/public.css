@@ -1,0 +1,158 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+@font-face {
+  font-family: "myicon";
+  src: url("../fonts/icomoon.eot");
+  src: url("../fonts/icomoon.eot?#iefix") format("embedded-opentype"), url("../fonts/icomoon.woff") format("woff"), url("../fonts/icomoon.ttf") format("truetype"), url("../fonts/icomoon.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  
+  /* IE9 兼容模式 */
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover,
+a:visited:hover {
+  text-decoration: underline;
+}
+body {
+  background-color: #F5F5F5;
+}
+ul {
+  list-style: none;
+}
+.center {
+  width: 1000px;
+  margin: 0 auto;
+}
+header div.head1 {
+  background-color: #9c9c9c;
+  border-bottom: 1px solid black;
+}
+header div.head1 aside {
+  width: 1000px;
+  margin: 0 auto;
+  height: 40px;
+  text-align: right;
+  font-size: 14px;
+}
+header div.head1 aside a,
+header div.head1 aside a:visited {
+  display: inline-block;
+  line-height: 40px;
+  color: white;
+  text-decoration: none;
+  margin-right: 10px;
+}
+header div.head1 aside a:before,
+header div.head1 aside a:visited:before {
+  content: attr(data-icon);
+  font-family: myicon;
+  color: #dddddd;
+  margin-right: 3px;
+}
+header div.head2 {
+  width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px;
+  box-sizing: border-box;
+  background-color: white;
+  line-height: 67px;
+}
+header div.head2 aside {
+  margin-top: 10px;
+  color: #B9B9B9;
+}
+header div.head2 aside:before {
+  content: attr(data-icon);
+  position: absolute;
+  margin-left: -30px;
+  font-family: "myicon";
+  font-size: 30px;
+}
+header div.head2 aside strong {
+  font-size: 25px;
+  color: #CC0000;
+}
+header nav {
+  width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  background-color: #766D66;
+  line-height: 40px;
+}
+header nav a,
+header nav a:visited {
+  color: white;
+}
+header nav a:hover,
+header nav a:visited:hover {
+  color: #ff7615;
+}
+header nav form {
+  width: 260px;
+  margin: 0 40px;
+}
+header nav form input {
+  width: 100%;
+  padding-right: 20px;
+  box-sizing: border-box;
+  display: block;
+  outline: none;
+  border: none;
+  height: 24px;
+  margin: 8px 0 ;
+  border-radius: 3px;
+}
+header nav form:after {
+  content: attr(data-icon);
+  font-family: "myicon";
+  position: absolute;
+  margin-top: -40px;
+  margin-left: 235px;
+  color: #BABABA;
+  font-size: 20px;
+}
+footer {
+  background-color: #9c9c9c;
+  border-top: 1px solid black;
+  padding: 10px 0;
+  text-align: center;
+}
+footer div.up {
+  width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+}
+footer div.up dt {
+  margin-bottom: 8px;
+}
+footer div.up a {
+  display: block;
+  line-height: 25px;
+  font-size: 15px;
+  color: #2e2e2e;
+}
+footer div.up dl:last-child dd {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer div.up dl:last-child dd span {
+  padding-left: 23px;
+  background: url("../images/weixin.png") left center no-repeat;
+  background-size: 20px 20px;
+  margin-bottom: 5px;
+}
+footer address {
+  font-style: normal;
+}

@@ -1,0 +1,98 @@
+@charset "utf-8";
+section.adv {
+  width: 1000px;
+  margin: 0 auto;
+}
+section.adv img {
+  width: 100%;
+}
+.main_pub {
+  border: 1px solid gainsboro;
+  background-color: white;
+}
+.main_pub header {
+  line-height: 40px;
+  padding-left: 23px;
+  border-bottom: 1px solid gainsboro;
+  font-weight: 600;
+}
+main {
+  width: 1000px;
+  margin: 15px auto;
+  display: flex;
+}
+main aside {
+  border: 1px solid gainsboro;
+  background-color: white;
+  flex: 1;
+  margin-right: 30px;
+}
+main aside header {
+  line-height: 40px;
+  padding-left: 23px;
+  border-bottom: 1px solid gainsboro;
+  font-weight: 600;
+}
+main aside ul {
+  padding: 15px 0 0 20px;
+  line-height: 30px;
+  font-size: 14px;
+  list-style: none;
+}
+main aside ul li a,
+main aside ul li a:visited {
+  display: block;
+  text-decoration: none;
+  color: #999;
+}
+main aside ul li a:before,
+main aside ul li a:visited:before {
+  position: absolute;
+  content: '\f0da\ ';
+  font-family: my_icon;
+  margin-left: -10px;
+}
+main aside ul li a:hover,
+main aside ul li a:visited:hover {
+  color: #0099ff;
+  text-decoration: underline;
+}
+main section {
+  flex: 4;
+  border: 1px solid gainsboro;
+  background-color: white;
+}
+main section header {
+  line-height: 40px;
+  padding-left: 23px;
+  border-bottom: 1px solid gainsboro;
+  font-weight: 600;
+}
+main section header {
+  text-align: center;
+  font-weight: bold;
+}
+main section article {
+  padding: 15px;
+  text-align: center;
+}
+main section article h3 {
+  font-size: 18px;
+}
+main section article div {
+  font-size: 14px;
+  color: #aaa;
+  margin: 20px 0;
+  border-bottom: 1px dashed #ddd;
+}
+main section article h4 {
+  font-size: 16px;
+  margin: 15px 0;
+}
+main section article p {
+  font-size: 14px;
+  line-height: 25px;
+  margin: 5px 0;
+  text-align: justify;
+  text-indent: 2em;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            width:100%;
+            height: 315px;
+            background: url("../images/header-bg.png");
+        }
+		
+        section{
+            position: relative;
+            width:100%;
+            height: inherit;
+            margin: 0 auto;
+            background: url("../images/con-bg.png") no-repeat 0 204px,url("../images/snow-bg.png")0 0;
+            animation: auto 5s linear infinite;
+            -webkit-animation: auto 5s linear infinite;
+        }
+        @keyframes auto {
+            from{background-position-y:204px,0;}
+            to{background-position-y:204px,850px;}
+        }
+		
+        .tree{
+            position: absolute;
+            width: 112px;
+            height: 137px;
+            background: url("../images/tree.png");
+            animation: play 3s;
+            -webkit-animation: play 3s;
+        }
+        .tree:nth-child(1){left:20px;top: 120px;animation-duration: 3s;}
+        .tree:nth-child(2){left:370px;top: 170px;animation-duration: 2.5s;}
+        .tree:nth-child(3){left:500px;top: 130px;animation-duration: 2s;}
+        .tree:nth-child(4){left:830px;top: 100px;animation-duration: 3s;}
+        .tree:nth-child(5){left:930px;top:180px;animation-duration: 2.5s;}
+        .tree:nth-child(6){left:630px;top: 200px;animation-duration: 3s;}
+        .tree:nth-child(7){left:750px;top: 100px;animation-duration: 2.5s;}
+        .tree:nth-child(8){left:1200px;top: 150px;animation-duration: 3s;}
+        .tree:nth-child(9){left:1100px;top: 200px;animation-duration: 2s;}
+        .ice{
+            position: absolute;
+            width: 115px;
+            height: 103px;
+            background: url("../images/ice.png");
+            left: 480px;
+            top: 190px;
+            animation: play 3s;
+            -webkit-animation: play 3s;
+        }
+        @keyframes play {
+            from{transform: translate(0,-350px);}
+            to{transform: translate(0,0);}
+        }
+    </style>
+</head>
+<body>
+<header>
+    <section>
+        <div class="tree"></div>
+        <div class="tree"></div>
+        <div class="tree"></div>
+        <div class="tree"></div>
+        <div class="tree"></div>
+        <div class="tree"></div>
+        <div class="ice"></div>
+        <div class="tree"></div>
+        <div class="tree"></div>
+        <div class="ice"></div>
+    </section>
+</header>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>浮动定位布局</title>
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        header, nav, main, article, footer {
+            width: 1000px;
+            margin: 0 auto;
+        }
+
+        header, footer {
+            height: 150px;
+            background: green;
+            text-align: center;
+            color: white;
+        }
+
+        nav {
+            height: 40px;
+            background-color: #000000;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        main {
+            background-color: rosybrown
+        }
+
+        main left {
+            float: left;
+            width: 100px;
+            height: 300px;
+        }
+
+        main middleRight {
+            display: inline-block;
+            width: 900px;
+            background: aquamarine;
+        }
+
+        main middleRight middle {
+            display: block;
+            box-sizing: border-box; /*表示下面的750px包含了内容，填充，边框共750px*/
+            width: 750px;
+            height: 300px;
+            padding: 30px;
+            border: 2px solid #ff0000;
+            background-color: slategrey;
+        }
+
+        main middleRight right {
+            float: right;
+            width: 150px;
+            height: 300px;
+        }
+        article {
+            display: -webkit-flex; /*横向伸缩分布*/;
+            /*-webkit-justify-content: center; 横向居中*/
+            /*-webkit-align-items: center;纵向居中*/
+
+        }
+
+        article left {
+            flex: 1;
+            background-color: lightblue;
+        }
+
+        article middle {
+            box-sizing: border-box; /*表示下面的700px包含了内容，填充，边框共750px*/
+            flex: 6;
+            height: 200px;
+            padding: 30px;
+            border: 2px solid;
+            background-color: #646ba9;
+        }
+
+        article right {
+            flex: 1;
+            background-color: #0b97ff;
+        }
+    </style>
+</head>
+<body>
+<header>
+    header
+    <h2>
+        注意：采用浮动或伸缩布局后的内联元素会自动变成块级元素，可设置宽高等值了
+    </h2>
+</header>
+<nav>
+    导航条
+</nav>
+<main>
+    <left>
+        <p>中华人民共和国中华人民共和国中华人民共和国
+            中华人民共和国中华人民共和国中华人民共和国
+            中华人民共和国中华人民共和国中华人民共和国</p>
+
+    </left>
+    <middleRight>
+        <right>
+            <p>
+                中华人民共和国中华人民共和国中华人民共和国
+                中华人民共和国中华人民共和国中华人民共和国
+                中华人民共和国中华人民共和国中华人民共和国
+            </p>
+        </right>
+        <middle>
+            <p>
+                中华人民共和国中华人民共和国中华人民共和国
+                中华人民共和国中华人民共和国中华人民共和国
+                中华人民共和国中华人民共和国中华人民共和国
+                中华人民共和国中华人民共和国中华人民共和国
+                中华人民共和国中华人民共和国中华人民共和国
+                中华人民共和国中华人民共和国中华人民共和国
+                中华人民共和国中华人民共和国中华人民共和国
+                中华人民共和国中华人民共和国中华人民共和国
+                中华人民共和国中华人民共和国中华人民共和国
+                中华人民共和国中华人民共和国中华人民共和国
+                中华人民共和国中华人民共和国中华人民共和国
+                中华人民共和国中华人民共和国中华人民共和国
+                中华人民共和国中华人民共和国中华人民共和国
+            </p>
+
+            <p>
+                中华人民共和国中华人民共和国中华人民共和国
+            </p>
+        </middle>
+    </middleRight>
+</main>
+<article>
+    <left>
+        <p>中华人民共和国中华人民共和国中华人民共和国
+            中华人民共和国中华人民共和国中华人民共和国
+            中华人民共和国中华人民共和国中华人民共和国</p>
+
+    </left>
+    <middle>
+        <p>
+            这部分用的伸缩布局方式<br>
+            中华人民共和国中华人民共和国中华人民共和国
+            中华人民共和国中华人民共和国中华人民共和国
+            中华人民共和国中华人民共和国中华人民共和国
+            中华人民共和国中华人民共和国中华人民共和国
+            中华人民共和国中华人民共和国中华人民共和国
+            中华人民共和国中华人民共和国中华人民共和国
+            中华人民共和国中华人民共和国中华人民共和国
+            中华人民共和国中华人民共和国中华人民共和国
+            中华人民共和国中华人民共和国中华人民共和国
+            中华人民共和国中华人民共和国中华人民共和国
+            中华人民共和国中华人民共和国中华人民共和国
+            中华人民共和国中华人民共和国中华人民共和国
+        </p>
+        <p>
+            中华人民共和国中华人民共和国中华人民共和国
+        </p>
+    </middle>
+    <right>
+        <p>
+            中华人民共和国中华人民共和国中华人民共和国
+            中华人民共和国中华人民共和国中华人民共和国
+            中华人民共和国中华人民共和国中华人民共和国
+        </p>
+    </right>
+</article>
+<footer>
+    footpage
+</footer>
+</body>
+</html>

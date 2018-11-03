@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        var arr=['http://www.cqwu.edu.cn/image1.jpg',
+                'http://www.cqwu2.edu.cn/image2.png',
+                'http://wwwer.cqwu3.edu.cn/image3.jpg',
+                'http://www.cqwu.edu.cn/image4.jpg'];
+        var newArr=[];
+        var reg=/http:\/\/(.+\.jpg)/;
+//        var reg2='$1';
+        arr.forEach(function (str) {
+            if(reg.test(str)){
+                newArr.push(str.replace(reg,'$1'));
+            }
+            else{
+                newArr.push(str);
+            }
+        });
+        console.log(newArr);
+        var aStr='This is a very cat'.match(/\b[a-zA-Z]+\b/g);
+        console.log(aStr);
+    </script>
+</head>
+<body>
+
+
+</body>
+</html>

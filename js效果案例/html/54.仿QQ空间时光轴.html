@@ -1,0 +1,744 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+        body {
+          width: 100%;
+            height: 100%;
+        }
+        div.bg{
+            width: 100%;
+            height: 900px;
+            position: fixed;
+            background: url("../images/1（1）.jpg")top center;
+            background-size: cover;
+            z-index: -1;
+        }
+        nav {
+            height: 40px;
+            width: 100%;
+            background-color: black;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 100;
+            display: flex;
+            padding-left: 150px;
+        }
+        nav a.logo{
+            background: url("../images/icenter.png");
+            height: 40px;
+            width: 90px;
+            background-position: -63px 0;
+            overflow: hidden;
+        }
+        nav ul{
+            list-style: none;
+            display: flex;
+        }
+        nav ul li{
+            padding: 0 20px;
+        }
+        nav ul li a{
+            text-decoration: none;
+            color: #fff;
+            position: relative;
+            padding: 0 10px 0 33px;
+            line-height: 40px;
+            display: flex;
+        }
+        nav ul li a i{
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            left: 10px;
+            top: 12px;
+        }
+        nav ul li:first-child a i{
+            background: url("../images/qqcenter.png");
+            background-position: -536px -208px;
+            overflow: hidden;
+        }
+        nav ul li:nth-of-type(2) a i{
+            background: url("../images/qqcenter.png");
+            background-position: -536px -260px;
+            overflow: hidden;
+        }
+        nav ul li:nth-of-type(3) a i{
+            background: url("../images/qqcenter.png");
+            background-position: -536px -234px;
+            overflow: hidden;
+        }
+        nav ul li:nth-of-type(4) a i{
+              background: url("../images/qqcenter.png");
+              background-position: -536px -286px;
+              overflow: hidden;
+          }
+        nav ul li:nth-of-type(5) a i{
+            background: url("../images/qqcenter.png");
+            background-position: -536px -312px;
+            overflow: hidden;
+        }
+        div.container {
+            padding-top: 40px;
+            width: 1000px;
+            margin: 0 auto;
+        }
+
+        div.container div.adv {
+            height: 260px;
+            background-color: rgba(255, 255, 255, .3);
+            display: flex;
+            border-radius: 0 0 10px 10px;
+        }
+        div.container div.adv>img{
+            margin: 80px 40px 80px 80px;
+            border: 2px solid #fff;
+            height: 100px;
+            width: 100px;
+        }
+        div.container div.adv figure{
+            margin: 80px 80px 80px 0;
+        }
+        div.container div.adv figure>span{
+            font-size: 20px;
+            color: #295C9D;
+            font-weight: bold;
+        }
+        div.container div.adv figure figcaption{
+            margin-top: 20px;
+            display: flex;
+        }
+        div.container div.adv figure figcaption img{
+            margin-right: 15px;
+        }
+        div.container div.adv figure figcaption span{
+            font-size: 15px;
+            color: #295C9D;
+        }
+        div.container div.adv figure figcaption p{
+            margin-top: 10px;
+            width: 182px;
+            height: 10px;
+            background: url("../images/icenter-adg.png");
+            background-position: -366px -104px;
+        }
+
+        div.container div.main {
+            padding: 30px 0 50px 10px;
+        }
+
+        div.container div.left {
+            position: absolute;
+            border-right: 2px solid #ccc;
+            padding: 10px 10px 10px 0;
+            color: #ccc;
+            line-height: 25px;
+            text-align: right;
+            margin-top: 30px;
+        }
+
+        div.container div.left dl dd {
+            display: none;
+            margin: 5px 0;
+        }
+
+        div.container div.left dl dt {
+            cursor: pointer;
+        }
+
+        div.container div.left dl.on dt {
+            color: #de5823;
+        }
+
+        div.container div.left dl.on dt:after {
+            position: absolute;
+            content: '';
+            width: 2px;
+            height: 25px;
+            margin-left: 10px;
+            background-color: #de5823;
+        }
+
+        div.container div.left dl.on dd {
+            display: block;
+            cursor: pointer;
+        }
+
+        div.container div.left dl.on dd.on {
+            color: #de5823;
+        }
+
+        div.container div.left dl.on dd.on:after {
+            position: absolute;
+            content: '';
+            width: 2px;
+            height: 25px;
+            margin-left: 10px;
+            background-color: #de5823;
+        }
+
+        div.container div.right {
+            margin-left: 80px;
+            padding-left: 35px;
+        }
+
+        div.container div.right {
+            border-left: 2px solid #4775ba;
+        }
+
+        div.container div.right article {
+            background-color: white;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px;
+        }
+
+        div.container div.right article img {
+            width: 100%;
+            height: 600px;
+        }
+
+        div.container div.right article:before {
+            position: absolute;
+            content: '';
+            width: 5px;
+            height: 5px;
+            border: 2px solid white;
+            border-radius: 50%;
+            margin-left: -76px;
+            margin-top: 40px;
+            background-color: #4c8905;
+        }
+
+        div.container div.right article p.date:before {
+            position: absolute;
+            content: '';
+            width: 30px;
+            height: 30px;
+            transform: rotate(45deg);
+            margin-left: -30px;
+            margin-top: 30px;
+            background-color: white;
+        }
+
+        div.container div.right dl dt {
+            position: absolute;
+            margin-left: -35px;
+            margin-top: 20px;
+            color: #d1d1d1;
+        }
+
+        div.container div.right dl dd:before {
+            position: absolute;
+            content: attr(data-month);
+            margin-left: -25px;
+            margin-top: 85px;
+            color: #e6e6e6;
+        }
+
+        div.container div.right dl dd article p.date {
+            color: #b2b2b2;
+            font-size: 35px;
+            line-height: 50px;
+            font-weight: 600;
+        }
+        div.container div.right dl dd article p.date span {
+            display: inline-block;
+            vertical-align: middle;
+            line-height: 50px;
+            width: 50px;
+            height: 50px;
+            background-color: #acdeff;
+            border-radius: 4px;
+            color: #eee;
+            font-size: 25px;
+            padding: 5px;
+            margin: 0 15px 0 20px;
+        }
+
+        div.container div.right dl dd article p.intro {
+            line-height: 25px;
+            text-indent: 2em;
+            text-align: justify;
+            color: #666;
+            margin: 10px;
+        }
+
+        div.container p.like_m a, div.container p.like_m a:visited {
+            display: inline-block;
+            color: #999;
+            margin: 15px 40px;
+            text-decoration: none;
+        }
+
+        div.container p.like_m a:first-child:before {
+            position: absolute;
+            content: '';
+            width: 20px;
+            height: 20px;
+            background-image: url("../images/icon1.png");
+            margin-left: -30px;
+        }
+
+        div.container p.like_m a:last-child:before {
+            position: absolute;
+            content: '';
+            width: 20px;
+            height: 20px;
+            background-image: url("../images/icon2.jpg");
+            margin-left: -30px;
+        }
+
+        div.container p.verylike {
+            margin-left: 30px;
+            color: #c3c3c3;
+        }
+    </style>
+</head>
+<body>
+<div class="bg"></div>
+<nav>
+    <a class="logo" href="javascript:;"></a>
+    <ul>
+        <li>
+            <a href="javascript:;">
+                <i></i>
+                <span>个人中心</span>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:;">
+                <i></i>
+                <span>我的主页</span>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:;">
+                <i></i>
+                <span>好友</span>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:;">
+                <i></i>
+                <span>游戏</span>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:;">
+                <i></i>
+                <span>装扮</span>
+            </a>
+        </li>
+    </ul>
+</nav>
+<div class="container">
+    <div class="adv">
+        <img src="../images/touxiang1.jpg">
+        <figure>
+            <span>陪你听风</span>
+            <figcaption>
+                <img src="../images/qz_vip.png">
+                <section>
+                    <span>成长值</span>
+                    <p></p>
+                </section>
+            </figcaption>
+        </figure>
+    </div>
+    <div class="main" id="main">
+        <div class="left">
+            <dl class="year">
+                <dt>2017年</dt>
+                <dd class='month'>5月</dd>
+                <dd class="month">3月</dd>
+                <dd class="month">1月</dd>
+            </dl>
+            <dl class="year">
+                <dt>2016年</dt>
+                <dd class="month">12月</dd>
+                <dd class="month">8月</dd>
+                <dd class="month">2月</dd>
+            </dl>
+        </div>
+        <div class="right">
+            <dl class="year">
+                <dt>2017年</dt>
+                <dd class='month' data-month='5月'>
+                    <article>
+                        <p class="date"><span class="nongli">初<br>&nbsp;&nbsp;&nbsp;一</span>2014-2-02</p>
+                        <p class="intro">
+                            为深入贯彻中央关于网络安全和信息化的战略部署，切实增强师生网络安全意识，提高网络安全防护技能，保障自身合法权益，共同维护国家网络安全。9月21日下午，学校在博文馆101会议举办了“2017网络安全宣传讲座”，讲座由永川区网安支队崔洪浩警官主讲，永川区网信办主任何滨、区公安局网安支队队长熊启伟出席会议并现场指导，学校党群部、学工部、现技中心全体人员，各教学单位办公室主任，非教学单位综合科科长，二级学院学生代表参加了讲座。</p>
+                        <img src="../images/1.jpg" alt="">
+                        <p class="like_m">
+                            <a href="#">(123456)</a>
+                            <a href="#">(215)</a>
+                        </p>
+                        <p class="verylike">1.2万人觉得很赞</p>
+                    </article>
+                    <article>
+                        <p class="date"><span class="nongli">初<br>&nbsp;&nbsp;一</span>2014-2-02</p>
+                        <p class="intro">
+                            为深入贯彻中央关于网络安全和信息化的战略部署，切实增强师生网络安全意识，提高网络安全防护技能，保障自身合法权益，共同维护国家网络安全。9月21日下午，学校在博文馆101会议举办了“2017网络安全宣传讲座”，讲座由永川区网安支队崔洪浩警官主讲，永川区网信办主任何滨、区公安局网安支队队长熊启伟出席会议并现场指导，学校党群部、学工部、现技中心全体人员，各教学单位办公室主任，非教学单位综合科科长，二级学院学生代表参加了讲座。</p>
+                        <img src="../images/1.jpg" alt="">
+                        <p class="like_m">
+                            <a href="#">(123456)</a>
+                            <a href="#">(215)</a>
+                        </p>
+                        <p class="verylike">1.2万人觉得很赞</p>
+                    </article>
+                    <article>
+                        <p class="date"><span class="nongli">初<br>&nbsp;&nbsp;一</span>2014-2-02</p>
+                        <p class="intro">
+                            为深入贯彻中央关于网络安全和信息化的战略部署，切实增强师生网络安全意识，提高网络安全防护技能，保障自身合法权益，共同维护国家网络安全。9月21日下午，学校在博文馆101会议举办了“2017网络安全宣传讲座”，讲座由永川区网安支队崔洪浩警官主讲，永川区网信办主任何滨、区公安局网安支队队长熊启伟出席会议并现场指导，学校党群部、学工部、现技中心全体人员，各教学单位办公室主任，非教学单位综合科科长，二级学院学生代表参加了讲座。</p>
+                        <img src="../images/1.jpg" alt="">
+                        <p class="like_m">
+                            <a href="#">(123456)</a>
+                            <a href="#">(215)</a>
+                        </p>
+                        <p class="verylike">1.2万人觉得很赞</p>
+                    </article>
+                </dd>
+                <dd class="month" data-month="3月">
+                    <article>
+                        <p class="date"><span>初<br>&nbsp;&nbsp;一</span>2014-2-02</p>
+                        <p class="intro">
+                            为深入贯彻中央关于网络安全和信息化的战略部署，切实增强师生网络安全意识，提高网络安全防护技能，保障自身合法权益，共同维护国家网络安全。9月21日下午，学校在博文馆101会议举办了“2017网络安全宣传讲座”，讲座由永川区网安支队崔洪浩警官主讲，永川区网信办主任何滨、区公安局网安支队队长熊启伟出席会议并现场指导，学校党群部、学工部、现技中心全体人员，各教学单位办公室主任，非教学单位综合科科长，二级学院学生代表参加了讲座。</p>
+                        <img src="../images/1.jpg" alt="">
+                        <p class="like_m">
+                            <a href="#">(123456)</a>
+                            <a href="#">(215)</a>
+                        </p>
+                        <p class="verylike">1.2万人觉得很赞</p>
+                    </article>
+                    <article>
+                        <p class="date"><span class="nongli">初<br>&nbsp;&nbsp;一</span>2014-2-02</p>
+                        <p class="intro">
+                            为深入贯彻中央关于网络安全和信息化的战略部署，切实增强师生网络安全意识，提高网络安全防护技能，保障自身合法权益，共同维护国家网络安全。9月21日下午，学校在博文馆101会议举办了“2017网络安全宣传讲座”，讲座由永川区网安支队崔洪浩警官主讲，永川区网信办主任何滨、区公安局网安支队队长熊启伟出席会议并现场指导，学校党群部、学工部、现技中心全体人员，各教学单位办公室主任，非教学单位综合科科长，二级学院学生代表参加了讲座。</p>
+                        <img src="../images/1.jpg" alt="">
+                        <p class="like_m">
+                            <a href="#">(123456)</a>
+                            <a href="#">(215)</a>
+                        </p>
+                        <p class="verylike">1.2万人觉得很赞</p>
+                    </article>
+                    <article>
+                        <p class="date"><span class="nongli">初<br>&nbsp;&nbsp;一</span>2014-2-02</p>
+                        <p class="intro">
+                            为深入贯彻中央关于网络安全和信息化的战略部署，切实增强师生网络安全意识，提高网络安全防护技能，保障自身合法权益，共同维护国家网络安全。9月21日下午，学校在博文馆101会议举办了“2017网络安全宣传讲座”，讲座由永川区网安支队崔洪浩警官主讲，永川区网信办主任何滨、区公安局网安支队队长熊启伟出席会议并现场指导，学校党群部、学工部、现技中心全体人员，各教学单位办公室主任，非教学单位综合科科长，二级学院学生代表参加了讲座。</p>
+                        <img src="../images/1.jpg" alt="">
+                        <p class="like_m">
+                            <a href="#">(123456)</a>
+                            <a href="#">(215)</a>
+                        </p>
+                        <p class="verylike">1.2万人觉得很赞</p>
+                    </article>
+                </dd>
+                <dd class="month">1月
+                    <article>
+                        <p class="date"><span class="nongli">初<br>&nbsp;&nbsp;一</span>2014-2-02</p>
+                        <p class="intro">
+                            为深入贯彻中央关于网络安全和信息化的战略部署，切实增强师生网络安全意识，提高网络安全防护技能，保障自身合法权益，共同维护国家网络安全。9月21日下午，学校在博文馆101会议举办了“2017网络安全宣传讲座”，讲座由永川区网安支队崔洪浩警官主讲，永川区网信办主任何滨、区公安局网安支队队长熊启伟出席会议并现场指导，学校党群部、学工部、现技中心全体人员，各教学单位办公室主任，非教学单位综合科科长，二级学院学生代表参加了讲座。</p>
+                        <img src="../images/1.jpg" alt="">
+                        <p class="like_m">
+                            <a href="#">(123456)</a>
+                            <a href="#">(215)</a>
+                        </p>
+                        <p class="verylike">1.2万人觉得很赞</p>
+                    </article>
+                    <article>
+                        <p class="date"><span class="nongli">初<br>&nbsp;&nbsp;一</span>2014-2-02</p>
+                        <p class="intro">
+                            为深入贯彻中央关于网络安全和信息化的战略部署，切实增强师生网络安全意识，提高网络安全防护技能，保障自身合法权益，共同维护国家网络安全。9月21日下午，学校在博文馆101会议举办了“2017网络安全宣传讲座”，讲座由永川区网安支队崔洪浩警官主讲，永川区网信办主任何滨、区公安局网安支队队长熊启伟出席会议并现场指导，学校党群部、学工部、现技中心全体人员，各教学单位办公室主任，非教学单位综合科科长，二级学院学生代表参加了讲座。</p>
+                        <img src="../images/1.jpg" alt="">
+                        <p class="like_m">
+                            <a href="#">(123456)</a>
+                            <a href="#">(215)</a>
+                        </p>
+                        <p class="verylike">1.2万人觉得很赞</p>
+                    </article>
+                    <article>
+                        <p class="date"><span class="nongli">初<br>&nbsp;&nbsp;一</span>2014-2-02</p>
+                        <p class="intro">
+                            为深入贯彻中央关于网络安全和信息化的战略部署，切实增强师生网络安全意识，提高网络安全防护技能，保障自身合法权益，共同维护国家网络安全。9月21日下午，学校在博文馆101会议举办了“2017网络安全宣传讲座”，讲座由永川区网安支队崔洪浩警官主讲，永川区网信办主任何滨、区公安局网安支队队长熊启伟出席会议并现场指导，学校党群部、学工部、现技中心全体人员，各教学单位办公室主任，非教学单位综合科科长，二级学院学生代表参加了讲座。</p>
+                        <img src="../images/1.jpg" alt="">
+                        <p class="like_m">
+                            <a href="#">(123456)</a>
+                            <a href="#">(215)</a>
+                        </p>
+                        <p class="verylike">1.2万人觉得很赞</p>
+                    </article>
+                </dd>
+            </dl>
+            <dl class="year">
+                <dt>2016年</dt>
+                <dd class="month">12月
+                    <article>
+                        <p class="date"><span class="nongli">初<br>&nbsp;&nbsp;一</span>2014-2-02</p>
+                        <p class="intro">
+                            为深入贯彻中央关于网络安全和信息化的战略部署，切实增强师生网络安全意识，提高网络安全防护技能，保障自身合法权益，共同维护国家网络安全。9月21日下午，学校在博文馆101会议举办了“2017网络安全宣传讲座”，讲座由永川区网安支队崔洪浩警官主讲，永川区网信办主任何滨、区公安局网安支队队长熊启伟出席会议并现场指导，学校党群部、学工部、现技中心全体人员，各教学单位办公室主任，非教学单位综合科科长，二级学院学生代表参加了讲座。</p>
+                        <img src="../images/1.jpg" alt="">
+                        <p class="like_m">
+                            <a href="#">(123456)</a>
+                            <a href="#">(215)</a>
+                        </p>
+                        <p class="verylike">1.2万人觉得很赞</p>
+                    </article>
+                    <article>
+                        <p class="date"><span class="nongli">初<br>&nbsp;&nbsp;一</span>2014-2-02</p>
+                        <p class="intro">
+                            为深入贯彻中央关于网络安全和信息化的战略部署，切实增强师生网络安全意识，提高网络安全防护技能，保障自身合法权益，共同维护国家网络安全。9月21日下午，学校在博文馆101会议举办了“2017网络安全宣传讲座”，讲座由永川区网安支队崔洪浩警官主讲，永川区网信办主任何滨、区公安局网安支队队长熊启伟出席会议并现场指导，学校党群部、学工部、现技中心全体人员，各教学单位办公室主任，非教学单位综合科科长，二级学院学生代表参加了讲座。</p>
+                        <img src="../images/1.jpg" alt="">
+                        <p class="like_m">
+                            <a href="#">(123456)</a>
+                            <a href="#">(215)</a>
+                        </p>
+                        <p class="verylike">1.2万人觉得很赞</p>
+                    </article>
+                    <article>
+                        <p class="date"><span class="nongli">初<br>&nbsp;&nbsp;一</span>2014-2-02</p>
+                        <p class="intro">
+                            为深入贯彻中央关于网络安全和信息化的战略部署，切实增强师生网络安全意识，提高网络安全防护技能，保障自身合法权益，共同维护国家网络安全。9月21日下午，学校在博文馆101会议举办了“2017网络安全宣传讲座”，讲座由永川区网安支队崔洪浩警官主讲，永川区网信办主任何滨、区公安局网安支队队长熊启伟出席会议并现场指导，学校党群部、学工部、现技中心全体人员，各教学单位办公室主任，非教学单位综合科科长，二级学院学生代表参加了讲座。</p>
+                        <img src="../images/1.jpg" alt="">
+                        <p class="like_m">
+                            <a href="#">(123456)</a>
+                            <a href="#">(215)</a>
+                        </p>
+                        <p class="verylike">1.2万人觉得很赞</p>
+                    </article>
+                </dd>
+                <dd class="month">3月
+                    <article>
+                        <p class="date"><span class="nongli">初<br>&nbsp;&nbsp;一</span>2014-2-02</p>
+                        <p class="intro">
+                            为深入贯彻中央关于网络安全和信息化的战略部署，切实增强师生网络安全意识，提高网络安全防护技能，保障自身合法权益，共同维护国家网络安全。9月21日下午，学校在博文馆101会议举办了“2017网络安全宣传讲座”，讲座由永川区网安支队崔洪浩警官主讲，永川区网信办主任何滨、区公安局网安支队队长熊启伟出席会议并现场指导，学校党群部、学工部、现技中心全体人员，各教学单位办公室主任，非教学单位综合科科长，二级学院学生代表参加了讲座。</p>
+                        <img src="../images/1.jpg" alt="">
+                        <p class="like_m">
+                            <a href="#">(123456)</a>
+                            <a href="#">(215)</a>
+                        </p>
+                        <p class="verylike">1.2万人觉得很赞</p>
+                    </article>
+                    <article>
+                        <p class="date"><span class="nongli">初<br>&nbsp;&nbsp;一</span>2014-2-02</p>
+                        <p class="intro">
+                            为深入贯彻中央关于网络安全和信息化的战略部署，切实增强师生网络安全意识，提高网络安全防护技能，保障自身合法权益，共同维护国家网络安全。9月21日下午，学校在博文馆101会议举办了“2017网络安全宣传讲座”，讲座由永川区网安支队崔洪浩警官主讲，永川区网信办主任何滨、区公安局网安支队队长熊启伟出席会议并现场指导，学校党群部、学工部、现技中心全体人员，各教学单位办公室主任，非教学单位综合科科长，二级学院学生代表参加了讲座。</p>
+                        <img src="../images/1.jpg" alt="">
+                        <p class="like_m">
+                            <a href="#">(123456)</a>
+                            <a href="#">(215)</a>
+                        </p>
+                        <p class="verylike">1.2万人觉得很赞</p>
+                    </article>
+                    <article>
+                        <p class="date"><span class="nongli">初<br>&nbsp;&nbsp;一</span>2014-2-02</p>
+                        <p class="intro">
+                            为深入贯彻中央关于网络安全和信息化的战略部署，切实增强师生网络安全意识，提高网络安全防护技能，保障自身合法权益，共同维护国家网络安全。9月21日下午，学校在博文馆101会议举办了“2017网络安全宣传讲座”，讲座由永川区网安支队崔洪浩警官主讲，永川区网信办主任何滨、区公安局网安支队队长熊启伟出席会议并现场指导，学校党群部、学工部、现技中心全体人员，各教学单位办公室主任，非教学单位综合科科长，二级学院学生代表参加了讲座。</p>
+                        <img src="../images/1.jpg" alt="">
+                        <p class="like_m">
+                            <a href="#">(123456)</a>
+                            <a href="#">(215)</a>
+                        </p>
+                        <p class="verylike">1.2万人觉得很赞</p>
+                    </article>
+                </dd>
+                <dd class="month">1月
+                    <article>
+                        <p class="date"><span class="nongli">初<br>&nbsp;&nbsp;一</span>2014-2-02</p>
+                        <p class="intro">
+                            为深入贯彻中央关于网络安全和信息化的战略部署，切实增强师生网络安全意识，提高网络安全防护技能，保障自身合法权益，共同维护国家网络安全。9月21日下午，学校在博文馆101会议举办了“2017网络安全宣传讲座”，讲座由永川区网安支队崔洪浩警官主讲，永川区网信办主任何滨、区公安局网安支队队长熊启伟出席会议并现场指导，学校党群部、学工部、现技中心全体人员，各教学单位办公室主任，非教学单位综合科科长，二级学院学生代表参加了讲座。</p>
+                        <img src="../images/1.jpg" alt="">
+                        <p class="like_m">
+                            <a href="#">(123456)</a>
+                            <a href="#">(215)</a>
+                        </p>
+                        <p class="verylike">1.2万人觉得很赞</p>
+                    </article>
+                    <article>
+                        <p class="date"><span class="nongli">初<br>&nbsp;&nbsp;一</span>2014-2-02</p>
+                        <p class="intro">
+                            为深入贯彻中央关于网络安全和信息化的战略部署，切实增强师生网络安全意识，提高网络安全防护技能，保障自身合法权益，共同维护国家网络安全。9月21日下午，学校在博文馆101会议举办了“2017网络安全宣传讲座”，讲座由永川区网安支队崔洪浩警官主讲，永川区网信办主任何滨、区公安局网安支队队长熊启伟出席会议并现场指导，学校党群部、学工部、现技中心全体人员，各教学单位办公室主任，非教学单位综合科科长，二级学院学生代表参加了讲座。</p>
+                        <img src="../images/1.jpg" alt="">
+                        <p class="like_m">
+                            <a href="#">(123456)</a>
+                            <a href="#">(215)</a>
+                        </p>
+                        <p class="verylike">1.2万人觉得很赞</p>
+                    </article>
+                    <article>
+                        <p class="date"><span class="nongli">初<br>&nbsp;&nbsp;一</span>2014-2-02</p>
+                        <p class="intro">
+                            为深入贯彻中央关于网络安全和信息化的战略部署，切实增强师生网络安全意识，提高网络安全防护技能，保障自身合法权益，共同维护国家网络安全。9月21日下午，学校在博文馆101会议举办了“2017网络安全宣传讲座”，讲座由永川区网安支队崔洪浩警官主讲，永川区网信办主任何滨、区公安局网安支队队长熊启伟出席会议并现场指导，学校党群部、学工部、现技中心全体人员，各教学单位办公室主任，非教学单位综合科科长，二级学院学生代表参加了讲座。</p>
+                        <img src="../images/1.jpg" alt="">
+                        <p class="like_m">
+                            <a href="#">(123456)</a>
+                            <a href="#">(215)</a>
+                        </p>
+                        <p class="verylike">1.2万人觉得很赞</p>
+                    </article>
+                </dd>
+            </dl>
+        </div>
+    </div>
+</div>
+<template>
+    <article>
+        <p class="date"><span>{nl}</span>{date}</p>
+        <p class="intro">{intro}</p>
+        {img}
+        <p class="like_m">
+            <a href="#">({like})</a>
+            <a href="#">({comment})</a>
+        </p>
+    </article>
+</template>
+<script src="../js/data.js"></script>
+<script src="../js/GetLunarDay.js"></script>
+<script>
+    window.onload= function () {
+        data.sort(function (a, b) {
+            return new Date(b.date).getTime() - new Date(a.date).getTime()
+        });
+        var obj = {};
+        //{2018:{12:[{date:'2018-5-3',intro:'内容'...,nl:初一},{},...{}],11:[]}},2017:{},2016:{}}
+        data.forEach(function (el) {
+            var date1 = new Date(el.date);
+            var year = date1.getFullYear();
+            var month = date1.getMonth() + 1;
+            if (!obj[year])
+                obj[year] = {};
+            if (!obj[year][month])
+                obj[year][month] = [];
+            el.anl = GetLunarDateString(date1);
+            obj[year][month].push(el);
+        });
+        var main = document.getElementById('main');
+        var div_l = main.querySelector('div.left');
+        var div_r = main.querySelector('div.right');
+        var temp=document.querySelector('template').innerHTML;
+        var dl_l = dl_r = '', dd_lm,dd_rm;
+        var arr1 =[],arr2= [],arr3;
+        var art;
+        for (var year in obj) {
+            dl_l ="<dl class='year'><dt>" + year + "年</dt>";
+            dl_r= "<dl class='year'><dt>" + year + "年</dt>";
+            dd_lm = '';
+            dd_rm = '';
+            arr3=[];
+            for (var month in obj[year]) {
+                dd_lm = "<dd class='month'>" + month + "月</dd>" + dd_lm;
+                dd_rm = "<dd class='month' data-month='"+month+"月'>";
+                art='';
+                obj[year][month].forEach(function (el) {
+                    art+=temp.replace('{nl}',el.anl).replace('{date}',el.date)
+                            .replace('{intro}',el.intro).replace('{img}',el.media)
+                            .replace('{like}',el.like).replace('{comment}',el.comment);
+                });
+                dd_rm+=art+"</dd>";
+                arr3.unshift(dd_rm);
+            }
+            dl_l += dd_lm + "</dl>";
+            dl_r += arr3.join('') + "</dl>";
+            arr1.unshift(dl_l);
+            arr2.unshift((dl_r));
+        }
+        div_l.innerHTML = arr1.join('');
+        div_r.innerHTML=arr2.join('');
+        var a_dl_r=div_r.querySelectorAll('dl');
+        var a_dl_l=div_l.querySelectorAll('dl');
+        window.onscroll= function () {
+            if(document.documentElement.scrollTop>300){
+                div_l.style.position='fixed';
+                div_l.style.top='60px';
+            }
+            else{
+                div_l.style.position='absolute';
+                div_l.style.top='';
+            }
+            var i=0;
+            while(i<a_dl_r.length && a_dl_r[i].offsetTop<document.documentElement.scrollTop+360){
+                i++;
+            }
+            clear_year_on();
+            a_dl_l[--i].classList.add('on');
+            var a_dd_r=a_dl_r[i].querySelectorAll('dd');
+            var a_dd_l=a_dl_l[i].querySelectorAll('dd');
+            var j=0;
+            while(j<a_dd_r.length && a_dd_r[j].offsetTop<document.documentElement.scrollTop+360){
+                j++;
+            }
+            clear_month_on();
+            a_dd_l[--j].classList.add('on');
+            function clear_month_on(){
+                [].forEach.call(a_dd_l, function (el) {
+                    if(el.classList.contains('on')){
+                        el.classList.remove('on');
+                        return false;
+                    }
+
+                });
+            }
+      }
+        function clear_year_on(){
+            [].forEach.call(a_dl_l, function (el) {
+                if(el.classList.contains('on')){
+                    el.classList.remove('on');
+                    return false;
+                }
+
+            });
+        }
+        var dds_l=div_l.querySelectorAll('dd');
+        var dds_r=div_r.querySelectorAll('dd');
+//        i为全局变量
+        for(var i=0;i<dds_l.length;i++){
+            dds_l[i].pos=i;
+
+        }
+        for(i=0;i<a_dl_l.length;i++){
+            a_dl_l[i].index=i;
+            a_dl_r[i].index=i;
+        }
+        
+        div_l.onclick= function (e) {
+            var target= e.target;
+            if(target.nodeName=='DT'){
+               var dl=target.parentNode;
+               var index=dl.index;
+               move(a_dl_r[index]);
+           }
+            else if(target.nodeName=='DD'){
+                var pos=target.pos;
+                move(dds_r[pos]);
+           }
+        };
+        function move(el){
+            var offsetTop=el.offsetTop-80;
+            var timer=null;
+            var scrollTop,step;
+            timer=setInterval(function () {
+                scrollTop=document.documentElement.scrollTop;
+                step=(offsetTop-scrollTop)/5;
+                step=step>0?Math.ceil(step):Math.floor(step);
+                if(offsetTop!=scrollTop){
+                    document.documentElement.scrollTop+=step;
+                }
+                else{
+                    clearInterval(timer);
+                }
+            },30);
+        }
+
+    }
+
+</script>
+</body>
+</html>

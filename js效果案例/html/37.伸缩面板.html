@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div.box {
+            position: absolute;
+            width: 400px;
+            height: 300px;
+            border: 1px solid black;
+            left: calc(50% - 200px);
+            top: 100px;
+        }
+        div.box h3.title {
+            line-height: 40px;
+            background-color:#b6d9f2;
+            text-align: center;
+            margin-top: 0;
+        }
+        div.right {
+            position: absolute;
+            top: 0;
+            right: -3px;
+            width: 6px;
+            height: 100%;
+            background-color: #00A5FF;
+            cursor: e-resize;
+            opacity: 0;
+        }
+        div.bottom {
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background-color: #a2b5f4;
+            cursor: n-resize;
+            opacity: 0;
+        }
+
+        div.rightBottom {
+            position: absolute;
+            bottom: -5px;
+            right: -5px;
+            width: 10px;
+            height: 10px;
+            background-color: red;
+            cursor: nw-resize;
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="box" id="box">
+    <h3 class="title">伸缩面板头部</h3>
+</div>
+<script src="../js/eventCompatible.js"></script>
+<script>
+    document.onselectstart = new Function('event.returnValue=false;');//禁止内容被选中
+    var oDiv=document.getElementById('box');
+    function getPos(el){
+        var left=el.offsetLeft;
+        var top=el.offsetTop;
+        while(el=el.offsetParent){
+            left+=el.offsetLeft;
+            top+=el.offsetTop;
+        }
+        return {left:left,top:top};
+    }
+    function createEl(obj,sEl,className){
+        var el=document.createElement(sEl);
+        el.className=className;
+        obj.appendChild(el);
+    }
+    createEl(oDiv,'div','com right');
+    createEl(oDiv,'div','com bottom');
+    createEl(oDiv,'div','com rightBottom');
+    var aDiv=oDiv.querySelectorAll('div');
+    var disX,disY;
+    //事件代理
+    eventCompatible.agentEvent(oDiv,'mousedown',['div','com'], function (ev) {
+        var e=ev || event;
+        var classN=this.classList.item(1);
+        switch (classN){
+            case 'right':
+                disX= e.pageX-getPos(this).left;
+                move(this,'r');
+                break;
+            case 'bottom':
+                disY= e.pageY-getPos(this).top;
+                move(this,'b');
+                break;
+            case 'rightBottom':
+                disX= e.pageX-getPos(this).left;
+                disY= e.pageY-getPos(this).top;
+                move(this,'rb');
+                break;
+        }
+    });
+    function move(el,dir){
+        eventCompatible.addEvent(document,'mousemove',subMove);
+        eventCompatible.addEvent(document,'mouseup',up);
+        function subMove(ev) {
+            var e=ev || event;
+            switch (dir){
+                case 'r':
+                    oDiv.style.width= Math.max(e.pageX-getPos(oDiv).left,200)+'px';
+                    oDiv.style.left= 'calc(50% - '+oDiv.offsetWidth/2+'px)';
+                    break;
+                case 'b':
+                    oDiv.style.height=Math.max(e.pageY-getPos(oDiv).top,200)+'px';
+                    break;
+                case 'rb':
+                    oDiv.style.width= Math.max(e.pageX-getPos(oDiv).left,200)+'px';
+                    oDiv.style.left= 'calc(50% - '+oDiv.offsetWidth/2+'px)';
+                    oDiv.style.height=Math.max(e.pageY-getPos(oDiv).top,200)+'px';
+                    break;
+            }
+        }
+        function up(){
+            eventCompatible.removeEvent(document,'mousemove',subMove);
+            eventCompatible.removeEvent(document,'mouseup',up);
+        }
+    }
+
+
+
+//    [].forEach.call(aDiv, function (el){
+//        el.onmousedown= function (ev) {
+//            var e=ev || event;
+//            var classN=this.className;
+//            switch (classN){
+//                case 'right':
+//                    disX= e.pageX-getPos(this).left;
+//                        move(this,'r');
+//                    break;
+//                case 'bottom':
+//                    disY= e.pageY-getPos(this).top;
+//                    move(this,'b');
+//                    break;
+//                case 'rightBottom':
+//                    disX= e.pageX-getPos(this).left;
+//                    disY= e.pageY-getPos(this).top;
+//                    move(this,'rb');
+//                    break;
+//            }
+//
+//        }
+//    });
+//    function move(el,dir){
+//        document.onmousemove= function (ev) {
+//            var e=ev || event;
+//            switch (dir){
+//                case 'r':
+//                    oDiv.style.width= e.pageX-getPos(oDiv).left+'px';
+//                    oDiv.style.left= 'calc(50% - '+oDiv.offsetWidth/2+'px)';
+//                    break;
+//                case 'b':
+//                    oDiv.style.height= e.pageY-getPos(oDiv).top-1+'px';
+//                    break;
+//                case 'rb':
+//                    oDiv.style.width= e.pageX-getPos(oDiv).left+'px';
+//                    oDiv.style.left= 'calc(50% - '+oDiv.offsetWidth/2+'px)';
+//                    oDiv.style.height= e.pageY-getPos(oDiv).top-1+'px';
+//                    break;
+//            }
+//        }
+//        document.onmouseup= function () {
+//            this.onmousemove=null;
+//            this.onmouseup=null;
+////            var ctrls=document.querySelectorAll('div.ctrl');
+////            for(var i=0;i<ctrls.length;i++){
+////                ctrls[i].style.left='';
+////                ctrls[i].style.top='';
+////            }
+//        }
+//    }
+
+</script>
+</body>
+
+</html>

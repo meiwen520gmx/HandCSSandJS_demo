@@ -1,0 +1,303 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+@font-face {
+  font-family: "my_font";
+  src: url("../fonts1/icomoon.eot") format("eot"), url("../fonts1/icomoon.woff") format("woff"), url("../fonts1/icomoon.svg") format("svg"), url("../fonts1/icomoon.ttf") format("ttf");
+  font-style: normal;
+  font-weight: normal;
+}
+.bcenter {
+  width: 1000px;
+  margin: 0 auto;
+}
+header {
+  margin-bottom: 15px;
+}
+header aside {
+  background-color: #F2F2F2;
+  display: flex;
+  justify-content: flex-start;
+  padding: 7px 0 7px 300px;
+  align-items: center;
+  color: #5E5E5E;
+  font-size: 13px;
+  font-weight: bold;
+}
+header aside span {
+  padding: 3px 10px;
+  border-right: 1px solid #E3E3E3;
+}
+header aside span:first-of-type {
+  color: red;
+}
+header figure {
+  width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+header figure img {
+  margin-left: 30px;
+}
+header figure figcaption {
+  padding: 30px 0 10px 0;
+}
+header figure figcaption form {
+  display: flex;
+  justify-content: center;
+}
+header figure figcaption form input {
+  outline: none;
+  width: 150px;
+  height: 30px;
+}
+header figure figcaption form button {
+  padding: 0 10px;
+  border: none;
+  background-color: #0251CB;
+  color: #0251CB;
+}
+header figure figcaption form button:before {
+  position: absolute;
+  content: '\f002';
+  font-family: my_font;
+  color: #fff;
+  font-size: 20px;
+  margin-top: -4px;
+  margin-left: 2px;
+}
+header nav {
+  width: 1000px;
+  margin: 0 auto;
+  background-color: #0357C7;
+}
+header nav > ul {
+  padding: 5px 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+header nav > ul li {
+  padding: 5px 10px;
+}
+header nav > ul li a {
+  text-decoration: none;
+  color: white;
+  padding: 5px 10px;
+  font-weight: bold;
+}
+header nav > ul li a:hover {
+  color: #FFC90E;
+}
+.pubh4 {
+  background-color: #E6E4E5;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  color: #075CD1;
+}
+.pubh4 i {
+  font-style: normal;
+  color: #075CD1;
+  font-size: 12px;
+}
+.pubh4 i:hover {
+  text-decoration: underline;
+}
+main {
+  margin-bottom: 15px !important;
+  width: 1000px;
+  margin: 0 auto;
+  display: flex;
+}
+main article {
+  border: 1px solid #EEEEEE;
+  box-sizing: border-box;
+  width: 70%;
+  margin-right: 10px;
+}
+main article > h4 {
+  background-color: #075CD3;
+  color: white;
+  padding: 5px 0 5px 15px;
+}
+main article div.main_sec {
+  padding: 20px 25px;
+  text-align: center;
+}
+main article div.main_sec h3 {
+  color: #646569;
+  padding: 0 0 10px 0;
+}
+main article div.main_sec h3:hover {
+  color: red;
+  text-decoration: underline;
+}
+main article div.main_sec p:first-of-type {
+  font-size: 13px;
+  padding: 5px 0;
+}
+main article div.main_sec p:nth-of-type(2) {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #E1E1DF;
+  font-size: 13px;
+}
+main article div.main_sec p:nth-of-type(2) i {
+  font-style: normal;
+  font-weight: bold;
+  color: #797979;
+}
+main article div.main_sec section {
+  padding: 20px 0;
+  text-align: justify;
+  text-indent: 2em;
+  font-size: 13px;
+  line-height: 25px;
+  color: #797979;
+}
+main article div.main_sec > h4 {
+  color: black;
+}
+main article div.main_sec > h4:hover {
+  color: red;
+  text-decoration: underline;
+}
+main article div.main_sec p:nth-of-type(3) {
+  text-align: right;
+  color: #060606;
+  font-size: 13px;
+}
+main article div.main_sec p:nth-of-type(4) {
+  color: #585858;
+  font-size: 12px;
+  text-align: left;
+  margin-top: 150px;
+}
+main aside {
+  width: 30%;
+}
+main aside section.one {
+  border: 1px solid #EEEEEE;
+  box-sizing: border-box;
+}
+main aside section.one h4 {
+  background-color: #E6E4E5;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  color: #075CD1;
+}
+main aside section.one h4 i {
+  font-style: normal;
+  color: #075CD1;
+  font-size: 12px;
+}
+main aside section.one h4 i:hover {
+  text-decoration: underline;
+}
+main aside section.one div {
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+main aside section.one div figure figcaption {
+  color: #626566;
+  font-size: 14px;
+  padding-top: 5px;
+}
+main aside section.two {
+  margin-top: 10px;
+  border: 1px solid #EEEEEE;
+  box-sizing: border-box;
+  padding: 10px 0;
+  text-align: center;
+}
+main aside section.two img {
+  margin-bottom: 10px;
+}
+main aside section.three {
+  margin-top: 10px;
+  border: 1px solid #EEEEEE;
+}
+main aside section.three h4 {
+  background-color: #E6E4E5;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  color: #075CD1;
+}
+main aside section.three h4 i {
+  font-style: normal;
+  color: #075CD1;
+  font-size: 12px;
+}
+main aside section.three h4 i:hover {
+  text-decoration: underline;
+}
+main aside section.three ul {
+  padding: 10px 25px;
+}
+main aside section.three ul li {
+  line-height: 25px;
+}
+main aside section.three ul li a {
+  color: #656565;
+  text-decoration: none;
+  font-size: 14px;
+}
+main aside section.three ul li a:hover {
+  color: black;
+  text-decoration: underline;
+}
+footer {
+  width: 1000px;
+  margin: 0 auto;
+  font-size: 14px;
+  color: #656565;
+}
+footer > div.up {
+  height: 100px;
+  border: 1px solid #EEEEEE;
+  padding: 15px 0 0 15px;
+}
+footer > div.up a {
+  color: #656565;
+  text-decoration: none;
+  padding-right: 15px;
+  font-size: 14px;
+}
+footer > div.up a:first-of-type {
+  color: #075CD3;
+  font-weight: bold;
+}
+footer div.down {
+  background-color: #F6F4F5;
+  margin-top: 15px;
+  padding: 30px 0;
+}
+footer div.down dl {
+  display: flex;
+  justify-content: center;
+}
+footer div.down dl dd {
+  padding: 5px 0;
+}
+footer div.down dl dd a {
+  padding: 0 10px;
+  color: #656565;
+  text-decoration: none;
+  border-right: 1px solid #ddd;
+  font-weight: bold;
+}
+footer div.down dl dd a:hover {
+  color: black;
+  text-decoration: underline;
+}
+footer div.down p {
+  text-align: center;
+  margin: 15px 0;
+  color: #686868;
+}

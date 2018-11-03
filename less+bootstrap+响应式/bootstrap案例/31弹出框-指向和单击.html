@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<link href="css/bootstrap.css" rel="stylesheet">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div class="container">
+    <br><br>
+    <button type="button" class="btn btn-default" data-toggle="popover" data-trigger="hover"
+            data-placement="left" title="提示框居左" data-content="我是弹出框的内容">猛击我吧
+    </button>
+    <button type="button" class="btn btn-default" id="myPopover">猛击我吧</button>
+</div>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+    $(function () {
+        $('[data-toggle="popover"]').popover();
+        $('#myPopover').popover({
+            title: "我是弹出框的标题",
+            content: "我是弹出框的内容",
+            placement: "bottom"
+        });
+    });
+</script>
+</body>
+</html>

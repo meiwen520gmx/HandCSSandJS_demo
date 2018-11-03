@@ -1,0 +1,341 @@
+@charset "UTF-8";
+nav.navbar-inverse .navbar-nav {
+  .active a {
+    background-color: transparent;
+  }
+  > li > a {
+    color: #C7CAD6;
+  }
+}
+nav.lcj {
+  background-color: #012269;
+  min-height: 40px;
+  button {
+    margin-bottom: 3px;
+    margin-top: 3px;
+  }
+  form{
+    position: relative;
+    input {
+      outline: none;
+      border: none;
+      height: 20px;
+      width: 135px;
+      border-radius: 10px;
+      background-color: #8091B4;
+    }
+    span {
+      color: #C7CAD6;
+      position: absolute;
+      left: 160px;
+      top: 5px;
+    }
+  }
+  a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 15px;
+  }
+}
+header {
+  margin-top: 39px;
+  height: 110px;
+  background-color: #002A84;
+  div.container.head1 {
+    height: 110px;
+    padding-top: 10px;
+  }
+  div.head2 {
+    background-color: rgba(3, 43, 131, .3);
+    .container {
+      nav.lcj {
+        margin-bottom: 0;
+        background-color: transparent;
+        border: none;
+        ul {
+          float: none;
+          display: flex;
+          justify-content: space-around;
+          li {
+            flex: 1;
+            text-align: center;
+            a, a:visited {
+              color: white;
+              font-size: 16px;
+            }
+            &:hover {
+              background-color: #b6d9f2;
+              a, a:visited {
+                color: #5a5a5a;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#slidershow {
+  img {
+    width: 100%;
+  }
+}
+
+.head_title(@m_d:30px) {
+  section {
+    margin: 5px 0 @m_d;
+    border-bottom: 2px solid #969696;
+    display: flex;
+    justify-content: space-between;
+    &:before {
+      content: "";
+      position: absolute;
+      margin-top: 44px;
+      width: 160px;
+      height: 2px;
+      background-color: #002A84;
+    }
+    h3 {
+      font-size: 18px;
+      font-weight: 600;
+      padding-left: 10px;
+      margin-bottom: 5px;
+      span {
+        font-size: 14px;
+        color: #002F94;
+        font-weight: 900;
+      }
+    }
+    a {
+      height: 20px;
+      font-size: 13px;
+      margin-top: 20px;
+      color: #7F667F;
+    }
+  }
+}
+
+div.lcj_news {
+  .head_title();
+  div.panel-heading {
+    background-color: #D54248;
+    color: white;
+    font-size: 15px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  img {
+    width: 100%;
+  }
+  div.panel-body {
+    padding: 0;
+    background-color: #5d718e;
+    color: #eee;
+    p {
+      margin-top: 15px;
+      padding: 0 15px;
+      font-size: 13px;
+      text-indent: 2em;
+      line-height: 20px;
+      .multi_row();
+      text-align: justify;
+      height: 57px;
+    }
+    a {
+      display: block;
+      text-align: right;
+      padding-right: 15px;
+      color: #eee;
+      margin-bottom: 20px;
+    }
+  }
+  div.col-md-4 {
+    &:hover {
+      div.panel-heading {
+        background-color: #5d718e;
+      }
+      div.panel-body {
+        background-color: #D54248;
+      }
+    }
+  }
+}
+
+.multi_row(@row:3) {
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: @row;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+div.lcj_tzgg {
+  div.col-md-6 {
+    .head_title(25px);
+    > a {
+      display: block;
+      border-bottom: 1px solid #B5B5B5;
+      margin: 10px 0;
+      div.col-md-2 {
+        h3 {
+          background-color: #5A6989;
+          line-height: 44px;
+          text-align: center;
+          color: white;
+          font-size: 30px;
+          font-weight: 700;
+          border-radius: 4px;
+          margin: 0 0 20px;
+          span {
+            line-height: 14px;
+            font-size: 14px;
+            display: block;
+            font-weight: 500;
+            padding-bottom: 12px;
+          }
+        }
+      }
+      div.col-md-10 {
+        h4 {
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          font-size: 16px;
+          font-weight: 600;
+          color: #737373;
+        }
+        p {
+          color: #858687;
+        }
+
+      }
+    }
+  }
+  div.lcj_xshd {
+    > a {
+      border-bottom-style: dashed;
+      p {
+        .multi_row(2);
+      }
+    }
+  }
+}
+
+div.lcj_topics {
+  .head_title(18px);
+  a {
+    display: block;
+    img {
+      width: 100%;
+    }
+    p {
+      line-height: 30px;
+      border-bottom: 1px solid #eee;
+      color: #909090;
+      padding-left: 10px;
+    }
+    &:hover {
+      background-color: #5D718E;
+      p {
+        color: #E5FFED;
+        margin-bottom: 0;
+      }
+      border: 2px solid #5D718E;
+    }
+  }
+}
+
+footer.up {
+  background: url("../images/footer_bg.jpg") center center no-repeat;
+  div.container {
+    padding: 35px 0 25px 70px;
+    p.plice {
+      margin-top: 20px;
+      a {
+        color: white;
+        display: block;
+        &:before {
+          content: "";
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          background: url("../images/beian.png") left center no-repeat;
+          vertical-align: middle;
+        }
+        &:hover{
+          color: #b95e70;
+        }
+      }
+    }
+    div.col-md-3,div.col-md-5{
+      color: white;
+      dl{
+        dt{
+          font-size: 15px;
+          padding-bottom: 5px;
+          border-bottom: 1px solid white;
+          &:before{
+            content: "";
+            position: absolute;
+            width: 22%;
+            height: 1px;
+            background-color: white;
+            margin-top: 25px;
+          }
+          margin-bottom: 10px;
+        }
+        dd{
+          margin-top: 3px;
+          a{
+            color: white;
+          }
+        }
+      }
+    }
+    div.col-md-5{
+      padding-left: 30px;
+      padding-right: 160px;
+      dt:before{
+        width: 15%!important;
+      }
+    }
+  }
+}
+footer.down{
+  background-color: black;
+  text-align: center;
+  color:#4B7180 ;
+}
+
+@media (min-width: 768px) {
+  header {
+    height: 150px;
+    background: url("../images/top_bg.jpg") center center no-repeat;
+    div.container.head1 {
+      background: url("../images/top_icon.png") right -20px no-repeat;
+    }
+  }
+}
+@media (min-width: 992px) {
+  footer.down{
+    line-height: 50px;
+  }
+}
+@media (max-width: 767px) {
+  nav.lcj{
+    form{
+      span{
+        top: 15px;
+      }
+    }
+  }
+  header {
+    div.container.head1 {
+      img {
+        height: 50px;
+      }
+    }
+  }
+}

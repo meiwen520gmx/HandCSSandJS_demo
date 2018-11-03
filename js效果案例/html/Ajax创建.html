@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax创建</title>
+    <script src="../js/ajax.js"></script>
+    <script>
+        window.onload= function () {
+            var oBton=document.getElementById('btn1');
+            var oUl=document.getElementById('ul1');
+            oBton.onclick= function () {
+                oUl.innerHTML='';
+                getAjaxData('get','js/b.txt',function(result){
+                    for(var i=0;i<result.length;i++){
+                        var oLi=document.createElement('li');
+                        oLi.innerHTML='<li><b>'+result[i].number+'</b><b>'+result[i].name+'</b></li>'
+                        oUl.appendChild(oLi);
+                    }
+                    console.log(result);
+                });
+
+            }
+        }
+
+    </script>
+</head>
+<body>
+<input id="btn1" type="button" value="提交">
+<ul id="ul1">
+
+</ul>
+
+</body>
+</html>

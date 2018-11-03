@@ -1,0 +1,142 @@
+@charset "UTF-8";
+body {
+  padding: 50px 0;
+}
+
+h1, h2, h3 {
+  font-family: "microsoft yahei";
+}
+
+nav {
+  &.lcj-nav {
+    background-color: #333;
+  }
+  div.navbar-header {
+    a {
+      padding-top: 0;
+      padding-bottom: 0;
+      img {
+        height: 50px;
+      }
+    }
+  }
+}
+
+header {
+  position: relative;
+  img {
+    width: 100%;
+  }
+  div.lcj-con {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h1 {
+      color: white;
+      font-size: 3.5vw;
+      font-weight: 600;
+      small {
+        margin-top: 25px;
+        font-size: 2.3vw;
+        color: #ccc;
+      }
+    }
+  }
+}
+
+main {
+  margin: 50px 0;
+  div.left {
+    div.lcj-panel {
+      ul {
+        margin-top: 10px;
+        li.active {
+          background-color: #458B00;
+          color: white;
+          border-radius: 2px;
+        }
+      }
+      form {
+        div.col-sm-4 {
+          margin-bottom: 20px;
+        }
+        button {
+          font-family: "microsoft yahei";
+        }
+      }
+      table {
+        th, td {
+          text-align: center;
+          vertical-align: middle;
+        }
+        td.price {
+          color: #fe6600;
+        }
+      }
+    }
+  }
+  div.right {
+    div.lcj-panel {
+      ul {
+        margin: 0 -5px -5px 0;
+        li {
+          text-align: center;
+          margin: 0 5px 5px 0;
+          background-color: #eee;
+          img {
+            width: 100%;
+          }
+        }
+      }
+      &:first-child {
+        ul li {
+          line-height: 35px;
+          width: 103px;
+        }
+      }
+      &:nth-child(2) {
+        div.lcj-col:not(:last-child){
+          margin-bottom: 10px;
+        }
+      }
+      &:last-child{
+        li{
+          width: 159px;
+          line-height: 35px;
+        }
+      }
+    }
+  }
+}
+footer{
+  background-color: #ccc;
+}
+
+@media (min-width: 1200px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 993px) and (max-width: 1199px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  html {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 12px;
+  }
+}

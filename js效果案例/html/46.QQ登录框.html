@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div.box{
+            width: 400px;
+            height: 280px;
+            padding: 10px 40px 30px 70px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            background-color: #f6f6f6;
+            box-shadow: 0 0 10px 2px rgba(0,0,0,.5);
+            border-radius: 10px;
+            position: absolute;
+            display: none;
+        }
+        div.box span.close{
+            position: absolute;
+            right: -5px;
+            top: -5px;
+            width: 28px;
+            height: 28px;
+            background: url('../images/close.png') no-repeat;
+            cursor: default;
+        }
+        div.box div.title{
+            height: 44px;
+            background: url('../images/login_window_logo.png') -175px top no-repeat;
+            cursor: move;
+        }
+        div.box form{
+            padding: 10px 10px 0;
+            line-height: 60px;
+        }
+        div.box form label{
+            display: block;
+        }
+        div.box form label input{
+            border-radius: 5px;
+            height: 20px;
+            border: 1px solid #ccc;
+            outline: none;
+        }
+        div.box form button{
+            height: 40px;
+            width: 111px;
+            border: none;
+            margin-top: 20px;
+            background: url("../images/login_btn.png") -111px top no-repeat;
+            vertical-align: middle;
+            margin-right: 30px;
+            outline:none;
+        }
+        dl{
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 10px;
+            font-size: 13px;
+        }
+        dl dt{
+            cursor: default;
+        }
+        dl  span.vis{
+            display: inline-block;
+            width: 18px ;
+            height: 18px;
+            background: url("../images/ptlogin.png") left top no-repeat;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        dl dt span.vis:after{
+            position: absolute;
+            content: '';
+            width: 0;
+            height: 0;
+            border: 4px solid transparent;
+            border-top-color: #666;
+            margin-left: 17px;
+            margin-top: 5px;
+        }
+        dl dd{
+            position: absolute;
+            width: 90px;
+            background-color: #fafafa;
+            border: 1px solid #999;
+            margin-left: 0;
+            margin-top: -20px;
+            line-height: 25px;
+            box-shadow: 0 0 5px 1px rgba(0,0,0,.3);
+            border-radius: 3px;
+            padding: 5px;
+            display: none;
+        }
+        dl dd a,dl dd a:visited{
+            display: block;
+            color: #666;
+            text-decoration: none;
+        }
+        dl dd a span{
+            display: inline-block;
+            vertical-align: middle;
+            width: 18px;
+            height: 18px;
+            background: url("../images/ptlogin.png") no-repeat;
+        }
+        dl span.online{
+            background-position-x: 0;
+        }
+        dl span.callMe{
+            background-position-x: -71px;
+        }
+        dl span.busy{
+            background-position-x: -35px;
+        }
+        dl span.away{
+            background-position-x: -18px;
+        }
+        dl span.silent{
+            background-position-x: -107px;
+        }
+        dl span.hidden{
+            background-position-x: -54px;
+        }
+        body>a,body>a:visited{
+            display: block;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 30px 50px 0 0;
+            color: #0a74cb;
+            text-decoration: none;
+        }
+        body>a.zz:after{
+            content: '';
+            position: fixed;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0,0,0,.3);
+        }
+
+    </style>
+</head>
+<body onselectstart="return false;">
+<a href="#" id="login">登录</a>
+<div class="box" id="box">
+    <span class="close"></span>
+    <div class="title" id="title"></div>
+    <form action="#">
+        <label>帐号：
+            <input type="text">
+        </label>
+        <label>密码：
+            <input type="password">
+        </label>
+        <button type="submit"></button>
+        <dl>
+            <dt class="show">
+                <span class="online vis"></span>
+                <span class="txt">我在线上</span>
+            </dt>
+            <dd class="panel">
+                <a href="#" class="link">
+                    <span class="online"></span>
+                    我在线上
+                </a>
+                <a href="#" class="link">
+                    <span class="callMe"></span>
+                    Q我吧
+                </a>
+                <a href="#" class="link">
+                    <span class="away"></span>
+                    离开
+                </a>
+                <a href="#" class="link">
+                    <span class="busy"></span>
+                    忙碌
+                </a>
+                <a href="#" class="link">
+                    <span class="silent"></span>
+                    请忽打扰
+                </a>
+                <a href="#" class="link">
+                    <span class="hidden"></span>
+                    隐身
+                </a>
+            </dd>
+        </dl>
+    </form>
+</div>
+<script src="../js/eventCompatible.js"></script>
+<script>
+    window.onload= function () {
+        var login=document.getElementById('login');
+        var obox=document.getElementById('box');
+        var title=box.querySelector('div.title');
+        var close=box.querySelector('span.close');
+        var show=box.querySelector('dt.show');
+        var panel=box.querySelector('dd.panel');
+        var vis=box.querySelector('span.vis');
+        var txt=box.querySelector('span.txt');
+        eventCompatible.addEvent(login,'click', function () {
+            obox.style.display='block';
+            this.className='zz';
+            center();
+        });
+        function center(){
+            box.style.left=(window.innerWidth-box.offsetWidth)/2+'px';
+        }
+        window.onresize= function () {
+            center();//变窗口大小，登录框也居中显示
+        }
+        eventCompatible.addEvent(title,'mousedown', function (ev) {
+            var e=ev || event;
+            var disx= e.pageX-obox.offsetLeft;
+            var disy= e.pageY-obox.offsetTop;
+            eventCompatible.addEvent(document,'mousemove',move);
+            function move(ev) {
+                var e=ev || event;
+                l= e.pageX-disx;
+                t= e.pageY-disy;
+                if(l<0){
+                    l=0
+                }
+                else if(l>window.innerWidth-obox.offsetWidth){
+                    l=window.innerWidth-obox.offsetWidth;
+                }
+                if(t<0){
+                    t=0;
+                }
+                else if(t>window.innerHeight-obox.offsetHeight){
+                    t=window.innerHeight-obox.offsetHeight;
+                }
+                obox.style.left=l+'px';
+                obox.style.top=t+'px';
+            }
+            eventCompatible.addEvent(document,'mouseup',up);
+            function up() {
+                eventCompatible.removeEvent(document,'mousemove',move);
+                eventCompatible.removeEvent(document,'mouseup',up)
+            }
+        });
+        eventCompatible.addEvent(close,'click', function () {
+            obox.style.display='none';
+            login.className='';
+        });
+        eventCompatible.addEvent(show,'click', function (ev) {
+            var e=ev || event;
+            eventCompatible.stopPropagation(e);
+            panel.style.display='block';
+        });
+        eventCompatible.agentEvent(panel,'click',['a','link'], function () {
+            vis.className=vis.className.replace(/\b\w+\b/,this.children[0].className);
+            txt.innerText=this.innerText;
+        });
+        eventCompatible.addEvent(document,'click', function () {
+            panel.style.display='none';
+        });
+
+
+
+
+    }
+</script>
+</body>
+</html>

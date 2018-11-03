@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div.box{
+            width: 700px;
+            margin: 100px auto 0;
+            border: 1px solid #00a5c3;
+            padding: 20px;
+            position: relative;
+        }
+        div.box div{
+            height: 0;
+            overflow: hidden;
+            transition: height 2s;
+        }
+        div.box div.high{
+            height: 100px;
+        }
+        div.box button{
+            position: absolute;
+            width: 80px;
+            left: 310px;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <p>手机 - 商品筛选</p>
+    <p>网络： 移动4G（TD-LTE ） 联通4G（TD-LTE） 联通3G（WCDMA）</p>
+    <div id="toggle">
+        <p>价格： 5000以上 4000-4999 3000-3999 2000-2999</p>
+        <p>特点： JDPhone计划 "0"元购机 防水 长待机 1080P全高清屏</p>
+    </div>
+    <button id="btn">更多</button>
+</div>
+</body>
+<script>
+   var oBtn=document.getElementById('btn');
+    var oDiv=document.getElementById('toggle');
+    oBtn.onclick= function () {
+        oDiv.classList.toggle('high');
+        this.innerText=(this.innerText=='更多')?'收起':'更多';
+//        if(oDiv.classList.contains('high')){
+//            oDiv.classList.remove('high');
+//            this.innerText='更多';
+//        }
+//        else{
+//            oDiv.classList.add('high');
+//            this.innerText='收起';
+//        }
+    }
+
+</script>
+</html>

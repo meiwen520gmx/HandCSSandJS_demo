@@ -1,0 +1,445 @@
+.insert_h3 h3 {
+  line-height: 46px;
+  margin: 15px 0;
+  font-size: 24px;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px 0 60px;
+  background: url("h_icon.png") left center no-repeat;
+}
+.insert_h3 h3 a,
+.insert_h3 h3 a:visited {
+  font-size: 14px;
+  color: black;
+  margin-top: 20px;
+  line-height: 26px;
+}
+.insert_h3 h3 a:after,
+.insert_h3 h3 a:visited:after {
+  content: "\f101";
+  font-family: "myicon";
+  margin-left: 2px;
+}
+main {
+  width: 1000px;
+  margin: 0 auto;
+}
+main div.up {
+  display: flex;
+}
+main div.up ul {
+  width: 190px;
+  background-color: #4593FD;
+  border: 1px solid #4593FD;
+  line-height: 25px;
+  position: relative;
+}
+main div.up ul li {
+  height: 68px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+main div.up ul li:not(:first-child) {
+  border-top: 1px solid #5AA1FE;
+}
+main div.up ul li:not(:last-child) {
+  border-bottom: 1px solid #3487F2;
+}
+main div.up ul li h5 {
+  color: #F6F9FF;
+  font-family: "Microsoft YaHei";
+  position: relative;
+}
+main div.up ul li h5 a,
+main div.up ul li h5 a:visited {
+  font-family: "宋体";
+  font-size: 12px;
+  color: white;
+  padding: 3px 6px;
+  background-color: #106AC0;
+  border-radius: 30%;
+  font-weight: 400;
+  text-decoration: underline;
+}
+main div.up ul li h5:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-left-color: #D5E8FF;
+  top: 6px;
+  right: 0;
+}
+main div.up ul li > a,
+main div.up ul li a:visited {
+  color: #C2D9F8;
+  font-family: "宋体";
+  font-size: 13px;
+}
+main div.up ul li menu {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background-color: white;
+  border: 1px solid #ddd;
+  width: 570px;
+  padding: 15px;
+  font-size: 12px;
+  line-height: 25px;
+}
+main div.up ul li menu dl {
+  border-bottom: 1px solid #E5E5E5;
+  padding: 8px 0;
+}
+main div.up ul li menu dl dt {
+  float: left;
+  color: #4B88DA;
+  font-weight: 600;
+  margin-right: 20px;
+}
+main div.up ul li menu dl dt a {
+  color: #4B88DA;
+  font-weight: 600;
+}
+main div.up ul li menu dl dd {
+  overflow: auto;
+}
+main div.up ul li menu dl dd a,
+main div.up ul li menu dl dd a:visited {
+  color: #666;
+}
+main div.up ul li menu dl dd a.active,
+main div.up ul li menu dl dd a:visited.active {
+  color: #ff7300;
+}
+main div.up ul li menu aside {
+  margin-top: 15px;
+}
+main div.up ul li menu aside a,
+main div.up ul li menu aside a:visited {
+  display: inline-block;
+  background-color: #2785E6;
+  padding: 0 30px 0 5px;
+  color: white;
+  position: relative;
+}
+main div.up ul li menu aside a:after,
+main div.up ul li menu aside a:visited:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-left-color: #D5E8FF;
+  top: 8px;
+  right: 10px;
+}
+main div.up ul li:hover {
+  background-color: white;
+}
+main div.up ul li:hover h5,
+main div.up ul li:hover > a {
+  color: black;
+}
+main div.up ul li:hover h5:after {
+  display: none;
+}
+main div.up ul li:hover menu {
+  display: block;
+}
+main div.up section.mid {
+  width: 568px;
+  border: 1px solid blue;
+  box-sizing: border-box;
+}
+main div.up section.down {
+  width: 240px;
+}
+main div.mid h3 {
+  line-height: 46px;
+  margin: 15px 0;
+  font-size: 24px;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px 0 60px;
+  background: url("h_icon.png") left center no-repeat;
+}
+main div.mid h3 a,
+main div.mid h3 a:visited {
+  font-size: 14px;
+  color: black;
+  margin-top: 20px;
+  line-height: 26px;
+}
+main div.mid h3 a:after,
+main div.mid h3 a:visited:after {
+  content: "\f101";
+  font-family: "myicon";
+  margin-left: 2px;
+}
+main div.mid section {
+  display: flex;
+}
+main div.mid section aside {
+  width: 192px;
+  height: 430px;
+  box-sizing: border-box;
+  color: white;
+  font-family: "Microsoft YaHei";
+}
+main div.mid section aside h4 {
+  font-size: 23px;
+}
+main div.mid section aside a {
+  display: block;
+  padding-left: 15px;
+  line-height: 30px;
+  background-color: white;
+  color: #696969;
+  font-size: 12px;
+}
+main div.mid section aside a:after {
+  position: absolute;
+  content: "\f0a9";
+  font-family: "myicon";
+  margin-left: 10px;
+  font-size: 16px;
+}
+main div.mid section div.r {
+  flex: 1;
+}
+main div.mid section div.r div.r_up {
+  display: flex;
+}
+main div.mid section div.r div.r_up figure {
+  flex: 1;
+  border-top: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  height: 295px;
+  text-align: center;
+}
+main div.mid section div.r div.r_up figure img {
+  margin: 46px 0 25px;
+}
+main div.mid section div.r div.r_up figure figcaption {
+  color: #FF8A42;
+  font-family: "Microsoft YaHei";
+}
+main div.mid section div.r div.r_up figure figcaption h5 {
+  color: black;
+  font-size: 17px;
+  margin-bottom: 7px;
+}
+main div.mid section div.r div.r_down {
+  display: flex;
+  border-bottom: 3px solid #FF7201;
+}
+main div.mid section div.r div.r_down figure {
+  flex: 1;
+  border-top: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  height: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main div.mid section div.r div.r_down figure figcaption {
+  margin-left: 23px;
+  font-size: 13px;
+}
+main div.mid section div.r div.r_down figure figcaption div.price {
+  font-family: "Microsoft YaHei";
+  font-size: 16px;
+  text-align: center;
+}
+main div.mid section div.r div.r_down figure figcaption div.price:before {
+  content: "\f157";
+  font-family: "myicon";
+  font-size: 12px;
+}
+main div.mid section aside {
+  background: url("bg1.png") right 58px no-repeat, linear-gradient(to right, #0254a6, #0181be);
+  padding: 240px 0 0 20px;
+}
+main div.mid section aside a {
+  margin: 15px 70px 60px 0;
+}
+main div.mid section aside div.col span {
+  display: inline-block;
+  width: 20px;
+  height: 5px;
+  margin-right: 6px;
+  background-color: white;
+}
+main div.mid section aside div.col span:last-child {
+  background-color: #FF7700;
+}
+main div.mid section div.r {
+  flex: 1;
+}
+main div.mid section div.r div.r_up {
+  display: flex;
+}
+main div.mid section div.r div.r_up figure {
+  flex: 1;
+  border-top: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  height: 295px;
+  text-align: center;
+}
+main div.mid section div.r div.r_up figure img {
+  margin: 46px 0 25px;
+}
+main div.mid section div.r div.r_up figure figcaption {
+  color: #FF8A42;
+  font-family: "Microsoft YaHei";
+}
+main div.mid section div.r div.r_up figure figcaption h5 {
+  color: black;
+  font-size: 17px;
+  margin-bottom: 7px;
+}
+main div.mid section div.r div.r_down {
+  display: flex;
+  border-bottom: 3px solid #FF7201;
+}
+main div.mid section div.r div.r_down figure {
+  flex: 1;
+  border-top: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  height: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main div.mid section div.r div.r_down figure figcaption {
+  margin-left: 23px;
+  font-size: 13px;
+}
+main div.mid section div.r div.r_down figure figcaption div.price {
+  font-family: "Microsoft YaHei";
+  font-size: 16px;
+  text-align: center;
+}
+main div.mid section div.r div.r_down figure figcaption div.price:before {
+  content: "\f157";
+  font-family: "myicon";
+  font-size: 12px;
+}
+main div.down {
+  margin-bottom: 40px;
+}
+main div.down h3 {
+  line-height: 46px;
+  margin: 15px 0;
+  font-size: 24px;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px 0 60px;
+  background: url("h_icon.png") left center no-repeat;
+}
+main div.down h3 a,
+main div.down h3 a:visited {
+  font-size: 14px;
+  color: black;
+  margin-top: 20px;
+  line-height: 26px;
+}
+main div.down h3 a:after,
+main div.down h3 a:visited:after {
+  content: "\f101";
+  font-family: "myicon";
+  margin-left: 2px;
+}
+main div.down section {
+  display: flex;
+}
+main div.down section aside {
+  width: 192px;
+  height: 400px;
+  box-sizing: border-box;
+  color: white;
+  font-family: "Microsoft YaHei";
+}
+main div.down section aside h4 {
+  font-size: 23px;
+}
+main div.down section aside a {
+  display: block;
+  padding-left: 15px;
+  line-height: 30px;
+  background-color: white;
+  color: #696969;
+  font-size: 12px;
+}
+main div.down section aside a:after {
+  position: absolute;
+  content: "\f0a9";
+  font-family: "myicon";
+  margin-left: 10px;
+  font-size: 16px;
+}
+main div.down section div.r {
+  flex: 1;
+}
+main div.down section div.r div.r_up {
+  display: flex;
+}
+main div.down section div.r div.r_up figure {
+  flex: 1;
+  border-top: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  height: 275px;
+  text-align: center;
+}
+main div.down section div.r div.r_up figure img {
+  margin: 46px 0 15px;
+}
+main div.down section div.r div.r_up figure figcaption {
+  color: #FF8A42;
+  font-family: "Microsoft YaHei";
+}
+main div.down section div.r div.r_up figure figcaption h5 {
+  color: black;
+  font-size: 17px;
+  margin-bottom: 7px;
+}
+main div.down section div.r div.r_down {
+  display: flex;
+  border-bottom: 3px solid #FF7201;
+}
+main div.down section div.r div.r_down figure {
+  flex: 1;
+  border-top: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main div.down section div.r div.r_down figure figcaption {
+  margin-left: 23px;
+  font-size: 13px;
+}
+main div.down section div.r div.r_down figure figcaption div.price {
+  font-family: "Microsoft YaHei";
+  font-size: 16px;
+  text-align: center;
+}
+main div.down section div.r div.r_down figure figcaption div.price:before {
+  content: "\f157";
+  font-family: "myicon";
+  font-size: 12px;
+}
+main div.down section aside {
+  background: #53c7f8 url("bg2.png") right 65px no-repeat;
+  padding: 240px 0 0 20px;
+}
+main div.down section aside a {
+  margin: 15px 70px 60px 0;
+}

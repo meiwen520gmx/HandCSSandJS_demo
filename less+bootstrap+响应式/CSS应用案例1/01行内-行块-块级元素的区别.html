@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            /*margin: 0;*/
+        }
+
+        html {
+            background-color: teal;
+        }
+
+        body {
+            background-color: gainsboro;
+            margin: 100px;
+            padding: 50px;
+            border: 1px solid red;
+        }
+
+        container {
+            display: block;
+            margin: 20px;
+            padding: 50px;
+            border: 1px solid black;
+            background-color: grey;
+        }
+
+        div {
+            margin: 20px 0;
+        }
+
+        /*行内元素仅不能设置高宽，但外间距仅对左右有效*/
+        div:nth-of-type(1) span {
+            margin: 8px; /*仅对左右有效*/
+            padding: 0 20px;
+            border: 1px solid blue;
+            background-color: #005aa7;
+            color: white;
+        }
+
+        /*行块元素不会单独占满一行，但有默认的8px左右间距*/
+        div:nth-of-type(2) span {
+            display: inline-block;
+            margin: 8px;
+            padding: 20px;
+            width: 150px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            border: 1px solid blue;
+            background-color: #005aa7;
+            color: white;
+        }
+
+        /*块级元素单独占一行，且对象之间上下间距为塌陷方式*/
+        div:nth-of-type(3) span {
+            display: block;
+            /*float: left;*/
+            margin: 8px;
+            padding: 20px;
+            width: 300px;
+            /*height: 50px;*/
+            line-height: 50px;
+            border: 1px solid blue;
+            background-color: #005aa7;
+            color: white;
+        }
+
+        /*块级元素默认宽100%，p标签默认有16px上下间距*/
+        div:nth-of-type(4) p {
+            /*margin-left: -8px;*/
+            /*clear: left;*/
+            /*margin: 0;*/
+            /*padding: 20px;*/
+            height: 50px;
+            line-height: 50px;
+            border: 1px solid green;
+            background-color: hotpink;
+        }
+    </style>
+</head>
+<body>
+<container>
+    <div>
+        <span>行内元素</span>
+        <span>行内元素</span>
+        <span>行内元素</span>
+        <span>行内元素</span>
+        <span>行内元素</span>
+        <span>行内元素</span>
+        <span>行内元素</span>
+        <span>行内元素</span>
+        <span>行内元素</span>
+        <span>行内元素</span>
+        <span>行内元素</span>
+        <span>行内元素</span>
+        <span>行内元素</span>
+        <span>行内元素</span>
+        <span>行内元素</span>
+        <span>行内元素</span>
+        <span>行内元素</span>
+        <span>行内元素</span>
+    </div>
+    <div>
+        <span>行块元素</span>
+        <span>行块元素</span>
+        <span>行块元素</span>
+        <span>行块元素</span>
+        <span>行块元素</span>
+        <span>行块元素</span>
+        <span>行块元素</span>
+        <span>行块元素</span>
+        <span>行块元素</span>
+        <span>行块元素</span>
+        <span>行块元素</span>
+        <span>行块元素</span>
+    </div>
+    <div>
+        <span>块级元素</span>
+        <span>块级元素</span>
+        <span>块级元素</span>
+    </div>
+    <div>
+        <p>p元素</p>
+        <p>p元素</p>
+        <p>p元素</p>
+    </div>
+</container>
+</body>
+</html>

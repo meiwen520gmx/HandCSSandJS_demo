@@ -1,0 +1,286 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+.bcenter {
+  width: 1000px;
+  margin: 0 auto;
+}
+main {
+  width: 1000px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+main section.up {
+  width: 1000px;
+  margin: 0 auto;
+  display: flex;
+}
+main section.up nav {
+  width: 200px;
+  background-color: #4594FD;
+  border: 1px solid #4594FD;
+  box-sizing: border-box;
+  position: relative;
+}
+main section.up nav > dl {
+  padding: 15px 10px;
+  line-height: 20px;
+  border-bottom: 1px solid #3B84F3;
+  border-top: 1px solid #56A3FB;
+}
+main section.up nav > dl > dd {
+  position: absolute;
+  display: none;
+  left: 199px;
+  top: 0;
+  width: 600px;
+  border: 1px solid transparent;
+  padding: 15px 20px;
+  background-color: white;
+}
+main section.up nav > dl:first-child {
+  border-top: none;
+}
+main section.up nav > dl:last-child {
+  border-bottom: none;
+}
+main section.up nav > dl h5 {
+  color: white;
+  font-size: 15px;
+  font-weight: normal;
+  position: relative;
+}
+main section.up nav > dl h5:after {
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-left-color: #D8E8FF;
+  right: 5px;
+  top: 5px;
+}
+main section.up nav > dl h5 a,
+main section.up nav > dl h5 a:visited {
+  background-color: #1469C6;
+  border-radius: 30%;
+  color: white;
+  padding: 1px 3px;
+  text-decoration: none;
+}
+main section.up nav > dl h5 a:hover,
+main section.up nav > dl h5 a:visited:hover {
+  text-decoration: underline;
+}
+main section.up nav > dl > a,
+main section.up nav > dl a:visited {
+  color: #B7D9F2;
+  font-size: 13px;
+}
+main section.up nav > dl:hover {
+  background-color: white;
+  color: black;
+}
+main section.up nav > dl:hover h5 {
+  color: black;
+}
+main section.up nav > dl:hover h5:after {
+  border-left-color: white;
+}
+main section.up nav > dl:hover dt > a {
+  color: black;
+}
+main section.up nav > dl:hover dd {
+  display: block;
+}
+main section.up nav > dl:hover dd a,
+main section.up nav > dl:hover dd a:visited {
+  color: #6A6A6A;
+}
+main section.up nav > dl:hover dd dl {
+  border-bottom: 1px solid #eee;
+  padding: 15px 0;
+  line-height: 20px;
+}
+main section.up nav > dl:hover dd dl dt {
+  float: left;
+  color: #45BCDA;
+  font-weight: 700;
+  font-size: 14px;
+  margin-right: 15px;
+}
+main section.up nav > dl:hover dd dl dd {
+  overflow: hidden;
+}
+main section.up nav > dl:hover dd dl dd a,
+main section.up nav > dl:hover dd dl dd a:visited {
+  font-size: 13px;
+  color: #656565;
+  font-weight: 200;
+  margin-right: 10px;
+  word-break: keep-all;
+}
+main section.up nav > dl:hover dd dl dd a:hover,
+main section.up nav > dl:hover dd dl dd a:visited:hover {
+  color: red;
+  text-decoration: underline;
+}
+main section.up nav > dl:hover dd aside {
+  margin: 15px 0 0;
+}
+main section.up nav > dl:hover dd aside a,
+main section.up nav > dl:hover dd aside a:visited {
+  padding: 5px 20px 5px 10px;
+  margin-right: 10px;
+  background-color: #2785E7;
+  color: white;
+  position: relative;
+}
+main section.up nav > dl:hover dd aside a:after,
+main section.up nav > dl:hover dd aside a:visited:after {
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-left-color: #D8E8FF;
+  right: 5px;
+  top: 9px;
+}
+main section.up nav > dl:hover:after {
+  position: absolute;
+  content: '';
+  width: 5px;
+  height: calc(100% / 5.1);
+  background-color: white;
+  margin-left: 188px;
+  margin-top: -56px;
+  z-index: 30;
+}
+main section.up aside {
+  flex: 1;
+}
+main section.up aside img {
+  width: 100%;
+  height: 100%;
+}
+main section.mid,
+main section.down {
+  width: 1000px;
+  margin: 0 auto;
+}
+main section.mid header,
+main section.down header {
+  padding: 15px 20px 15px 60px;
+  line-height: 45px;
+  background: url("../images/h_icon.png") no-repeat left center;
+  position: relative;
+}
+main section.mid header h2,
+main section.down header h2 {
+  font-weight: normal;
+}
+main section.mid header a,
+main section.down header a,
+main section.mid header a:visited,
+main section.down header a:visited {
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
+  color: black;
+  font-size: 12px;
+}
+main section.mid header a:hover,
+main section.down header a:hover,
+main section.mid header a:visited:hover,
+main section.down header a:visited:hover {
+  color: red;
+}
+main section.mid > div,
+main section.down > div {
+  display: flex;
+}
+main section.mid > div a,
+main section.down > div a {
+  width: 190px;
+}
+main section.mid > div a img,
+main section.down > div a img {
+  width: 100%;
+}
+main section.mid > div div.right,
+main section.down > div div.right {
+  flex: 1;
+}
+main section.mid > div div.right div,
+main section.down > div div.right div {
+  display: flex;
+}
+main section.mid > div div.right div figure,
+main section.down > div div.right div figure {
+  flex: 1;
+  border-top: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  display: flex;
+}
+main section.mid > div div.right div.top,
+main section.down > div div.right div.top {
+  height: 280px;
+  text-align: center;
+}
+main section.mid > div div.right div.top figure,
+main section.down > div div.right div.top figure {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main section.mid > div div.right div.top figure h4,
+main section.down > div div.right div.top figure h4 {
+  margin: 25px 0 5px;
+}
+main section.mid > div div.right div.top figure b,
+main section.down > div div.right div.top figure b {
+  color: #FF7005;
+  font-size: 15px;
+  font-weight: normal;
+}
+main section.mid > div div.right div.bottom,
+main section.down > div div.right div.bottom {
+  height: 118px;
+  border-bottom: 2px solid #FF7101;
+}
+main section.mid > div div.right div.bottom figure,
+main section.down > div div.right div.bottom figure {
+  padding: 27px 10px;
+}
+main section.mid > div div.right div.bottom figure img,
+main section.down > div div.right div.bottom figure img {
+  width: 38px;
+  height: 75px;
+}
+main section.mid > div div.right div.bottom figure figcaption,
+main section.down > div div.right div.bottom figure figcaption {
+  font-size: 13px;
+  line-height: 20px;
+}
+main section.mid > div div.right div.bottom figure figcaption p,
+main section.down > div div.right div.bottom figure figcaption p {
+  color: #FF7101;
+}
+main section.mid div div.bottom p {
+  padding-left: 10px;
+}
+main section.mid div div.bottom b {
+  padding-left: 10px;
+}
+main section.down div.bottom {
+  height: 119px;
+}
+main section.down div.bottom figure {
+  padding: 27px 30px !important;
+}
+main section.down div.bottom figure img {
+  margin-right: 15px;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            background-color: #aeaeae;
+        }
+        div.container{
+            width: 500px;
+            height: 500px;
+            margin: 150px auto;
+            perspective: 250px;
+            transform-style: preserve-3d;
+            perspective-origin: -100% -50%;
+        }
+        aside{
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            font-size: 50px;
+            position: absolute;
+        }
+        aside:first-child{
+            border: 1px dashed black;
+        }
+        aside:nth-child(2){
+            transform: translateZ(50px);
+            background-color: rgba(255,0,0,1);
+        }
+        aside:nth-child(3){
+            transform: translateZ(-50px);
+            background-color: rgba(0,0,0,1);
+        }
+        aside:nth-child(4){
+            transform: rotateY(90deg) translateZ(50px);
+            background-color: rgba(0,255,0,1);
+        }
+        aside:nth-child(5){
+            transform: rotateY(-90deg) translateZ(50px);
+            background-color: rgba(0, 129, 255, 0.7);
+        }
+        aside:nth-child(6){
+            transform: rotateX(90deg) translateZ(50px);
+            background-color: rgba(255, 217, 14, 1);
+        }
+        aside:nth-child(7){
+            transform: rotateX(-90deg) translateZ(50px);
+            background-color: rgba(255, 36, 243, 1);
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <aside></aside>
+    <aside>1</aside>
+    <aside>2</aside>
+    <aside>3</aside>
+    <aside>4</aside>
+    <aside>5</aside>
+    <aside>6</aside>
+</div>
+</body>
+</html>

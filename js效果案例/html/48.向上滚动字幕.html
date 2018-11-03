@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{margin: 0; padding: 0}
+        body{
+            background: url("../images/dh_bg.jpg") no-repeat top center;
+        }
+        div.box{
+            width: 310px;
+            height:300px;
+            margin: 150px auto 0;
+            border: 5px solid #9ebbd2;
+            overflow-y: hidden;
+            padding-left: 15px;
+            background-color: #fff;
+            border-radius: 5px;
+        }
+        div.box ul{
+            padding-right: 15px;
+            list-style: none;
+            line-height: 40px;
+        }
+        div.box ul a,div.box ul a:visited{
+            text-decoration: none;
+            color: #0A246A;
+        }
+        div.box ul a:hover{
+            color: red;
+        }
+        div.box ul li{
+            border-bottom: 1px dotted rgba(0, 0, 200, 0.25);
+        }
+    </style>
+</head>
+<body>
+<div class="box" id="box">
+    <ul>
+        <!--<li><a href="{href}">{no}.{txt}</a></li>-->
+    </ul>
+</div>
+<script>
+    var data = [];
+    data[data.length] = {href: 'http://www.baidu.com', con: '习近平成功访问美国等欧美国家'};
+    data[data.length] = {href: 'http://www.cqwu.edu.cn', con: '李克强成功访问美国等欧美国家'};
+    data[data.length] = {href: 'http://www.qq.com', con: '刘云山成功访问美国等欧美国家'};
+    data[data.length] = {href: 'http://www.163.com', con: '热烈欢迎李克强总理到重庆视察工作'};
+    data[data.length] = {href: 'http://www.sina.com', con: '热烈欢迎刘云山常委重庆视察工作'};
+    data[data.length] = {href: 'http://www.sina.com', con: '热烈欢迎刘云山常委重庆视察工作'};
+    data[data.length] = {href: 'http://www.cqw.edu.cn', con: '热烈欢迎习近平总书记到重庆视察工作'};
+    data[data.length] = {href: 'http://www.google.com', con: '重庆文理学院在创新工作中获得第一名'};
+    var oBox=document.getElementById('box');
+    var oUl=oBox.querySelector('ul');
+    var html='';
+    var timer=null;
+    data.forEach(function (el,i) {
+        html+='<li><a href='+el.href+'>'+(i+1)+'.'+el.con+'</a></li>';
+    });
+    oUl.innerHTML=html;
+    var ul1=oUl.cloneNode(true);
+    oBox.appendChild(ul1);
+    function move(){
+        var top;
+        timer=setInterval(function(){
+            top=oBox.scrollTop;
+            if(top<oUl.offsetHeight){
+                oBox.scrollTo(0,++top);
+            }
+            else{
+                oBox.scrollTo(0,0);
+            }
+        },30);
+    }
+    move();
+    oBox.onmouseover= function () {
+        clearInterval(timer);
+    }
+    oBox.onmouseout= function () {
+        move();
+    }
+
+</script>
+</body>
+</html>

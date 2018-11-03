@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table {
+            width: 700px;
+            margin: 50px auto 0;
+            border-collapse: collapse;
+            line-height: 35px;
+        }
+        table caption {
+            font-size: 26px;
+            letter-spacing: 20px;
+        }
+        table th, table td {
+            border: 1px solid #999;
+            text-align: center;
+        }
+        tbody tr:nth-child(2n+1) {
+            background-color: #b6d9f2;
+        }
+    </style>
+</head>
+<body>
+<table>
+    <caption>考试成绩排名</caption>
+    <thead>
+        <th>排序</th>
+        <th>姓名</th>
+        <th>语文</th>
+        <th>英语</th>
+        <th>数学</th>
+        <th>总分</th>
+    </thead>
+    <tbody id="tbody">
+    <!--<tr><td>1</td><td>市领导</td><td>78</td><td>89</td><td>45</td></tr>-->
+    </tbody>
+</table>
+
+<script>
+    var arr= [];
+    //姓名，语文成绩，英语成绩，数学成绩
+    arr[arr.length] = {name: '小明', yw: 89, yy: 87, sx: 79};
+    arr[arr.length] = {name: '小李', yw: 79, yy: 75, sx: 73};
+    arr[arr.length] = {name: '李磊', yw: 83, yy: 58, sx: 89};
+    arr[arr.length] = {name: '张三', yw: 69, yy: 86, sx: 96};
+    arr[arr.length] = {name: '赵红', yw: 86, yy: 68, sx: 96};
+    arr[arr.length] = {name: '小芳', yw: 88, yy: 75, sx: 69};
+    arr[arr.length] = {name: '高敏雪', yw: 98, yy: 100, sx: 90};
+    arr.sort(function (a, b) {
+        return b.yw+ b.yy+ b.sx- a.yw- a.yy- a.sx;
+    });
+    var sHtml='';
+    arr.forEach(function(el,i){
+        var total=el.yw+el.yy+el.sx;
+        sHtml+='<tr><td>'+(i+1)+'</td><td>'+el.name+'</td><td>'+el.yw+'</td><td>'+el.yy+
+                '</td><td>'+el.sx+'</td><td>'+total+'</td></tr>';
+    });
+    document.getElementById('tbody').innerHTML=sHtml;
+
+</script>
+</body>
+
+</html>

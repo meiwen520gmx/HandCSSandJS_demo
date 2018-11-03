@@ -1,0 +1,101 @@
+@charset "utf-8";
+body{
+  background-color: #efefef;
+}
+main{
+  margin: 30px 0 0;
+  aside{
+    div.panel-heading h4{
+      font-size: 18px;
+      color:#797979;
+      font-weight: 600;
+      small{
+        margin-left: 10px;
+      }
+    }
+    ul.list-group{
+      a{
+        display: block;
+        padding:10px 30px;
+        font-size: 15px;
+      }
+    }
+  }
+
+  div.news_list{
+    .panel{
+      margin-bottom: 0;
+    }
+      div.panel-heading{
+        a{
+          color: white;
+          &.active{
+            color:darkred;
+            padding-right: 30px;
+          }
+        }
+      }
+      ul.media-list{
+        li{
+          &:not(:last-of-type){
+            border-bottom:1px dotted #ccc;
+            padding-bottom: 10px;
+          }
+          img{
+            width:~'calc(60px + 8vw)';
+            margin-right: 1vw;
+          }
+          h4{
+            font-weight: 600;
+            color:#686868;
+            margin:1vw 2vw 1.1vw 0;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            font-size: 1.15vw;
+            span{
+              font-size: 13px;
+              color: #aaa;
+            }
+          }
+          div.media-body{
+            display: inherit;
+            div{
+              line-height:25px;
+              font-size: .9vw;
+              color: #666;
+              display: -webkit-box;
+              -webkit-box-orient:vertical;
+              -webkit-line-clamp:3;
+              overflow: hidden;
+            }
+          }
+        }
+      }
+  }
+}
+
+@media (max-width: 991px) and (min-width:768px){
+  main div.news_list ul.media-list li div.media-body div{
+    line-height: 21px;
+  }
+  .pagination>li>a{
+    padding: 6px 10px;
+    line-height: 1.6;
+    font-size: 13px;
+  }
+}
+@media (max-width: 767px) {
+  main div.news_list ul.media-list li div.media-body div{
+    line-height: 20px;
+    display: -webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:2;
+    overflow: hidden;
+  }
+  .pagination>li>a{
+     padding: 5px;
+    line-height: 1.5;
+    font-size: 12px;
+  }
+}

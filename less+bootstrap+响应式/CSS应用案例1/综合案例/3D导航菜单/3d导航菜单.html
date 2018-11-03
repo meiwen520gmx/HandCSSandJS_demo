@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="3d导航菜单.css">
+</head>
+<body>
+<nav>
+    <dl>
+        <a href="#">home
+        </a>
+    </dl>
+    <dl>
+        <a href="#">abcdeftg
+            <box>
+                <front>Services</front>
+                <bottom>Services</bottom>
+            </box>
+        </a>
+        <dd>
+            <a href="#">教学部门
+                <box>
+                    <front>教学部门</front>
+                    <bottom>教学部门</bottom>
+                </box>
+            </a>
+            <a href="#">学生工作
+                <box>
+                    <front>学生工作</front>
+                    <bottom>学生工作</bottom>
+                </box>
+            </a>
+            <a href="#">后期保障
+                <box>
+                    <front>后期保障</front>
+                    <bottom>后期保障</bottom>
+                </box>
+            </a>
+            <a href="#">办公室
+                <box>
+                    <front>办公室</front>
+                    <bottom>办公室</bottom>
+                </box>
+            </a>
+        </dd>
+    </dl>
+    <dl>
+        <a href="#">Products
+            <box>
+                <front>Products</front>
+                <bottom>Products</bottom>
+            </box>
+        </a>
+    </dl>
+    <dl>
+        <a href="#">About
+            <box>
+                <front>About</front>
+                <bottom>About</bottom>
+            </box>
+        </a>
+    </dl>
+    <dl>
+        <a href="#">Contact
+            <box>
+                <front>Contact</front>
+                <bottom>Contact</bottom>
+            </box>
+        </a>
+    </dl>
+    <dl>
+        <a href="#">Blog
+            <box>
+                <front>Blog</front>
+                <bottom>Blog</bottom>
+            </box>
+        </a>
+        <dd>
+            <a href="#">Html5
+                <box>
+                    <front>Html5</front>
+                    <bottom>Html5</bottom>
+                </box>
+            </a>
+            <a href="#">Css3
+                <box>
+                    <front>Css3</front>
+                    <bottom>Css3</bottom>
+                </box>
+            </a>
+            <a href="#">JavaScript
+                <box>
+                    <front>JavaScript</front>
+                    <bottom>JavaScript</bottom>
+                </box>
+            </a>
+            <a href="#">Videogames
+                <box>
+                    <front>Videogames</front>
+                    <bottom>Videogames</bottom>
+                </box>
+            </a>
+        </dd>
+    </dl>
+    <dl>
+        <a href="#">Shop On-line
+            <box>
+                <front>Shop On-line</front>
+                <bottom>Shop On-line</bottom>
+            </box>
+        </a>
+    </dl>
+</nav>
+</body>
+</html>
+<!--nav {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  dl {
+    font-size: 18px;
+    font-family: "microsoft yahei";
+    &:first-child a {
+      bottomground-color: black;
+      color: white;
+    }
+    &:not(:last-child) {
+      margin-right: 1px;
+    }
+    a{
+      display: block;
+      text-decoration: none;
+      padding: 10px 10px;
+      perspective: 200px;
+      box, box front, box bottom {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        padding: 10px 10px;
+        box-sizing: border-box;
+      }
+      box {
+        transform-style: preserve-3d; /*子元素作3D变换*/
+        transform: translateZ(-22px);
+        transition: all 0.3s ease-out;
+        front {
+          bottomground-color: black;
+          color: white;
+          transform: translateZ(22px);
+        }
+        bottom {
+          transform: rotateX(-90deg) translateZ(22px); /*外移25,外转90*/
+          bottomground-color: #ffc23e;
+          color: black;
+        }
+      }
+      &:hover box {
+        transform: translateZ(-25px) rotateX(90deg);
+      }
+    }
+    dd {
+      position: absolute;
+      display: none;
+      a{
+        margin-top: 1px;
+      }
+    }
+    &:hover dd {
+      display: block;
+    }
+  }
+}-->

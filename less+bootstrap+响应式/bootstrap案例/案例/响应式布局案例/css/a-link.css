@@ -1,0 +1,61 @@
+@charset "UTF-8";
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+body {
+  padding-top: 80px;
+  padding-bottom: 70px;
+}
+main {
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+main div.left {
+  position: fixed;
+  top: 80px;
+  bottom: 70px;
+  z-index: 10;
+}
+main div.left h3 {
+  margin: 0;
+}
+main div.left div.lcj-panel {
+  height: 100%;
+  background-color: #eee;
+}
+main div.left div.lcj-panel ul {
+  margin-top: 20px;
+}
+main div.left div.lcj-panel ul li {
+  line-height: 35px;
+}
+main div.left div.lcj-panel ul li a {
+  display: block;
+  padding-left: 30px;
+}
+main div.left div.lcj-panel ul li:hover {
+  background-color: #00b5d6;
+}
+main div.left div.lcj-panel ul li:hover a {
+  color: white;
+}
+main div.left div.lcj-panel ul li.active {
+  background-color: black ;
+}
+main div.left div.lcj-panel ul li.active a {
+  color: white;
+}
+main div.left div.lcj-panel ul li.divider {
+  margin: 5px 0;
+  height: 0;
+  border-top: 1px dotted black;
+  border-bottom: 1px solid white;
+}
+footer {
+  line-height: 40px;
+  background-color: #0C4E7C;
+  color: white;
+}

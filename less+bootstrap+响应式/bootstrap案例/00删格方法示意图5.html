@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>基本用法</title>
+    <!--Bootstrap的必须要求，网页适应多种设备，下面这代码很重要，让网页视口自动适应设备宽度，缩放比例我1-->
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <style>
+        [class*=col-md-] {
+            border: 1px solid #999;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <h2>列组合</h2>
+
+    <div class="row">
+        <div class="col-md-4 col-sm-6">.col-md-4 .col-sm-6</div>
+        <div class="col-md-8 col-sm-6">.col-md-8 .col-sm-6</div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 col-xs-4">.col-md-4 .col-xs-4</div>
+        <div class="col-md-4 col-xs-8">.col-md-4 .col-xs-8</div>
+        <div class="clearfix visible-xs"></div>
+        <div class="col-md-4 col-xs-6">.col-md-4 .col-xs-6</div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">.col-md-3</div>
+        <div class="col-md-6">.col-md-6</div>
+        <div class="col-md-3">.col-md-3</div>
+    </div>
+    <h2>列偏移</h2>
+
+    <div class="row">
+        <div class="col-md-4">.col-md-4</div>
+        <div class="col-md-2 col-md-offset-4">本身占2列，偏移4列</div>
+        <div class="col-md-2">.col-md-2</div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">.col-md-4</div>
+        <div class="col-md-4 col-md-offset-4">本身占4列，偏移4列</div>
+    </div>
+    <h2>列排序 两列产生的交换</h2>
+
+    <div class="row">
+        <div class="col-md-4 col-md-push-8">.col-md-4</div>
+        <div class="col-md-8 col-md-pull-4">.col-md-8</div>
+    </div>
+    <h2>列的嵌套</h2>
+
+    <h3>形式一</h3>
+
+    <div class="row">
+        <div class="col-md-8">
+            <div class="row">
+                <div class="col-md-6">col-md-6</div>
+                <div class="col-md-6">col-md-6</div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">col-md-6</div>
+                <div class="col-md-6">col-md-6</div>
+            </div>
+        </div>
+        <div class="col-md-4">col-md-4这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是</div>
+    </div>
+    <h3>形式二</h3>
+
+    <div class="row">
+        <div class="col-md-4">.col-md-4</div>
+        <div class="col-md-8">
+            <div class="row">
+                <div class="col-md-4">col-md-4</div>
+                <div class="col-md-4">col-md-4</div>
+                <div class="col-md-4">col-md-4</div>
+            </div>
+        </div>
+    </div>
+    <h3>形式三</h3>
+    <div class="row">
+        <div class="col-md-4">.col-md-4中华人民共和国中华人民共和国中华人民共和国的里面嵌套了一个网格(上下分）</div>
+        <div class="col-md-8">
+            <div class="row">
+                <div class="col-md-12">col-md-12</div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">col-md-4</div>
+                <div class="col-md-4">col-md-4</div>
+                <div class="col-md-4">col-md-4</div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

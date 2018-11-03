@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/fonts/bootstrap.css">
+    <style>
+        div.panel {
+            width: 500px;
+            margin: 50px auto 0;
+        }
+        .has-feedback .form-control {
+            display: inline-block;
+            padding-right: 0;
+            width: 80%;
+        }
+
+        div.require:before {
+            position: absolute;
+            content: '*';
+            color: red;
+            margin-left: -10px;
+            margin-top: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        请注册
+    </div>
+    <div class="panel-body">
+        <form class="form-horizontal" role="form" id="form1">
+            <div class="form-group has-feedback">
+                <label class="col-sm-3 control-label" for="zh1">帐号：</label>
+                <div class="col-sm-9 require">
+                    <input type="text" class="form-control" id="zh1" placeholder="请输入6-10位字母数字或下划线"
+                           pattern="\w{6,10}" required>
+                    <span class="glyphicon"></span>
+                </div>
+            </div>
+            <div class="form-group has-feedback">
+                <label class="col-sm-3 control-label" for="pw1">密码：</label>
+                <div class="col-sm-9 require">
+                    <input type="password" class="form-control" id="pw1" placeholder="请输入6-8位含字母数字特殊符号"
+                           pattern="(?=.*[a-zA-Z])(?=.*[\d])(?=.*[\W_])\S{6,8}" required>
+                    <span class="glyphicon"></span>
+                </div>
+            </div>
+            <div class="form-group has-feedback">
+                <label class="col-sm-3 control-label" for="pw2">确认密码：</label>
+                <div class="col-sm-9 require">
+                    <input type="password" class="form-control" id="pw2" placeholder="请再次输入密码"
+                           pattern="(?=.*[a-zA-Z])(?=.*[\d])(?=.*[\W_])\S{6,8}" required><span class="glyphicon"></span>
+                </div>
+            </div>
+            <div class="form-group has-feedback">
+                <label class="col-sm-3 control-label" for="email1">邮箱：</label>
+                <div class="col-sm-9">
+                    <input type="email" class="form-control allow" id="email1" placeholder="请输入您的邮箱地址">
+                    <span class="glyphicon"></span>
+                </div>
+            </div>
+            <div class="form-group has-feedback">
+                <label class="col-sm-3 control-label" for="url1">网址：</label>
+                <div class="col-sm-9">
+                    <input type="url" class="form-control allow" id="url1" placeholder="请输入您的网址">
+                    <span class="glyphicon"></span>
+                </div>
+            </div>
+            <div class="form-group has-feedback">
+                <label class="col-sm-3 control-label" for="age">年龄：</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control allow" id="age" placeholder="不超过130"
+                           pattern="([1-9]|1[0-2])?\d|130">
+                    <span class="glyphicon"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-9 col-sm-offset-3 checkbox">
+                    <label>
+                        <input type="checkbox"> 记住密码
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-3 col-sm-offset-3">
+                    <button class="btn btn-default submit">注册</button>
+                </div>
+                <div class="col-sm-6">
+                    <button type="reset" class="btn btn-default reset">重置</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="../js/eventCompatible.js"></script>
+<script>
+    var aReg = [/^\w{6,10}$/, /^(?=.*[a-zA-Z])(?=.*[\d])(?=.*[\W_])\S{6,8}$/,
+        /^(?=.*[a-zA-Z])(?=.*[\d])(?=.*[\W_])\S{6,8}$/,
+        /^\w+@\w{2,4}\.\w{2,4}(\.\w{2,4})*$/,
+        /^(http|https):\/\/\w+(\.\w+)*$/, /^((([1-9]|1[0-2])?\d)|130)$/];
+    var oForm = document.getElementById('form1');
+    var aInput = oForm.querySelectorAll('.form-control');
+    var aPassword = oForm.querySelectorAll('input[type=password]');
+    var aSpan = oForm.querySelectorAll('span');
+    for (var i = 0; i < aInput.length; i++) {
+        aInput[i].i = i;
+        console.log(i);
+    }
+    eventCompatible.agentEvent(oForm, 'click', ['input', 'form-control'], function () {
+        eventCompatible.addEvent(this, 'blur', check);
+        function check() {
+            var i = this.i;
+            console.log(this.i);
+            var oSpan = aSpan[i];
+            oSpan.className = 'glyphicon';
+            if (this.classList.contains('allow') && this.value.trim() == '')return;
+            if (aReg[i].test(this.value.trim())) {
+                oSpan.classList.add('glyphicon-ok');
+                oSpan.style.color = "green"
+            } else {
+                oSpan.classList.add('glyphicon-remove');
+                oSpan.style.color = "red"
+            }
+            eventCompatible.removeEvent(this, 'blur', check)
+        }
+    });
+    /*
+     [].forEach.call(aInput,function(el,i){
+     el.onblur=function(){
+     var oSpan=aSpan[i];
+     oSpan.className='glyphicon';
+     if(el.classList.contains('allow') && el.value.trim()=='')return;
+     if (aReg[i].test(el.value.trim())) {
+     oSpan.classList.add('glyphicon-ok');
+     oSpan.style.color = "green"
+     } else {
+     oSpan.classList.add('glyphicon-remove');
+     oSpan.style.color = "red"
+     }
+     }
+     });
+     */
+    eventCompatible.addEvent(oForm,'submit',function(e){
+        eventCompatible.preventDefault(e);
+        if (aPassword[0].value == aPassword[1].value) {
+            var str = '';
+            [].forEach.call(aInput, function (el) {
+                str += el.value + "--"
+            });
+            console.log(str)
+        } else {
+            alert('两次输入密码不一致')
+        }
+    });
+    eventCompatible.addEvent(oForm,'reset',function(){
+        [].forEach.call(aSpan, function (el) {
+            el.className = "glyphicon";
+        })
+    })
+</script>
+</body>
+</html>

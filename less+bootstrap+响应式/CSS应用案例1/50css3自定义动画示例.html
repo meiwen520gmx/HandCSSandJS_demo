@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>实现动画效果</title>
+    <style>
+        box, animate1, animate2, animate3 {
+            display: block;
+        }
+
+        box {
+            width: 300px;
+            margin: 0 auto;
+        }
+
+        /*第一个动画*/
+        animate1 {
+            height: 200px;
+            background: red;
+            color: #fff;
+        }
+
+        animate1:hover {
+            -webkit-animation: wobble 5s ease .1s;
+        }
+
+        @-webkit-keyframes wobble {
+            0% {
+                background: green;
+            }
+            40% {
+                width: 250px;
+                height: 150px;
+                background: orange;
+            }
+            60% {
+                width: 80px;
+                height: 80px;
+                background: blue;
+            }
+            100% {
+                width: 300px;
+                height: 200px;
+                background: red;
+            }
+        }
+
+        /*第二个动画*/
+        animate2 {
+            height: 300px;
+            border: 1px solid red;
+            position: relative;
+        }
+
+        animate2 ball {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            background: orange;
+            border-radius: 50%;
+            -webkit-animation-name: ball;
+            -webkit-animation-duration: 10s;
+            -webkit-animation-timing-function: ease;
+            -webkit-animation-delay: 1s;
+            -webkit-animation-iteration-count: infinite; /*无限循环*/
+        }
+
+        @-webkit-keyframes ball {
+            0% {
+                -webkit-transform: translateX(0);
+            }
+            25% {
+                -webkit-transform: translateX(280px);
+            }
+            50% {
+                -webkit-transform: translate(280px, 280px);
+            }
+            75% {
+                -webkit-transform: translate(0, 280px);
+            }
+            100% {
+                -webkit-transform: translateY(0);
+            }
+        }
+
+        /*第三个动画*/
+        animate3 {
+            line-height: 281px;
+            text-align: center;
+            color: #fff;
+            background: green;
+        }
+
+        animate3:hover {
+            -webkit-animation-name: toradius;
+            -webkit-animation-duration: 5s;
+            -webkit-animation-timing-function: ease-in-out;
+            -webkit-animation-delay: .1s;
+        }
+
+        @-webkit-keyframes toradius {
+            from {
+                border-radius: 0;
+            }
+            to {
+                border-radius: 100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+<box>
+    <animate1>属性值改变</animate1>
+    <animate2>位置改变
+        <ball></ball>
+    </animate2>
+    <animate3>方变园</animate3>
+</box>
+</body>
+</html>

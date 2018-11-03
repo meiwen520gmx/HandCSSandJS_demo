@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自定义滚动条</title>
+    <style>
+        body{
+            background: url("../images/dh_bg.jpg") no-repeat top center;
+        }
+        div.one{
+            display: flex;
+            justify-content:center;
+            margin: 120px 0 0 50px;
+        }
+        #parent{
+            width: 20px;
+            height: 450px;
+            background-color: #59758B;
+            position: relative;
+            border-radius: 10px;
+            padding: 5px 0;
+            box-shadow: 0 0 3px 3px rgba(255, 255, 255, 0.3) inset;
+        }
+        #div1{
+            width: 50px;
+            height: 50px;
+            position: absolute;
+        }
+        #div1 img{
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            margin-left: -15px;
+        }
+        #div2{
+            width:500px;
+            height: 400px;
+            position: relative;
+        }
+        #div2 img{
+            left: 0;
+            top: 0;
+            position: absolute;
+            filter:alpha(opacity:0);
+            opacity: 0;
+        }
+
+    </style>
+    <script>
+        window.onload= function () {
+            var oDiv=document.getElementById('div1');
+            var oParent=document.getElementById('parent');
+            var oDiv2=document.getElementById('div2');
+            var oImg=oDiv2.getElementsByTagName('img')[0];
+
+            var disY=0;
+            oDiv.onmousedown= function (ev) {
+                var oEvent=ev || event;
+                disY=oEvent.clientY-oDiv.offsetTop;
+                document.onmousemove= function (ev) {
+                    var oEvent=ev || event;
+                    var t=oEvent.clientY-disY;
+                    if(t<0){
+                        t=0;
+                    }
+                    else if(t>oParent.offsetHeight-oDiv.offsetHeight){
+                        t=oParent.offsetHeight-oDiv.offsetHeight;
+                    }
+                    oDiv.style.top=t+'px';
+                    var scale=t/(oParent.offsetHeight-oDiv.offsetHeight);
+                    //改透明度
+                    oImg.style.filter='alpha(opacity:'+scale*100+')';
+                    oImg.style.opacity=(100*scale)/100;
+                    oDiv3.style.top=-scale*(oDiv3.offsetHeight-oDiv2.offsetHeight)+'px';
+                };
+                document.onmouseup= function () {
+                    document.onmousemove=null;
+                    document.onmouseup=null;
+                };
+                return false;//屏蔽火狐浏览器的小bug
+            };
+        };
+    </script>
+</head>
+<body>
+<div class="one">
+    <div id="div2">
+            <img src="../images/8(1).png">
+    </div>
+    <div id="parent">
+        <div id="div1">
+            <img src="../images/7(1).png">
+        </div>
+    </div>
+</div>
+</body>
+</html>

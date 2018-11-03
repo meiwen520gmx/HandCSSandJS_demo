@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="../jquery-3.3.1/jquery-1.11.2.js"></script>
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        main figure {
+            position: relative;
+            display: none;
+        }
+
+        main span {
+            display: inline-block;
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            width: 16px;
+            height: 16px;
+            background: url("../images/icon.jpg") no-repeat -399px -19px;
+        }
+
+        main span:hover {
+            background: url("../images/icon.jpg") no-repeat -371px -19px;
+        }
+
+        main div {
+            height: 0;
+        }
+
+        /*显示隐藏视频部分CSS样式*/
+        aside {
+            position: fixed;
+            height: 200px;
+            width: 282px;
+            right: -250px;
+            bottom: 0;
+        }
+
+        aside span {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 32px;
+            height: 32px;
+            margin-top: -16px;
+            background: url("../images/login.png") no-repeat;
+            cursor: pointer;
+        }
+
+        aside span.out {
+            background: url("../images/logout.png") no-repeat;
+        }
+
+        aside video {
+            position: absolute;
+            top: 0;
+            left: 32px;
+        }
+    </style>
+</head>
+<body>
+<main>
+    <figure>
+        <img src="../images/cur.png" height="53">
+        <span></span>
+    </figure>
+    <div>
+        <img src="../images/adv.png" height="373">
+    </div>
+    <section>
+        <img src="../images/cqwu.jpg">
+    </section>
+</main>
+<aside>
+    <span></span>
+    <video src="../video/vedio-2.mp4" width="250px" height="200px" controls></video>
+</aside>
+<script type="text/javascript">
+    $('main div').animate({height:'373'},1000).delay(2000).animate({height:'53'},1000,function(){
+        $(this).prev().show().end().remove();
+    });
+    $('main figure span').click(function(){
+        $(this).parent().remove();
+    });
+    $('aside span').click(function(){
+        var $this=$(this);
+        $this.toggleClass('out');
+        if($this.hasClass('out')){
+            $this.parent().animate({right:0},500)
+        }else {
+            $this.parent().animate({right:'-250'},500)
+        }
+
+    })
+
+</script>
+</body>
+</html>

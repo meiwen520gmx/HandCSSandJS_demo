@@ -1,0 +1,187 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+}
+@font-face {
+  font-family: "myicon";
+  src: url("../fonts/icomoon.eot?#iefix") format("embedded-opentype"), url("../fonts/icomoon.woff") format("woff"), url("../fonts/icomoon.ttf") format("truetype"), url("../fonts/icomoon.svg") format("svg");
+  font-style: normal;
+  font-weight: normal;
+}
+ul {
+  list-style: none;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+.w_center {
+  margin: 0 auto;
+  width: 1000px;
+}
+body {
+  background-color: #F5F5F5;
+  font-family: "Microsoft Yahei";
+}
+h4 {
+  padding: 0 15px;
+  line-height: 40px;
+  border-bottom: 1px solid #E8E8E8;
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+}
+h4 a,
+h4 a:visited {
+  color: #A6C5EB;
+  font-size: 12px;
+  font-weight: normal;
+}
+h4 a:after,
+h4 a:visited:after {
+  content: attr(data-icon);
+  font-family: "myicon";
+}
+header div.up {
+  background-color: #9C9C9C;
+  height: 40px;
+  border-bottom: 1px solid #000;
+}
+header div.up aside {
+  margin: 0 auto;
+  width: 1000px;
+  padding-right: 10px;
+  box-sizing: border-box;
+  text-align: right;
+  line-height: 40px;
+}
+header div.up aside a,
+header div.up aside a:visited {
+  color: #fff;
+  font-size: 14px;
+  margin-right: 20px;
+}
+header div.up aside a:before,
+header div.up aside a:visited:before {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-left-color: #ddd;
+  margin-left: -12px;
+  margin-top: 16px ;
+}
+header div.mid {
+  margin: 0 auto;
+  width: 1000px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+header div.mid span {
+  line-height: 80px;
+  color: #c00;
+  font-size: 25px;
+  font-weight: 600;
+}
+header div.mid span:before {
+  position: absolute;
+  content: "24小时服务热线：";
+  color: #B9B9B9;
+  margin-left: -150px;
+  margin-top: 2px;
+  font-size: 17px;
+  font-weight: normal;
+}
+header div.mid span:after {
+  content: "\f098";
+  position: absolute;
+  font-family: "myicon";
+  margin-left: -352px;
+  color: #B9B9B9;
+  font-size: 27px ;
+}
+header div.down {
+  margin: 0 auto;
+  width: 1000px;
+  background-color: #766D66;
+  height: 40px;
+  display: flex;
+  justify-content: space-around;
+  line-height: 40px;
+  padding-left: 20px;
+  box-sizing: border-box;
+}
+header div.down a,
+header div.down a:visited {
+  flex: 1;
+  color: white;
+}
+header div.down form {
+  flex: 3;
+  padding: 8px 0;
+  box-sizing: border-box;
+}
+header div.down form input {
+  width: 260px;
+  height: 24px;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  vertical-align: top;
+  padding-right: 23px;
+  box-sizing: border-box;
+}
+header div.down form:after {
+  content: attr(data-icon);
+  position: absolute;
+  font-family: "myicon";
+  margin-left: -23px;
+  margin-top: -10px;
+  font-size: 20px;
+  color: #BABABA;
+}
+footer {
+  background-color: #9C9C9C;
+  height: 190px;
+  text-align: center;
+  border-top: 1px solid black;
+  margin-top: 15px;
+}
+footer div {
+  margin: 0 auto;
+  width: 1000px;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15px;
+}
+footer div dl a,
+footer div dl a:visited {
+  display: block;
+  line-height: 25px;
+  color: #2E2E2E;
+}
+footer div dl dt {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+footer div dl span {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 8px;
+  padding-left: 30px;
+  line-height: 27px;
+  background: url("../images/weixin.png") left center no-repeat;
+}
+footer address {
+  font-style: normal;
+  font-size: 18px;
+  padding-bottom: 15px;
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>侧边栏(总)</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+        html,body{
+            height: 100%;
+            overflow: hidden;
+            font: 15px/2 "Arail";
+            position: relative;
+            background-image: -webkit-linear-gradient(top,#DAE5EC,#D6E2E9);
+        }
+        main{
+            height: 100%;
+            width: 100%;
+        }
+        main #div1{
+            position: absolute;
+            left: -300px;
+            height:100%;
+        }
+        main #div1 aside{
+            position: absolute;
+            width: 300px;
+            height: 100%;
+            background-color: rgba(71, 134, 179, 0.6);
+            z-index: 10;
+            overflow-y:auto;
+        }
+        main #div1 span{
+            position: absolute;
+            width: 25px;
+            top: 300px;
+            left: 300px;
+            padding: 5px;
+            text-align: center;
+            background-color:cornflowerblue;
+            color: #fff;
+            z-index: 1000;
+            border-radius: 0 5px 5px 0;
+        }
+        main iframe{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            border: none;
+        }
+        main aside a{
+            display: block;
+            padding: 5px 50px;
+        }
+        a,a:visited{
+            text-decoration: none;
+            color: white;
+            font-size: 15px;
+        }
+    </style>
+    <script src="js/move4.js"></script>
+    <script>
+        window.onload= function () {
+            var oDiv=document.getElementById('div1');
+            oDiv.onmouseover= function () {
+                startMove(oDiv,{left:0});
+            }
+            oDiv.onmouseout= function () {
+                startMove(oDiv,{left:-300});
+            }
+        }
+    </script>
+</head>
+<body>
+<main>
+    <div id="div1">
+        <span>请欣赏</span>
+        <aside>
+            <a href="html/1.右侧悬浮框.html" target="main">1.右侧悬浮框</a>
+            <a href="html/2.时钟.html" target="main">2.时钟</a>
+            <a href="html/3.表格.html" target="main">3.表格</a>
+            <a href="html/4.无缝滚动.html" target="main">4.无缝滚动</a>
+            <a href="html/5.图片轮播.html" target="main">5.图片轮播</a>
+            <a href="html/6.土豆右下角效果.html" target="main">6.土豆右下角效果</a>
+            <a href="html/7.幻灯片-上下滑动.html" target="main">7.幻灯片-上下滑动</a>
+            <a href="html/8.日历.html" target="main">8.日历</a>
+            <a href="html/9.微博效果-链式运动.html" target="main">9.微博效果-链式运动</a>
+            <a href="html/10.一串跟着鼠标的div.html" target="main">10.一串跟着鼠标的div</a>
+            <a href="html/11.web专班通信录.html" target="main">11.web专班通信录</a>
+            <a href="html/12.表格（排序）.html" target="main">12.表格（排序）</a>
+            <a href="html/13.淡入淡出图片.html" target="main">13.淡入淡出图片</a>
+            <a href="html/14.缓冲运动.html" target="main">14.缓冲运动</a>
+            <a href="html/15.ctrl+回车提交留言.html" target="main">15.ctrl+回车提交留言</a>
+            <a href="html/16.面向对象选项卡.html" target="main">16.面向对象选项卡</a>
+            <a href="html/17.json选项卡.html" target="main">17.json选项卡</a>
+            <a href="html/18.自定义右键菜单.html" target="main">18.自定义右键菜单</a>
+            <a href="html/19.事件代理选项卡.html" target="main">19.事件代理选项卡</a>
+            <a href="html/20.cookie注册表单1.html" target="main">20.cookie注册表单1</a>
+            <a href="html/21.QQ登录界面拖拽.html" target="main">21.QQ登录界面拖拽</a>
+            <a href="html/22.QQ登录界面拖拽（黑框）.html" target="main">22.QQ登录界面拖拽（黑框）</a>
+            <a href="html/23.自定义滚动条改变内容.html" target="main">23.自定义滚动条改变内容</a>
+            <a href="html/24.自定义滚动条改变宽高.html" target="main">24.自定义滚动条改变宽高</a>
+            <a href="html/25.自定义滚动条改变透明度.html" target="main">25.自定义滚动条改变透明度</a>
+            <a href="html/26.固定边栏.html" target="main">26.固定边栏</a>
+            <a href="html/27.商品分类导航实现.html" target="main">27.商品分类导航实现</a>
+            <a href="html/28.收起-展开.html" target="main">28.收起-展开</a>
+            <a href="html/29.顶部短时广告.html" target="main">29.顶部短时广告</a>
+            <a href="html/30.随机产生题目.html" target="main">30.随机产生题目</a>
+            <a href="html/31.鼠标滚轮实现对象缩放.html" target="main">31.鼠标滚轮实现对象缩放</a>
+            <a href="html/32.动态加载select.html" target="main">32.动态加载select</a>
+            <a href="html/33.动态级联实现1.html" target="main">33.动态级联实现1</a>
+            <a href="html/34.动态创建数据表.html" target="main">34.动态创建数据表</a>
+            <a href="html/35.表单验证1.html" target="main">35.表单验证1</a>
+            <a href="html/36.前端数据编辑.html" target="main">36.前端数据编辑</a>
+            <a href="html/37.伸缩面板.html" target="main">37.伸缩面板</a>
+            <a href="html/38.输入信息动态提示.html" target="main">38.输入信息动态提示</a>
+            <a href="html/39.滚动监控.html" target="main">39.滚动监控</a>
+            <a href="html/40.翻转.html" target="main">40.数字翻转</a>
+            <a href="html/41.相册.html" target="main">41.翻转相册</a>
+            <a href="html/42.倒计时.html" target="main">42.商品倒计时</a>
+            <a href="html/43.钟表.html" target="main">43.钟表</a>
+            <a href="html/44.弹性广告条.html" target="main">44.弹性广告条</a>
+            <a href="html/45.漂浮广告条.html" target="main">45.漂浮广告条</a>
+            <a href="html/46.QQ登录框.html" target="main">46.QQ登录框</a>
+            <a href="html/47.动态class方法.html" target="main">47.动态class方法</a>
+            <a href="html/48.向上滚动字幕.html" target="main">48.向上滚动字幕</a>
+            <a href="html/49.向左滚动字幕.html" target="main">49.向左滚动字幕</a>
+            <a href="html/50.暂停字幕滚动.html" target="main">50.暂停字幕滚动</a>
+            <a href="html/51.图片放大镜.html" target="main">51.图片放大镜</a>
+            <a href="html/52.仿图片裁剪.html" target="main">52.仿图片裁剪</a>
+            <a href="html/53.购物车.html" target="main">53.购物车</a>
+            <a href="html/54.仿QQ空间时光轴.html" target="main">54.仿QQ空间时光轴</a>
+        </aside>
+    </div>
+    <iframe src="html/slow.html" name="main">
+    </iframe>
+</main>
+</body>
+</html>

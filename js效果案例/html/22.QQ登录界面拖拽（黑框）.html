@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>QQ登录界面拖拽(黑框)</title>
+    <script src="../font2/iconfont.js"></script>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            background-color: #fff;
+        }
+        .box{
+            border: 1px solid black;
+            position: absolute;
+        }
+            .icon {
+                width: 1em; height: 1em;
+                vertical-align: -0.15em;
+                fill: currentColor;
+                overflow: hidden;
+            }
+        #div1{
+            display: none;
+            filter:alpha(opacity:0);
+            opacity: 0;
+            width: 430px;
+            height: 350px;
+            border: 1px solid #dbdbdb;
+            position: absolute;
+            border-radius: 3px;
+            box-shadow:0 0  5px 3px rgba(178,178,178,.6);
+        }
+        #div1 div.bg{
+            padding: 12px;
+            height: 118px;
+            background-color: blue;
+            background-image:-webkit-linear-gradient(45deg,#426AFF,#98DBFA,#78C3F7);
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            position: relative;
+        }
+        aside{
+            display: flex;
+        }
+        aside .icon{
+            color: #fff;
+            width: 25px;
+            height: 30px;
+            margin-right: 5px;
+        }
+        aside span{
+            color: #fff;
+            font-size: 18px;
+        }
+       figure .icon{
+           color: #fff !important;
+           font-size: 15px;
+           font-weight: normal !important;
+           margin: 0 5px;
+       }
+       #div1>span{
+           position: relative;
+       }
+        #div1>span img{
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 2px solid #A3C8FA;
+            box-shadow:0 0 5px 5px rgba(79,148,246,.3);
+            z-index: 10;
+            margin-top: -35px;
+            margin-left: 185px;
+            display: block;
+        }
+        #div1>span:before{
+            position: absolute;
+            content: '';
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color:#09F175;
+            border: 2px solid #fff;
+            left:233px;
+            top: 10px;
+            z-index: 100;
+        }
+        #div1 form{
+            width: 240px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 40px auto 0;
+        }
+        #div1 form label{
+            line-height: 38px;
+        }
+        #div1 form label.txt input{
+            padding-left: 20px;
+            width: 220px;
+            border: none;
+            border-bottom: 1px solid #E5E5E5;
+        }
+        #div1 form label.txt:first-child:before{
+            position: absolute;
+            content:url("../images/QQ.PNG");
+            margin-top: 2px;
+        }
+        #div1 form label.txt:first-child:after{
+            position: absolute;
+            content:url("../images/xiala.PNG");
+            margin-left: -20px;
+        }
+        #div1 form label.txt:nth-child(2):before{
+            position: absolute;
+            content:url("../images/lock.PNG");
+            margin-top: 2px;
+        }
+        #div1 form label.txt:nth-child(2):after{
+            position: absolute;
+            content:url("../images/keyboard.PNG");
+            margin-left: -20px;
+        }
+        #div1 form label.check{
+            width: 240px;
+            font-size: 13px;
+            color: #A6A6A6;
+            display: flex;
+            justify-content: space-around;
+        }
+        #div1 form label.check span{
+            display: flex;
+            justify-content:space-between;
+            align-items: center;
+        }
+        #div1 form label.check input{
+            width: 14px;
+            height: 14px;
+        }
+        #div1 form label button{
+            width: 240px;
+            background-color:#07BDFD;
+            border: none;
+            padding: 6px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 15px;
+            color: #fff;
+            border-radius: 3px;
+            box-shadow:0 0 3px 3px rgba(211,239,255,.5);
+        }
+        #div1 section{
+            padding:0 10px;
+            display: flex;
+            justify-content: space-between;
+
+        }
+        #div1 section span{
+            font-weight: normal;
+            font-size: 15px;
+            color: #A6A6A6;
+        }
+        #div1 section img{
+            position: absolute;
+            margin-top: -10px;
+            margin-left: 380px;
+        }
+        body>figure{
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        body>figure small{
+            margin-top: 10px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+    </style>
+    <script src="../js/move4.js"></script>
+    <script>
+        window.onload= function () {
+            var oDiv=document.getElementById('div1');
+            var oFig=document.getElementById('fig');
+            var oImg=oFig.getElementsByTagName('img')[0];
+            var oBtn=document.getElementById('close');
+            var disX=0;
+            var disY=0;
+            oImg.onclick= function () {
+                oDiv.style.display='block';
+                startMove(oDiv,{opacity:100});
+            }
+            oBtn.onclick= function () {
+                oDiv.style.display='none';
+                startMove(oDiv,{opacity:0});
+            }
+           oDiv.onmousedown= function (ev) {
+               var oEvent=ev || event;
+               disX=oEvent.clientX-oDiv.offsetLeft;
+               disY=oEvent.clientY-oDiv.offsetTop;
+               var oBox=document.createElement('div');
+               oBox.className='box';
+               oBox.style.width=oDiv.offsetWidth-2+'px';
+               oBox.style.height=oDiv.offsetHeight-2+'px';
+               oBox.style.left=oDiv.offsetLeft+'px';
+               oBox.style.top=oDiv.offsetTop+'px';
+               document.body.appendChild(oBox);
+
+               document.onmousemove= function (ev) {
+                   var oEvent=ev || event;
+                   var l=oEvent.clientX-disX;
+                   var t=oEvent.clientY-disY;
+                   if(l<0){
+                       l=0;
+                   }
+                   else if(l>document.documentElement.clientWidth-oDiv.offsetWidth){
+                       l=document.documentElement.clientWidth-oDiv.offsetWidth;
+                   }
+                   if(t<0){
+                       t=0;
+                   }
+                   else if(t>document.documentElement.clientHeight-oDiv.offsetHeight){
+                       t=document.documentElement.clientHeight-oDiv.offsetHeight;
+                   }
+                   oBox.style.left=l+'px';
+                   oBox.style.top=t+'px';
+               };
+               document.onmouseup= function () {
+                   document.onmousemove=null;
+                   document.onmouseup=null;
+                   oDiv.style.left=oBox.offsetLeft+'px';
+                   oDiv.style.top=oBox.offsetTop+'px';
+                   document.body.removeChild(oBox);
+               };
+               return false;//屏蔽火狐浏览器的小bug
+           };
+        };
+    </script>
+</head>
+<body>
+<figure id="fig">
+    <img src="../images/social-qq.png">
+    <small>打开QQ</small>
+</figure>
+<div id="div1">
+    <div class="bg">
+        <aside>
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-qq"></use>
+            </svg>
+            <span>QQ</span>
+        </aside>
+        <figure>
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-shezhi"></use>
+            </svg>
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-jianhao"></use>
+            </svg>
+            <svg id="close" class="icon" aria-hidden="true">
+                <use xlink:href="#icon-cancel-1-copy"></use>
+            </svg>
+        </figure>
+    </div>
+    <span><img src="../images/touxiang.jpg"></span>
+    <form>
+        <label class="txt"><input type="text" placeholder="账号"></label>
+        <label class="txt"><input type="password" placeholder="密码"></label>
+        <label class="check">
+            <span><input type="checkbox">自动登录</span>
+            <span><input type="checkbox">记住密码</span>
+            <span>找回密码</span>
+        </label>
+        <label>
+            <button>
+                <img src="../images/save.PNG">
+                <span>安全登录</span>
+            </button>
+        </label>
+    </form>
+    <section>
+        <span>注册账号</span>
+        <img src="../images/erweima.PNG">
+    </section>
+
+</div>
+</body>
+</html>

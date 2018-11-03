@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="../jquery-3.3.1/jquery-1.11.2.js"></script>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background: url("../images/dh_bg.jpg")top center no-repeat;
+            /*background-size: cover;*/
+        }
+
+        aside {
+            width: 600px;
+            height: 50px;
+            line-height: 50px;
+            margin: 150px auto;
+            border: 2px solid #b6d9f2;
+            /*(1)overflow: auto;*/
+            overflow: hidden;
+            position: relative;
+        }
+
+        aside div {
+            position: absolute;
+            display: flex;
+        }
+
+        div ol {
+            display: flex;
+        }
+
+        div ol li {
+            list-style-position: inside;
+            font-size: 15pt;
+            color: #555;
+            margin-right: 20px;
+            white-space: nowrap;
+        }
+        div ol li a{
+            text-decoration: none;
+            color: black;
+        }
+        div ol li a:hover{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<aside>
+    <div>
+        <ol>
+            <li><a href="#"> 长江之星客轮新闻报道</a></li>
+            <li><a href="http://www.cqwu.edu.cn"> 长江之特大新闻报道</a></li>
+            <li><a href="#"> 长江之星客大新闻报道</a></li>
+            <li><a href="#"> 重庆文理学院新药创制中心成立</a></li>
+            <li><a href="#"> 重庆大学软件学院新药创制中心成立</a></li>
+        </ol>
+    </div>
+</aside>
+</body>
+<script>
+//    一个方法是改变滚动条，一个是改变left值
+//    (1)
+//    var $aside=$('aside');
+//    var $ol=$('aside ol').clone();
+//    $ol.appendTo('aside div');
+//    var olW=$ol.outerWidth();
+//    var timer=null;
+//    var i=0;
+//    function move(){
+//        timer=setInterval(function () {
+////        滚动条是aside的
+//            if(i>=olW){
+//                i=0;
+//            }
+//            $aside.scrollLeft(++i);
+//        },10)
+//    }
+//
+//    $aside.hover(function () {
+//        clearInterval(timer);
+//    }, function () {
+//        move();
+//    }).mouseleave();
+//(2)
+   var $aside=$('aside');
+   var $div=$('aside div');
+   var $ol=$('aside ol').clone();
+   $ol.appendTo('aside div');
+    var olW=$ol.outerWidth();
+    var timer=null;
+    function move(){
+        var left;
+        timer=setInterval(function () {
+            left=$div.position().left;
+            if(left<-olW){
+                $div.css({left:0});
+            }
+            $div.css({left:"-=1"});
+        },10);
+    }
+   $aside.hover(function () {
+           clearInterval(timer);
+       }, function () {
+            move();
+        }).mouseleave();
+
+</script>
+</html>

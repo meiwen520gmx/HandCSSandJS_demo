@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>3D旋转菜单</title>
+    <style>
+        body {
+            background-color: #edecec;
+        }
+
+        /* basic menu styles */
+        .nav-menu {
+            width: 950px;
+            margin: 50px auto;
+        }
+
+        .nav-menu > li {
+            list-style: none;
+            float: left;
+            border-right: 1px solid #94c0be;
+            position: relative;
+        }
+
+        .nav-menu > li:last-child {
+            border-right: none;
+        }
+
+        .nav-menu  li  a {
+            display: block;
+            text-decoration: none;
+            text-transform: capitalize; /*第一个字母转换成大写*/
+            /*以下二行保证文字在块的中间*/
+            font-size: 18px;
+            padding: 15px 30px;
+            perspective: 200px;/*透视效果,对下一元素起作用*/
+        }
+        .three-d-box {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transition: all 0.3s ease-out;
+            transform: translateZ(-25px); /*往里面移动25像素*/
+            pointer-events: none; /*能否穿透绝对定位元素去触发下面元素的某些行为,默认的，可不要*/
+            transform-style: preserve-3d; /*子元素作3D变换*/
+        }
+        .three-d-box span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            padding: 15px 30px;
+            color: white;
+            box-sizing: border-box;
+        }
+
+        .front {
+            transform: translateZ(25px);
+        }
+
+        .back {
+            transform: rotateX(-90deg) translateZ(25px);
+            color: #FFE7C4;
+        }
+
+        .nav-menu a:not(.active):hover .three-d-box,
+        .nav-menu a:not(.active):focus .three-d-box {
+            transform: translateZ(-25px) rotateX(90deg);/*里移25，里转90*/
+        }
+
+        .nav-menu a.active .three-d-box span,
+        .nav-menu a:hover .three-d-box span {  /*仅改变背景*/
+            background-color: #51938f;
+            background-size: 50px 50px;
+            background-image: linear-gradient(45deg, #478480 25%, transparent 25%, transparent 75%, #478480 75%, #478480);
+        }
+
+        .nav-menu ul {
+            display: none;
+            position: absolute;
+            left: -40px; /*因为box和span变换后位置发生的改变*/
+            list-style: none;
+        }
+
+        .nav-menu  li:hover ul {
+            display: block;
+        }
+        .nav-menu ul a{
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+<ul class="nav-menu">
+    <li><a href="#" class="active">
+        home
+        <span class="three-d-box"><span class="front">Home</span><span class="back">Home</span></span>
+    </a></li>
+    <li><a href="#">
+        Services
+        <span class="three-d-box"><span class="front">Services</span><span class="back">Services</span></span>
+    </a>
+        <ul class="drop-menu">
+            <li><a href="#">
+                教学部门
+                <span class="three-d-box"><span class="front">教学部门</span><span class="back">教学部门</span></span>
+            </a></li>
+            <li><a href="#">
+                学生工作
+                <span class="three-d-box"><span class="front">学生工作</span><span class="back">学生工作</span></span>
+            </a></li>
+            <li><a href="#">
+                后期保障
+                <span class="three-d-box"><span class="front">后期保障</span><span
+                        class="back">后期保障</span></span>
+            </a></li>
+            <li><a href="#">
+                办公室
+                <span class="three-d-box"><span class="front">办公室</span><span
+                        class="back">办公室</span></span>
+            </a></li>
+        </ul>
+    </li>
+    <li><a href="#">
+        Products
+        <span class="three-d-box"><span class="front">Products</span><span class="back">Products</span></span>
+    </a></li>
+    <li><a href="#">
+        About
+        <span class="three-d-box"><span class="front">About</span><span class="back">About</span></span>
+    </a></li>
+    <li><a href="#">
+        Contact
+        <span class="three-d-box"><span class="front">Contact</span><span class="back">Contact</span></span>
+    </a></li>
+    <li>
+        <a href="#">
+            Blog
+            <span class="three-d-box"><span class="front">Blog</span><span class="back">Blog</span></span>
+        </a>
+        <ul class="drop-menu">
+            <li><a href="#">
+                Html5
+                <span class="three-d-box"><span class="front">Html5</span><span class="back">Html5</span></span>
+            </a></li>
+            <li><a href="#">
+                Css3
+                <span class="three-d-box"><span class="front">Css3</span><span class="back">Css3</span></span>
+            </a></li>
+            <li><a href="#">
+                JavaScript
+                <span class="three-d-box"><span class="front">JavaScript</span><span
+                        class="back">JavaScript</span></span>
+            </a></li>
+            <li><a href="#">
+                Videogames
+                <span class="three-d-box"><span class="front">Videogames</span><span
+                        class="back">Videogames</span></span>
+            </a></li>
+        </ul>
+    </li>
+    <li><a href="#">
+        Shop On-line
+            <span class="three-d-box"><span class="front">Shop On-line</span><span
+                    class="back">Shop On-line</span></span>
+    </a></li>
+</ul>
+</body>
+</html>

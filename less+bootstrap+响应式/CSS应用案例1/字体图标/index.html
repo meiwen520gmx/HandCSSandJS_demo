@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /*下载字体文件网站：https://icomoon.io，该网站有4000以上矢量字体图标可选用,
+        通过下载的demo.html文件找到需要的十六进制图标编码即可运用*/
+        @font-face {
+            font-family: "imooc-icon";
+            src: url("fonts/icomoon.eot"); /* IE9 兼容模式 */
+            src: url("fonts/icomoon.eot?#iefix") format("embedded-opentype"),
+            url("fonts/icomoon.woff") format("woff"),
+            url("fonts/icomoon.ttf") format("truetype"),
+            url("fonts/icomoon.svg") format("svg");
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        table {
+            width: 706px;
+            height: 283px;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+
+        table tr td {
+            width: 140px;
+            height: 140px;
+            border: 1px solid #ccccbb;
+            font-family: "imooc-icon";
+            /*font-style: normal;*/
+            /*font-weight: bold;*/
+            font-size: 64px;
+            text-align: center;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background-color: #f4f4f4;
+            color: #888;
+            cursor: pointer;
+        }
+
+        table tr:first-child td:nth-child(1) {
+            color: #efe0ce;
+        }
+
+        table tr:first-child td:nth-child(2) {
+            color: #ef7073;
+        }
+
+        table tr:first-child td:nth-child(3) {
+            color: #78ade3;
+        }
+
+        table tr:first-child td:nth-child(4) {
+            color: #eae77f;
+        }
+
+        table tr:last-child td:nth-child(1) {
+            font-size: 30px;
+        }
+
+        table tr:last-child td:nth-child(2) {
+            font-size: 60px;
+        }
+
+        table tr:last-child td:nth-child(3) {
+            font-size: 90px;
+        }
+
+        table tr:last-child td:nth-child(4) {
+            font-size: 120px
+        }
+
+        table tr:last-child td:nth-child(5) {
+            font-size: 148px;
+        }
+
+        table tr td:hover {
+            background-color: #fff;
+            color: red;
+        }
+
+        ul {
+            width: 120px;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            border-bottom: none;
+            list-style: none;
+        }
+
+        ul li {
+            line-height: 35px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        ul li:before {
+            content: attr(data-icon);
+            font-family: "imooc-icon";
+            font-size: 10px;
+            margin: 0 10px;
+        }
+
+        ul li:hover {
+            background-color: #003366;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<table>
+    <tr>
+        <td>&#xf000;</td>
+        <td>&#xf004;</td>
+        <td>&#xf005;</td>
+        <td>&#xf013;</td>
+        <td>&#xf019;</td>
+    </tr>
+    <tr>
+        <td>&#xf293;</td>
+        <td>&#xf007;</td>
+        <td>&#xf00e;</td>
+        <td>&#xf012;</td>
+        <td>&#xf015;</td>
+    </tr>
+</table>
+<ul>
+    <li data-icon="&#xf000">列表项一</li>
+    <li data-icon="&#xf001">列表项二</li>
+    <li data-icon="&#xf002">列表项三</li>
+    <li data-icon="&#xf003">列表项四</li>
+    <li data-icon="&#xf004">列表项五</li>
+    <li data-icon="&#xf005">列表项六</li>
+</ul>
+</body>
+</html>

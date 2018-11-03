@@ -1,0 +1,112 @@
+@charset "utf-8";
+main header {
+  padding: 30px 0 6px 15px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid #969696;
+  margin-bottom: 20px;
+}
+main header h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+main header h3 span {
+  font-size: 16px;
+  color: #002F94;
+}
+main header:before {
+  content: '';
+  position: absolute;
+  width: 12%;
+  height: 2px;
+  background-color: #002F94;
+  margin-top: 26px;
+  margin-left: -15px;
+}
+main div.news figure h4 {
+  margin-bottom: 0;
+  height: 60px;
+  line-height: 25px;
+  padding: 5px 25px;
+  background-color: #d54248;
+  font-size: 15px;
+  color: white;
+}
+main div.news figure img {
+  width: 100%;
+}
+main div.news figure figcaption {
+  padding: 10px;
+  background-color: #5d718e;
+  color: white;
+  text-indent: 2em;
+}
+main div.news figure figcaption p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+main div.news figure figcaption a {
+  display: block;
+  text-align: right;
+  color: white;
+}
+main div.news figure:hover,
+main div.news figure:hover h4 {
+  cursor: default;
+  background-color: #5d718e;
+}
+main div.news figure:hover figcaption {
+  background-color: #d54248;
+}
+main div.notice header:before {
+  width: 30%;
+}
+main div.notice ul li {
+  border-bottom: 1px solid #999;
+  padding-bottom: 10px;
+}
+main div.notice ul li > a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #5a6989;
+  color: white;
+  line-height: 25px;
+  padding: 10px;
+  border-radius: 6px;
+  margin-right: 5px;
+}
+main div.notice ul li > a b {
+  font-size: 30px;
+}
+main div.notice ul li div.media-body h4 {
+  font-size: 16px;
+  color: #737373;
+  font-weight: 600;
+  margin: 5px 0;
+}
+main div.notice ul li div.media-body div {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  color: #737373;
+}
+main div.notice ul li:first-of-type {
+  padding-top: 0;
+}
+main div.topics img {
+  width: 100%;
+}
+main div.topics img.thumbnail {
+  margin-bottom: 0;
+}
+main div.topics figcaption {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0 5px 10px;
+  font-size: 15px;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body{
+            background-color: #b6d9f2;
+            height: 2000px;
+        }
+        #div1{
+            width: 150px;
+            height: 200px;
+            position: absolute;
+            background-color:red;
+            right: 0;
+            bottom: 0;
+        }
+        #div1 img{
+            width: 150px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+<div id="div1">
+    <img src="../images/hzwyb.png">
+</div>
+
+<script>
+    window.onscroll=function(){
+        var oDiv=document.getElementById('div1');
+        var scrollTop=document.documentElement.scrollTop || document.body.scrollTop;
+        startMove(parseInt((document.documentElement.clientHeight-oDiv.offsetHeight)/2+scrollTop));
+    };
+    var timer=null;
+    function startMove(iTarget){
+        var oDiv=document.getElementById('div1');
+        clearInterval(timer);
+        timer=setInterval(function(){
+            var speed=(iTarget-oDiv.offsetTop)/6;
+            speed=speed>0?Math.ceil(speed):Math.floor(speed);
+            if(oDiv.offsetTop==iTarget){
+                clearInterval(timer);
+            }
+            else{
+                oDiv.style.top=oDiv.offsetTop+speed+'px';
+//                document.title = oDiv.offsetTop+speed;
+            }
+        },30);
+    }
+</script>
+</body>
+</html>

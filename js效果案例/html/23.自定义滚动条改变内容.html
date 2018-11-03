@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自定义滚动条</title>
+    <style>
+        body{
+            background: url("../images/dh_bg.jpg") no-repeat top center;
+            background-size: cover;
+            display: flex;
+            height: 100%;
+        }
+        div.one{
+            display: flex;
+            justify-content:flex-start;
+            margin: 130px 0 0 50px;
+        }
+        #parent{
+            width: 20px;
+            height: 450px;
+            background-color: #59758B;
+            position: relative;
+            border-radius: 10px;
+            padding: 5px 0;
+            box-shadow: 0 0 3px 3px rgba(255, 255, 255, 0.3) inset;
+        }
+        #div1{
+            width: 50px;
+            height: 50px;
+            position: absolute;
+        }
+        #div1 img{
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            margin-left: -15px;
+        }
+        #div2{
+            width:690px;
+            height: 450px;
+            border: 5px solid #59758B;
+            border-radius: 5px;
+            overflow: hidden;
+            position: relative;
+            margin-right: -8px;
+            /*filter:alpha(opacity:0);*/
+            /*opacity: 0;*/
+        }
+        #div3{
+            position: absolute;
+            left: 0;
+            top: 0;
+            padding: 10px 15px;
+        }
+        #div3 h2{
+            margin: 5px 0;
+            color: #EC136F;
+        }
+        #div3 p{
+            margin: 5px 0;
+            text-align: justify;
+            text-indent: 2em;
+        }
+        figure{
+            height: 430px;
+            margin: 130px 0 0 50px;
+            border: 1px solid #DEDEDE;
+            background-color: #9BC9EC;
+            border-radius: 5px;
+        }
+        figure h3{
+            color: #413937;
+            margin:5px;
+        }
+        figure figcaption{
+            margin: 10px;
+            border: 1px solid #DEDEDE;
+            background-color: #fff;
+        }
+        figure figcaption ul{
+            margin: 5px;
+            padding: 10px ;
+            list-style: none;
+            font-size: 14px;
+        }
+        figure figcaption ul li{
+            border-bottom: 1px dotted #B5E3FF;
+            display: flex;
+            justify-content: space-between;
+            line-height: 24px;
+        }
+        figure figcaption ul li span{
+            color: red;
+        }
+    </style>
+    <script>
+        window.onload= function () {
+            var oDiv=document.getElementById('div1');
+            var oParent=document.getElementById('parent');
+            var oDiv2=document.getElementById('div2');
+            var oDiv3=document.getElementById('div3');
+            var disY=0;
+            oDiv.onmousedown= function (ev) {
+                var oEvent=ev || event;
+                disY=oEvent.clientY-oDiv.offsetTop;
+                document.onmousemove= function (ev) {
+                    var oEvent=ev || event;
+                    var t=oEvent.clientY-disY;
+                    if(t<0){
+                        t=5;
+                    }
+                    else if(t>oParent.offsetHeight-oDiv.offsetHeight){
+                        t=oParent.offsetHeight-oDiv.offsetHeight;
+                    }
+                    oDiv.style.top=t+'px';
+                    var scale=t/(oParent.offsetHeight-oDiv.offsetHeight);
+                    //改透明度
+//                    oDiv2.style.filter='alpha(opacity:'+scale*100+')';
+//                    oDiv2.style.opacity=(100*scale)/100;
+                    oDiv3.style.top=-scale*(oDiv3.offsetHeight-oDiv2.offsetHeight)+'px';
+                };
+                document.onmouseup= function () {
+                    document.onmousemove=null;
+                    document.onmouseup=null;
+                };
+                return false;//屏蔽火狐浏览器的小bug
+            };
+        };
+    </script>
+</head>
+<body>
+<div class="one">
+    <div id="div2">
+        <div id="div3">
+            <h2>银魂</h2>
+            <p>
+                江户时代末期（本作的20年前），被称为“天人”的谜之异星人来袭。
+                于是地球人与天人之间的战争瞬即爆发，为数众多的武士和攘夷派志士都参与与天人的战斗。
+                幕府见识到天人强大的实力后，最终向天人低头，放弃武士不管，擅自与天人签订不平等条约，
+                准许他们入国。其后更颁布了“废刀令”，夺走了武士的刀，使他们无力反抗。
+                自此，天人横行霸道，幕府为天人所影响，甚至被控制，成为了“傀儡政权”。
+                在这样的时代，有一个武士与同伴愉快地过着异想天开的生活。
+            </p>
+            <h2>火影忍者</h2>
+            <p>
+                火影忍者 博人传之火影次世代动画全集改编自日本漫画《火影忍者》原作者岸本齐史监修、
+                漫画原助手池本干雄编绘、剧场版《博人传》剧本协力小太刀右京负责脚本的漫画，
+                讲述原作的故事完结后漩涡鸣人之子漩涡博人的冒险故事。
+                经历漫长的战争之后以七代目火影漩涡鸣人治理的木叶村为中心，成立了新的忍者5大国，
+                本作主要讲述佐助的女儿、对鸣人抱持憧憬的萨拉娜；充满了谜团的超级优秀忍者见月（三月）；
+                以及鸣人的儿子、虽然有才能却把鸣人叫做臭老爸的漩涡博人三人一组，在村子里努力修炼成长的故事。
+            </p>
+            <h2>妖精的尾巴</h2>
+            <p>
+                【妖精的尾巴TV动画再启动预定2014年4月开播！各位敬请期待……】魔法师协会分布在全世界各地！！
+                那里是魔法师介绍工作和传达情报的场所。梦想成为一名独当一面的魔法师少女露西遇上了能吃火，
+                用火攻击，操纵火的灭龙魔法师，夏。来自妖精的尾巴的夏，邀请露西加入。可是，那是…一群粗暴者！
+                ？集合成的“问题”魔法师协会！虽然有点危险，可是看来还是蛮好玩的。属于妖精的尾巴的门扉，
+                现在，为你打开！
+            </p>
+            <h2>齐木楠雄的灾难</h2>
+            <p>
+                超能力者齐木楠雄的灾难第二季动画全集改编自由麻生周一所作的一部漫画作品，
+                高中生·齐木楠雄是超能力者。心灵感应、念动力、透视、预知、瞬间移动、千里眼等，
+                不论任何事情都自由自在。但这任谁都羡慕不已的最强能力，实际上对于本人而言是引来灾难的不幸元凶。
+                因此，他在别人面前封印了超能力，以不起眼、不和他人有所牵扯为信条，默默无闻地过日子。
+                但不知为何，他的身边总是聚集着不可思议的人类（生物），风暴般的灾难接连不断地降临！
+            </p>
+            <h2>火影忍者</h2>
+            <p>
+                火影忍者 博人传之火影次世代动画全集改编自日本漫画《火影忍者》原作者岸本齐史监修、
+                漫画原助手池本干雄编绘、剧场版《博人传》剧本协力小太刀右京负责脚本的漫画，
+                讲述原作的故事完结后漩涡鸣人之子漩涡博人的冒险故事。
+                经历漫长的战争之后以七代目火影漩涡鸣人治理的木叶村为中心，成立了新的忍者5大国，
+                本作主要讲述佐助的女儿、对鸣人抱持憧憬的萨拉娜；充满了谜团的超级优秀忍者见月（三月）；
+                以及鸣人的儿子、虽然有才能却把鸣人叫做臭老爸的漩涡博人三人一组，在村子里努力修炼成长的故事。
+            </p>
+            <h2>狐妖小红娘</h2>
+            <p>
+                狐妖小红娘动画全集讲述狐妖，可以说是承载了许多男人的幻想，从古至今很多文学作品中都能见其身影，
+                上至苏妲己，下至仙剑2中的苏媚。对其描写刻画多为妖娆，妩媚，魅惑至极。
+                这样的传统印象，当让其拿起红线，以才子佳人牵线搭桥代替横刀夺爱，让剧情少了成吨的狗血的同时，
+                也擦出了不同的火花。
+                问世间情为何物，直教人生死相许，早已耳熟能详。在这部漫画中也同样体现了这一点。
+                当爱情面临着世事沧桑，世易时移，不老不死的妖与寿元有限的人之间一样能拥有着纯美的爱。
+            </p>
+        </div>
+    </div>
+    <div id="parent">
+        <div id="div1">
+            <img src="../images/7(1).png">
+        </div>
+    </div>
+</div>
+<figure>
+    <h3>最新更新动画</h3>
+    <figcaption>
+        <ul>
+            <li>妖神记[第70集]<span>18-04-19</span></li>
+            <li>食神魂第二季[第6集]<span>18-04-19</span></li>
+            <li>49%的灵魂[第16集]<span>18-04-19</span></li>
+            <li>万古仙穹第二季[第6集]<span>18-04-19</span></li>
+            <li>游戏王VRAI...[48无字幕]<span>18-04-19</span></li>
+            <li>见习神明 秘密...[第128集]<span>18-04-19</span></li>
+            <li>重神机潘多拉[第3集]<span>18-04-19</span></li>
+            <li>妖神记[第70集]<span>18-04-19</span></li>
+            <li>食神魂第二季[第6集]<span>18-04-19</span></li>
+            <li>49%的灵魂[第16集]<span>18-04-19</span></li>
+            <li>万古仙穹第二季[第6集]<span>18-04-19</span></li>
+            <li>游戏王VRAI...[48无字幕]<span>18-04-19</span></li>
+            <li>见习神明 秘密...[第128集]<span>18-04-19</span></li>
+            <li>重神机潘多拉[第3集]<span>18-04-19</span></li>
+        </ul>
+    </figcaption>
+</figure>
+
+
+
+</body>
+</html>

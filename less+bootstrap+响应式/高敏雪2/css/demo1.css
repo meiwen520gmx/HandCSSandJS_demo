@@ -1,0 +1,397 @@
+@charset "utf-8";
+* {
+  padding: 0;
+  margin: 0;
+}
+@font-face {
+  font-family: "my_icon";
+  src: url("../fonts1/icomoon.woff") format("woff"), url("../fonts1/icomoon.eot") format("eot"), url("../fonts1/icomoon.svg") format("svg"), url("../fonts1/icomoon.ttf") format("ttf");
+  font-style: normal;
+  font-weight: normal;
+}
+.bcenter {
+  width: 1000px;
+  margin: 0 auto;
+}
+header {
+  margin: 0 auto;
+  text-align: center;
+  color: #24477B;
+}
+header section {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  width: 1000px;
+  margin: 0 auto;
+}
+header section figure {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header section figure img {
+  margin-right: 10px;
+}
+header section figure figcaption {
+  color: #2D4D82;
+}
+header section div {
+  margin-top: 10px;
+}
+header section div span {
+  color: #2D4D82;
+  font-size: 13px;
+}
+header section div span b {
+  font-size: 18px;
+}
+header section div span:before {
+  position: absolute;
+  content: '\f098';
+  font-family: my_icon;
+  font-size: 30px;
+  margin-top: 7px;
+  margin-left: -40px;
+  color: #24477B;
+}
+header section div p {
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-around;
+}
+header section div p img {
+  width: 16px;
+  height: 16px;
+}
+header nav {
+  background-color: #1C3963;
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+header nav ul li {
+  padding: 13px 50px;
+  color: white !important;
+}
+header nav ul li span {
+  display: none;
+}
+header nav ul li:hover {
+  background-color: #274B83;
+  display: flex;
+  flex-direction: column;
+  padding: 2px 50px!important;
+}
+header nav ul li:hover span {
+  display: block;
+}
+.hv:hover {
+  color: #0099ff;
+}
+div.aside {
+  position: absolute;
+  width: 130px;
+  height: 200px;
+  background-color: #24477F;
+  right: 100px;
+  top: 500px;
+  border-radius: 5px;
+  padding: 15px 10px;
+  text-align: center;
+  color: white;
+  font-size: 14px;
+}
+div.aside h2 {
+  display: block;
+}
+div.aside h2:hover {
+  color: #0099ff;
+}
+div.aside span {
+  display: block;
+}
+div.aside span:hover {
+  color: #0099ff;
+}
+div.aside p {
+  margin: 5px 0;
+  padding-left: 5px;
+}
+div.aside p:hover {
+  color: #0099ff;
+}
+div.aside p:before {
+  position: absolute;
+  content: '\f007';
+  font-family: my_icon;
+  margin-left: -15px;
+  margin-top: 3px;
+}
+main {
+  width: 1000px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+main div.adv {
+  width: 1000px;
+  margin: 0 auto;
+}
+main > figure {
+  width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+main > figure figcaption span {
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  padding: 25px 10px;
+  font-size: 14px;
+}
+main > figure figcaption span:first-of-type:before {
+  position: absolute;
+  content: '\f104';
+  font-family: my_icon;
+  color: #4A78B3;
+  font-size: 30px;
+  top: -3px;
+  right: 60px;
+}
+main > figure figcaption span:last-of-type:after {
+  position: absolute;
+  content: '\f105';
+  font-family: my_icon;
+  color: #4A78B3;
+  font-size: 30px;
+  top: -5px;
+  right: -10px;
+}
+main > figure figcaption span:not(:first-of-type):before,
+main > figure figcaption span:not(:last-of-type):after {
+  position: absolute;
+  content: '\f10c';
+  font-family: my_icon;
+  color: #4A78B3;
+  font-size: 25px;
+  right: 20px;
+  top: 2px;
+}
+main > figure figcaption span:not(:first-of-type):before:hover,
+main > figure figcaption span:not(:last-of-type):after:hover {
+  color: red;
+}
+main > section {
+  display: flex;
+  justify-content: space-around;
+  color: #979797;
+}
+main > section div.up {
+  width: 33%;
+  width: 263px;
+  font-size: 13px;
+}
+main > section div.up aside.top {
+  margin-bottom: 20px;
+}
+main > section div.up aside.top p {
+  text-indent: 2em;
+}
+main > section div.up aside.top p:hover {
+  color: red;
+  text-decoration: underline;
+}
+main > section div.up aside.bottom {
+  border-right: 3px solid #B8B8B8;
+}
+main > section div.up aside.bottom h2 {
+  color: #515151;
+  margin-bottom: 15px;
+}
+main > section div.up aside.bottom h2:after {
+  position: absolute;
+  content: '';
+  width: 120px;
+  height: 3px;
+  background-color: #9F9F9F;
+  margin-top: 30px;
+  margin-left: -80px;
+}
+main > section div.up aside.bottom h2:hover {
+  color: black;
+}
+main > section div.up aside.bottom figure {
+  margin-bottom: 10px;
+}
+main > section div.up aside.bottom figure p {
+  color: white;
+  background-color: #B9B9B9;
+  width: 30px;
+}
+main > section div.up aside.bottom figure b {
+  color: black;
+  padding: 10px 0;
+}
+main > section div.up aside.bottom:after {
+  position: absolute;
+  content: '1';
+  font-size: 100px;
+  color: #B8B8B8;
+  margin-top: -340px;
+  margin-left: 218px;
+}
+main > section div.mid {
+  width: 263px;
+  font-size: 13px;
+  margin-right: 10px;
+}
+main > section div.mid aside.top {
+  margin-bottom: 20px;
+}
+main > section div.mid aside.top p {
+  text-indent: 2em;
+}
+main > section div.mid aside.top p:hover {
+  color: red;
+  text-decoration: underline;
+}
+main > section div.mid aside.bottom {
+  border-right: 3px solid #B8B8B8;
+}
+main > section div.mid aside.bottom h2 {
+  color: #515151;
+  margin-bottom: 15px;
+}
+main > section div.mid aside.bottom h2:after {
+  position: absolute;
+  content: '';
+  width: 120px;
+  height: 3px;
+  background-color: #9F9F9F;
+  margin-top: 30px;
+  margin-left: -98px;
+}
+main > section div.mid aside.bottom h2:hover {
+  color: black;
+}
+main > section div.mid aside.bottom figure {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+main > section div.mid aside.bottom figure img {
+  width: 40%;
+  height: 70px;
+  margin-right: 10px;
+}
+main > section div.mid aside.bottom figure figcaption {
+  width: 60%;
+}
+main > section div.mid aside.bottom figure figcaption h3 {
+  color: black;
+}
+main > section div.mid aside.bottom figure figcaption p {
+  font-size: 12px;
+}
+main > section div.mid aside.bottom:after {
+  position: absolute;
+  content: '2';
+  font-size: 100px;
+  color: #B8B8B8;
+  margin-top: -340px;
+  margin-left: 218px;
+}
+main > section div.down {
+  width: 33%;
+  width: 263px;
+  font-size: 13px;
+}
+main > section div.down aside.top {
+  margin-bottom: 20px;
+}
+main > section div.down aside.top p {
+  text-indent: 2em;
+}
+main > section div.down aside.top p:hover {
+  color: red;
+  text-decoration: underline;
+}
+main > section div.down aside.bottom {
+  border-right: 3px solid #B8B8B8;
+}
+main > section div.down aside.bottom h2 {
+  color: #515151;
+  margin-bottom: 15px;
+}
+main > section div.down aside.bottom h2:after {
+  position: absolute;
+  content: '';
+  width: 120px;
+  height: 3px;
+  background-color: #9F9F9F;
+  margin-top: 30px;
+  margin-left: -80px;
+}
+main > section div.down aside.bottom h2:hover {
+  color: black;
+}
+main > section div.down aside.bottom figure {
+  margin-bottom: 10px;
+}
+main > section div.down aside.bottom figure p {
+  color: white;
+  background-color: #B9B9B9;
+  width: 30px;
+}
+main > section div.down aside.bottom figure b {
+  color: black;
+  padding: 10px 0;
+}
+main > section div.down aside.bottom:after {
+  position: absolute;
+  content: '3';
+  font-size: 100px;
+  color: #B8B8B8;
+  margin-top: -340px;
+  margin-left: 218px;
+}
+footer {
+  background-color: #343434;
+  height: 150px;
+  padding: 10px 240px;
+}
+footer h1 {
+  padding-left: 100px;
+  display: block;
+  padding-top: 30px;
+  color: white;
+}
+footer h1 span {
+  color: #7CA4E6 !important;
+}
+footer div {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  padding: 10px 100px;
+  font-size: 14px;
+}
+footer div span {
+  display: block;
+  padding: 5px 0;
+}
+footer div section {
+  text-align: right;
+  position: relative;
+}
+footer div section:after {
+  font-family: my_icon;
+  position: absolute;
+  content: '\f041';
+  margin-top: -70px;
+  margin-left: 20px;
+  font-size: 50px;
+}

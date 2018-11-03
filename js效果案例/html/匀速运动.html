@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #div1{
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            background-color: red;
+            top: 50px;
+            left: 0;
+        }
+    </style>
+    <script>
+        window.onload= function () {
+            var oBtn=document.getElementById('btn1');
+            var oDiv=document.getElementById('div1');
+            var timer=null;
+            oBtn.onclick= function () {
+                clearInterval(timer);
+                timer=setInterval(function () {
+                    speed=10;
+                    if(oDiv.offsetLeft>=700){
+                        clearInterval(timer);
+                    }
+                    else{
+                        oDiv.style.left=oDiv.offsetLeft+speed+'px';
+                    }
+                },30);
+            }
+        }
+    </script>
+
+</head>
+<body>
+<input id="btn1" value="点击" type="button">
+<div id="div1">
+
+</div>
+
+</body>
+</html>

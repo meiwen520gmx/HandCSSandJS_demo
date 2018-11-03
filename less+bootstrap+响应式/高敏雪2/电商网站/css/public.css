@@ -1,0 +1,183 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+a,
+a:visited {
+  text-decoration: none;
+  font-size: 14px;
+}
+ul,
+ol {
+  list-style: none;
+}
+@font-face {
+  font-family: "my_icon";
+  src: url("../fonts/icomoon.woff") format("woff"), url("../fonts/icomoon.eot") format("eot"), url("../fonts/icomoon.svg") format("svg"), url("../fonts/icomoon.ttf") format("ttf");
+  font-style: normal;
+  font-weight: normal;
+}
+.bcenter {
+  width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+header section.up {
+  background-color: #f7f7f7;
+  height: 30px;
+  line-height: 30px;
+}
+header section.up div {
+  width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  font-size: 13px;
+  padding: 0 30px;
+}
+header section.up div span:first-child {
+  font-weight: bold;
+}
+header section.up div span:first-child:before {
+  color: #F2BA05;
+  content: '\f005';
+  font-family: my_icon;
+  margin-right: 5px;
+}
+header section.up div span:last-child,
+header section.up div span:last-child a,
+header section.up div span:last-child a:visited {
+  font-weight: 100;
+  font-family: "Arial";
+  color: grey;
+}
+header section.up div span a:hover {
+  color: red;
+  text-decoration: underline;
+}
+header section.down {
+  background-color: #1d7ad9;
+  height: 86px;
+}
+header section.down div {
+  width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  justify-content: flex-start;
+  background: url("../images/logo.png") no-repeat;
+  padding-left: 330px;
+  height: 86px;
+}
+header section.down div * {
+  height: 37px;
+}
+header section.down div input,
+header section.down div button {
+  margin-top: 24px;
+  width: 360px;
+  outline: none;
+  border: none;
+}
+header section.down div button {
+  width: 70px;
+  background-color: #FF8C01;
+  color: white;
+  font-size: 15px;
+  font-weight: 200;
+  margin-right: 30px;
+}
+header section.down div aside {
+  background-color: #FF8C01;
+  color: white;
+  font-size: 15px;
+  font-weight: 200;
+  margin-top: 24px;
+  line-height: 37px;
+  display: flex;
+}
+header section.down div aside span:first-child {
+  width: 90px;
+  border-right: 1px solid #E27900;
+  box-sizing: border-box;
+}
+header section.down div aside span:first-child:before {
+  font-family: my_icon;
+  content: '\f07a';
+  color: white;
+  margin: 0 6px;
+  font-size: 18px;
+}
+header section.down div aside span:last-child {
+  width: 60px;
+  border-left: 1px solid #FF9E02;
+  padding-left: 15px;
+  box-sizing: border-box;
+}
+header section.down div aside span:last-child:after {
+  font-family: my_icon;
+  content: '\f0ab';
+  color: white;
+  margin-left: 6px;
+}
+header nav {
+  background-color: #1369c0;
+  height: 35px;
+}
+header nav ul {
+  width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  justify-content: flex-start;
+}
+header nav ul li {
+  padding: 10px 30px;
+  color: white;
+  font-size: 14px;
+}
+header nav ul li:first-child {
+  padding: 7px 40px;
+  font-size: 16px;
+}
+header nav ul li:first-child:after {
+  font-family: my_icon;
+  content: '\f078';
+  color: white;
+}
+header nav ul li:not(:first-child):hover {
+  background-color: #4594FD;
+}
+footer {
+  background-color: #d4d4d4;
+  height: 220px;
+  text-align: center;
+  padding: 50px 0;
+  box-sizing: border-box;
+}
+footer div.up {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+footer div.up a,
+footer div.up a:visited {
+  color: black;
+  padding: 0 5px;
+}
+footer div.mid {
+  font-size: 12px;
+  margin-bottom: 35px;
+  color: black;
+}
+footer div.mid span {
+  margin: 0 5px;
+}
+footer div.down a:not(:last-child) {
+  margin-right: 25px;
+}

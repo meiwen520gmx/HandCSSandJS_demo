@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>宽高不固定的多元素水平与垂直居中实现</title>
+</head>
+<style>
+    body {
+        width: 70%;
+        margin: auto;
+    }
+
+
+    div {
+        display: table-cell;/*将div设置为单元格，即可设置子元素的垂直居中效果*/
+        vertical-align: middle;
+        width: 1000px;
+        height: 600px;
+        border: 1px solid red;
+    }
+
+
+    section {
+        display: table;/*table具有固定宽度，通过margin属性就可以让元素水平居中*/
+        margin: auto;
+        line-height: 50px;
+        border: 1px solid blue;
+    }
+    article,main{
+        width: 600px;
+        margin: auto;
+        height: 600px;
+        border: 1px solid red;
+    }
+    article{
+        position: relative;
+        margin-bottom: 50px;
+    }
+    article img{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    main{
+        display: flex;
+        justify-content: center;  /*水平居中*/
+        align-items: center; /*垂直居中*/
+    }
+    main img{
+        /*align-self: flex-end;*/
+    }
+
+
+</style>
+<body>
+<div>
+    <section>中华人民共和中华人民共和国国中华人民共和国</section>
+    <section>中华人民共和国中华人民共和国</section>
+    <!--让元素浮动，会使上层容器具有包裹性-->
+    <section><img src="../img/img_g.jpg" style="float: left"/></section>
+    <section>中华人民共和国中华人民共和国</section>
+</div>
+<article>
+    <img src="../img/img_g.jpg"/>
+</article>
+<main>
+    <img src="../img/img_g.jpg"/>
+</main>
+</body>
+</html>

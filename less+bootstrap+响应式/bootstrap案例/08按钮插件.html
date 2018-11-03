@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+
+    <h2>模拟加载按钮,需要脚本支持</h2>
+    <button class="btn btn-primary" data-loading-text="正在加载中,请稍等..."
+            type="button" id="loaddingBtn">加载
+    </button>
+
+    <h2>模拟单选按钮组</h2>
+    <div class="btn-group">
+        <label class="btn btn-primary">
+            <input type="radio" name="options" id="options1">男
+        </label>
+        <label class="btn btn-primary">
+            <input type="radio" name="options" checked id="options2">女
+        </label>
+        <label class="btn btn-primary">
+            <input type="radio" name="options" id="options3">未知
+        </label>
+    </div>
+
+    <h2>模拟复选按钮组</h2>
+    <div class="btn-group">
+        <label class="btn btn-primary">
+            <input type="checkbox" id="options4">电影
+        </label>
+        <label class="btn btn-primary">
+            <input type="checkbox" id="options5">音乐
+        </label>
+        <label class="btn btn-primary">
+            <input type="checkbox" id="options6">游戏
+        </label>
+        <label class="btn btn-primary">
+            <input type="checkbox" id="options7">摄影
+        </label>
+    </div>
+
+</div>
+</body>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+    $("#loaddingBtn").click(function () {
+       var btn=$(this).button("loading");
+        setTimeout(function(){
+            alert("加载完成！");
+            btn.button("reset");
+        },5000);
+    });
+</script>
+</html>

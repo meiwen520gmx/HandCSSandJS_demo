@@ -1,0 +1,584 @@
+@charset "utf-8";
+body {
+  background-color: #F0F0F0;
+}
+.bcenter {
+  width: 1000px;
+  margin: 0 auto;
+}
+.bott {
+  padding: 0 5px;
+  border: 1px solid #C8C8C8;
+  margin-right: 5px;
+}
+.bott.active {
+  background-color: #E9E9E9;
+  color: red;
+}
+.bott.ok {
+  background-color: #E8E8E8;
+}
+.bott:nth-of-type(1) {
+  color: #C8C8C8;
+}
+main {
+  width: 1000px;
+  margin: 0 auto;
+}
+main div.current {
+  padding: 10px 0 17px 5px;
+}
+main div.current a,
+main div.current a:visited {
+  color: #595959;
+  font-size: 12px;
+}
+main div.current a:first-child,
+main div.current a:visited:first-child {
+  font-weight: bold;
+}
+main div.current a:hover,
+main div.current a:visited:hover {
+  color: red;
+  text-decoration: underline;
+}
+main div.up {
+  display: flex;
+  border: 1px solid #CDCDCD;
+  background-color: white;
+}
+main div.up aside {
+  padding: 340px 20px 226px 20px;
+  display: flex;
+  width: 310px;
+  border-right: 1px solid #CDCDCD;
+  position: relative;
+}
+main div.up aside dl {
+  flex: 1;
+  border: 1px solid #CDCDCD;
+  border-right: none;
+}
+main div.up aside dl:last-child {
+  border-right: 1px solid #CDCDCD;
+}
+main div.up aside dl.active {
+  border-color: #307EE3;
+  border-right: 1px solid #307EE3;
+}
+main div.up aside dl dt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main div.up aside dl:not(:last-child) dd {
+  display: none;
+}
+main div.up aside dl:hover dd,
+main div.up aside dl:last-child dd {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 340px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main div.up aside dl:hover dd {
+  z-index: 100;
+  background-color: white;
+}
+main div.up .btn button:hover {
+  border: 1px solid blue;
+}
+main div.up section {
+  flex: 1;
+  padding: 25px 10px;
+}
+main div.up section h4 {
+  margin-bottom: 10px;
+  margin-left: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #343434;
+  line-height: 25px;
+}
+main div.up section p {
+  margin-left: 20px;
+  line-height: 30px;
+  font-size: 14px;
+  color: #626262;
+}
+main div.up section p:first-of-type span {
+  color: #ce2a21;
+  font-size: 16px;
+  margin-left: 20px;
+}
+main div.up section p:first-of-type span:before {
+  content: '¥';
+  font-size: 12px;
+}
+main div.up section p:nth-of-type(2) span {
+  padding-left: 100px;
+  background: url("../images/icon11.jpg") no-repeat 40px center;
+}
+main div.up section p:nth-of-type(3) {
+  margin: 22px 0 30px 20px;
+  font-weight: 600;
+}
+main div.up section p:nth-of-type(3) span {
+  color: #107ED7;
+}
+main div.up section p:last-of-type {
+  color: #949494;
+  font-size: 14px;
+  margin-top: 40px;
+}
+main div.up section div.op {
+  padding: 20px 15px;
+  background-color: #F2F2F2;
+  line-height: 45px;
+  font-size: 14px;
+}
+main div.up section div.op label {
+  display: block;
+  color: #686868;
+}
+main div.up section div.op label select,
+main div.up section div.op label button,
+main div.up section div.op label span {
+  height: 30px;
+  outline: none;
+  border: 1px solid #ccc;
+  background-color: white;
+}
+main div.up section div.op label select {
+  margin: 0 10px 0 35px;
+}
+main div.up section div.op label button {
+  margin-left: 7px;
+  padding: 0 20px;
+  overflow: hidden;
+}
+main div.up section div.op label:nth-of-type(2) button:hover {
+  border: 1px solid blue;
+}
+main div.up section div.op label:nth-of-type(3) {
+  display: flex;
+}
+main div.up section div.op label:nth-of-type(3) b {
+  width: 530px;
+  margin-left: 4px;
+}
+main div.up section div.op label:nth-of-type(3) b button:hover {
+  border: 1px solid blue;
+}
+main div.up section div.op label:last-child b {
+  color: #FF7205;
+}
+main div.up section div.op label:last-child span:first-child {
+  padding: 3px 4px;
+  margin-left: 35px;
+  background-color: #ccc;
+}
+main div.up section div.op label:last-child span:nth-child(2) {
+  padding: 3px 20px;
+  margin-left: -5px;
+}
+main div.up section div.op label:last-child span:last-of-type {
+  padding: 3px 1px;
+  margin-left: -5px;
+  background-color: #ccc;
+}
+main div.up section div.add span {
+  padding: 10px 15px;
+  margin: 20px 50px;
+  background-color: #FD8902;
+  color: white;
+  font-size: 18px;
+  font-family: my_icon;
+}
+main div.up section div.add span:last-child:before {
+  position: absolute;
+  content: '';
+  width: 1px;
+  height: 80px;
+  background-color: #E6E6E6;
+  margin-left: -67px;
+  margin-top: -28px;
+}
+main div.down {
+  display: flex;
+  margin-top: 17px;
+}
+main div.down aside {
+  width: 190px;
+  margin-right: 25px;
+}
+main div.down aside div.top,
+main div.down aside div.bottom {
+  border: 1px solid #CCC;
+  border-top: 3px solid #1E86D0;
+  background-color: white;
+}
+main div.down aside div.top header,
+main div.down aside div.bottom header {
+  padding: 10px 15px;
+  font-size: 15px;
+  background-color: #F3F3F3;
+  border-bottom: 1px solid #CCC;
+  font-weight: 600;
+}
+main div.down aside div.top figure,
+main div.down aside div.bottom figure {
+  padding: 13px;
+  line-height: 20px;
+  font-size: 11px;
+  color: #999;
+}
+main div.down aside div.top figure a,
+main div.down aside div.bottom figure a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+main div.down aside div.top figure p,
+main div.down aside div.bottom figure p {
+  color: red;
+  font-weight: 600;
+}
+main div.down aside div.bottom {
+  border-top: 1px solid #CCC;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+main div.down section {
+  flex: 1;
+}
+main div.down section div.top {
+  display: flex;
+  border: 1px solid #ccc;
+  background-color: white;
+  position: relative;
+}
+main div.down section div.top dl {
+  flex: 1;
+}
+main div.down section div.top dl dd {
+  position: absolute;
+  left: 0;
+  top: 40px;
+  right: 0;
+}
+main div.down section div.top dl dt {
+  line-height: 40px;
+  text-align: center;
+  background-color: #eee;
+  font-family: my_icon;
+  cursor: pointer;
+}
+main div.down section div.top dl.active dt {
+  background-color: #0479C9;
+  color: white;
+}
+main div.down section div.top dl.active dd {
+  z-index: 10;
+}
+main div.down section div.top dl:first-child dd {
+  text-align: center;
+  border: 1px solid #CCC;
+  background-color: white;
+  padding: 15px 15px 145px 15px;
+}
+main div.down section div.top dl:first-child dd img {
+  margin: 30px 0;
+}
+main div.down section div.top dl:first-child dd p {
+  color: #656565;
+  line-height: 22px;
+  font-size: 14px;
+  text-align: justify;
+  margin: 25px 0;
+}
+main div.down section div.top dl:first-child dd h4 {
+  text-align: left;
+  border-bottom: 2px solid #D7D7D7;
+  padding: 7px 0;
+  color: #2458A3;
+  margin-top: 20px;
+}
+main div.down section div.top dl:first-child dd h4 span {
+  font-size: 12px;
+  color: #7F7F7F;
+  margin-left: 10px;
+  font-weight: normal;
+}
+main div.down section div.top dl:first-child dd h4:before {
+  position: absolute;
+  content: '';
+  width: 70px;
+  height: 2px;
+  background-color: #2458A3;
+  margin-top: 25px;
+}
+main div.down section div.top dl:last-child dd {
+  padding: 0 !important;
+}
+main div.down section div.top dl:last-child dd div.border {
+  position: relative;
+  padding: 0;
+  background-color: white;
+  border: 1px solid #CCC;
+}
+main div.down section div.top dl:last-child dd div.border:after {
+  position: absolute;
+  content: '';
+  width: 788px;
+  height: 20px;
+  background-color: #F0F0F0;
+  margin-top: 1px;
+  margin-left: -3px;
+}
+main div.down section div.top dl:last-child dd div.border h4 {
+  padding: 10px;
+  color: #666;
+  margin-bottom: 30px;
+  font-size: 15px;
+}
+main div.down section div.top dl:last-child dd div.border div.comment {
+  padding-left: 10px;
+  display: flex;
+}
+main div.down section div.top dl:last-child dd div.border div.comment b {
+  font-size: 40px;
+  font-weight: 500;
+  color: #FF9100;
+}
+main div.down section div.top dl:last-child dd div.border div.comment b i {
+  font-style: normal;
+  font-size: 16px;
+  color: #69657C;
+}
+main div.down section div.top dl:last-child dd div.border div.comment P {
+  margin-left: 15px;
+  font-size: 12px;
+  position: relative;
+}
+main div.down section div.top dl:last-child dd div.border div.comment P span {
+  background-color: #BEBEBE;
+  color: white;
+  padding: 0 30px;
+  display: table-cell;
+}
+main div.down section div.top dl:last-child dd div.border div.comment P i {
+  display: block;
+  margin-top: -5px;
+  font-style: normal;
+  color: #666374;
+}
+main div.down section div.top dl:last-child dd div.border div.comment P:before {
+  position: absolute;
+  content: attr(data-number);
+  right: 30px;
+  top: -23px;
+  background-color: #808080;
+  color: white;
+  font-size: 12px;
+  padding: 0 5px;
+}
+main div.down section div.top dl:last-child dd div.border div.comment P:after {
+  position: absolute;
+  content: '';
+  right: 38px;
+  top: -9px;
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-top-color: #808080;
+}
+main div.down section div.top dl:last-child dd div.border header {
+  display: flex;
+  justify-content: space-around;
+  background-color: #F2F2F2;
+  margin-top: 55px;
+  font-size: 13px;
+}
+main div.down section div.top dl:last-child dd div.border header span {
+  padding: 8px 3px;
+}
+main div.down section div.top dl:last-child dd div.border header span:last-of-type {
+  margin-right: 150px;
+}
+main div.down section div.top dl:last-child dd div.border header span.active {
+  color: #337DE8;
+  font-weight: bold;
+  border-bottom: 2px solid #337DE8;
+}
+main div.down section div.top dl:last-child dd div.border header select {
+  outline: none;
+  background-color: transparent;
+  height: 20px;
+  margin-top: 8px;
+  border-bottom: none;
+}
+main div.down section div.top dl:last-child dd div.border div.evaluate {
+  padding: 20px 20px 30px 35px;
+  font-size: 13px;
+}
+main div.down section div.top dl:last-child dd div.border div.evaluate figure {
+  margin-bottom: 40px;
+  display: flex;
+}
+main div.down section div.top dl:last-child dd div.border div.evaluate figure > span {
+  display: inline-block;
+  margin-right: 65px;
+  width: 60px;
+  height: 95px;
+  text-align: center;
+}
+main div.down section div.top dl:last-child dd div.border div.evaluate figure > span i {
+  font-style: normal;
+  color: #999;
+}
+main div.down section div.top dl:last-child dd div.border div.evaluate figure figcaption p {
+  margin-bottom: 10px;
+}
+main div.down section div.top dl:last-child dd div.border div.evaluate figure figcaption p i {
+  font-family: my_icon;
+  color: #f9a115;
+  font-style: normal;
+  letter-spacing: 2px;
+}
+main div.down section div.top dl:last-child dd div.border div.evaluate figure figcaption p b span {
+  padding-left: 340px;
+  color: #999;
+  font-weight: normal;
+}
+main div.down section div.top dl:last-child dd div.border div.evaluate figure figcaption p:nth-of-type(2) {
+  color: #999;
+}
+main div.down section div.top dl:last-child dd div.border div.evaluate figure figcaption p:nth-of-type(3) {
+  color: #0479C9;
+}
+main div.down section div.top dl:last-child dd div.border div.evaluate section {
+  text-align: right;
+  line-height: 28px;
+}
+main div.down section div.top dl:last-child dd div.border div.evaluate section span {
+  padding: 0 5px;
+  border: 1px solid #C8C8C8;
+  margin-right: 5px;
+}
+main div.down section div.top dl:last-child dd div.border div.evaluate section span.active {
+  background-color: #E9E9E9;
+  color: red;
+}
+main div.down section div.top dl:last-child dd div.border div.evaluate section span.ok {
+  background-color: #E8E8E8;
+}
+main div.down section div.top dl:last-child dd div.border div.evaluate section span:nth-of-type(1) {
+  color: #C8C8C8;
+}
+main div.down section div.top dl:last-child dd div.border div.evaluate section span:nth-of-type(8),
+main div.down section div.top dl:last-child dd div.border div.evaluate section span:nth-of-type(9) {
+  color: #0479C9;
+}
+main div.down section div.top dl:last-child dd div.consult {
+  margin-top: 20px;
+  background-color: white;
+}
+main div.down section div.top dl:last-child dd div.consult header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #096BB6;
+  color: #096BB6;
+}
+main div.down section div.top dl:last-child dd div.consult header h3 {
+  border: 1px solid #096BB6;
+  border-bottom: none;
+  font-size: 16px;
+  padding: 15px;
+  position: relative;
+}
+main div.down section div.top dl:last-child dd div.consult header h3:after {
+  position: absolute;
+  content: '';
+  width: 137px;
+  height: 3px;
+  background-color: white;
+  margin-left: -122px;
+  margin-top: 35px;
+}
+main div.down section div.top dl:last-child dd div.consult header span {
+  font-size: 14px;
+  padding: 18px 33px 15px 0;
+}
+main div.down section div.top dl:last-child dd div.consult > p {
+  margin: 15px 25px 35px 25px;
+  background-color: #F3F3F3;
+  color: #8F8F8F;
+  font-size: 15px;
+  padding: 15px 15px 10px 25px;
+}
+main div.down section div.top dl:last-child dd div.consult figure {
+  font-size: 13px;
+  display: flex;
+  margin: 0 40px 50px 80px;
+}
+main div.down section div.top dl:last-child dd div.consult figure > span {
+  text-align: center;
+  display: inline-block;
+  width: 60px;
+  height: 90px;
+  margin-right: 45px;
+}
+main div.down section div.top dl:last-child dd div.consult figure > span i {
+  font-style: normal;
+  color: #939393;
+}
+main div.down section div.top dl:last-child dd div.consult figure figcaption b {
+  display: block;
+  margin-bottom: 15px;
+}
+main div.down section div.top dl:last-child dd div.consult figure figcaption b i {
+  font-style: normal;
+  color: #B4B4B4;
+  font-weight: normal;
+  padding-left: 350px;
+}
+main div.down section div.top dl:last-child dd div.consult figure figcaption p {
+  color: #909090;
+  margin-bottom: 15px;
+}
+main div.down section div.top dl:last-child dd div.consult figure figcaption section {
+  background-color: #F1F1F1;
+  padding: 25px 0 25px 35px;
+}
+main div.down section div.top dl:last-child dd div.consult figure figcaption section span {
+  color: #909090;
+}
+main div.down section div.top dl:last-child dd div.consult section.bo {
+  font-size: 13px;
+  text-align: right;
+  padding: 0 75px 25px 0;
+}
+main div.down section div.top dl:last-child dd div.consult section.bo span {
+  padding: 0 5px;
+  border: 1px solid #C8C8C8;
+  margin-right: 5px;
+}
+main div.down section div.top dl:last-child dd div.consult section.bo span.active {
+  background-color: #E9E9E9;
+  color: red;
+}
+main div.down section div.top dl:last-child dd div.consult section.bo span.ok {
+  background-color: #E8E8E8;
+}
+main div.down section div.top dl:last-child dd div.consult section.bo span:nth-of-type(1) {
+  color: #C8C8C8;
+}
+main div.down section div.top dl:last-child dd div.consult section.bo span:nth-of-type(3) {
+  color: #096BB6;
+}

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{margin: 0;padding: 0}
+        div.container{
+            width: 1200px;
+            height: 160px;
+            margin: 50px auto;
+            display: flex;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        figure{
+            flex:1;
+            border-right:1px solid #ccc ;
+            padding: 8px;
+            line-height: 25px;
+            position: relative;
+        }
+        figure:hover{
+            flex: 2;
+        }
+        figure:before{
+            position: absolute;
+            content: "";
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background-color: rgba(0,0,0,.3);
+            z-index: 10;
+        }
+        figure figcaption h3{
+            font-weight: 500;
+            font-size: 17px;
+            transition: all .5s;
+        }
+        figure:hover figcaption h3{
+            font-weight: 600;
+            font-size: 20px;
+        }
+        figure figcaption p,figure:not(:last-child):hover ~ figure:last-child p{
+            font-size: 14px;
+            transition: all .5s;
+        }
+        figure:hover figcaption p{
+            font-size: 16px;
+        }
+        figure figcaption i{
+            font-size: 14px;
+            color: red;
+            transition: all .5s;
+        }
+        figure:hover figcaption i{
+            font-size: 16px;
+        }
+        figure figcaption aside{
+            display: none;
+        }
+        figure:hover figcaption aside,figure:last-child aside{
+            display: block;
+        }
+        figure img{
+            width: 80px;
+            height: 50px;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            transition: all .5s;
+        }
+        figure:hover img,figure:last-child img{
+            width: 160px;
+            height: 100px;
+        }
+        figure:last-child{
+            flex:2;
+            border-right:none ;
+            background-color: white;
+        }
+        figure:last-child h3{
+            font-weight: 600;
+            font-size: 20px;
+        }
+        figure:last-child p,figure:last-child i{
+            font-size: 16px;
+        }
+        figure:last-child:before,figure:hover:before{
+            background-color: transparent;
+        }
+        figure:not(:last-child):hover ~ figure:last-child{
+            flex: 1;
+        }
+        figure:not(:last-child):hover ~ figure:last-child h3{
+            font-size: 16px;
+            font-weight: 500;
+        }
+        figure:not(:last-child):hover ~ figure:last-child i{
+            font-size: 14px;
+        }
+        figure:not(:last-child):hover ~ figure:last-child aside{
+            display: none;
+        }
+        figure:not(:last-child):hover ~ figure:last-child img{
+            width: 80px;
+            height: 50px;
+        }
+        figure:not(:last-child):hover ~ figure:last-child:before{
+            background-color: rgba(0,0,0,.3);
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <figure>
+        <figcaption>
+            <h3>baby</h3>
+            <p>宝宝该换装了，新品抢购</p>
+            <i>2.5折起</i>
+            <aside>进入专题网站</aside>
+        </figcaption>
+        <img src="img/img1.jpg" alt="">
+    </figure>
+    <figure>
+        <figcaption>
+            <h3>baby</h3>
+            <p>宝宝该换装了，新品抢购</p>
+            <i>2.5折起</i>
+            <aside><a href="#"> 进入专题网站</a></aside>
+        </figcaption>
+        <img src="img/img2.jpg" alt="">
+    </figure>
+    <figure>
+        <figcaption>
+            <h3>baby</h3>
+            <p>宝宝该换装了，新品抢购</p>
+            <i>2.5折起</i>
+            <aside>进入专题网站</aside>
+        </figcaption>
+        <img src="img/img3.jpg" alt="">
+    </figure>
+    <figure>
+        <figcaption>
+            <h3>baby</h3>
+            <p>宝宝该换装了，新品抢购</p>
+            <i>2.5折起</i>
+            <aside>进入专题网站</aside>
+        </figcaption>
+        <img src="img/img4.jpg" alt="">
+    </figure>
+    <figure>
+        <figcaption>
+            <h3>baby</h3>
+            <p>宝宝该换装了，新品抢购</p>
+            <i>2.5折起</i>
+            <aside>进入专题网站</aside>
+        </figcaption>
+        <img src="img/img5.jpg" alt="">
+    </figure>
+</div>
+</body>
+</html>

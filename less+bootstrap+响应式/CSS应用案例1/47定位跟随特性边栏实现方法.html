@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>另有两种遮罩实现方法</title>
+    <style>
+        div {
+            position: absolute;
+            left: 100px;
+            right: 300px;
+            /*width: 800px;*/
+            height: 1500px;
+            /*margin: auto;*/
+            border: 1px solid red;
+            text-align: right; /*跟随的关键*/
+        }
+
+        div aside {
+            display: inline-block; /*这样才具有跟随性*/
+            position: fixed;
+            margin-top: 50px;
+            margin-left: 20px;
+            width: 140px;
+            padding: 10px;
+            border: 1px solid blue;
+            font-size: 0;
+        }
+
+        div main {
+            height: 100%;
+            line-height: 40px;
+            text-align: justify;
+            text-indent: 2em;
+            background-color: lavender;
+        }
+
+        /*
+                !*宽高法实现遮罩*!
+                body {
+                    margin: 0;
+                }
+
+                section {
+                    position: fixed;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0, 0, 0, 0.4);
+                }
+        */
+
+        /*位伸法实现遮罩*/
+        section {
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+    </style>
+</head>
+<body>
+<div>
+    <aside>
+        <img src="../img/drag/img1.jpg">
+        <img src="../img/drag/img1.jpg">
+        <img src="../img/drag/img1.jpg">
+    </aside>
+    <main>
+        中华人民共和国中华人民共和国中华人民共和国中华人民共和国中华人民共和国
+        中华人民共和国中华人民共和国中华人民共和国中华人民共和国中华人民共和国
+        中华人民共和国中华人民共和国中华人民共和国中华人民共和国中华人民共和国
+        中华人民共和国中华人民共和国中华人民共和国中华人民共和国中华人民共和国
+        中华人民共和国中华人民共和国中华人民共和国中华人民共和国中华人民共和国
+        中华人民共和国中华人民共和国中华人民共和国中华人民共和国中华人民共和国
+        中华人民共和国中华人民共和国中华人民共和国中华人民共和国中华人民共和国
+        中华人民共和国中华人民共和国中华人民共和国中华人民共和国中华人民共和国
+        中华人民共和国中华人民共和国中华人民共和国中华人民共和国中华人民共和国
+        中华人民共和国中华人民共和国中华人民共和国中华人民共和国中华人民共和国
+        中华人民共和国中华人民共和国中华人民共和国中华人民共和国中华人民共和国
+        中华人民共和国中华人民共和国中华人民共和国中华人民共和国中华人民共和国
+        中华人民共和国中华人民共和国中华人民共和国中华人民共和国中华人民共和国
+        中华人民共和国中华人民共和国中华人民共和国中华人民共和国中华人民共和国
+    </main>
+</div>
+<section></section>
+</body>
+</html>

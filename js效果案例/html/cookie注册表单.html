@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册表单</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: #EDEFF0;
+        }
+        form{
+            width: 900px;
+            margin: 0 auto;
+            border: 1px solid darkgrey;
+            background-color: white;
+        }
+        form header{
+            padding: 25px 0 25px 35px;
+            background-color: #BE3948;
+            color: white;
+            font-size: 18px;
+        }
+        form section{
+            padding: 100px 0 100px 200px;
+            font-size: 14px;
+        }
+        form label{
+            display: block;
+            margin-bottom: 20px;
+        }
+        form input:not([type=checkbox]){
+            outline: none;
+            width: 240px;
+            height: 30px;
+            border:1px solid #DDD;
+            margin-left:6px;
+            margin-right: 5px;
+        }
+        /*无依赖的绝对定位，因为父亲没有相对定位*/
+        form .require:before{
+            position: absolute;
+            content: "*";
+            color: red;
+            margin-left: -8px;
+            margin-top: 8px;
+        }
+        label.captcha img{
+            vertical-align: top;
+        }
+        label.captcha input{
+           margin-left: 20px;
+        }
+        label:first-child em{
+            color: #EB72B2;
+        }
+        label:nth-child(2) em{
+            color: #ccc;
+        }
+       label.indent{
+           margin-left: 70px;
+       }
+        form button{
+            background-color: #39B94E;
+            padding: 12px 50px;
+            color: white;
+            border: none;/*内边框*/
+            outline: none;/*外边框*/
+        }
+    </style>
+</head>
+<body>
+    <form action="#"  class="box" id="box">
+        <header>注册</header>
+        <section>
+            <label class="require">登录邮箱:
+                <input type="email" class="get_info"><em>!邮箱格式不正确</em>
+            </label>
+            <label class="require">登录密码:
+                <input type="password"><em>请输入6-16位密码</em>
+            </label>
+            <label class="require">用户昵称:
+                <input  class="get_info">
+            </label>
+            <label>手机号码:
+                <input>
+            </label>
+            <label class="require captcha">验证码:
+                <input><img src="http://img.mukewang.com/545308540001678401500040.jpg">
+            </label>
+            <label class="indent">
+                <input type="checkbox" checked>我已阅读并同意
+                <a href="#">相关协议</a>
+            </label>
+            <label class="indent">
+                <input type="checkbox"  class="rem">记录账号和昵称
+
+            </label>
+            <label class="indent">
+                <button>立即注册</button>
+            </label>
+        </section>
+    </form>
+
+    <script src="../js/cookies.js"></script>
+    <script>
+        var oBtn=document.querySelector('form.box button');
+        var oBox=document.getElementById('box');
+//        var oEml=oBox.querySelector('.email');
+//        var oNc=oBox.querySelector('.nc');
+        var aInput=oBox.querySelectorAll('.get_info');
+        var oChk=oBox.querySelector('.rem');
+        if(document.cookie){
+            var arr=document.cookie.split(';');
+            [].forEach.call(arr,function (el,i) {
+                aInput[i].value=(el.substr(el.indexOf('=')+1));
+//                alert(el);
+            });
+
+        }
+        oBtn.onclick= function () {
+            if(oChk.checked){
+                setCookie('emailName',aInput[0].value,7);
+                setCookie('nc',aInput[1].value,7);
+                alert('保存成功');
+            }
+        }
+    </script>
+</body>
+</html>

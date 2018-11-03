@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div.box {
+            width: 1000px;
+            margin: 50px auto 0;
+        }
+        form {
+            display: flex;
+            justify-content: space-around;
+        }
+        table {
+            width: 100%;
+            margin-top: 50px;
+            border-collapse: collapse;
+            line-height: 30px;
+        }
+
+        table caption {
+            letter-spacing: 20px;
+            font-size: 26px;
+            margin-bottom: 20px;
+        }
+
+        div.box td, div.box th {
+            border: 1px solid #999;
+            text-align: center;
+        }
+
+        div.box span {
+            display: inline-block;
+            padding: 5px 10px;
+            margin: 0 15px;
+            background-color: #0a74cb;
+            color: white;
+            font-size: 12px;
+            line-height: 12px;
+            cursor: default;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <form id="form1">
+        <label>商品名称：
+            <input type="text" id="product" pattern="\S+" required>
+        </label>
+        <label>商品数量：
+            <input type="text" id="number" pattern="\d{1,4}" required>
+        </label>
+        <label>商品单价：
+            <input type="text" id="price" pattern="\d{1,4}(\.\d{1,2})?" required>
+        </label>
+        <button>添加一行</button>
+    </form>
+    <table id="table">
+        <caption>商品数据显示与编辑</caption>
+        <thead>
+        <tr>
+            <th>商品名称</th>
+            <th>数量（个）</th>
+            <th>价格（元）</th>
+            <th>小计（元）</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!--<tr><td>电视机</td><td>10</td><td>35.9</td><td>300</td><td><span>编辑</span><span>删除</span></td></tr>-->
+        </tbody>
+    </table>
+</div>
+<script src="../js/eventCompatible.js"></script>
+<script>
+    var oForm=document.getElementById('form1');
+    var aInput=oForm.querySelectorAll('input');
+    var oTbody=document.getElementById('table').tBodies[0];
+    eventCompatible.addEvent(oForm,'submit', function (e){
+        eventCompatible.preventDefault(e);
+        var subtotal=(aInput[1].value*aInput[2].value).toFixed(2);//转成两位小数
+        oTbody.innerHTML='<tr><td>'+aInput[0].value+'</td><td>'+aInput[1].value+
+                '</td><td>'+aInput[2].value+'</td><td>'+subtotal+'</td><td>' +
+                '<span class="com edit">编辑</span><span class="com del">删除</span></td></tr>'
+                +oTbody.innerHTML;
+    });
+    eventCompatible.agentEvent(oTbody,'click',['span','com'], function () {
+        var tr = this.parentNode.parentNode;
+        if (this.classList.contains('del')) {
+            if (confirm('你确定要删除本行吗')) {
+                oTbody.removeChild(tr);
+            }
+        }
+        else {
+            this.innerText = '确定';
+            var aTd = tr.cells;
+            for (var i = 0; i < aTd.length; i++) {
+                aTd[i].setAttribute('contenteditable', true);
+                aTd[i].style.cssText = 'outline:1px solid blue';
+                if (i == 2) {
+                    return false;
+                }//2以后的都不做了
+                aTd[0].focus();//获得焦点
+                eventCompatible.addEvent(this, 'click', edit);
+                function edit(ev) {
+                    var e = ev || event;//兼容
+                    eventCompatible.stopPropagation(e);//阻止冒泡
+                    var txt0 = aTd[0].innerText;
+                    var txt1 = aTd[1].innerText;
+                    var txt2 = aTd[2].innerText;
+                    if (/^\S+$/.test(txt0) && /^\d{1,4}$/.test(txt1) && /^\d{1,4}(\.\d{1,2})?$/.test(txt2)) {
+                        aTd[3].innerText = (txt1 * txt2).toFixed(2);
+                        this.innerText = '编辑';
+                        for (var i = 0; i < aTd.length; i++) {
+                            aTd[i].setAttribute('contenteditable', false);
+                            aTd[i].style.cssText = 'outline:none';
+                            if (i == 2) {
+                                return false;
+                            }
+                        }
+                        eventCompatible.removeEvent(this, 'click', edit);
+                    }
+                    else{
+                        alert('数据格式不符合要求，请检查');
+                    }
+                }
+//            aTd[0].setAttribute('contenteditable',true);//设置属性
+//            aTd[1].setAttribute('contenteditable',true);
+//            aTd[2].setAttribute('contenteditable',true);
+            }
+        }
+    });
+</script>
+</body>
+</html>

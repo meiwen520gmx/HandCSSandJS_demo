@@ -1,0 +1,118 @@
+main {
+  width: 1000px;
+  margin: 16px auto;
+  display: flex;
+}
+main * {
+  font-family: simsun;
+}
+main h2 {
+  font-size: 14px;
+  line-height: 35px;
+  color: #555555;
+  border-bottom: 2px solid #D7D7D7;
+  text-align: center;
+}
+main section.left {
+  width: 185px;
+  height: 910px;
+  border: 1px solid #D7D7D7;
+  background-color: #F3F3F3;
+  box-sizing: border-box;
+}
+main section.left dl {
+  padding-left: 20px;
+  line-height: 27px;
+  font-size: 12px;
+}
+main section.left dl:not(:last-child) {
+  border-bottom: 1px dotted #D7D7D7;
+}
+main section.left dl dt {
+  font-weight: bold;
+  color: #555555;
+}
+main section.left dl a {
+  display: inline-block;
+  color: #555555;
+  font-size: 12px;
+}
+main section.left dl a:nth-child(2n+1) {
+  width: 67px;
+}
+main section.left dl a:nth-child(2n) {
+  width: 87px;
+}
+main section.left dl a:hover {
+  color: red;
+}
+main section.right {
+  flex: 1;
+  margin-left: 5px;
+}
+main section.right h2 {
+  text-align: left;
+  margin-left: 10px;
+  border-bottom: none;
+  line-height: 30px;
+  margin-top: 10px;
+}
+main section.right h2:after {
+  content: '';
+  position: absolute;
+  width: 10%;
+  height: 2px;
+  margin-left: -66px;
+  margin-top: 30px;
+  background-color: #096DBA;
+}
+main section.right article {
+  padding-left: 15px;
+  border-top: 2px solid #ccc;
+  display: flex;
+  flex-wrap: wrap;
+}
+main section.right article figure {
+  width: 197px;
+  height: 270px;
+  font-size: 12px;
+}
+main section.right article figure > a {
+  display: flex;
+  height: 175px;
+  justify-content: center;
+  /*水平居中*/
+  align-items: center;
+  /*垂直居中*/
+}
+main section.right article figure figcaption {
+  color: #333333;
+  line-height: 18px;
+  font-weight: normal;
+}
+main section.right article figure price {
+  display: block;
+  color: #D4105A;
+  font-weight: bold;
+  margin-top: 20px;
+}
+main section.right article figure price:before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 10px;
+  margin-right: 5px;
+  background-image: url("../images/icon8.jpg");
+}
+main section.right article figure dl {
+  margin-top: 5px;
+  display: flex;
+}
+main section.right article figure dl dd {
+  width: 13px;
+  height: 12px;
+  background-image: url("../images/icon9.jpg");
+}
+main section.right article figure dl a {
+  color: #085C9B;
+}

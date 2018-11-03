@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div dl dd{
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 51px;
+            width: 500px;
+            height: 280px;
+            border: 1px solid #ccc;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        div{
+            margin: 50px auto;
+            width: 500px;
+            display: flex;
+            justify-content: space-around;
+        }
+        dl{
+            flex: 1;
+            position: relative;
+            line-height: 50px;
+        }
+        dt{
+            color: #970000;
+            text-align: center;
+            font-family: "microsoft yahei";
+        }
+        input{
+            opacity: 0;
+        }
+        input:checked+dt{
+            border: 1px solid #ccc;
+            border-radius: 3px 3px 0 0;
+        }
+        input:checked+dt:after{
+            content: "";
+            position: absolute;
+            margin-left: -94px;
+            margin-top: 48px;
+            width: 123px;
+            height: 5px;
+            background-color: #fff;
+            z-index: 20;
+        }
+        input:checked~dd{
+            display: block;
+        }
+        dl:nth-child(2) dd{
+            left: -125px;
+        }
+        dl:nth-child(3) dd{
+            left: -250px;
+        }
+        dl:nth-child(4) dd{
+            left: -375px;
+        }
+        input{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+        a,a:visited{
+            display: inline-block;
+            color: #004080;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+    </style>
+</head>
+<body>
+<div>
+    <dl>
+        <input type="radio" name="xxk" checked/>
+        <dt>电子产品</dt>
+        <dd>
+            <a href="#">CPU</a> <a href="#">主板</a> <a href="#">显卡</a> <a href="#">硬盘</a> <a href="#">
+            SSD固态硬盘</a> <a href="#">内存</a> <a href="#">机箱</a> <a href="#">电源</a> <a href="#">显示器</a>
+            <a href="#">刻录机/光驱</a> <a href="#">声卡/扩展卡</a> <a href="#">散热器</a> <a href="#">装机配件</a>
+            <a href="#">组装电脑</a>
+            <a href="#">CPU</a> <a href="#">主板</a> <a href="#">显卡</a> <a href="#">硬盘</a> <a href="#">
+            SSD固态硬盘</a> <a href="#">内存</a> <a href="#">机箱</a> <a href="#">电源</a> <a href="#">显示器</a>
+            <a href="#">刻录机/光驱</a> <a href="#">声卡/扩展卡</a> <a href="#">散热器</a> <a href="#">装机配件</a>
+            <a href="#">组装电脑</a>
+        </dd>
+    </dl>
+    <dl>
+        <input type="radio" name="xxk"/>
+        <dt>儿童用品</dt>
+        <dd>
+            <a href="#">平板电视</a> <a href="#">空调</a> <a href="#">冰箱</a> <a href="#">洗衣机</a> <a
+                href="#">家庭影院</a> <a href="#">DVD</a> <a href="#">迷你音响</a> <a href="#">烟机/灶具</a>
+            <a href="#">热水器</a> <a href="#">消毒柜/洗碗机</a> <a href="#">酒柜/冷柜</a> <a href="#">家电配件</a>
+            <a href="#">平板电视</a> <a href="#">空调</a> <a href="#">冰箱</a> <a href="#">洗衣机</a> <a
+                href="#">家庭影院</a> <a href="#">DVD</a> <a href="#">迷你音响</a> <a href="#">烟机/灶具</a>
+            <a href="#">热水器</a> <a href="#">消毒柜/洗碗机</a> <a href="#">酒柜/冷柜</a> <a href="#">家电配件</a>
+            <a href="#">平板电视</a> <a href="#">空调</a> <a href="#">冰箱</a> <a href="#">洗衣机</a> <a
+                href="#">家庭影院</a> <a href="#">DVD</a> <a href="#">迷你音响</a> <a href="#">烟机/灶具</a>
+            <a href="#">热水器</a> <a href="#">消毒柜/洗碗机</a> <a href="#">酒柜/冷柜</a> <a href="#">家电配件</a>
+        </dd>
+    </dl>
+    <dl>
+        <input type="radio" name="xxk"/>
+        <dt>书籍资料</dt>
+        <dd>
+            <a href="#">电风扇</a> <a href="#">冷风扇</a> <a href="#">净化器</a> <a href="#">饮水机</a>
+            <a href="#">净水设备</a> <a href="#">挂烫机/熨斗</a> <a href="#">吸尘器</a> <a href="#">电话机</a>
+            <a href="#">插座</a> <a href="#">收录/音机</a> <a href="#">清洁机</a> <a href="#">加湿器</a>
+            <a href="#">除湿/干衣机</a> <a href="#">取暖电器</a> <a href="#">其它生活电器</a>
+            <a href="#">电风扇</a> <a href="#">冷风扇</a> <a href="#">净化器</a> <a href="#">饮水机</a>
+            <a href="#">净水设备</a> <a href="#">挂烫机/熨斗</a> <a href="#">吸尘器</a> <a href="#">电话机</a>
+            <a href="#">插座</a> <a href="#">收录/音机</a> <a href="#">清洁机</a> <a href="#">加湿器</a>
+            <a href="#">除湿/干衣机</a> <a href="#">取暖电器</a> <a href="#">其它生活电器</a>
+        </dd>
+    </dl>
+    <dl>
+        <input type="radio" name="xxk"/>
+        <dt>床上用品</dt>
+        <dd>
+            <a href="#">免费</a> <a href="#">小说</a> <a href="#">励志与成功</a>
+            <a href="#">婚恋/两性</a>
+            <a href="#">文学</a> <a href="#">经管</a> <a href="#">畅读VIP</a>
+            <a href="#">免费</a> <a href="#">小说</a> <a href="#">励志与成功</a>
+            <a href="#">婚恋/两性</a>
+            <a href="#">文学</a> <a href="#">经管</a> <a href="#">畅读VIP</a>
+            <a href="#">免费</a> <a href="#">小说</a> <a href="#">励志与成功</a>
+            <a href="#">婚恋/两性</a>
+            <a href="#">文学</a> <a href="#">经管</a> <a href="#">畅读VIP</a>
+        </dd>
+    </dl>
+</div>
+</body>
+</html>

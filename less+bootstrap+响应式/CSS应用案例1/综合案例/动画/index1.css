@@ -1,0 +1,84 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+nav {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+}
+nav dl:not(:first-child) dt > a {
+  opacity: 0;
+}
+nav dl:first-child {
+  background-color: #00A5FF ;
+  color: white;
+}
+nav dl dd {
+  position: absolute;
+  display: none;
+}
+nav dl dd div {
+  margin-top: 1px;
+}
+nav dl dd div:hover menu {
+  transform: rotateX(90deg) translateY(-23px);
+}
+nav dl:hover dd {
+  display: block;
+}
+nav dl:hover dt menu {
+  transform: rotateX(90deg) translateY(-23px);
+}
+nav dl dt,
+nav dl div {
+  position: relative;
+  perspective: 300px;
+  transform-style: preserve-3D;
+}
+nav dl dt a,
+nav dl div a,
+nav dl dt a:visited,
+nav dl div a:visited {
+  display: block;
+  font-size: 20px;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+nav dl dt menu,
+nav dl div menu {
+  transform-style: preserve-3D;
+  transform: translateZ(-23px);
+  transition: all .5s;
+}
+nav dl dt menu,
+nav dl div menu,
+nav dl dt menu a,
+nav dl div menu a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+nav dl dt menu a.front,
+nav dl div menu a.front {
+  transform: translateZ(23px);
+}
+nav dl dt menu a.bottom,
+nav dl div menu a.bottom {
+  transform: rotateX(-90deg) translateZ(23px);
+}
+nav dl dt a.front,
+nav dl div a.front {
+  background-color: #00A5FF;
+}
+nav dl dt a.bottom,
+nav dl div a.bottom {
+  background-color: #ffaf3d;
+}
+nav dl:not(:last-child) {
+  margin-right: 1px;
+}

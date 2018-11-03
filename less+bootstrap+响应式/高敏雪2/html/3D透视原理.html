@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3D透视原理</title>
+    <style>
+        div.box{
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin: 50px auto;
+            perspective: 500px;
+            transform-style: preserve-3d;/*变型后用3D方式呈现*/
+            perspective-origin: -100% -50%; /* 指定用户从哪个方向看过来的 */
+        }
+        div.box div{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100px;
+            height: 100px;
+            box-sizing: border-box;
+            font-size: 30px;
+            text-align: center;
+            line-height: 100px;
+        }
+        div.mid{
+            border: 1px dashed black;
+        }
+        div.front{
+            background-color: rgba(255,0,0,.5);
+            transform:translateZ(50px);
+
+        }
+        div.back{
+            background-color:green;
+            transform:translateZ(-50px);
+        }
+        div.left{
+            background-color:rgba(0,0,255,.5);
+            transform:rotateY(-90deg) translateZ(50px);
+        }
+        div.right{
+            background-color:rgba(255,255,0,.5);
+            transform:rotateY(90deg) translateZ(50px);
+        }
+        div.top{
+            background-color:rgba(0,255,255,.5);
+            transform:rotateX(90deg) translateZ(50px);
+        }
+        div.bottom{
+            background-color:rgba(255,0,255,.5);
+            transform:rotateX(90deg) translateZ(-50px);
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="mid"></div>
+        <div class="front">前</div>
+        <div class="back">后</div>
+        <div class="left">左</div>
+        <div class="right">右</div>
+        <div class="top">上</div>
+        <div class="bottom">下</div>
+    </div>
+</body>
+</html>

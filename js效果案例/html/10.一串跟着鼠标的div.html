@@ -1,0 +1,58 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body{
+            background-color: purple;
+        }
+        div{
+            width: 20px;
+            height: 20px;
+            border: 5px solid yellow;
+            box-shadow:1px 1px 5px 5px yellow;
+            border-radius: 50%;
+            position: absolute;
+        }
+    </style>
+    <script src="../js/getpos.js"></script>
+    <script src="../js/move4.js"></script>
+    <script>
+        window.onload=function(){
+            document.onmousemove= function (ev) {
+                var oEvent=ev || event;
+                var aDiv=document.getElementsByTagName('div');
+                var pos=getPos(oEvent);
+                for(var i=aDiv.length-1;i>0;i--){
+                    aDiv[i].style.left=aDiv[i-1].offsetLeft+'px';
+                    aDiv[i].style.top=aDiv[i-1].offsetTop+'px';
+                }
+                for(var j=0;j<aDiv.length;j++){
+                    startMove(aDiv[j],{height:j,width:j});
+                }
+                aDiv[0].style.left=pos.x+'px';
+                aDiv[0].style.top=pos.y+'px';
+            };
+        };
+
+    </script>
+</head>
+<body>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+</body>
+</html>

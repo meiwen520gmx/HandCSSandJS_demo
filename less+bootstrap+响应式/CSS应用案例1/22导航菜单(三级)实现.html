@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>三级导航菜单(此例理解的关键是绝对定位的包果性和块级元素的充满性,以及隐藏后的元素必须显示声明显示才能看到)</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "微软雅黑";
+        }
+
+        body {
+            padding-top: 50px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav div:first-child a {
+            border-radius: 5px 0 0 5px;
+        }
+
+        nav div:last-child > a {
+            border-radius: 0 5px 5px 0;
+        }
+
+        nav a {
+            display: block;
+            font-size: 14px;
+            text-align: center;
+            padding: 10px 15px;
+            word-break: keep-all; /*保持中文不自动换行*/
+            text-decoration: none;
+        }
+
+        nav a, nav a:visited {
+            background-color: #333;
+            color: white;
+        }
+
+        nav div > a {
+            font-size: 16px;
+            padding: 7px 20px;
+            border: 2px solid #333;
+        }
+
+        nav div ul {
+            position: absolute;
+            border: 2px solid black;
+            display: none;
+            list-style: none;
+        }
+
+        nav div ul li:not(:first-child), span a:not(:first-child) {
+            margin-top: 1px;
+        }
+
+        nav a:hover {
+            background-color: #fff;
+            color: #000;
+        }
+
+        nav div:hover ul {
+            display: block;
+        }
+
+        nav div ul li {
+            position: relative;
+        }
+
+        nav div ul li span {
+            position: absolute;
+            top: 0;
+            left: 100%;
+            border: 2px solid black;
+            display: none;
+        }
+
+        nav div ul li:hover span {
+            display: block;
+        }
+
+        div.abc {
+            width: 800px;
+            margin: 100px auto;
+            height: 40px;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <div>
+        <a href="http://www.baidu.com">首页</a>
+    </div>
+    <div>
+        <a href="#">新闻中心</a>
+        <ul>
+            <li><a href="http://www.cqwu.edu.cn">重庆文理学院</a></li>
+            <li><a href="#">二级菜单条</a></li>
+            <li><a href="#">二级菜单条</a></li>
+            <li><a href="#">二级菜单条</a></li>
+        </ul>
+    </div>
+    <div>
+        <a href="#">活动报道</a>
+        <ul>
+            <li><a href="#">二级菜单条</a></li>
+            <li><a href="#">二级菜单更多</a>
+                <span>
+                    <a href="http://www.cqwu.edu.cn">重庆文理学院</a>
+                    <a href="#">三级菜单条</a>
+                    <a href="#">三级菜单条</a>
+                    <a href="#">三级菜单条</a>
+                </span>
+            </li>
+            <li><a href="#">二级菜单条</a></li>
+            <li><a href="#">二级菜单条</a></li>
+        </ul>
+    </div>
+    <div>
+        <a href="#">机构设置</a>
+        <ul>
+            <li><a href="http://www.qq.com">腾讯主页</a></li>
+            <li><a href="#">二级菜单条</a></li>
+            <li><a href="#">二级菜单条</a></li>
+            <li><a href="#">二级菜单条</a></li>
+        </ul>
+    </div>
+    <div>
+        <a href="#">党政工团群</a>
+        <ul>
+            <li><a href="http://www.qq.com">腾讯主页</a></li>
+            <li><a href="#">二级菜单条</a></li>
+            <li><a href="#">二级菜单条更多</a>
+                <span>
+                    <a href="http://www.cqwu.edu.cn">重庆文理学院</a>
+                    <a href="#">三级菜单条</a>
+                    <a href="#">三级菜单条</a>
+                    <a href="#">三级菜单条</a>
+                </span>
+            </li>
+            <li><a href="#">二级菜单条</a></li>
+        </ul>
+    </div>
+    <div>
+        <a href="#">行政事务</a>
+        <ul>
+            <li><a href="http://www.qq.com">腾讯主页</a></li>
+            <li><a href="#">二级菜单条</a></li>
+            <li><a href="#">二级菜单条</a></li>
+            <li><a href="#">二级菜单条</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="abc">二级菜单采用绝对定位后，对周围元素无影响</div>
+</body>
+</html>

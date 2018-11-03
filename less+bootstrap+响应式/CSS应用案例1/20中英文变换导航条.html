@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>导航菜单</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            display: flex;
+            justify-content: center;
+            margin-top: 100px;
+            background: #daeeff;
+            border-bottom: 3px solid #005aa7;
+            overflow: auto; /*也可以用隐藏*/
+            list-style: none;
+        }
+
+        ul li {
+            font-weight: bold;
+            box-shadow: 0px 0px 2px black;
+        }
+
+        ul li:not(:first-child) {
+            margin-left: 16px;
+        }
+
+        ul li a {
+            display: block;
+            text-align: center;
+            line-height: 26px;
+            background-color: #ddd;
+            font-size: 16px;
+            padding: 5px 20px 0;
+            text-decoration: none;
+        }
+
+        ul li a english {
+            display: none; /*开始时把英文部分隐藏起来*/
+        }
+
+        ul li a:hover english {
+            display: block; /*英文部分显示并变转换成块级元素，英文部分就会自动移到下一行*/
+        }
+
+        ul li a:hover {
+            margin-top: -26px; /*同时整体向上移动一行高，就隐藏了中文部分,英文到原来中文位置*/
+            background-color: #005aa7;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li>
+        <a href="http://www.baidu.com">首页<english>Home</english></a>
+    </li>
+    <li>
+        <a href="http://www.baidu.com">课程大厅<english>Course</english></a>
+    </li>
+    <li>
+        <a href="http://www.baidu.com">学习中心<english>Learn</english></a>
+    </li>
+    <li>
+        <a href="http://www.baidu.com">关于我们<english>About</english></a>
+    </li>
+</ul>
+</body>
+</html>

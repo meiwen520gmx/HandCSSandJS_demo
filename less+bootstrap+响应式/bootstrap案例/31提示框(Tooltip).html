@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+</head>
+<style>
+    body {
+        padding: 100px;
+    }
+    .btn {
+        margin: 20px 10px 20px;
+    }
+</style>
+<body>
+<h3>按钮做的提示框</h3>
+<button class="btn btn-default" data-toggle="tooltip" data-placement="left"
+        data-original-title="234235423423" title="">提示框居左
+</button>
+<button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top"
+        data-original-title="提示框在顶部">提示框在顶部
+</button>
+<button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom"
+        data-original-title="提示框在底部">提示框在底部
+</button>
+<button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right"
+        data-original-title="提示框居右">提示框居右
+</button>
+
+<h3>普通文本或链接制作的提示框</h3>
+<span class="btn btn-primary" data-toggle="tooltip" data-placement="left" title="提示框居左">
+    提示框居左
+</span>
+<a href="#" data-toggle="tooltip" data-placement="top" title="提示框在顶部中华人民共和国中华人民共和国中华人民共和国">
+    习近平
+</a>
+<a class="btn btn-primary" data-toggle="tooltip" data-placement="bottom" title="提示框在底部">
+    提示框在底部
+</a>
+<a class="btn btn-primary" data-toggle="tooltip" data-placement="right" title="提示框在居右">
+    提示框居右
+</a>
+<a href="##" class="btn btn-primary" id="myTooltip">我是提示框</a>
+<a href="##" class="btn btn-primary" id="myTooltip2">我是提示框2</a>
+
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+    $(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+        $('#myTooltip2').tooltip({
+            title:"我是一个提示框，我在顶部出现",
+            placement:'right'
+        });
+    });
+</script>
+</body>
+</html>

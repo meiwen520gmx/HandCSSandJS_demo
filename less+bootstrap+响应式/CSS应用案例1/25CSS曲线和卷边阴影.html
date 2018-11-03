@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>用CSS3实现曲线阴影和卷边阴影</title>
+    <style type="text/css">
+        body {
+            background-color: skyblue;
+        }
+
+        div {
+            margin: 10px auto;
+            width: 70%;
+            height: 200px;
+            background-color: #fff;
+        }
+
+        div h1 {
+            line-height: 200px;
+            text-align: center;
+        }
+
+        .effect {
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            /*0 0 40px是从盒子中中心位置开始产生40像素阴影，默认向外，inset则改为内部*/
+            position: relative;
+        }
+
+        .effect:after,.effect:before {
+            /*在内容的前后各插入一个盒子，共2个，并隐藏在后面*/
+            content: '';
+            position: absolute;
+            left: 30px;
+            right: 30px;
+            top: 50%;
+            bottom: 0;
+            z-index: -1;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+            border-radius: 100px/20px; /*椭园角的水平半径为100px,垂直半径为20px*/
+            background: #ff0; /*测试用背景颜色*/
+        }
+
+        /*上面的效果重用在section元素上，达到通用的目的*/
+        section {
+            margin: 20px auto;
+            width: 800px;
+            background: white;
+            text-align: center;
+            list-style: inside;
+            line-height: 1.5em;
+        }
+
+        /*卷边效果*/
+        photos {
+            width: 1100px;
+            display: flex;/*伸缩布局*/
+            justify-content: space-around;  /*伸缩布局居中*/
+            margin: 20px auto;
+            border: 1px solid red;
+        }
+
+        photos photo {
+            background: white;
+            margin: 20px;
+            border: 2px solid #efefef;
+            padding: 5px;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 1px 60px rgba(0, 0, 0, 0.1) inset;
+            position: relative;
+        }
+
+        photo img {
+            width: 100%;
+            height: 200px;
+        }
+
+        photo:before, photo:after {
+            content: '';
+            position: absolute;
+            /*z-index: -2;*/
+            width: 90%; /*不能是100%，因为变成平行四边形后宽度会增加*/
+            height: 80%;
+            background: #ff0000; /*测试时用红色等*/
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+        }
+
+        photo:before {
+            left: 20px;
+            bottom: 8px;
+            -webkit-transform: skew(-11deg) rotate(-4deg); /*水平向右倾斜11度*,反时针旋转4度*/
+        }
+
+        photo:after {
+            right: 20px;
+            bottom: 8px;
+            -webkit-transform: skew(12deg) rotate(4deg); /*水平向左倾斜12度*,顺时针旋转4度*/
+        }
+    </style>
+</head>
+<body>
+<label>收到了丰盛的1</label>
+<label>收到了丰盛的2</label>
+</body>
+</html>

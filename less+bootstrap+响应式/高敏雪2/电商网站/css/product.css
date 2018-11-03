@@ -1,0 +1,104 @@
+@charset "utf-8";
+main {
+  width: 1000px;
+  margin: 15px auto 40px;
+  display: flex;
+}
+main aside {
+  width: 185px;
+  margin-bottom: 70%;
+  margin-right: 5px;
+  border: 1px solid #CDCDCD;
+  background-color: #F3F3F3;
+}
+main aside header {
+  padding: 10px 0;
+  border-bottom: 1px solid #CDCDCD;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+main aside dl {
+  line-height: 25px;
+  font-size: 12px;
+  padding: 10px 0 10px 20px;
+}
+main aside dl:not(:last-child) {
+  border-bottom: 1px dashed #CDCDCD;
+}
+main aside dl dt {
+  font-weight: bold;
+}
+main aside dl dt:hover {
+  color: #003bb3;
+  text-decoration: underline;
+}
+main aside dl a {
+  display: inline-block;
+  width: 66px;
+  font-size: 12px;
+  color: #575757;
+}
+main aside dl a:hover {
+  color: red;
+  text-decoration: underline;
+}
+section {
+  flex: 1;
+}
+section div.up {
+  width: 100%;
+}
+section div.mid {
+  display: table;
+  content: '';
+  clear: both;
+}
+section div.mid header {
+  padding: 15px;
+  border-bottom: 2px solid #CDCDCD;
+  position: relative;
+  font-size: 17px;
+  font-weight: 500;
+}
+section div.mid header:before {
+  position: absolute;
+  content: '';
+  height: 2px;
+  width: 180px;
+  background-color: #086DBB;
+  margin-top: 34px;
+  margin-left: -15px;
+}
+section div.mid figure {
+  width: 202px;
+  float: left;
+  padding: 20px;
+  box-sizing: border-box;
+  font-size: 12px;
+  text-align: center;
+}
+section div.mid figure a,
+section div.mid figure a:visited {
+  width: 100%;
+  height: 162px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section div.mid figure figcaption {
+  text-align: left;
+  line-height: 18px;
+}
+section div.mid figure figcaption p {
+  margin-bottom: 15px;
+}
+section div.mid figure figcaption p:last-child i {
+  font-family: my_icon;
+  color: #f9a115;
+  font-style: normal;
+  letter-spacing: 2px;
+}
+section div.mid figure figcaption b {
+  color: #D11955;
+}

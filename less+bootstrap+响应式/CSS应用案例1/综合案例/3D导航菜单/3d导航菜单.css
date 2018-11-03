@@ -1,0 +1,65 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+nav {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+nav dl:first-child a {
+  background-color: black;
+  color: white;
+}
+nav dl:not(:last-child) {
+  margin-right: 1px;
+}
+nav dl a {
+  display: block;
+  text-decoration: none;
+  font-family: "microsoft yahei";
+  font-size: 18px;
+  padding: 10px;
+  perspective: 200px;
+  position: relative;
+}
+nav dl a box,
+nav dl a box front,
+nav dl a box bottom {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+nav dl a box {
+  transform-style: preserve-3d;
+  transform: translateZ(-22px);
+  transition: all 0.3s ease-out;
+}
+nav dl a box front {
+  background-color: black;
+  color: white;
+  transform: translateZ(22px);
+}
+nav dl a box bottom {
+  background-color: #ffae19;
+  color: black;
+  transform: rotateX(-90deg) translateZ(22px);
+}
+nav dl a:hover box {
+  transform: translateZ(-22px) rotateX(90deg);
+}
+nav dl dd {
+  position: absolute;
+  display: none;
+}
+nav dl dd a {
+  margin-top: 1px;
+}
+nav dl:hover dd {
+  display: block;
+}

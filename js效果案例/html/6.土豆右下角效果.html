@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../font1/iconfont.js"></script>
+    <script src="../js/move.js"></script>
+    <style type="text/css">
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .icon {
+            width: 1em; height: 1em;
+            vertical-align: -0.15em;
+            fill: currentColor;
+            overflow: hidden;
+        }
+       body{
+           background-color:pink;
+           overflow: hidden;
+       }
+        a#but{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            display: block;
+            padding:27px 20px;
+            background-color: #0044cc;
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+            z-index: 1;
+        }
+         ul#one{
+            position: absolute;
+             bottom: 0;
+             right: -250px;
+             border-radius: 10px 0 0 10px;
+        }
+         ul{
+             list-style: none;
+             background-color: #b6d9f2;
+         }
+        ul#one li{
+            float: left;
+        }
+        svg.icon{
+            font-size: 80px;
+        }
+        ul#two{
+            padding-top: 15px;
+            list-style: none;
+            position: absolute;
+            right: 0;
+            bottom: -550px;
+            border-radius: 10px 10px 0 0;
+        }
+        a#but1 svg.icon{
+            position: absolute;
+            font-size: 20px;
+            top: -3px;
+            right: 0;
+            z-index: 1;
+            color: black;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var oBtnShow=document.getElementById('but');
+            var oOne=document.getElementById('one');
+            var oTwo=document.getElementById('two');
+            var oCloseBtn=document.getElementById('but1');
+            oBtnShow.onclick= function () {
+                startMove(oOne,'right',80,function(){
+                    startMove(oTwo,'bottom',77);
+                });
+            }
+            oCloseBtn.onclick= function () {
+                startMove(oTwo,'bottom',-550, function () {
+                    startMove(oOne,'right',-250);
+                })
+            }
+
+        };
+    </script>
+</head>
+<body>
+
+    <a href="#" id="but">点击</a>
+    <ul id="one">
+        <li><svg class="icon" aria-hidden="true"><use xlink:href="#icon-daxiang"></use></svg></li>
+        <li><svg class="icon" aria-hidden="true"><use xlink:href="#icon-baitu"></use></svg></li>
+        <li><svg class="icon" aria-hidden="true"><use xlink:href="#icon-gongji"></use></svg></li>
+        <li><svg class="icon" aria-hidden="true"><use xlink:href="#icon-hashiqi"></use></svg></li>
+    </ul>
+
+    <ul id="two">
+        <li>
+            <a href="#" id="but1">
+                <svg class="icon" aria-hidden="true"><use xlink:href="#icon-cancel"></use></svg>
+            </a>
+        </li>
+        <li><svg class="icon" aria-hidden="true"><use xlink:href="#icon-houzi"></use></svg></li>
+        <li><svg class="icon" aria-hidden="true"><use xlink:href="#icon-mao"></use></svg></li>
+        <li><svg class="icon" aria-hidden="true"><use xlink:href="#icon-mianyang"></use></svg></li>
+        <li><svg class="icon" aria-hidden="true"><use xlink:href="#icon-songshu"></use></svg></li>
+        <li><svg class="icon" aria-hidden="true"><use xlink:href="#icon-tiane"></use></svg></li>
+        <li><svg class="icon" aria-hidden="true"><use xlink:href="#icon-zhu"></use></svg></li>
+    </ul>
+</body>
+</html>

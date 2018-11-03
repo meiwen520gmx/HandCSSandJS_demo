@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <style>
+        .lcj-dropdown{
+            float: left;
+        }
+        .h2{
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>基本</h2>
+    <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+            下 拉 菜 单
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+            <li><a href="#">下拉菜单项的拭目以待</a></li>
+            <li><a href="#">下拉菜单项</a></li>
+            <li><a href="#">下拉菜单项</a></li>
+            <li><a href="#">下拉菜单项</a></li>
+        </ul>
+    </div>
+
+    <h2>下拉分隔线</h2>
+    <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown">
+            下拉菜单
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+            <li><a href="#">下拉菜单项</a></li>
+            <li><a href="#">下拉菜单项</a></li>
+            <li><a href="#">下拉菜单项</a></li>
+            <li class="divider"></li>
+            <li><a href="#">下拉菜单项</a></li>
+        </ul>
+        </div>
+
+    <h2>菜单标题</h2>
+    <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown">
+            下拉菜单
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+            <li class="dropdown-header">第一部分菜单头部</li>
+            <li><a href="#">下拉菜单项</a></li>
+            <li><a href="#">下拉菜单项</a></li>
+            <li><a href="#">下拉菜单项</a></li>
+            <li class="divider"></li>
+            <li class="dropdown-header">第二部分菜单头部</li>
+            <li><a href="#">下拉菜单项</a></li>
+            <li><a href="#">下拉菜单项</a></li>
+            <li><a href="#">下拉菜单项</a></li>
+        </ul>
+    </div>
+    <h2>对齐方式改变，需将父容器设置为左浮动</h2>
+    <div class="dropdown lcj-dropdown">
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu4" data-toggle="dropdown">
+            下拉菜单
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dropdownMenu1">
+            <li><a href="#">下拉菜单项</a></li>
+            <li><a href="#">下拉菜单项</a></li>
+            <li><a href="#">下拉菜单项</a></li>
+            <li class="divider"></li>
+            <li><a href="#">下拉菜单项</a></li>
+        </ul>
+    </div>
+    <h2 class="h2">当前状态active和禁用状态disabled</h2>
+    <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu5" data-toggle="dropdown">
+            下拉菜单
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu5">
+            <li><a href="#">下拉菜单项</a></li>
+            <li  class="active"><a href="#">下拉菜单项</a></li>
+            <li><a href="#">下拉菜单项</a></li>
+            <li class="divider"></li>
+            <li class="disabled"><a href="#">下拉菜单项</a></li>
+        </ul>
+    </div>
+
+    <h2>向上弹起的下拉菜单</h2>
+    <div class="btn-group dropup">
+        <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">按钮下拉菜单<span class="caret"></span></button>
+        <ul class="dropdown-menu">
+            <li><a href="##">按钮下拉菜单项</a></li>
+            <li><a href="##">按钮下拉菜单项</a></li>
+            <li><a href="##">按钮下拉菜单项</a></li>
+            <li><a href="##">按钮下拉菜单项</a></li>
+        </ul>
+    </div>
+
+</div>
+
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

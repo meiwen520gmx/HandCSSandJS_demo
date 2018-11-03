@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ctrl+回车提交留言</title>
+    <style>
+        body{
+            background-color: darkgrey;
+            padding: 100px;
+        }
+        #txt1{
+            display: block;
+            margin-bottom: 20px;
+        }
+        img{
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+    <script>
+        window.onload= function () {
+            var oTxt1=document.getElementById('txt1');
+            var oTxt2=document.getElementById('txt2');
+            oTxt1.onkeydown= function (ev) {
+                var oEvent=ev || event;
+                if(oEvent.keyCode==13 && oEvent.ctrlKey){
+                    oTxt2.value=oTxt1.value+'\n';
+                    oTxt1.value='';
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<input type="text" id="txt1" placeholder="请输入留言">
+<textarea id="txt2" rows="10" cols="50">
+</textarea>
+
+
+</body>
+</html>

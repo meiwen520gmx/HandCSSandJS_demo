@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body{
+            text-align: center;
+        }
+        background1 {
+            display: inline-block;
+            border: 2px solid #000000;
+            width: 100px;
+            height: 100px;
+            background-image: -webkit-linear-gradient(-225deg, red, yellow);
+        }
+
+        background2 {
+            display: inline-block;
+            border: 2px solid #000000;
+            width: 100px;
+            height: 100px;
+            background-image: -webkit-linear-gradient(left, red, yellow);
+        }
+
+        background3 {
+            display: inline-block;
+            border: 2px solid #000000;
+            width: 100px;
+            height: 100px;
+            background-image: -webkit-linear-gradient(0deg, red, yellow);
+        }
+
+        background4 {
+            display: inline-block;
+            border: 2px solid #000000;
+            width: 100px;
+            height: 100px;
+            background-image: -webkit-linear-gradient(135deg, red, yellow);
+        }
+
+        background5 {
+            display: inline-block;
+            border: 2px solid #000000;
+            width: 100px;
+            height: 100px;
+            background-image: -webkit-linear-gradient(45deg, red 25%, yellow 25%, green 50%);
+        }
+
+        background6 {
+            display: inline-block;
+            border: 2px solid #000000;
+            width: 150px;
+            height: 100px;
+            background-image: -webkit-radial-gradient(closest-side, red 10%, yellow 50%, blue);
+        /*closest-side：最近的边,默认为最远的角farthest-corner*/
+        }
+
+        background7 {
+            display: inline-block;
+            border: 2px solid #000000;
+            width: 150px;
+            height: 100px;
+            background-image: -webkit-radial-gradient(#ace 5%, #f96 25%, #1E90FF 50%);;
+        }
+
+        background8 {
+            display: inline-block;
+            border: 2px solid #000000;
+            width: 100px;
+            height: 100px;
+            background-image: -webkit-radial-gradient(bottom right, circle, #ace, #f96, #1E90FF);
+        }
+
+        background9 {
+            display: inline-block;
+            border: 2px solid #000000;
+            width: 150px;
+            height: 100px;
+            background-image: -webkit-radial-gradient(bottom left, ellipse, #ace, #f96, #1E90FF);;
+        }
+
+        background10 {
+            display: inline-block;
+            border: 2px solid #000000;
+            width: 100px;
+            height: 100px;
+            background-image: -webkit-repeating-linear-gradient(top left, #ace 0px, #ace 5px, #f96 5px, #f96 10px);
+        }
+
+        background11 {
+            display: inline-block;
+            border: 2px solid #000000;
+            width: 300px;
+            height: 300px;
+            background-size: 100px 100px;
+            background-position: 100px 200px; /*也可采用坐标方法如：50px 35px */
+            background-repeat: no-repeat;
+            background-image: -webkit-linear-gradient(45deg, red 25%, yellow 25%, green 50%);
+        }
+
+        background12 {
+            display: inline-block;
+            border: 2px solid #000000;
+            width: 300px;
+            height: 300px;
+            background-size: 100px 100px;
+            background-position: 0 30px;
+            background-repeat: repeat-x;
+            background-image: -webkit-linear-gradient(45deg, red 25%, yellow 25%, green 50%);
+        }
+
+        background13 {
+            display: inline-block;
+            border: 2px solid #000000;
+            width: 300px;
+            height: 300px;
+            background-size: 100px 100px;
+            background-position: 20px 0;
+            background-repeat: repeat-y;
+            background-image: -webkit-linear-gradient(45deg, red 25%, yellow 25%, green 50%);
+        }
+
+        background14 {
+            display: inline-block;
+            border: 2px solid #000000;
+            width: 300px;
+            height: 300px;
+            background-color: #fff;
+            background-size: 50px 50px;
+            background-image: linear-gradient(45deg, #555 25%, transparent 25%),
+            linear-gradient(135deg, #555 25%, transparent 25%),
+            linear-gradient(225deg, #555 25%, transparent 25%),
+            linear-gradient(315deg, #555 25%, transparent 25%);
+            /*或者
+                          linear-gradient(45deg, #555 25%, transparent 25%, transparent),
+                         linear-gradient(315deg,#555 25%, transparent 25%, transparent),
+                        linear-gradient(45deg, transparent 75%, #555 75%),
+                        linear-gradient(315deg, transparent 75%, #555 75%);
+            */
+        }
+        background15 {
+            display: inline-block;
+            border: 50px solid #000000;
+            width: 300px;
+            height: 300px;
+            background-size: 100px 100px;
+            background-position:left center; /*也可采用坐标方法如：50px 35px */
+            background-repeat: no-repeat;
+            background-image: -webkit-linear-gradient(45deg, red 25%, yellow 25%, green 50%);
+            padding: 30px;
+            /*background-origin: border-box;背景从边框开始*/
+            background-origin: content-box;  /*背景排除边框和内间距后开始*/
+            /*background-origin: padding-box;  /!*背景从内间距开始，默认*!/*/
+        }
+        background16 {
+            display: inline-block;
+            border: 2px solid #000000;
+            width: 300px;
+            height: 300px;
+            background-size: 100px 100px;
+            background-position:left center; /*也可采用坐标方法如：50px 35px */
+            background-repeat: no-repeat;
+            background-image: -webkit-linear-gradient(45deg, red 25%, yellow 25%, green 50%);
+            padding: 30px;
+            /*background-clip: border-box;     /!*从边框后裁剪出的部分作为背景*!/*/
+            background-clip: content-box;  /*从边框和内间距后裁剪出的部分成为背景*/
+            /*background-clip: padding-box;  /!*从内间距开始裁剪的部分作为背景，默认*!/*/
+        }
+    </style>
+</head>
+<body>
+<background1></background1>
+<background2></background2>
+<background3></background3>
+<background4></background4>
+<background5></background5>
+<hr>
+<background6></background6>
+<background7></background7>
+<background8></background8>
+<background9></background9>
+<background10></background10>
+<hr>
+<background11></background11>
+<background12></background12>
+<background13></background13>
+<background14></background14>
+<background15></background15>
+<background16></background16>
+</body>
+</html>

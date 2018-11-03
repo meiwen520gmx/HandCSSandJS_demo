@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        body {
+            background-color: #000;
+        }
+
+        #image {
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+<img id="image" src="../images/8.jpg" width="512"/>
+
+<script type="text/javascript">
+    var oImg=document.getElementById('image');
+    var winW=document.documentElement.offsetWidth;
+    oImg.style.left=(winW-oImg.offsetWidth)/2+'px';
+    oImg.addEventListener('mousewheel',function(e){
+        if(e.wheelDelta>0 && oImg.offsetWidth<1000){
+            oImg.style.width=oImg.offsetWidth+10+'px';
+            oImg.style.left=(winW-oImg.offsetWidth)/2+'px';
+        }
+        else if(e.wheelDelta<0 && oImg.offsetWidth>512){
+            oImg.style.width=oImg.offsetWidth-10+'px';
+            oImg.style.left=(winW-oImg.offsetWidth)/2+'px';
+        }
+    },false);
+</script>
+</body>
+</html>

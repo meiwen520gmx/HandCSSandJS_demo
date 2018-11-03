@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+<style>
+    div{
+        width: 700px;
+        height: 500px;
+        margin: 50px auto;
+        position: relative;
+    }
+    img{
+        width: 700px;
+        height: 500px;
+    }
+    div span{
+       position: absolute;
+        top:0 ;
+        bottom: 0;
+        height: 100%;
+        width: 50%;
+    }
+    div span:hover{
+        background-color: white;
+        opacity: 0.3;
+        cursor: url("cur/Dgn1_Hnd.cur"),auto;
+    }
+    div span.prent{
+        left: 0;
+    }
+    div span.next{
+        right: 0;
+        cursor: url("cur/Dgn2_Hnd.cur"),auto;
+    }
+</style>
+<body>
+<div>
+    <span class="prent"></span>
+    <span class="next"></span>
+    <img src="../img/img_g1.jpg" alt="">
+</div>
+</body>
+</html>

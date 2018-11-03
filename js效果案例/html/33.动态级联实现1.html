@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div.box{
+            width: 600px;
+            margin: 50px auto 0;
+            background-color: #b6d9f2;
+            border: 2px solid #b7b7b7;
+            box-sizing: border-box;
+            padding: 40px 15px;
+            position: relative;
+        }
+        div.box form button{
+            display: block;
+            width: 80px;
+            margin: 50px 0 0 100px;
+        }
+        div.box form label a{
+            text-decoration: none;
+            color: red;
+            font-weight: bold;
+        }
+        div.box form label a:hover{
+            text-decoration: underline;
+        }
+        div.box aside{
+            position: absolute;
+            width: 350px;
+            height: 250px;
+            top: 40px;
+            left: calc(50% - 175px);
+            border-radius: 5px;
+            background-color: #c9d3f4;
+            padding: 15px;
+            z-index: 100;
+            display: none;
+        }
+        div.box aside label{
+            display: block;
+            margin: 15px;
+        }
+        div.box aside button{
+           margin: 40px 0 0 100px;
+        }
+        div.shade{
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background-color: rgba(0,0,0,.4);
+            z-index: 10;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="box" id="box">
+    <p>您的本次订单号码是：2008081400</p>
+    <p>订购了以下商品：</p>
+    <ul>
+        <li>小天鹅洗衣机 1台 800元
+        <li>TCL 32寸液晶电视1台 5000 元
+        <li>步步高DVD 1台 400 元
+    </ul>
+    <form class="form1">
+        <label>请输入你的送货地址:
+            <input type="text" class="address">
+            <a href="javascript:;" class="select">选择送货地址</a>
+        </label>
+        <button>提交数据</button>
+    </form>
+    <aside class="pop">
+        <label>请选择省份：
+            <select class="area">
+            </select>
+        </label>
+        <label>请选择城市：
+            <select class="city">
+            </select>
+        </label>
+        <label>请选择街道：
+            <input type="text" class="street">
+        </label>
+        <label>请选择门牌号：
+            <input type="text" class="door">
+        </label>
+        <button class="ok">确认</button>
+    </aside>
+</div>
+<div class="shade" id="shade"></div>
+
+</body>
+<script>
+    window.onload= function () {
+        var arr= [];
+        arr[0] = {name: '四川省', city: [{qn: '021', name: '成都市'},{qn: '029', name: '万元市'},{qn: '028', name: '宜宾市'}]};
+        arr[1] = {name: '江苏省', city: [{qn: '051', name: '南京市'},{qn: '059', name: '昆山市'},{qn: '053', name: '苏州市'}]};
+        arr[2] = {name: '重庆市', city: [{qn: '0231', name: '渝中区'},{qn: '0232', name: '永川区'},{qn: '0234', name: '合川区'},{qn: '0233', name: '江津区'}]};
+        function getClass(path){
+            return obj=document.querySelector('#'+path);//空格是后代的意思
+        }
+        var oShade=document.getElementById('shade');
+        var oArea=getClass('box .area');
+        var oCity=getClass('box .city');
+        getClass('box .select').onclick= function () {
+            getClass('box .pop').style.display='block';
+            oShade.style.display='block';
+            oArea.length=0;
+            oCity.length=0;
+            oArea.appendChild(new Option('-请选择-','-1'));
+            oCity.appendChild(new Option('-请选择-','-1'));
+            arr.forEach(function(el,i){
+                oArea.appendChild(new Option(el.name,el.name));
+            });
+        };
+        oArea.onchange= function () {
+            var aCity=arr[this.selectedIndex-1].city;
+            oCity.length=1;
+            aCity.forEach(function(el){
+                oCity.appendChild(new Option(el.name,el.name));
+            });
+        };
+        getClass('box .ok').onclick= function () {
+            var area=oArea.value;
+            var city=oCity.value;
+            var street=getClass('box .street').value;
+            var door=getClass('box .door').value;
+            if(area!='-1' && city!='-1' && street!='' && door!=''){
+                getClass('box .address').value=area+city+street+door;
+                getClass('box .pop').style.display='none';
+                oShade.style.display='none';
+            }
+        }
+    }
+
+</script>
+</html>

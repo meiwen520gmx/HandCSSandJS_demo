@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+        body{
+            height: 100%;
+            width: 100%;
+            background: url("../images/dh_bg.jpg")center top no-repeat;
+            background-size: cover;
+            background-color: #fff;
+        }
+        div.box {
+            border: 2px solid #b6d9f2;
+            width: 320px;
+            height: 70px;
+            margin: 150px auto 0;
+            overflow-y: hidden;
+            padding-left: 15px;;
+        }
+
+        div.box ul {
+            list-style: none;
+            line-height: 35px;
+        }
+
+        div.box ul a, div.box ul a:visited {
+            text-decoration: none;
+            color: #0A246A;
+        }
+
+        div.box ul a:hover {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<div class="box" id="box">
+    <ul>
+
+        <!--<li><a href="{href}">{no}.{txt}</a></li>-->
+    </ul>
+</div>
+<script>
+    var arr = [];
+    arr[arr.length] = {href: 'http://www.baidu.com', con: '习近平成功访问美国等欧美国家'};
+    arr[arr.length] = {href: 'http://www.cqwu.edu.cn', con: '李克强成功访问美国等欧美国家'};
+    arr[arr.length] = {href: 'http://www.qq.com', con: '刘云山成功访问美国等欧美国家'};
+    arr[arr.length] = {href: 'http://www.163.com', con: '热烈欢迎李克强总理到重庆视察工作'};
+    arr[arr.length] = {href: 'http://www.sina.com', con: '热烈欢迎刘云山常委重庆视察工作'};
+    arr[arr.length] = {href: 'http://www.sina.com', con: '热烈欢迎刘云山常委重庆视察工作'};
+    arr[arr.length] = {href: 'http://www.cqw.edu.cn', con: '热烈欢迎习近平总书记到重庆视察工作'};
+    arr[arr.length] = {href: 'http://www.google.com', con: '重庆文理学院在创新工作中获得第一名'};
+    var oBox=document.getElementById('box');
+    var oUl=oBox.querySelector('ul');
+    var html='';
+    arr.forEach(function (el, i) {
+        html+='<li><a href='+el.href+'>'+(i+1)+'.'+el.con+'</a></li>'
+    });
+    html+=html;
+    oUl.innerHTML=html;
+    var timer=timer1=null;
+    function move(){
+        var ulH=oUl.offsetHeight;
+        var scrollTop;
+        timer=setInterval(function () {
+            scrollTop=oBox.scrollTop;
+            if(scrollTop>=ulH/2){
+                oBox.scrollTop=0;
+            }
+            move1();
+        },2000);
+    }
+
+    function move1(){
+        var i=0;
+        timer1=setInterval(function () {
+            i++;
+            if(i<=70){
+                oBox.scrollTop++
+            }
+            else{
+                clearInterval(timer1);
+            }
+        },10);
+    }
+    move();
+</script>
+</body>
+</html>

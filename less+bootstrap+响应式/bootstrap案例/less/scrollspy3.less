@@ -1,0 +1,48 @@
+@charset "UTF-8";
+main {
+  ul.nav-one {
+    top: 50px;
+    border-bottom: none;
+    ul{
+      display: none;
+      li{
+        margin-left: 30px;
+        padding-left: 10px;
+      }
+    }
+    li.nav-two:hover{
+      ul{
+        display: block;
+      }
+    }
+    >li.active{
+      border-left: 2px solid black;
+      a{
+        border: none;
+      }
+      &:hover a{
+        border: none;
+      }
+      &.nav-two{
+        border-left: none;
+        ul{
+          display: block;
+          li.active{
+            border-left: 1px solid black;
+          }
+        }
+        &:before{
+          content: '';
+          position: absolute;
+          width: 2px;
+          height: 35px;
+          background-color: black;
+          z-index: 10;
+        }
+      }
+    }
+  }
+}
+footer {
+  background-color: #ddd;
+}

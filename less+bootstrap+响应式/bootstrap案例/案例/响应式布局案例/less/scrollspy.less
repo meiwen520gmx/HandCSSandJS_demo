@@ -1,0 +1,47 @@
+@charset "UTF-8";
+main {
+  ul.nav-one {
+    border: none;
+    top: 40px;
+    ul {
+      display: none;
+      margin-left: 10px;
+      li {
+        padding-left: 10px;
+      }
+    }
+    > li {
+      &.active {
+        border-left: 2px solid black;
+        a, a:hover {
+          border: none;
+        }
+        ul {
+          display: block;
+        }
+        &.nav-two {
+          border: none;
+          &:before {
+            content: '';
+            position: absolute;
+            height: 35px;
+            width: 2px;
+            background-color: black;
+            z-index: 100;
+          }
+          ul li.active {
+            border-left: 1px solid black;
+          }
+        }
+      }
+      &.nav-two:hover {
+        ul {
+          display: block;
+        }
+      }
+    }
+  }
+  footer {
+    background-color: #ccc;
+  }
+}

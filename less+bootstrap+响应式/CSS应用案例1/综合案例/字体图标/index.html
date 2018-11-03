@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: "myfont";
+            src: url("fonts/icomoon.eot?#iefix") format("embedded-opentype"),url("fonts/icomoon.woff") format("woff"),url("fonts/icomoon.ttf") format("truetype"),url("fonts/icomoon.svg") format("svg");
+            font-style: normal;
+            font-weight: normal;
+        }
+        table{
+            width: 700px;
+            margin: 50px auto;
+            border-collapse: collapse;
+            font-family: "myfont";
+            text-align: center;
+        }
+        td{
+            border: 1px solid #ccc;
+            height: 100px;
+        }
+        tr:first-child{
+            font-size: 70px;
+        }
+        tr:first-child td:first-child{
+            color: red;
+        }
+        ul{
+            list-style: none;
+            width: 200px;
+            margin: 0 auto;
+            font-size: 30px;
+        }
+        li:before{
+            content: attr(data-icon);
+            font-family: "myfont";
+            font-size: 20px;
+            margin-right: 10px;
+        }
+        li:hover{
+            color: #00A8FF;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+<table>
+    <tr>
+        <td>&#xf000;</td>
+        <td>&#xf004;</td>
+        <td>&#xf005;</td>
+        <td>&#xf008;</td>
+        <td>&#xf011;</td>
+    </tr>
+    <tr>
+        <td>&#xf101;</td>
+        <td>&#xf104;</td>
+        <td>&#xf105;</td>
+        <td>&#xf108;</td>
+        <td>&#xf111;</td>
+    </tr>
+</table>
+<ul>
+    <li data-icon="&#xf000">列表项一</li>
+    <li data-icon="&#xf004">列表项一</li>
+    <li data-icon="&#xf005">列表项一</li>
+    <li data-icon="&#xf008">列表项一</li>
+    <li data-icon="&#xf012">列表项一</li>
+</ul>
+</body>
+</html>

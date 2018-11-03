@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>随机选题</title>
+    <style>
+        table{
+            width: 1000px;
+            margin: 50px auto;
+            border-collapse: collapse;
+            line-height: 40px;
+            text-align: center;
+        }
+        body{
+            background-color: #b6d9f2;
+        }
+        th,td{
+            border: 1px solid slategray;
+        }
+        thead th:nth-child(1){
+            width: 20%;
+        }
+        thead th:nth-child(2){
+            width: 15%;
+        }
+        thead th:nth-child(3){
+            width: 15%;
+        }
+        thead th:nth-child(4){
+            width: 50%;
+        }
+        caption{
+            font-size: 22px;
+            letter-spacing: 10px;
+        }
+    </style>
+</head>
+<body>
+<table id="table">
+    <caption>随机产生题目</caption>
+    <thead>
+        <th>学号</th>
+        <th>姓名</th>
+        <th>题编号</th>
+        <th>题目</th>
+    </thead>
+    <tbody id="tbody">
+
+    </tbody>
+</table>
+<template id="temp1">
+    <tr>
+        <td>{{no}}</td>
+        <td>{{name}}</td>
+        <td>{{topic_no}}</td>
+        <td>{{topic_name}}</td>
+    </tr>
+</template>
+<script>
+    var arr1=[];
+    arr1[arr1.length] = {no: "201358264001", name: "米园园"};
+    arr1[arr1.length] = {no: "201358264002", name: "张琼月"};
+    arr1[arr1.length] = {no: "201358264003", name: "李佳敏"};
+    arr1[arr1.length] = {no: "201358264004", name: "唐莉"};
+    arr1[arr1.length] = {no: "201358264005", name: "彭红"};
+    arr1[arr1.length] = {no: "201358264006", name: "黄珊珊"};
+    arr1[arr1.length] = {no: "201358264007", name: "黄锦秀"};
+    arr1[arr1.length] = {no: "201358264008", name: "曹泽彦"};
+    arr1[arr1.length] = {no: "201358264010", name: "张旭伟"};
+    arr1[arr1.length] = {no: "201358264012", name: "孟豪"};
+    arr1[arr1.length] = {no: "201358264014", name: "陈桂潮"};
+    arr1[arr1.length] = {no: "201358264015", name: "刘木彬"};
+    arr1[arr1.length] = {no: "201358264016", name: "王泓安"};
+    arr1[arr1.length] = {no: "201358264017", name: "陈良旺"};
+    arr1[arr1.length] = {no: "201358264018", name: "林诚浩"};
+    arr1[arr1.length] = {no: "201358264019", name: "邓春煌"};
+    arr1[arr1.length] = {no: "201358264020", name: "曾德洵"};
+    arr1[arr1.length] = {no: "201358264021", name: "刘皓月"};
+    arr1[arr1.length] = {no: "201358264022", name: "石俊杰"};
+    arr1[arr1.length] = {no: "201358264023", name: "王帅"};
+    arr1[arr1.length] = {no: "201358264024", name: "黄亮远"};
+    arr1[arr1.length] = {no: "201358264026", name: "单创新"};
+    arr1[arr1.length] = {no: "201358264027", name: "乔溪"};
+    arr1[arr1.length] = {no: "201358264028", name: "曹庭祥"};
+    arr1[arr1.length] = {no: "201358264029", name: "钱坤"};
+    arr1[arr1.length] = {no: "201358264030", name: "林国龙"};
+    arr1[arr1.length] = {no: "201358264031", name: "曾超"};
+    arr1[arr1.length] = {no: "201358264032", name: "陈巍"};
+    arr1[arr1.length] = {no: "201358264033", name: "王帅"};
+    arr1[arr1.length] = {no: "201358264034", name: "伍泳洁"};
+    arr1[arr1.length] = {no: "201358264035", name: "左锐"};
+    arr1[arr1.length] = {no: "201358264036", name: "邬海林"};
+    arr1[arr1.length] = {no: "201358264037", name: "周仁富"};
+    var arr2 = [];
+    arr2[arr2.length] = {topic: "1", topicname: "表单验证处理"};
+    arr2[arr2.length] = {topic: "2", topicname: "电子时钟"};
+    arr2[arr2.length] = {topic: "3", topicname: "漂浮广告条"};
+    arr2[arr2.length] = {topic: "4", topicname: "模板方法动态创建数据表"};
+    arr2[arr2.length] = {topic: "5", topicname: "选项卡"};
+    arr2[arr2.length] = {topic: "6", topicname: "3D翻页相册"};
+    arr2[arr2.length] = {topic: "7", topicname: "广告的展开与收起"};
+    arr2[arr2.length] = {topic: "8", topicname: "向上无缝滚动字幕"};
+    arr2[arr2.length] = {topic: "9", topicname: "商品分类导航显示"};
+    arr2[arr2.length] = {topic: "10", topicname: "对象拖动的两种实现办法"};
+    arr2[arr2.length] = {topic: "11", topicname: "下拉列表框级联实现"};
+    arr2[arr2.length] = {topic: "12", topicname: "js实现图片裁剪"};
+    arr2[arr2.length] = {topic: "13", topicname: "QQ登录拖动框"};
+    arr2[arr2.length] = {topic: "14", topicname: "可拖动登录框"};
+    arr2[arr2.length] = {topic: "15", topicname: "图片放大镜效果"};
+    arr2[arr2.length] = {topic: "16", topicname: "焦点图轮播"};
+    arr2[arr2.length] = {topic: "17", topicname: "网页内定位导航"};
+    arr2[arr2.length] = {topic: "18", topicname: "滑动门效果"};
+    arr2[arr2.length] = {topic: "19", topicname: "3D翻页实现"};
+    arr2[arr2.length] = {topic: "20", topicname: "Table特有方法动态创建数据表"};
+    arr2[arr2.length] = {topic: "21", topicname: "不随内容滚动的广告条"};
+    arr2[arr2.length] = {topic: "22", topicname: "绅缩面板"};
+    arr2[arr2.length] = {topic: "23", topicname: "信息检索中的自动提示功能"};
+    arr2[arr2.length] = {topic: "24", topicname: "向上无缝滚动字幕"};
+    arr2[arr2.length] = {topic: "25", topicname: "商品分类导航显示"};
+    arr2[arr2.length] = {topic: "26", topicname: "常用表单功能实现"};
+    arr2[arr2.length] = {topic: "27", topicname: "抽奖案例"};
+    arr2[arr2.length] = {topic: "28", topicname: "暂停式向上无缝滚动字幕"};
+    arr2[arr2.length] = {topic: "29", topicname: "用hash数据填充下拉列表框"};
+    arr2[arr2.length] = {topic: "30", topicname: "表格式数据编辑"};
+    arr2[arr2.length] = {topic: "31", topicname: "通用方法动态创建数据表"};
+    arr2[arr2.length] = {topic: "32", topicname: "随机抽题案例"};
+    arr2[arr2.length] = {topic: "33", topicname: "鼠标滚轮实现对象缩放"};
+    //字符串拼接
+//    var oTbody=document.getElementById('tbody');
+//    var sHtml='',num;
+//    arr1.forEach(function(el,i){
+//        num=parseInt(Math.random()*arr2.length);
+//        sHtml+="<tr><td>"+el.no+"</td><td>"+el.name+"</td><td>"+arr2[num].topic+"</td><td>"+arr2[num].topicname+"</td></tr>"
+//    });
+//    oTbody.innerHTML=sHtml;
+  //模板方法
+//    var oTable=document.getElementById('table');
+//    var sHtml='',num;
+//    var sTempHtml=document.getElementById('temp1').innerHTML;
+//    arr1.forEach(function(el){
+//        num=parseInt(Math.random()*arr2.length);
+//        sHtml+=sTempHtml.replace('{{no}}',el.no).replace('{{name}}',el.name)
+//                .replace('{{topic_no}}',arr2[num].topic).replace('{{topic_name}}',arr2[num].topicname);
+//    });
+//    oTable.tBodies[0].innerHTML=sHtml;
+    //创建元素法
+//    var oTable=document.getElementById('table');
+//    var sHtml='',num;
+//    var tr;
+//    var oTbody=document.getElementById('tbody');
+//    arr1.forEach(function(el){
+//        num=parseInt(Math.random()*arr2.length);
+//        tr=document.createElement('tr');
+//        addTd(tr,el.no);
+//        addTd(tr,el.name);
+//        addTd(tr,arr2[num].topic);
+//        addTd(tr,arr2[num].topicname);
+//        oTbody.appendChild(tr);
+//    });
+//    function addTd(tr,text){
+//        td=document.createElement('td');
+//        td.innerText=text;
+//        tr.appendChild(td);
+//    }
+   //table特有方法
+//    var oTbody=document.getElementById('table').tBodies[0];
+//    var tr,td;
+//    var num=0;
+//    arr1.forEach(function(el){
+//        num=parseInt(Math.random()*arr2.length);
+//        tr=oTbody.insertRow('tr');
+//        td=tr.insertCell('td');
+//        td.innerText=arr2[num].topicname;
+//        td=tr.insertCell('td');
+//        td.innerText=arr2[num].topic;
+//        td=tr.insertCell('td');
+//        td.innerText=el.name;
+//        td=tr.insertCell('td');
+//        td.innerText=el.no;
+//    });
+    //对象字面量方法
+//    var createTable={
+//        addTr:function(id,arr1,arr2){
+//            var oTable=document.getElementById(id);
+//            var oTbody=oTable.tBodies[0];
+//            var tr;
+//            var num;
+//            var _this=this;
+//            arr1.forEach(function(el,i){
+//                num=parseInt(Math.random()*arr2.length);
+//                tr=oTbody.insertRow(i);
+//                _this.addTd(tr,el.no,0);
+//                _this.addTd(tr,el.name,1);
+//                _this.addTd(tr,arr2[num].topic,2);
+//                _this.addTd(tr,arr2[num].topicname,3);
+//            });
+//        },
+//        addTd:function (tr,text,j){
+//            var td=tr.insertCell(j);
+//            td.innerText=text;
+//        }
+//    }
+//    createTable.addTr('table',arr1,arr2);
+//    table特有方法
+//        var oTbody=document.getElementById('table').tBodies[0];
+//        var tr,td;
+//        var num=0;
+//        arr1.forEach(function(el,i){
+//            num=parseInt(Math.random()*arr2.length);
+//            tr=oTbody.insertRow(i);
+//            td=tr.insertCell(0);
+//            td.innerText=el.no;
+//            td=tr.insertCell(1);
+//            td.innerText=el.name;
+//            td=tr.insertCell(2);
+//            td.innerText=arr2[num].topic;
+//            td=tr.insertCell(3);
+//            td.innerText=arr2[num].topicname;
+//        });
+    //面向对象方法
+    //创建类
+    function CreateTable(id,arr1,arr2){
+        this.id=id;
+        this.arr1=arr1;
+        this.arr2=arr2;
+    }
+    CreateTable.prototype.addTr= function () {
+        var oTable=document.getElementById(this.id);
+        var oTbody=oTable.tBodies[0];
+        var num;
+        var tr;
+        var _this=this;
+        var arrTwo=this.arr2;
+        this.arr1.forEach(function(el,i){
+            var
+            num=parseInt(Math.random()*arrTwo.length);
+                tr=oTbody.insertRow(i);
+                _this.addTd(tr,el.no,0);
+                _this.addTd(tr,el.name,1);
+                _this.addTd(tr,arrTwo[num].topic,2);
+                _this.addTd(tr,arrTwo[num].topicname,3);
+        });
+    };
+    CreateTable.prototype.addTd= function (tr,text,j){
+        var td=tr.insertCell(j);
+        td.innerText=text;
+    };
+    window.onload= function () {
+        var tab1=new CreateTable('table',arr1,arr2);//实例化
+        tab1.addTr();
+    }
+</script>
+</body>
+</html>

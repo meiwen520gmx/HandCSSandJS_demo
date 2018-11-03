@@ -1,0 +1,152 @@
+.w_center {
+  width: 1000px;
+  margin: 0 auto;
+}
+div.adv {
+  width: 1000px;
+  margin: 0 auto;
+}
+main {
+  width: 1000px;
+  margin: 0 auto;
+}
+main div.up,
+main div.down {
+  margin: 20px 0;
+  display: flex;
+}
+main div.up section.left,
+main div.down section.left {
+  width: 330px;
+  border: 1px solid #E8E8E8;
+  background-color: white;
+  margin-right: 30px;
+  box-sizing: border-box;
+}
+main div.up section.left figure,
+main div.down section.left figure {
+  padding: 5px 0 5px 5px;
+}
+main div.up section.left figure img,
+main div.down section.left figure img {
+  float: left;
+  margin-right: 5px;
+}
+main div.up section.left figure figcaption,
+main div.down section.left figure figcaption {
+  font-size: 12px;
+  line-height: 20px;
+}
+main div.up section.left figure figcaption a,
+main div.down section.left figure figcaption a,
+main div.up section.left figure figcaption a:visited,
+main div.down section.left figure figcaption a:visited {
+  font-size: 12px;
+  color: #CF0000;
+}
+main div.up section.left ul,
+main div.down section.left ul {
+  margin: 5px 3px;
+}
+main div.up section.left ul li,
+main div.down section.left ul li {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  line-height: 25px;
+  padding-left: 6px;
+}
+main div.up section.left ul li:not(:last-child),
+main div.down section.left ul li:not(:last-child) {
+  border-bottom: 1px dashed #ddd;
+}
+main div.up section.left ul li a,
+main div.down section.left ul li a,
+main div.up section.left ul li a:visited,
+main div.down section.left ul li a:visited {
+  font-size: 13px;
+  color: #000;
+}
+main div.up section.left ul li span,
+main div.down section.left ul li span {
+  color: #D6CCCF;
+}
+main div.up section.left ul li:before,
+main div.down section.left ul li:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 4px solid transparent;
+  border-bottom-color: red;
+  transform: rotate(-45deg);
+  margin-left: -7px;
+  margin-top: 3px;
+}
+main div.up section.mid,
+main div.down section.mid {
+  width: 330px;
+  border: 1px solid #E8E8E8;
+  background-color: white;
+  margin-right: 30px;
+  box-sizing: border-box;
+}
+main div.up section.mid figure,
+main div.down section.mid figure {
+  margin: 5px;
+}
+main div.up section.mid figure img,
+main div.down section.mid figure img {
+  float: left;
+  margin-right: 5px;
+  height: 140px;
+  width: 158px;
+}
+main div.up section.mid figure figcaption a,
+main div.down section.mid figure figcaption a,
+main div.up section.mid figure figcaption a:visited,
+main div.down section.mid figure figcaption a:visited {
+  font-size: 12px;
+  color: #CF0000;
+}
+main div.up section.mid figure figcaption p,
+main div.down section.mid figure figcaption p {
+  text-indent: 2em;
+  text-align: justify;
+  line-height: 18px;
+  font-size: 12px;
+}
+main div.up section.mid ul,
+main div.down section.mid ul {
+  line-height: 70px;
+  display: flex;
+  justify-content: space-around;
+}
+main div.up section.mid ul a,
+main div.down section.mid ul a,
+main div.up section.mid ul a:visited,
+main div.down section.mid ul a:visited {
+  font-size: 13px;
+  color: red;
+}
+main div.up section.right,
+main div.down section.right {
+  width: 280px;
+  border: 1px solid #E8E8E8;
+  background-color: white;
+  margin-right: 0;
+  box-sizing: border-box;
+}
+main div.up video {
+  width: 278px;
+}
+main div.up img.app {
+  width: 278px;
+}
+main div.down audio {
+  width: 278px;
+  margin: 55px 0;
+}
+main div.down img.app {
+  width: 278px;
+}

@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #bababa;
+        }
+        #box {
+            width: 700px;
+            margin: 100px auto 0;
+            border-top: 1px solid #f4f4f4;
+            border-radius: 4px 4px 0 0;
+            background-color: #d1d1d1;
+            display: flex;
+            position: relative;
+        }
+
+        #box dl {
+            flex: 1;
+        }
+
+        #box dl dt {
+            font-size: 18px;
+            text-align: center;
+            line-height: 50px;
+            border-radius: 4px 4px 0 0;
+            cursor: pointer;
+        }
+
+        #box dl.active dt {
+            font-size: 18px;
+            background-color: white;
+            border: 1px solid #939393;
+            position: relative;
+        }
+
+        #box dl.active dt:after {
+            position: absolute;
+            content: '';
+            height: 3px;
+            width: 100%;
+            background-color: white;
+            left: 0;
+            margin-top: 50px;
+            z-index: 5;
+        }
+        #box dd {
+            position: absolute;
+            display: none;
+        }
+        #box dl.active dd {
+            display: block;
+            background-color: white;
+            border: 1px solid #939393;
+            padding: 10px;
+            text-align: justify;
+            text-indent: 2em;
+            line-height: 25px;
+            left: 0;
+        }
+
+    </style>
+</head>
+<body>
+<div id="box">
+    <dl class="active">
+        <dt>学校简介</dt>
+        <dd>
+            学校坐落在重庆市永川区，有红河、星湖两个校区，校园占地面积1767亩，
+            校舍建筑面积71万平方米，馆藏图书191万册，教学仪器设备总值2.89亿元；
+            现代教育技术中心和电子阅览室设施齐备，校园网设备先进，教学、科研及生活设施完善。
+            学校坐落在重庆市永川区，有红河、星湖两个校区，校园占地面积1767亩，
+            校舍建筑面积71万平方米，馆藏图书191万册，教学仪器设备总值2.89亿元；
+            现代教育技术中心和电子阅览室设施齐备，校园网设备先进，教学、科研及生活设施完善。
+        </dd>
+    </dl>
+    <dl>
+        <dt>校园文化</dt>
+        <dd>
+            重庆文理学院学生社团联合会成立于2008年6月15日，现已注册学生社团66个，
+            其中学术科技类12个，社会实践类14个，文学类16个，艺体类24个。
+            重庆文理学院学生社团联合会成立于2008年6月15日，现已注册学生社团66个，
+            其中学术科技类12个，社会实践类14个，文学类16个，艺体类24个。
+        </dd>
+    </dl>
+    <dl>
+        <dt>组织机构</dt>
+        <dd>
+            文化与传媒学院、数学与财经学院、材料与化工学院、
+            机器人工程学院/机电工程学院、林学与生命科学学院、电子电气工程学院、
+            重庆服务外包学院/软件工程学院、经济管理学院/建筑工程学院、
+            旅游学院、公共管理学院、教育学院、外国语学院、音乐学院、体育学院、美术与设计学院、
+            重庆文化遗产学院、国际学院。
+            旅游学院、公共管理学院、教育学院、外国语学院、音乐学院、体育学院、美术与设计学院、
+            重庆文化遗产学院、国际学院。
+        </dd>
+    </dl>
+    <dl>
+        <dt>科研机构</dt>
+        <dd>
+            重庆市高校微纳米材料工程与技术重点实验室、
+            环境材料与修复技术重庆市重点实验室、
+            重庆高校群与图的理论及应用重点实验室、
+            激酶类创新药物重庆市重点实验室、
+            重庆市高校情绪与心理健康重点实验室。
+            重庆高校群与图的理论及应用重点实验室、
+            激酶类创新药物重庆市重点实验室、
+            重庆市高校情绪与心理健康重点实验室。
+        </dd>
+    </dl>
+    <dl>
+        <dt>学术期刊</dt>
+        <dd>
+            价值化管理在我国高校变革中逐渐占据垄断地位,审视其运行逻辑和困境并试图予以规约,
+            可以强化高校改革的伦理反思意识。
+            价值化管理以主体效用为核心,以价值换算为基础,以价值比对为中介,
+            以价值替代为路径,以价值监控和评估为手段。
+            价值化管理在我国高校变革中逐渐占据垄断地位,审视其运行逻辑和困境并试图予以规约,
+            可以强化高校改革的伦理反思意识。
+            价值化管理以主体效用为核心,以价值换算为基础,以价值比对为中介,
+            以价值替代为路径,以价值监控和评估为手段。
+        </dd>
+    </dl>
+</div>
+<script>
+    var box=document.getElementById('box');
+    var aDl=box.querySelectorAll('dl')//类数组
+    var aDt=box.querySelectorAll('dl dt');
+    function clearClass() {
+        for(var i=0;i<aDl.length;i++){
+            if(aDl[i].className=='active'){
+                aDl[i].className='';
+                break;
+            }
+        }
+    }
+    //法一
+//    for(var i=0;i<aDt.length;i++){
+//        aDt[i].onclick= function () {
+//            clearClass();
+//            var oDl=this.parentNode;
+//            oDl.className='active';
+//        }
+//    }
+    //法二
+    //所有浏览器全部支持
+    [].forEach.call(aDt,function (el, i, arr) {
+        el.onclick= function () {
+            clearClass();
+            var oDl=this.parentNode;
+            oDl.className='active';
+            console.log(i);
+        }
+    });
+    //法三
+    //事件代理
+//    box.onclick= function (ev) {
+//        var oEvent=ev || event;
+//        var oTarget=oEvent.target || oEvent.srcElement;//获取目标
+//        if(oTarget.nodeName=='DT'){
+//            var oDl=oTarget.parentNode;
+//            clearClass();
+//            oDl.className='active';
+//        }
+//    }
+
+</script>
+</body>
+</html>

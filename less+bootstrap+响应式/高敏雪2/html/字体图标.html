@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>字体图标</title>
+    <link rel="stylesheet" href="../icomoon(1)/demo-files/demo.css">
+    <link rel="stylesheet" href="../icomoon(1)/style.css">
+    <style>
+        body{
+            background-color: #A6C5EB;
+        }
+        @font-face {
+            font-family: "icon";
+            src: url("../icomoon(1)/fonts/icomoon.eot") format("eot"),
+                url("../icomoon(1)/fonts/icomoon.woff") format("woff"),
+                url("../icomoon(1)/fonts/icomoon.svg") format("svg"),
+                url("../icomoon(1)/fonts/icomoon.ttf") format("ttf");
+            font-style: normal;
+            font-weight: normal;
+        }
+        main{
+            display: flex;
+            flex-wrap: wrap;
+            perspective: 500px;
+            transform-style: preserve-3d;
+        }
+        span{
+            display: inline-block;
+            width:20%;
+            margin: 100px auto;
+            font-family: icon;
+            font-size: 80px;
+            color: #0099ff;
+            position: relative;
+            text-align: center;
+        }
+        span:before{
+            content: attr(date-icon);
+            position: absolute;
+            font-family: icon;
+            font-size: 50px;
+            color: #003366;
+            right: 100px;
+            top: -30px;
+        }
+        main span:nth-child(1):hover{
+            transition:transform 1s;
+            transform: translate3d(20px,20px,20px);
+        }
+        main span:nth-child(2):hover{
+            transition:transform 1s;
+            transform:rotate(180deg) scale(2);
+        }
+
+
+        main span:nth-child(3):hover{
+
+            -webkit-animation: move .3s ease 1s infinite alternate;
+        }
+        @-webkit-keyframes move{
+            0% {
+                transform: translate(0);
+            }
+            45% {
+                transform: translate(100px, 0);
+            }
+            100% {
+                rotate(45deg);
+                transfrom: translate(300px, 100px);
+            }
+        }
+        main span:nth-child(4):hover{
+            transition:transform 1s;
+            transform:rotate(180deg) translateY(20px);
+        }
+        main span:nth-child(5):hover{
+            transition:transform 1s;
+            transform:rotate(180deg) translateY(20px);
+        }
+        main span:nth-child(6):hover{
+            transition:transform 1s linear;
+            transform:rotateZ(360deg);
+        }
+        main span:nth-child(7):hover{
+            transition:transform 1s linear;
+            transform:rotateY(360deg);
+        }
+        main span:nth-child(8):hover{
+            transition:transform 1s linear;
+            transform:rotateZ(360deg);
+        }
+        main span:nth-child(9):hover{
+            transition: transform 1s linear;
+            transform:rotateX(45deg) scale(2);
+        }
+        main span:nth-child(10):hover{
+            transition: transform 1s linear;
+            transform:translate3d(50px,-50px,0);
+        }
+    </style>
+</head>
+<body>
+<main>
+    <span date-icon="&#xe900"></span>
+    <span date-icon="&#xe904"></span>
+    <span date-icon="&#xe905"></span>
+    <span date-icon="&#xe907"></span>
+    <span date-icon="&#xe90b"></span>
+    <span date-icon="&#xe911"></span>
+    <span date-icon="&#xe919"></span>
+    <span date-icon="&#xe941"></span>
+    <span date-icon="&#xe942"></span>
+    <span date-icon="&#xe949"></span>
+</main>
+
+
+
+</body>
+</html>

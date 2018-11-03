@@ -1,0 +1,64 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+nav {
+  margin-top: 40px;
+  font-family: "microsoft yahei";
+  display: flex;
+  justify-content: center;
+}
+nav a {
+  display: block;
+  background-color: black;
+  color: white;
+  word-break: keep-all;
+  /*保持中文不自动换行*/
+  text-decoration: none;
+  padding: 10px 20px;
+}
+nav a:hover {
+  background-color: white;
+  color: black;
+}
+nav menu {
+  border: 1px solid black;
+}
+nav menu:first-child {
+  border-radius: 5px 0 0 5px;
+}
+nav menu:first-child a {
+  border-radius: 5px 0 0 5px;
+}
+nav menu:last-child {
+  border-radius: 0 5px 5px 0;
+}
+nav menu:last-child > a {
+  border-radius: 0 5px 5px 0;
+}
+nav menu dl {
+  display: none;
+}
+nav menu:hover dl {
+  display: block;
+  position: absolute;
+  border: 1px solid black;
+  margin-left: -1px;
+}
+nav menu:hover dl dd:not(:last-child) {
+  border-bottom: 1px solid #666;
+}
+nav menu:hover dl dd three {
+  display: none;
+}
+nav menu:hover dl dd:hover three {
+  display: block;
+  position: absolute;
+  margin-left: 100%;
+  margin-top: -43px;
+  border: 1px solid black;
+}
+nav menu:hover dl dd:hover three a:not(:last-child) {
+  border-bottom: 1px solid #666;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+
+        main {
+            width: 1190px;
+            height: 2787px;
+            background: url("../images/tb_bg.jpg") center top no-repeat;
+            margin: 0 auto;
+        }
+
+        div.adv {
+            position: fixed;
+            top: 0;
+            left:0;
+            width: 123px;
+            height: 290px;
+            background: url("../images/leftAdv.jpg") center top no-repeat;
+        }
+        div.adv span {
+            position: absolute;
+            width: 123px;
+            line-height: 20px;
+            bottom: 0;
+            background-color: #0A246A;
+            color: white;
+            text-align: center;
+            font-size: 12px;
+            cursor: default;
+        }
+
+    </style>
+</head>
+<body>
+<main>
+</main>
+<div class="adv" id="div">
+    <span class="close">关闭</span>
+</div>
+<script>
+    window.onload= function () {
+        var oDiv=document.getElementById('div');
+        var oClose=oDiv.querySelector('span.close');
+        var top,left, x=y=1;
+        var oDivH=oDiv.offsetHeight;
+        var oDivW=oDiv.offsetWidth;
+        var timer;
+        function move() {
+            timer =setInterval(function () {
+                top=oDiv.offsetTop;
+                left=oDiv.offsetLeft;
+                if(top==window.innerHeight-oDivH || top<0)y=-y;
+                if(left==window.innerWidth-oDivW || left<0)x=-x;
+                oDiv.style.top=top+y+'px';
+                oDiv.style.left=left+x+'px';
+            } ,30);
+        }
+        move();
+        oDiv.onmouseover= function () {
+            clearInterval(timer);
+        }
+        oDiv.onmouseout= function () {
+            move();
+        }
+        window.onresize=function(){
+            oDiv.style.left='';
+            oDiv.style.top='';
+        }
+        oClose.onclick= function () {
+            oDiv.parentNode.removeChild(oDiv);
+        }
+    }
+</script>
+</body>
+</html>

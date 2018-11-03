@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            background-color: #EDEFF0;
+        }
+        div.container{
+            width: 1200px;
+            margin: 0 auto;
+        }
+        h3{
+            background-color: #BE3948;
+            line-height: 60px;
+            padding-left: 30px;
+            font-weight: 500;
+            color: white;
+        }
+        form{
+            padding: 110px 0 80px 310px;
+            background-color: white;
+        }
+        label{
+            display: block;
+            line-height: 55px;
+        }
+        label:first-child span{
+            color: #C20052;
+            font-size: 12px;
+            background: url("icon.gif") left center no-repeat;
+            padding-left: 15px;
+            margin-left: 10px;
+            display: none;
+        }
+        label input[type="text"]{
+            height: 40px;
+            width: 270px;
+        }
+        label.yzm input{
+            width: 200px;
+            margin-left: 8px;
+        }
+        label:last-of-type{
+            font-size: 14px;
+        }
+        label input[type="checkbox"]{
+            margin-left: 70px;
+        }
+        label:not(.hand):before{
+            content: "*";
+            color: red;
+            position: absolute;
+            margin-left: -10px;
+            margin-top: 5px;
+        }
+        label.yzm img{
+            position: absolute;
+            margin-top: 5px;
+        }
+        button{
+            margin-left: 70px;
+            outline: none;
+            border: none;
+            width: 155px;
+            line-height: 38px;
+            text-align: center;
+            background-color: #39B94E;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <h3>注册</h3>
+    <form action="#">
+        <label>登录邮箱
+            <input type="text"><span>邮箱格式不准确</span>
+        </label>
+        <label>登录密码
+            <input type="text"><span></span>
+        </label>
+        <label>用户名称
+            <input type="text">
+        </label>
+        <label class="hand">手机号码
+            <input type="text">
+        </label>
+        <label class="yzm">验 证 码
+            <input type="text"><img src="yzm.jpg"/>
+        </label>
+        <label class="hand">
+            <input type="checkbox" checked>我已阅读并同意<a href="#" >相关协议</a>
+        </label>
+        <button>立即注册</button>
+    </form>
+</div>
+</body>
+</html>

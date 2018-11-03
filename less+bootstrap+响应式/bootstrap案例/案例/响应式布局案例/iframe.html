@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            height: 100%;
+            overflow: hidden;
+        }
+        body{
+            /*display: flex;*/
+        }
+        iframe{
+            /*flex: 1;*/
+            width: 100%;
+            height: 100%;
+        }
+        dl{
+            position: fixed;
+            top: 200px;
+            right: -135px;
+            width: 150px;
+            background-color: rgba(255,0,0,.2);
+            text-align: center;
+            border-radius: 4px;
+            transition: 0.5s ease-out;
+        }
+        dl:hover{
+            cursor: pointer;
+            right: 0;
+        }
+        dl dt{
+            font-family: "Microsoft YaHei";
+            font-size: 18px;
+        }
+        dl dd a{
+            display: block;
+            color: #333;
+            margin: 15px 0;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+<dl>
+    <dt>页面导航</dt>
+    <dd>
+        <a href="index.html" target="main">主页</a>
+    </dd>
+    <dd>
+        <a href="a-link.html" target="main">管理控制台</a>
+    </dd>
+    <dd>
+        <a href="scrollspy.html" target="main">滚动监控</a>
+    </dd>
+    <dd>
+        <a href="订票系统.html" target="main">订票系统</a>
+    </dd>
+    <dd>
+        <a href="手机动画.html" target="main">手机动画</a>
+    </dd>
+    <dd>
+        <a href="about.html" target="main">关于</a>
+    </dd>
+</dl>
+<iframe src="index.html" name="main" frameborder="0"></iframe>
+</body>
+</html>

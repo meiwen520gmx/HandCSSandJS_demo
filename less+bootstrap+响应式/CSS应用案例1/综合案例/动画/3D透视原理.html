@@ -1,0 +1,63 @@
+<style>
+    div {
+        width: 200px;
+        height: 200px;
+        margin: 30px auto;
+        perspective: 250px; /* 透视深度,近大远小*/
+        transform-style: preserve-3d; /* preseve-3d指定元素的子元素在3d空间内定位 */
+        perspective-origin: -100% -50%; /* 指定用户从哪个方向看过来的 */
+    }
+
+    div * {
+        position: absolute;   /*保证所有元素只能在原有位置变换*/
+        width: 100px;
+        height: 100px;
+        line-height: 100px;
+        font-size: 60px;
+        color: white;
+        text-align: center;
+    }
+
+    middle {
+        border: 1px dashed black;/* middle 用来展示基准面 */
+    }
+
+    front {
+        background: rgba(0, 0, 0, 0.3);
+        -webkit-transform: translateZ(50px);
+    }
+
+    back {
+        background: rgba(0, 255, 0, 1);
+        -webkit-transform: translateZ(-50px);
+    }
+
+    right {
+        background: rgba(196, 0, 0, 0.7);
+        -webkit-transform: rotateY(90deg) translateZ(50px);
+    }
+
+    left {
+        background: rgba(0, 0, 196, 0.7);
+        -webkit-transform: rotateY(-90deg) translateZ(50px);
+    }
+
+    top {
+        background: rgba(196, 196, 0, 0.7);
+        -webkit-transform: rotateX(90deg) translateZ(50px);
+    }
+
+    bottom {
+        background: rgba(196, 0, 196, 0.7);
+        -webkit-transform: rotateX(-90deg) translateZ(50px);
+    }
+</style>
+<div>
+    <middle></middle>
+    <front>1</front>
+    <back>2</back>
+    <right>3</right>
+    <left>4</left>
+    <top>5</top>
+    <bottom>6</bottom>
+</div>

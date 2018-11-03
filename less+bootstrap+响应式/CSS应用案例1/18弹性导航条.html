@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>颜色过渡背景导航条</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            margin-top: 100px;
+            display: flex;/*伸缩布局，下面的直接子元素采用水平排列，且自动转块*/
+            justify-content: center; /*横向居中*/
+        }
+
+        nav a {
+            padding: 10px 15px;
+            border: 1px solid #000;
+            color: darkblue;
+            text-decoration: none;
+            background-image: linear-gradient(to bottom, #333, #888, #eee, #333);
+
+        }
+
+        nav a:hover {
+            background-color: #31938f;
+            background-size: 5px 5px;
+            background-image: linear-gradient(45deg, #478480 25%, transparent 25%, transparent 75%, #478480 75%, #478480);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <a href="#">首页</a>
+    <a href="#">机构设置</a>
+    <a href="#">组织人事</a>
+    <a href="#">教学管理</a>
+    <a href="#">学科专业</a>
+    <a href="#">人才培养</a>
+    <a href="#">师资培训部</a>
+</nav>
+</body>
+</html>

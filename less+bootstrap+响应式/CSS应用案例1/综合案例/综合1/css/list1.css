@@ -1,0 +1,109 @@
+.w_center {
+  width: 1000px;
+  margin: 0 auto;
+}
+body {
+  background-color: #00a5c3;
+}
+div.adv {
+  width: 1000px;
+  margin: 0 auto;
+}
+div.adv img {
+  width: 1000px;
+  vertical-align: top;
+}
+main {
+  width: 1000px;
+  margin: 0 auto;
+  margin-top: 20px;
+  display: flex;
+}
+main div.left {
+  width: 200px;
+  margin-right: 20px;
+  border: 1px solid #E8E8E8;
+  box-sizing: border-box;
+  background-color: white;
+}
+main div.left ul.pub {
+  margin: 15px 8px;
+  padding-left: 10px;
+  line-height: 35px;
+}
+main div.left ul.pub a,
+main div.left ul.pub a:visited {
+  font-size: 13px;
+  color: #666;
+}
+main div.left ul.pub a:before,
+main div.left ul.pub a:visited:before {
+  content: "\f0da\ ";
+  font-family: "myicon";
+  font-size: 13px;
+}
+main div.left ul.pub li:hover a {
+  color: #24b3de;
+}
+main div.left ul.pub li:hover a:before {
+  color: red;
+}
+main div.right {
+  width: 780px;
+  margin-right: 0;
+  border: 1px solid #E8E8E8;
+  box-sizing: border-box;
+  background-color: white;
+}
+main div.right ul.pub {
+  margin: 15px 8px;
+  padding-left: 10px;
+  line-height: 30px;
+}
+main div.right ul.pub a,
+main div.right ul.pub a:visited {
+  font-size: 13px;
+  color: #666;
+}
+main div.right ul.pub a:before,
+main div.right ul.pub a:visited:before {
+  content: "\f081\ ";
+  font-family: "myicon";
+  font-size: 13px;
+}
+main div.right ul.pub li:hover a {
+  color: #24b3de;
+}
+main div.right ul.pub li:hover a:before {
+  color: red;
+}
+main div.right ul.pub li {
+  display: flex;
+  justify-content: space-between;
+}
+main div.right ul.pub li:not(:last-child) {
+  border-bottom: 1px dashed #ddd;
+}
+main div.right ul.pub li span {
+  font-size: 12px;
+  color: #666;
+}
+main div.right ul.page {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+main div.right ul.page li a {
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  color: black;
+  font-size: 13px;
+}
+main div.right ul.page li a:hover,
+main div.right ul.page li a.active {
+  background-color: red;
+  text-decoration: none;
+}
+main div.right ul.page li:not(:last-child) {
+  margin-right: 15px;
+}

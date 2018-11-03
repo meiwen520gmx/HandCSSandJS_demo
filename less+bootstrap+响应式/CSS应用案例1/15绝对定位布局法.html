@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>绝对定位布局</title>
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        header,main,footer {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        header, footer {
+            height: 150px;
+            background: green;
+            text-align: center;
+            color: white;
+        }
+
+        main {
+            position: relative;
+        }
+
+        main left {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 150px;
+            height: 500px;
+            background: cornflowerblue;
+        }
+
+        main right {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 200px;
+            height: 500px;
+            background-color: tomato;
+        }
+
+        main div {
+            width: 850px;
+            height: 500px;
+            margin: 0 150px;
+            padding: 30px;
+            border: 1px solid blue;
+            background: rosybrown;
+            box-sizing: border-box; /*此时的宽度850px是包含了边框、填充的*/
+        }
+    </style>
+</head>
+<body>
+    <header>
+        header
+    </header>
+    <main>
+        <left>
+            <p>中华人民共和国中华人民共和国中华人民共和国
+                中华人民共和国中华人民共和国中华人民共和国
+                中华人民共和国中华人民共和国中华人民共和国</p>
+
+            <p>中华人民共和国中华人民共和国中华人民共和国
+                中华人民共和国中华人民共和国中华人民共和国
+                中华人民共和国中华人民共和国中华人民共和国</p>
+
+            <p>中华人民共和国中华人民共和国中华人民共和国
+                中华人民共和国中华人民共和国中华人民共和国
+                中华人民共和国中华人民共和国中华人民共和国</p>
+        </left>
+        <div>
+            <h2>
+                注意：采用绝对定位的内联元素会自动变成块级或行块级元素
+                采用绝对定位的内联元素会自动变成块级或行块级元素
+                采用绝对定位的内联元素会自动变成块级或行块级元素
+                采用绝对定位的内联元素会自动变成块级或行块级元素
+            </h2>
+
+            <p>
+                中华人民共和国中华人民共和国中华人民共和国
+            </p>
+        </div>
+        <right>
+            <p>
+                中华人民共和国中华人民共和国中华人民共和国
+                中华人民共和国中华人民共和国中华人民共和国
+                中华人民共和国中华人民共和国中华人民共和国
+            </p>
+        </right>
+    </main>
+    <footer>
+        footpage
+    </footer>
+</body>
+</html>

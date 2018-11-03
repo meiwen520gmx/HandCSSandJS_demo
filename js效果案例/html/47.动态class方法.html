@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            background-color: #b7b7b7;
+        }
+        div.box {
+            margin: 50px auto 0;
+            display: flex;
+        }
+
+        div.box div {
+            width: 160px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            box-shadow: -2px 0 5px 0 rgba(0, 0, 0, .3);
+            overflow: hidden;
+            transition: all .5s;
+        }
+        div.box div img{
+            width: 475px;
+            height:520px;
+            border: 2px solid #b6d9f2;
+        }
+        div.box div.show {
+            width: 475px;
+        }
+    </style>
+</head>
+<body>
+<div class="box" id="box">
+    <div class="com show">
+        <img src="../images/1.jpg" alt="">
+    </div>
+    <div class="com">
+        <img src="../images/2.jpg" alt="">
+    </div>
+    <div class="com">
+        <img src="../images/3.jpg" alt="">
+    </div>
+    <div class="com">
+        <img src="../images/4.jpg" alt="">
+    </div>
+    <div class="com">
+        <img src="../images/5.jpg" alt="">
+    </div>
+    <div class="com">
+        <img src="../images/6.jpg" alt="">
+    </div>
+</div>
+<script src="../js/eventCompatible.js"></script>
+<script>
+    window.onload= function () {
+        var oBox=document.getElementById('box');
+        var oShow=oBox.querySelector('div.show');
+        var aDiv=oBox.querySelectorAll('div');
+        oBox.style.width=oShow.offsetWidth+(aDiv.length-1)*aDiv[1].offsetWidth+'px';
+        function clearClass(){
+            for(var i=0;i<aDiv.length;i++){
+                if(aDiv[i].classList.contains('show')){
+                    aDiv[i].className='com';
+                    break;
+                }
+            }
+        }
+        eventCompatible.agentEvent(oBox,'mouseover',['div','com'], function () {
+            clearClass();
+            this.className='com show';
+        });
+        eventCompatible.addEvent(oBox,'mouseout', function () {
+           clearClass();
+            oShow.className='com show';
+        });
+
+    }
+</script>
+</body>
+</html>

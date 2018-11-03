@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <style>
+        html,body{
+            height: 100%;
+            overflow: hidden;
+            width: 100%;
+        }
+        body{
+            padding: 70px 0 30px 0;
+            box-sizing: border-box;
+        }
+        main{
+            width: 100%;
+            overflow: hidden;
+        }
+        main,main div.row,main div.row div.my_body,
+        main div.row div.my_body div.panel{
+            height: 100%;
+        }
+
+       aside.my_nav{
+           position:fixed;
+           left: 10px;
+           top: 70px;
+           width:calc(100% / 6 - 10px);
+        }
+        footer{
+            background-color:lightseagreen;
+            line-height: 30px;
+        }
+        div.my_body div.panel div.panel-body{
+            overflow-y: auto;
+            height: 100%;
+
+        }
+
+
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top lcj-nav" role="navigation">
+    <!--<nav class="navbar navbar-default" role="navigation">-->
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <!-- sr-only 用于提升可访问性（accessibility），它的含义是 screen reader only（仅提供给屏幕阅读器使用） -->
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+                <img src="images/logo.png" alt="">
+            </a>
+        </div>
+        <!-- 这个元素在移动设备中将被折叠起来 -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active hidden-sm"><a href="#">公司简介</a></li>
+                <li class="hidden-sm hidden-md"><a href="#">新品出炉</a></li>
+                <li class="hidden-sm hidden-md"><a href="#">产品介绍</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li><a href="#">Separated link</a></li>
+                        <li><a href="#">One more separated link</a></li>
+                    </ul>
+                </li>
+                <li class="hidden-sm"><a href="#">加强联系</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<aside class="panel panel-primary my_nav">
+    <div class="panel-heading">
+        <h3 class="panel-title">管理控制台</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="list-unstyled">
+            <li>
+                <a href="#one">第一</a>
+            </li>
+            <li>
+                <a href="#ttwo">第一</a>
+            </li>
+            <li>
+                <a href="#three">第三</a>
+            </li>
+            <li>
+                <a href="#four">第四</a>
+            </li>
+            <li>
+                <a href="##">CSS3文本</a>
+            </li>
+            <li>
+                <a href="##">揭开CSS3的面</a>
+            </li>
+            <li>
+                <a href="##">CSS3选择器</a>
+            </li>
+            <li>
+                <a href="##">CSS3边框</a>
+            </li>
+            <li>
+                <a href="##">CSS3背景</a>
+            </li>
+            <li>
+                <a href="##">CSS3文本</a>
+            </li>
+        </ul>
+    </div>
+</aside>
+<main class="container-fluid">
+    <div class="row">
+        <div class="col-md-10 col-md-offset-2 my_body">
+            <div class="panel panel-primary" id="one">
+                <div class="panel-heading">
+                    <h3 class="panel-title">第一</h3>
+                </div>
+                <div class="panel-body">
+                    <p>第一</p>
+                    <p>第一</p>
+                    <p>第一</p>
+                    <p>第一</p>
+                    <p>第一</p>
+                    <p>第一</p>
+                    <p>第一</p>
+                    <p>第一</p>
+                    <p>第一</p>
+                    <p>第一</p>
+                    <p>第一</p>
+                    <p>第一</p>
+                </div>
+            </div>
+            <div class="panel panel-primary" id="ttwo">
+                <div class="panel-heading">
+                    <h3 class="panel-title">第二</h3>
+                </div>
+                <div class="panel-body">
+                    <p>第二</p>
+                    <p>第二</p>
+                    <p>第二</p>
+                    <p>第二</p>
+                    <p>第二</p>
+                    <p>第二</p>
+                    <p>第二</p>
+                    <p>第二</p>
+                    <p>第二</p>
+                    <p>第二</p>
+                    <p>第二</p>
+                    <p>第二</p>
+                    <p>第二</p>
+                    <p>第二</p>
+                    <p>第二</p>
+                    <p>第二</p>
+                    <p>第二</p>
+                    <p>第二</p>
+                    <p>第二</p>
+                    <p>第二</p>
+                </div>
+            </div>
+            <div class="panel panel-primary" id="three">
+                <div class="panel-heading">
+                    <h3 class="panel-title">第三</h3>
+                </div>
+                <div class="panel-body">
+                    <p>第三</p>
+                    <p>第三</p>
+                    <p>第三</p>
+                    <p>第三</p>
+                    <p>第三</p>
+                    <p>第三</p>
+                    <p>第三</p>
+                    <p>第三</p>
+                    <p>第三</p>
+                    <p>第三</p>
+                    <p>第三</p>
+                    <p>第三</p>
+                    <p>第三</p>
+                    <p>第三</p>
+                    <p>第三</p>
+                </div>
+            </div>
+            <div class="panel panel-primary" id="four">
+                <div class="panel-heading">
+                    <h3 class="panel-title">第四</h3>
+                </div>
+                <div class="panel-body">
+                    <p>第四</p>
+                    <p>第四</p>
+                    <p>第四</p>
+                    <p>第四</p>
+                    <p>第四</p>
+                    <p>第四</p>
+                    <p>第四</p>
+                    <p>第四</p>
+                    <p>第四</p>
+                    <p>第四</p>
+                    <p>第四</p>
+                    <p>第四</p>
+                    <p>第四</p>
+                    <p>第四</p>
+                    <p>第四</p>
+                    <p>第四</p>
+                    <p>第四</p>
+                    <p>第四</p>
+                    <p>第四</p>
+                    <p>第四</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+<footer class="footer navbar-fixed-bottom">
+
+            <ul class="list-inline text-center" style="margin-bottom:0;">
+                <li><a href="http://www.miibeian.gov.cn/" target="_blank">京ICP备11008151号</a></li>
+                <li>京公网安备11010802014853</li>
+            </ul>
+
+</footer>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/向上无缝滚动字幕.js"></script>
+<script>
+    $(function () {
+        $("#slidershow").carousel({
+            interval: 2000
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        section {
+            height: 450px;
+            width: 450px;
+            margin: 50px auto;
+            padding: 30px;
+            border: 1px solid red;
+            perspective: 550px;        /*视口的透视距离,近大远小，对直接子元素起作用 */
+            perspective-origin: 100% 100%;     /*设置 3D 元素的查看角度，对子元素起作用,默认为50% 50%*/
+        }
+
+        aside {
+            padding: 50px;
+            height: inherit;
+            box-sizing: border-box;
+            background-color: yellow;
+            transition: all 1s ease-out .1s;
+            /*transform:translateZ(-75px);*/
+            transform-origin: right top ;  /*设置旋转元素的基点位置：*/
+
+        }
+        aside:hover {
+            transform:rotateX(-45deg);
+            /*transform:rotateX(-45deg)*/
+            /*transform:skew(-30deg,-10deg)*/
+            /*transform:scale(0.5,0.5)*/
+        }
+    </style>
+</head>
+
+<body>
+<section>
+    <aside>HELLO</aside>
+</section>
+</body>
+</html>

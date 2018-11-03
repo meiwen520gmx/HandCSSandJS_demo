@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css动画式导航条</title>
+
+    <style>
+        body{
+            background-color: #A6C5EB;
+
+        }
+        a,a:visited{
+            text-decoration: none;
+            color: white;
+            text-shadow: 2px 2px 6px rgba(255,255,255,.5);
+            transition: color .5s;
+            position: relative;
+        }
+        nav{
+            margin-top: 200px;
+            display: flex;
+            justify-content: center;
+            font-size: 30px;
+            perspective: 500px;
+        }
+        nav a:not(:last-child){
+            margin-right: 30px;
+        }
+        nav a span{
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            background: url("../images/logo.png") no-repeat;
+            top: -80px;
+            left: calc(50% - 40px);
+            opacity: 0;
+            transition:all 1s;
+        }
+        a:hover{
+            color: #0099ff;
+        }
+        nav a:nth-child(1) span{
+            transform:translateY(10px) rotate3d(1,1,1,45deg);
+            transform-origin: center;
+        }
+        nav a:nth-child(2) span{
+            transform:translateY(20px);
+        }
+        nav a:nth-child(3) span{
+            transform:rotateY(90deg);
+        }
+        nav a:nth-child(4) span{
+            transform:translateY(-40px);
+        }
+        nav a:nth-child(5) span{
+            transform:scale3d(2,2,1);
+        }
+
+        nav a:hover span{
+            opacity: 1;
+            transform: translate3d(0,0,0) rotate3d(1,1,1,0deg) scale3d(1,1,1);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#">Home
+            <span></span>
+        </a>
+        <a href="#">About me
+            <span></span>
+        </a>
+        <a href="#">Photography
+            <span></span>
+        </a>
+        <a href="#">Work
+            <span></span>
+        </a>
+        <a href="#">Contact
+            <span></span>
+        </a>
+    </nav>
+
+</body>
+</html>

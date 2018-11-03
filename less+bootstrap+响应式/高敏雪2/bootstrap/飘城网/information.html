@@ -1,0 +1,545 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>瓢城旅行社</title>
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+	<style>
+		body {
+			padding-top: 50px;
+			background-color: #ccc;
+		}
+
+		nav a.navbar-brand {
+			padding: 0;
+		}
+
+		nav a.navbar-brand img {
+			height: 50px;
+		}
+
+		div.jumbotron {
+			background: url("img/headline.jpg") no-repeat center center;
+			background-size: 100% auto;
+			height: 23vw;
+			padding-top: 2vw;
+			padding-bottom: 3vw;
+		}
+		div.jumbotron h1{
+			font-size:4vw;
+		}
+		div.jumbotron h1 small{
+			font-size:1.5vw;
+		}
+		div.jumbotron div.container {
+			padding: 5vw 0;
+			color: white;
+		}
+
+		main li.media {
+			margin-top: 30px;
+			margin-bottom: 30px;
+		}
+		/*main ul.media-list li:not(:last-child):before{*/
+			/*position: absolute;*/
+			/*content: '';*/
+			/*width: calc(100% - 30px);*/
+			/*height: 1px;*/
+			/*background-color: #fbfbfb;*/
+			/*margin-top:14vw;*/
+		/*}*/
+		/*main ul.media-list li:not(:last-child):after{*/
+			/*position: absolute;*/
+			/*content: '';*/
+			/*width: calc(100% - 30px);*/
+			/*height: 1px;*/
+			/*background-color: #808080;*/
+			/*margin-top: 0.6vw;*/
+		/*}*/
+		main li.media > a {
+			width: 40%;
+			height: calc(100px + 6vw);
+			padding-right: 10px;
+		}
+		main li.media a img {
+			width: 100%;
+			height: 100%;
+		}
+		main li.media div.media-body {
+			background-color: white;
+			line-height: 1.5;
+			padding:10px;
+			border-radius: 3px;
+			/*height:200px;*/
+			height: calc(100px + 6vw);
+		}
+		main li.media div.media-body p {
+			font-size:1vw;
+			color: #666;
+		}
+		main li.media div.media-body h3 {
+			margin: 1vw auto;
+			font-size:calc(12px + .8vw);
+		}
+		main li.media div.media-body p b {
+			border: 1px solid #0a74cb;
+			color: #ff838f;
+			padding: 1px 3px;
+			border-radius: 2px;
+		}
+		main div.media-body h4 {
+			font-size:calc(14px + 1vw);
+			color: #f60;
+		}
+		main div.media-body h4 small {
+			text-decoration: line-through;
+		}
+		main div.media-body a {
+			background-color: #f60;
+			color: white;
+		}
+		main div.sidebar div.panel-body{
+			padding-right: 11px;
+		}
+		main div.sidebar a {
+			display: inline-block;
+			width: calc(33.3% - 4px);
+			font-size: 13px;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			line-height: 25px;
+			text-align: center;
+			background-color: #e5f3ff;
+			border-radius: 3px;
+			margin-bottom: 5px;
+		}
+		main div.hot figure{
+			display: inline-block;
+			width: calc(50% - 4px);
+		}
+		main div.hot figure p{
+			text-overflow: ellipsis;
+			overflow: hidden;
+			white-space: nowrap;
+		}
+		main div.hot img {
+			width: 100%;
+			border-radius: 4px;
+		}
+		main div.baibao a{
+			display: inline-block;
+			width: calc(50% - 4px);
+			text-align: left;
+			padding-left: 6px;
+		}
+		main div.baibao a i{
+			font-style: normal;
+			margin-right: 5px;
+		}
+		footer{
+			border-top: 2px solid #fff;
+			background-color: #222222;
+		}
+		footer a{
+			display: block;
+			color: #666666;
+			font-size: 16px;
+			line-height: 1.8;
+		}
+		footer dt{
+			color: #CCCCCC;
+			font-size: 18px;
+			margin: 20px 0;
+		}
+		footer div.down{
+			text-align: center;
+			line-height:40px;
+			font-size: 16px;
+			color: #777777;
+			background-color: #000000;
+		}
+		@media (max-width: 991px) and (min-width:768px) {
+			nav ul.navbar-right{
+				float:left !important;
+			}
+		}
+		@media (max-width: 767px) {
+			main li.media a{
+				width: 100%;
+				margin-bottom: 5px;
+				margin-left: 5px;
+			}
+		}
+
+
+	</style>
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex8-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand hidden-sm" href="#">
+				<img src="img/logo.png" alt="">
+			</a>
+		</div>
+		<div class="collapse navbar-collapse navbar-ex8-collapse">
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="#">首页</a></li>
+				<li><a href="#">旅游资讯</a></li>
+				<li><a href="#">机票订购</a></li>
+				<li><a href="#">风景欣赏</a></li>
+				<li><a href="#">关于公司</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+<div class="jumbotron">
+	<div class="container">
+		<h1>旅游资讯<br>
+			<small style="color: #ddd">介绍各种最新旅游信息、资讯要闻、景点攻略等</small>
+		</h1>
+	</div>
+</div>
+<main class="container">
+	<div class="row">
+		<div class="col-md-9 ">
+			<ul class="media-list">
+				<li class="media">
+					<a class="pull-left" href="#">
+						<img class="media-object img-rounded" src="img/tour1.jpg"
+							 alt="...">
+					</a>
+					<div class="media-body">
+						<h3 class="media-heading">曼谷-芭提雅6日游</h3>
+						<div class="row">
+							<div class="col-xs-8">
+								<p>包团特惠，超丰富景点，升级1晚国五，无自费，赠送600元成人券...</p>
+								<p><b>交通</b>春秋航空,杭州出发,无需转机</p>
+								<p><b>团期</b> 11/01、11/03、11/08...</p>
+							</div>
+							<div class="col-xs-4">
+								<h4>¥2864
+									<small>¥3980</small>
+								</h4>
+								<a href="##" class="btn btn-default">立即抢购</a>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="media">
+					<a class="pull-left" href="#">
+						<img class="media-object img-rounded" src="img/tour2.jpg"
+							 alt="...">
+					</a>
+					<div class="media-body">
+						<h3 class="media-heading">曼谷-芭提雅6日游</h3>
+						<div class="row">
+							<div class="col-xs-8">
+								<p>包团特惠，超丰富景点，升级1晚国五，无自费，赠送600元成人券...</p>
+								<p><b>交通</b>春秋航空,杭州出发,无需转机</p>
+								<p><b>团期</b> 11/01、11/03、11/08...</p>
+							</div>
+							<div class="col-xs-4">
+								<h4>¥2864
+									<small>¥3980</small>
+								</h4>
+								<a href="##" class="btn btn-default">立即抢购</a>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="media">
+					<a class="pull-left" href="#">
+						<img class="media-object img-rounded" src="img/tour3.jpg"
+							 alt="...">
+					</a>
+					<div class="media-body">
+						<h3 class="media-heading">曼谷-芭提雅6日游</h3>
+						<div class="row">
+							<div class="col-xs-8">
+								<p>包团特惠，超丰富景点，升级1晚国五，无自费，赠送600元成人券...</p>
+								<p><b>交通</b>春秋航空,杭州出发,无需转机</p>
+								<p><b>团期</b> 11/01、11/03、11/08...</p>
+							</div>
+							<div class="col-xs-4">
+								<h4>¥2864
+									<small>¥3980</small>
+								</h4>
+								<a href="##" class="btn btn-default">立即抢购</a>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="media">
+					<a class="pull-left" href="#">
+						<img class="media-object img-rounded" src="img/tour4.jpg"
+							 alt="...">
+					</a>
+					<div class="media-body">
+						<h3 class="media-heading">曼谷-芭提雅6日游</h3>
+						<div class="row">
+							<div class="col-xs-8">
+								<p>包团特惠，超丰富景点，升级1晚国五，无自费，赠送600元成人券...</p>
+								<p><b>交通</b>春秋航空,杭州出发,无需转机</p>
+								<p><b>团期</b> 11/01、11/03、11/08...</p>
+							</div>
+							<div class="col-xs-4">
+								<h4>¥2864
+									<small>¥3980</small>
+								</h4>
+								<a href="##" class="btn btn-default">立即抢购</a>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="media">
+					<a class="pull-left" href="#">
+						<img class="media-object img-rounded" src="img/tour5.jpg"
+							 alt="...">
+					</a>
+					<div class="media-body">
+						<h3 class="media-heading">曼谷-芭提雅6日游</h3>
+						<div class="row">
+							<div class="col-xs-8">
+								<p>包团特惠，超丰富景点，升级1晚国五，无自费，赠送600元成人券...</p>
+								<p><b>交通</b>春秋航空,杭州出发,无需转机</p>
+								<p><b>团期</b> 11/01、11/03、11/08...</p>
+							</div>
+							<div class="col-xs-4">
+								<h4>¥2864
+									<small>¥3980</small>
+								</h4>
+								<a href="##" class="btn btn-default">立即抢购</a>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="media">
+					<a class="pull-left" href="#">
+						<img class="media-object img-rounded" src="img/tour6.jpg"
+							 alt="...">
+					</a>
+					<div class="media-body">
+						<h3 class="media-heading">曼谷-芭提雅6日游</h3>
+						<div class="row">
+							<div class="col-xs-8">
+								<p>包团特惠，超丰富景点，升级1晚国五，无自费，赠送600元成人券...</p>
+								<p><b>交通</b>春秋航空,杭州出发,无需转机</p>
+								<p><b>团期</b> 11/01、11/03、11/08...</p>
+							</div>
+							<div class="col-xs-4">
+								<h4>¥2864
+									<small>¥3980</small>
+								</h4>
+								<a href="##" class="btn btn-default">立即抢购</a>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="media">
+					<a class="pull-left" href="#">
+						<img class="media-object img-rounded" src="img/tour7.jpg"
+							 alt="...">
+					</a>
+					<div class="media-body">
+						<h3 class="media-heading">曼谷-芭提雅6日游</h3>
+						<div class="row">
+							<div class="col-xs-8">
+								<p>包团特惠，超丰富景点，升级1晚国五，无自费，赠送600元成人券...</p>
+								<p><b>交通</b>春秋航空,杭州出发,无需转机</p>
+								<p><b>团期</b> 11/01、11/03、11/08...</p>
+							</div>
+							<div class="col-xs-4">
+								<h4>¥2864
+									<small>¥3980</small>
+								</h4>
+								<a href="##" class="btn btn-default">立即抢购</a>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="media">
+					<a class="pull-left" href="#">
+						<img class="media-object img-rounded" src="img/tour8.jpg"
+							 alt="...">
+					</a>
+					<div class="media-body">
+						<h3 class="media-heading">曼谷-芭提雅6日游</h3>
+						<div class="row">
+							<div class="col-xs-8">
+								<p>包团特惠，超丰富景点，升级1晚国五，无自费，赠送600元成人券...</p>
+								<p><b>交通</b>春秋航空,杭州出发,无需转机</p>
+								<p><b>团期</b> 11/01、11/03、11/08...</p>
+							</div>
+							<div class="col-xs-4">
+								<h4>¥2864
+									<small>¥3980</small>
+								</h4>
+								<a href="##" class="btn btn-default">立即抢购</a>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="media">
+					<a class="pull-left" href="#">
+						<img class="media-object img-rounded" src="img/tour9.jpg"
+							 alt="...">
+					</a>
+					<div class="media-body">
+						<h3 class="media-heading">曼谷-芭提雅6日游</h3>
+						<div class="row">
+							<div class="col-xs-8">
+								<p>包团特惠，超丰富景点，升级1晚国五，无自费，赠送600元成人券...</p>
+								<p><b>交通</b>春秋航空,杭州出发,无需转机</p>
+								<p><b>团期</b> 11/01、11/03、11/08...</p>
+							</div>
+							<div class="col-xs-4">
+								<h4>¥2864
+									<small>¥3980</small>
+								</h4>
+								<a href="##" class="btn btn-default">立即抢购</a>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="col-md-3 hidden-xs hidden-sm sidebar">
+			<div class="panel panel-info">
+				<div class="panel-heading">
+					<h3 class="panel-title">景点推荐</h3>
+				</div>
+				<div class="panel-body">
+					<a href="###">曼谷(12)</a>
+					<a href="###">东京(5)</a>
+					<a href="###">西双版纳(8)</a>
+					<a href="###">漓江(16)</a>
+					<a href="###">呼伦贝尔(4)</a>
+					<a href="###">首尔(9)</a>
+					<a href="###">巴厘岛(15)</a>
+					<a href="###">土耳其(22)</a>
+					<a href="###">夏威夷(5)</a>
+					<a href="###">巴厘岛(11)</a>
+					<a href="###">毛里求斯(7)</a>
+					<a href="###">吉普岛(4)</a>
+					<a href="###">希腊(18)</a>
+					<a href="###">法瑞意(8)</a>
+					<a href="###">马尔代夫(9)</a>
+					<a href="###">新西兰(16)</a>
+					<a href="###">埃及(11)</a>
+					<a href="###">迪拜(14)</a>
+					<a href="###">斯里兰卡(7)</a>
+					<a href="###">麦哈顿(3)</a>
+					<a href="###">大阪(15)</a>
+				</div>
+			</div>
+			<div class="panel panel-info hot">
+				<div class="panel-heading">
+					<h3 class="panel-title">热卖旅游</h3>
+				</div>
+				<div class="panel-body">
+					<figure>
+						<img src="img/hot1.jpg" alt="">
+						<p>曼谷-芭提雅6日游</p>
+					</figure>
+					<figure>
+						<img src="img/hot2.jpg" alt="">
+						<p>马尔代夫双鱼6日游</p>
+					</figure>
+					<figure>
+						<img src="img/hot3.jpg" alt="">
+						<p>海南双飞5日游</p>
+					</figure>
+					<figure>
+						<img src="img/hot4.jpg" alt="">
+						<p>富山大阪东京8日游</p>
+					</figure>
+					<figure>
+						<img src="img/hot5.jpg" alt="">
+						<p>法瑞意德12日游</p>
+					</figure>
+					<figure>
+						<img src="img/hot6.jpg" alt="">
+						<p>巴厘岛6日半游</p>
+					</figure>
+					<figure>
+						<img src="img/hot7.jpg" alt="">
+						<p>塞舌尔迪拜9日游</p>
+					</figure>
+					<figure>
+						<img src="img/hot8.jpg" alt="">
+						<p>花样土耳其10日游</p>
+					</figure>
+				</div>
+			</div>
+			<div class="panel panel-info baibao">
+				<div class="panel-heading">
+					<h3 class="panel-title">旅游百宝箱</h3>
+				</div>
+				<div class="panel-body">
+					<a href="##"><i class="glyphicon glyphicon-eye-open"></i>天气预报</a>
+					<a href="##"><i class="glyphicon glyphicon-eye-open"></i>火车票查询</a>
+					<a href="##"><i class="glyphicon glyphicon-eye-open"></i>航空查询</a>
+					<a href="##"><i class="glyphicon glyphicon-eye-open"></i>铁路线路查询</a>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</main>
+<footer>
+	<div class="container">
+		<div class="row text-center hidden-xs">
+			<div class="col-md-4">
+				<dl>
+					<dt>合作伙伴</dt>
+					<dd>
+						<a href="#">途牛旅游网</a>
+						<a href="#">驴妈妈旅游网</a>
+						<a href="#">携程旅游</a>
+						<a href="#">中国青年旅行社</a>
+					</dd>
+				</dl>
+			</div>
+			<div class="col-md-4">
+				<dl>
+					<dt>旅游FAQ</dt>
+					<dd>
+						<a href="#">旅游合同签订方式？</a>
+						<a href="#">儿童价是基于什么制定的？</a>
+						<a href="#">旅游的线路品质怎么界定的？</a>
+						<a href="#">单房差是什么？</a>
+						<a href="#">旅游保险有那些种类？</a>
+					</dd>
+				</dl>
+			</div>
+			<div class="col-md-4">
+				<dl>
+					<dt>联系方式</dt>
+					<dd>
+						<a href="#">微博：weibo.com/ycku</a>
+						<a href="#">邮件：ycku@ycku.com</a>
+						<a href="#">地址：江苏盐城无名路123号</a>
+					</dd>
+				</dl>
+			</div>
+		</div>
+
+	</div>
+	<div class="down">
+		Copyright © YCKU 瓢城旅行社 | 苏ICP备120110119号 | 旅行社经营许可证：L-YC-BK12345
+	</div>
+</footer>
+<script src="../js/jquery.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</html>

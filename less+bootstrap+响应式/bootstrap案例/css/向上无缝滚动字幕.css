@@ -1,0 +1,32 @@
+#warp {
+    border: 2px solid #ff0000;
+    background-color: #f8f8f8;
+    margin-bottom: 20px;
+}
+
+#warp h4 {
+    margin: 0;
+    background-color: #ff0000;
+    height: 40px;
+    padding-left: 30px;
+    line-height: 40px;
+    color: #fff;
+    font-weight: 700;
+}
+
+#warp #box {
+    height: 390px;
+    overflow: hidden;
+}
+
+#warp ol{
+    padding-left: 5px; ;
+}
+
+#warp ol  li {
+    list-style-position: inside;
+    line-height: 30px;
+    white-space: nowrap; /*强制一行内*/
+    text-overflow: ellipsis; /*产生省略号*/
+    overflow: hidden; /*需要加上这一行，才能产生省略号*/
+}

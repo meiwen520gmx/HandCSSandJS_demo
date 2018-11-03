@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            background: url("../images/dh_bg.jpg") no-repeat top center;
+        }
+        div.box{
+            width: 800px;
+            margin: 180px auto 0;
+            border: 5px solid #9ebbd2;
+            line-height: 40px;
+            overflow-x: hidden;
+        }
+        div.box ul{
+            list-style: none;
+            display: flex;
+            white-space: nowrap;
+        }
+        div.box ul li:not(:last-child){
+            margin-right:30px;
+        }
+        div.box ul li a{
+            text-decoration: none;
+            color: black;
+        }
+        div.box ul li a:hover{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<div class="box" id="box">
+    <ul>        <!--也可用ol，编号自动产生-->
+        <!--<li><a href="{href}">{no}.{txt}</a></li>-->
+    </ul>
+</div>
+<script>
+    var data = [];
+    data[data.length] = {href: 'http://www.baidu.com', con: '习近平成功访问美国等欧美国家'};
+    data[data.length] = {href: 'http://www.cqwu.edu.cn', con: '李克强成功访问美国等欧美国家'};
+    data[data.length] = {href: 'http://www.qq.com', con: '刘云山成功访问美国等欧美国家'};
+    data[data.length] = {href: 'http://www.163.com', con: '热烈欢迎李克强总理到重庆视察工作'};
+    data[data.length] = {href: 'http://www.sina.com', con: '热烈欢迎刘云山常委重庆视察工作'};
+    data[data.length] = {href: 'http://www.sina.com', con: '热烈欢迎刘云山常委重庆视察工作'};
+    data[data.length] = {href: 'http://www.cqw.edu.cn', con: '热烈欢迎习近平总书记到重庆视察工作'};
+    data[data.length] = {href: 'http://www.google.com', con: '重庆文理学院在创新工作中获得第一名'};
+    var oBox=document.getElementById('box');
+    var oUl=box.querySelector('ul');
+    var html='';
+    var timer=null;
+    data.forEach(function (el, i) {
+        html+='<li><a href='+el.href+'>'+(i+1)+'.'+el.con+'</a></li>'
+    });
+    html+=html;
+    oUl.innerHTML=html;
+    function move(){
+        timer=setInterval(function(){
+            if(oBox.scrollLeft<=oUl.scrollWidth/2){
+                oBox.scrollLeft+=1;
+            }
+            else{
+                oBox.scrollLeft=0;
+            }
+        },10);
+    }
+    move();
+    oBox.onmouseover= function () {
+        clearInterval(timer);
+    }
+    oBox.onmouseout= function () {
+        move();
+    }
+</script>
+</body>
+</html>

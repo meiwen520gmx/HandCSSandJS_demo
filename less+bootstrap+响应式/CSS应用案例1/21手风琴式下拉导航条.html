@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>不用JS实现列表显示与隐藏</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            width: 180px;
+            margin: 30px auto;
+            border: 1px solid #27568b;
+        }
+
+        h4 {
+            line-height: 30px;
+            background-color: #27568b;
+            font-family: "微软雅黑";
+            color: #ffffff;
+            padding-left: 5px;
+        }
+
+        div dl dt {
+            padding: 10px 15px;
+            border-bottom: 1px dashed #CCCCCC;
+            font-size: 16px;
+            font-weight: bold;
+            color: #000033;
+            position: relative;
+        }
+        div dl:last-child dt {
+            border-bottom: none;
+        }
+
+        div dl dt:after {
+            position: absolute;
+            content: '';
+            right: 10px;
+            top: 15px;
+            width: 0;
+            height: 0;
+            border: 5px solid transparent;
+            border-top-color: #b3b3b3;
+        }
+
+        div dl dd {
+            display: none;
+        }
+
+        dd{
+            font-size: 13px;
+            padding: 10px 25px;
+        }
+
+        dl:hover dd {
+            display: block;
+        }
+
+        dl dt:hover,dl dd:hover {
+            background-color: #eeeeee;
+        }
+        dd span{
+            color: #6a3d40;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <h4>商品分类信息列表</h4>
+    <dl>
+        <dt>日用百货</dt>
+        <dd><span>▲</span>这是二级名称</dd>
+        <dd><span>★</span>这是二级名称</dd>
+        <dd><span>●</span><a href="http://www.baidu.com">去百度看看</a></dd>
+        <dd><span>◆</span>这是二级名称</dd>
+    </dl>
+    <dl>
+        <dt>家用电器</dt>
+        <dd><span>▲</span>这是二级名称</dd>
+        <dd><span>★</span>这是二级名称</dd>
+        <dd><span>●</span><a href="http://www.baidu.com">去百度看看</a></dd>
+        <dd><span>◆</span>这是二级名称</dd>
+    </dl>
+    <dl>
+        <dt>化工材料</dt>
+        <dd><span>▲</span>这是二级名称</dd>
+        <dd><span>★</span>这是二级名称</dd>
+        <dd><span>●</span><a href="http://www.baidu.com">去百度看看</a></dd>
+        <dd><span>◆</span>这是二级名称</dd>
+    </dl>
+    <dl>
+        <dt>中国石化</dt>
+        <dd><span>▲</span>这是二级名称</dd>
+        <dd><span>★</span>这是二级名称</dd>
+        <dd><span>●</span><a href="http://www.baidu.com">去百度看看</a></dd>
+        <dd><span>◆</span>这是二级名称</dd>
+    </dl>
+    <dl>
+        <dt>国外产品</dt>
+        <dd><span>▲</span>这是二级名称</dd>
+        <dd><span>★</span>这是二级名称</dd>
+        <dd><span>●</span><a href="http://www.baidu.com">去百度看看</a></dd>
+        <dd><span>◆</span>这是二级名称</dd>
+    </dl>
+</div>
+</body>
+</html>

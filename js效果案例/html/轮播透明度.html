@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border: 5px solid black;
+            margin: 20px;
+            float: left;
+            opacity: 0.3;
+            filter:Alpha(opacity:30);
+            /*position: absolute;*/
+            /*top: 50px;*/
+        }
+        /*div:nth-child(2){*/
+            /*left: 125px;*/
+        /*}*/
+        /*div:nth-child(3){*/
+            /*left: 250px;*/
+        /*}*/
+    </style>
+</head>
+<body>
+<div id="div1">
+</div>
+<div id="div2">
+</div>
+<div id="div3">
+    哈哈哈哈哈
+</div>
+<script src="../js/move.js">
+</script>
+<script>
+
+    var oDiv1=document.getElementById('div1');
+    var oDiv2=document.getElementById('div2');
+    var oDiv3=document.getElementById('div3');
+    oDiv1.onmouseover=function(){
+        startMove(this,'opacity',100);
+    }
+    oDiv1.onmouseout=function(){
+        startMove(this,'opacity',30);
+    }
+//    oDiv2.onclick=function(){
+//        if(parseInt(getStyle(this,'top'))==300){
+//            startMove(this,'top',50);
+//        }
+//        else{
+//            startMove(this,'top',300);
+//        }
+//
+//    }
+    oDiv2.onmouseover=function(){
+        startMove(this,'height',300);
+    }
+    oDiv2.onmouseout=function(){
+        startMove(this,'height',100);
+    }
+    oDiv3.onmouseover=function(){
+        startMove(this,'fontSize',40);
+    }
+    oDiv3.onmouseout=function(){
+        startMove(this,'fontSize',16);
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+@charset "UTF-8";
+body {
+  background-color: #174747;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "myicon";
+  src: url('fonts/raphaelicons-webfont.eot') format('eot'),
+  url('fonts/raphaelicons-webfont.ttf') format('truetype'),
+  url('fonts/raphaelicons-webfont.woff') format('woff'),
+  url('fonts/raphaelicons-webfont.svg') format('svg');
+  font-style: normal;
+  font-weight: normal;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+.my_up_down(@m:0,@cn:1) {
+  transform: translateY(@m);
+  .a@{cn}{
+      h3 {
+        animation: my_down 1s linear 1s backwards;
+      }
+      p {
+        animation: my_up 1s linear 1s backwards;
+      }
+  }
+}
+
+div {
+  height: 100%;
+  input, span {
+    position: absolute;
+    bottom: 0;
+    height: 40px;
+    width: 20%;
+  }
+  input:nth-of-type(2), span:nth-of-type(2) {
+    left: 20%;
+  }
+  input:nth-of-type(3), span:nth-of-type(3) {
+    left: 40%;
+  }
+  input:nth-of-type(4), span:nth-of-type(4) {
+    left: 60%;
+  }
+  input:nth-of-type(5), span:nth-of-type(5) {
+    left: 80%;
+  }
+  span {
+    background-color: #E23A6E;
+    color: white;
+    line-height: 40px;
+    text-align: center;
+    font-weight: 600;
+  }
+  input {
+    z-index: 10;
+    opacity: 0;
+  }
+  input:hover + span {
+    background-color: #c63d66;
+  }
+  input:checked + span {
+    background-color: #97344c;
+  }
+  input:checked + span:before {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    border: 20px solid transparent;
+    border-bottom-color: #97344c;
+    top: -40px;
+    left: ~'calc(50% - 20px)';
+  }
+  input:nth-of-type(1):checked ~ section {
+    .my_up_down()
+  }
+  input:nth-of-type(2):checked ~ section {
+    .my_up_down(-100%,2)
+  }
+  input:nth-of-type(3):checked ~ section {
+    .my_up_down(-200%,3)
+  }
+  input:nth-of-type(4):checked ~ section {
+    .my_up_down(-300%,4)
+  }
+  input:nth-of-type(5):checked ~ section {
+    .my_up_down(-400%,5)
+  }
+  section, article {
+    height: 100%;
+  }
+  section {
+    transition: all 1s;
+  }
+  article {
+    text-align: center;
+    position: relative;
+    border: 2px solid #E23A6E;
+    padding: 0 15px;
+    box-sizing: border-box;
+    overflow: hidden;
+    h3 {
+      font-size: 7vh;
+      color: white;
+      font-weight: 500;
+      margin-top: 100px;
+    }
+    p {
+      margin-top: 2vh;
+      font-size: 4vh;
+      line-height: 7vh;
+      color: #ddd;
+      text-align: justify;
+      text-indent: 2em;
+      font-family: "宋体";
+    }
+    b {
+      position: absolute;
+      width: 160px;
+      height: 160px;
+      background-color: #E23A6E;
+      transform: rotate(45deg);
+      left: ~'calc(50% - 80px)';
+      top: -80px;
+      &:before {
+        content: attr(data-icon);
+        font-family: "myicon";
+        position: absolute;
+        color: white;
+        font-size: 60px;
+        top: 70px;
+        animation: my_ani 2s linear infinite;
+      }
+    }
+  }
+}
+
+@keyframes my_up {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes my_down {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes my_ani {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}

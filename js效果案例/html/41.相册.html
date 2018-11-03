@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            background-color: #333;
+        }
+        div#box {
+            width: 1200px;
+            margin: 150px auto 0;
+            height: 900px;
+            perspective: 800px;
+            perspective-origin: 30% 70%;
+            position: relative;
+        }
+        div#box > div{
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            left: 0;
+            top: 0;
+            transform-style: preserve-3d;
+            transform-origin: right;/*变形中心*/
+            transition: transform 0.7s;
+            /*动画运行结束后的保持状态(初态，终态--运行结束后该是什么样子就是什么样子)*/
+            animation-fill-mode:forwards
+            /*backwards;*/
+            /*转到后面是否看得见*/
+            backface-visibility: hidden;
+        }
+
+        #box > div.right {
+            transform: rotateY(180deg);
+        }
+        #box > div.left {
+            transform: rotateY(0deg);
+        }
+       #box span{
+           position: absolute;
+           /*继承父元素的宽度*/
+           width:inherit;
+           height: inherit;
+           padding: 10px;
+           background-color: #b6d9f2;
+           border: 1px solid #b7b7b7;
+           box-sizing: border-box;
+           border-radius: 3px;
+           box-shadow:0 0 5px rgba(155, 185, 205, 0.8) inset;
+       }
+       #box span.back{
+           transform: rotateY(180deg);
+           padding-left: 20px;
+           border-left: none;
+       }
+        #box span.front{
+            padding-right: 20px;
+            border-right: none;
+        }
+        #box span.front:after{
+            position: absolute;
+            content: '';
+            width: 15px;
+            height: 70%;
+            right:0;
+            top:80px;
+            background-color:rgba(255,255,255,.2);
+            box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.38) inset;
+        }
+        #box span img{
+            width: 100%;
+            height: 90%;
+        }
+        #box span p{
+            line-height:1.5;
+            font-size: 18px;
+        }
+
+    </style>
+</head>
+<body>
+<div id="box">
+    <!--
+        <div class="left" arr-z="1">
+            <div class="back">
+                <img src="images/1.jpg" alt="">
+                <p>美丽风光无限：拍摄地：&#45;&#45;1/10</p>
+            </div>
+            <div class="front">
+                <img src="images/2.jpg" alt="">
+                <p>美丽风光无限：拍摄地：&#45;&#45;2/10</p>
+            </div>
+        </div>
+    -->
+</div>
+<template>
+    <div class="com left">
+        <span class="back">
+            <img src="{path1}">
+            <p>{title1}--{page1}</p>
+        </span>
+        <span class="front">
+            <img src="{path2}">
+            <p>{title2}--{page2}</p>
+        </span>
+    </div>
+</template>
+<script src="../js/eventCompatible.js"></script>
+<script>
+    arr = [];
+    arr[arr.length] = {src: "../images/1.jpg", title: "男神陈伟霆：拍摄地：北京"};
+    arr[arr.length] = {src: "../images/2.jpg", title: "陈伟霆摆拍：拍摄地：天津"};
+    arr[arr.length] = {src: "../images/3.jpg", title: "最美印度小女孩：拍摄地：国外印度"};
+    arr[arr.length] = {src: "../images/img4.jpg", title: "撒娇的二哈：拍摄地：外面"};
+    arr[arr.length] = {src: "../images/img5.jpg", title: "想出去玩的二哈：拍摄地：朋友家里"};
+    arr[arr.length] = {src: "../images/img6.jpg", title: "奔跑的逗比二哈：拍摄地：雪地里"};
+    arr[arr.length] = {src: "../images/7.jpg", title: "古力娜扎：拍摄地：江苏"};
+    arr[arr.length] = {src: "../images/img1.jpg", title: "逗比二哈二货：拍摄地：草地"};
+    arr[arr.length] = {src: "../images/img2.jpg", title: "拉雪橇的逗比二哈：拍摄地：雪地里"};
+    arr[arr.length] = {src: "../images/img3.jpg", title: "逗比二哈：拍摄地：家里"};
+    var str=document.querySelector('template').innerHTML;
+    var oBox=document.getElementById('box');
+    var html='';
+    var len=arr.length,zIndex=1;
+    for(var i=0;i<arr.length;i=i+2){
+       html+=str.replace('{path1}',arr[i].src).replace('{title1}',arr[i].title)
+               .replace('{page1}',i+1+'/'+len).replace('{path2}',arr[i+1].src)
+               .replace('{title2}',arr[i+1].title).replace('{page2}',i+2+'/'+len);
+   }
+    oBox.innerHTML=html;
+    eventCompatible.agentEvent(oBox,'click',['div','com'], function () {
+        if(this.classList.contains('left')){
+            this.className='com right';
+        }
+        else{
+            this.className='com left';
+        }
+        this.style.zIndex=zIndex++;
+    });
+
+</script>
+</body>
+</html>

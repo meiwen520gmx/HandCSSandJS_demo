@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        section{
+            margin: 50px auto;
+            border: 1px solid red;
+        }
+        div.black{
+            width: 310px;
+            height: 635px;
+            margin: auto;
+            padding: 80px 20px;
+            box-sizing: border-box;
+            background-image: url("img/phone.png");
+            position: relative;
+        }
+        div.black > video{
+            width: 270px;
+            height: 475px;
+        }
+        div.white{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 80px 20px ;
+            background-image: url("img/phone1.png");
+            animation: toggle 10s ease 0s infinite ;
+        }
+        @keyframes toggle {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 1;
+            }
+            51% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+
+        div.white video{
+            width: 270px;
+            height: 475px;
+        }
+    </style>
+</head>
+<body>
+<section>
+    <div class="black">
+        <video src="img/1.mp4" autoplay loop></video>
+        <div class="white">
+            <video src="img/3.mp4" autoplay loop></video>
+        </div>
+    </div>
+</section>
+</body>
+</html>

@@ -1,0 +1,125 @@
+@charset "UTF-8";
+body {
+  padding: 50px 0;
+}
+h1,
+h2,
+h3 {
+  font-family: "microsoft yahei";
+}
+nav.lcj-nav {
+  background-color: #333;
+}
+nav div.navbar-header a {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+nav div.navbar-header a img {
+  height: 50px;
+}
+header {
+  position: relative;
+}
+header img {
+  width: 100%;
+}
+header div.lcj-con {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+header div.lcj-con h1 {
+  color: white;
+  font-size: 3.5vw;
+  font-weight: 600;
+}
+header div.lcj-con h1 small {
+  margin-top: 25px;
+  font-size: 2.3vw;
+  color: #ccc;
+}
+main {
+  margin: 50px 0;
+}
+main div.left div.lcj-panel ul {
+  margin-top: 10px;
+}
+main div.left div.lcj-panel ul li.active {
+  background-color: #458B00;
+  color: white;
+  border-radius: 2px;
+}
+main div.left div.lcj-panel form div.col-sm-4 {
+  margin-bottom: 20px;
+}
+main div.left div.lcj-panel form button {
+  font-family: "microsoft yahei";
+}
+main div.left div.lcj-panel table th,
+main div.left div.lcj-panel table td {
+  text-align: center;
+  vertical-align: middle;
+}
+main div.left div.lcj-panel table td.price {
+  color: #fe6600;
+}
+main div.right div.lcj-panel ul {
+  margin: 0 -5px -5px 0;
+}
+main div.right div.lcj-panel ul li {
+  text-align: center;
+  margin: 0 5px 5px 0;
+  background-color: #eee;
+}
+main div.right div.lcj-panel ul li img {
+  width: 100%;
+}
+main div.right div.lcj-panel:first-child ul li {
+  line-height: 35px;
+  width: 103px;
+}
+main div.right div.lcj-panel:nth-child(2) div.lcj-col:not(:last-child) {
+  margin-bottom: 10px;
+}
+main div.right div.lcj-panel:last-child li {
+  width: 159px;
+  line-height: 35px;
+}
+footer {
+  background-color: #ccc;
+}
+@media (min-width: 1200px) {
+  html {
+    font-size: 16px;
+  }
+}
+@media (min-width: 993px) and (max-width: 1199px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media (min-width: 769px) and (max-width: 992px) {
+  html {
+    font-size: 13px;
+  }
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 12px;
+  }
+}

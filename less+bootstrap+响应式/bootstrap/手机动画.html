@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>手机动画</title>
+    <style>
+        div.white{
+            width: 310px;
+            height: 635px;
+            margin: 100px auto 0;
+            background: url("images/phone0.png");
+            padding: 80px 22px 77px;
+            position: relative;
+            box-sizing: border-box;
+        }
+        div.white video,div.black video{
+            width: 100%;
+            height: 100%;
+        }
+        div.black{
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            padding: 80px 22px 77px;
+            background: url("images/phone.png");
+            animation: toggle_vedio 16s infinite;
+            box-sizing: border-box;
+
+        }
+        @keyframes toggle_vedio {
+            0% {
+                /*opacity:0;*/
+                visibility: hidden;
+            }
+            50% {
+                /*opacity: 0;*/
+                visibility: hidden;
+            }
+            50.001% {
+                /*opacity: 1;*/
+                visibility: visible;
+            }
+            100% {
+                /*opacity:1;*/
+                visibility: visible;
+            }
+        }
+    </style>
+</head>
+<body>
+  <div class="white">
+      <video src="images/3.mp4" autoplay loop></video>
+      <div class="black">
+          <video src="images/1.mp4" autoplay loop></video>
+      </div>
+  </div>
+</body>
+</html>

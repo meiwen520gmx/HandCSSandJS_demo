@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>缓冲运动</title>
+    <style>
+        body{
+            background-color: green;
+        }
+        input#btn1{
+            position: absolute;
+            top: 10px;
+            left: 20px;
+        }
+        #div1{
+            position: absolute;
+            top:50px;
+            left: 20px;
+            width:1300px;
+            height: 250px;
+            background-color: #ababab;
+            z-index: -2;
+
+        }
+        #div1:after{
+            position: absolute;
+            content: '';
+            border: 5px double white;
+            width: 1260px;
+            left: 10px;
+            top:120px;
+            z-index: -1;
+        }
+        #div1 img{
+            position: absolute;
+            width: 120px;
+            height: 100px;
+        }
+        #div1 img:nth-child(1){
+            top: 50px;
+            left: 10px;
+        }
+        #div1 img:nth-child(2){
+            left: 180px;
+        }
+        #div1 img:nth-child(3){
+            left: 350px;
+            transform: rotateY(180deg);
+        }
+    </style>
+    <script>
+        window.onload= function () {
+            var oBtn=document.getElementById('btn1');
+            var oDiv=document.getElementById('div1');
+            var aImg=oDiv.getElementsByTagName('img');
+            var timer=null;
+            oBtn.onclick= function () {
+                clearInterval(timer);
+                timer=setInterval(function () {
+                    var j=700;
+                    for(var i=0;i<aImg.length;i++){
+                        var speed=(j-aImg[i].offsetLeft)/50;
+                        speed=speed>0?Math.ceil(speed):Math.floor(speed);
+                        aImg[i].style.left=aImg[i].offsetLeft+speed+'px';
+                        j+=150;
+                    }
+
+                },30);
+            }
+        }
+    </script>
+</head>
+<body>
+<input id="btn1" type="button" value="点击开车">
+<div id="div1">
+    <img src="../images/car1.png">
+    <img src="../images/car2.png">
+    <img src="../images/car3.png">
+</div>
+
+</body>
+</html>

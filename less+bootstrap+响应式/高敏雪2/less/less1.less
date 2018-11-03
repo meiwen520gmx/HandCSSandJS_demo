@@ -1,0 +1,167 @@
+@charset "utf-8";
+*{
+  margin: 0;
+  padding: 0;
+}
+html,body{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;//不产生滚动条
+}
+@bottom_h:56px;
+.absolute{
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+header{
+  .absolute;
+  top: 0;
+  color: white;
+  background-color: black;
+  line-height: 48px;
+  display: flex;
+  justify-content: space-around;
+  .span{
+    background-size: 20px 20px;
+    width: 48px;
+    display: inline-block;
+    text-indent:-99em;
+    background-position: center;
+  }
+  >span{
+    background: url("../images/left%20(2).png") no-repeat;
+     .span
+  }
+  div{
+    span:first-child{
+      background: url("../images/sousuo.png") no-repeat;
+      .span
+    }
+    span:last-child{
+      background: url("../images/jiahao.png") no-repeat;
+      .span
+    }
+
+  }
+  h3{
+    font-weight: 400;
+  }
+}
+aside{
+  .absolute;
+  top: 49px;
+  height: ~'calc(100% / 3)';
+  img{
+   height: 100%;
+    width: 100%;
+  }
+}
+main{
+  .absolute;
+  top:~'calc(49px + 100% / 3)';
+  bottom:@bottom_h;
+  //line-height: 50px;
+  overflow-y: auto;
+  padding: 10px;
+  h4{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.5;
+    background-color: #EBEBEB;
+    padding: 5px;
+    span{
+      border: 1px solid #22aadd;
+      color: #0086b3;
+    }
+  }
+  a{
+    display: block;
+    height: 60px;
+    &:not(:last-child){
+      border-bottom: 1px solid gainsboro;
+    }
+    padding-left: 60px;
+    background: url("../images/time.PNG") no-repeat left center;
+    line-height: 30px;
+    &:link,&:visited{
+      color: gray;
+      text-decoration: none;
+    }
+    p{
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    h5{
+      font-size: 14px;
+      color: gray;
+      display: flex;
+      justify-content: space-between;
+      font-weight: 400;
+      span{
+        margin-right: 15px;
+        color: gainsboro;
+      }
+    }
+  }
+
+}
+footer{
+  .absolute;
+  height: @bottom_h;
+  border-top: 1px solid #aaa;
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+  background-color: #b6d9f2;
+  box-sizing: border-box;
+  span{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    //padding-top: 30px;
+    //font-size: 14px;
+    //text-align: center;
+    //line-height: 25px;
+    //background-size: 32px 32px;
+    //background-origin: padding-box;
+    i{
+      height:30px;
+      width: 35px;
+      font-style: normal;
+      font-size: 14px;
+      background: url("../images/tb2.png") no-repeat center top;
+    }
+    &:nth-child(1) i{
+      background-position:center -0px;
+      &:hover{
+        background-position: center -35px;
+      }
+    }
+    &:nth-child(2) i{
+      background-position:center -70px;
+      &:hover{
+        background-position: center -105px;
+      }
+    }
+    &:nth-child(3) i{
+      background-position:center -140px;
+      &:hover{
+        background-position: center -175px;
+      }
+    }
+    &:nth-child(4) i{
+      background-position:center -210px;
+      &:hover{
+        background-position: center -245px;
+      }
+    }
+
+  }
+
+
+
+
+}

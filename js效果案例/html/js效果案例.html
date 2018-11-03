@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            height: 2000px;
+        }
+        #div1{
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            position: absolute;
+        }
+    </style>
+
+</head>
+<body>
+<div id="div1">
+
+</div>
+
+<script src="../js/eventCompatible.js"></script>
+<script>
+    var oDiv=document.getElementById('div1');
+    eventCompatible.addEvent(oDiv,'mousedown',function(e){
+        var e=e||event;
+        var disX= e.pageX-this.offsetLeft;
+        var disY= e.pageY-this.offsetTop;
+        var _this=this;
+        eventCompatible.addEvent(document,'mousemove',move);
+        eventCompatible.addEvent(document,'mouseup',up);
+        function move(e){
+            var e=e||event;
+            var left= e.pageX-disX;
+            var top= e.pageY-disY;
+            left=Math.min(Math.max(left,0),eventCompatible.getDocProp('clientWidth')-_this.offsetWidth);
+            top=Math.min(Math.max(top,0),eventCompatible.getDocProp('clientHeight')-_this.offsetHeight);
+//            left=left+eventCompatible.getDocProp('scrollLeft');
+//            top=top+eventCompatible.getDocProp('scrollTop');
+            _this.style.left=left+'px';
+            _this.style.top=top+'px';
+        }
+        function up(){
+            eventCompatible.removeEvent(document,'mousemove',move);
+            eventCompatible.removeEvent(document,'mousemove',up);
+        }
+
+    });
+</script>
+</body>
+</html>

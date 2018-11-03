@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>时钟</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            background-color: #b1eeff;
+        }
+        div{
+            margin-top: 50px;
+            font-size: 60px;
+            text-align: center;
+        }
+        #ul1{
+            margin-top:180px;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+        section{
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+        }
+        section img{
+            width: 150px;
+            height: 150px;
+        }
+        img.one{
+            transform:rotateY(180deg);
+        }
+
+    </style>
+    <script>
+        function toDou(n){
+            if(n<10){
+                return '0'+n;
+            }
+            else{
+                return ''+n;
+            }
+        }
+        window.onload=function(){
+            var oDiv=document.getElementById('div1');
+            var aImg =document.querySelectorAll('ul li img.des');
+            function tick(){
+                var oDate=new Date();
+                oYear=oDate.getFullYear();
+                oMonth=oDate.getMonth()+1;
+                oDay=oDate.getDate();
+                oDiv.innerHTML=oYear+'年'+oMonth+'月'+oDay+'号';
+                var str=toDou(oDate.getHours())+toDou(oDate.getMinutes())+toDou(oDate.getSeconds());
+                document.title=str;
+                for(var i=0;i<aImg.length;i++){
+                    aImg[i].src='../images/'+str[i]+'.png';
+                }
+            };
+            setInterval(tick,1000);
+            tick();
+        };
+    </script>
+</head>
+<body>
+   <section>
+       <img class="one" src="../images/8(1).png">
+       <div id="div1"></div>
+       <img class="two" src="../images/8(1).png">
+   </section>
+
+    <ul id="ul1">
+        <li><img class="des" src="../images/0.png"></li>
+        <li><img class="des" src="../images/0.png"></li>
+        <li><img src="../images/d.png"></li>
+        <li><img class="des"  src="../images/0.png"></li>
+        <li><img class="des"  src="../images/0.png"></li>
+        <li><img src="../images/d.png"></li>
+        <li><img class="des"  src="../images/0.png"></li>
+        <li><img class="des"  src="../images/0.png"></li>
+    </ul>
+
+
+</body>
+</html>

@@ -1,0 +1,239 @@
+@charset "UTF-8";
+body {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+h1, h2, h3, h4, small {
+  font-family: "microsoft yahei";
+}
+
+nav {
+  &.lcj-nav {
+    background-color: #282c37;
+    div.lcj-head {
+      a {
+        padding-top: 0;
+        padding-bottom: 0;
+        img {
+          height: 50px;
+        }
+      }
+    }
+  }
+}
+
+header {
+  position: relative;
+  img {
+    width: 100%;
+  }
+  div.lcj-con {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h1 {
+      color: white;
+      font-size: 5.5vw;
+      small {
+        font-size: 3vw;
+        margin-top: 25px;
+        color: #ddd;
+      }
+    }
+  }
+}
+
+main {
+  margin: 50px 0;
+  div.left {
+    div.panel-primary {
+      border-color: #2b91d9;
+      div.panel-heading {
+        border-color: #2b91d9;
+        background-color: #2b91d9;
+      }
+    }
+    li.active {
+      background-color: darkgreen;
+      border-radius: 2px;
+      color: white;
+    }
+    form {
+      margin-right: 10px;
+      button {
+        font-family: "microsoft yahei";
+        margin-left: -10px;
+      }
+    }
+    table {
+      border: none;
+      tr:last-child td {
+        border: none;
+      }
+      td, th {
+        text-align: center;
+        vertical-align: middle;
+        &.price {
+          color: #ffc444;
+        }
+      }
+    }
+  }
+  div.right {
+    div.panel-info {
+      border-color: #417aa3;
+      div.panel-heading {
+        border-color: #417aa3;
+        background-color: #417aa3;
+      }
+      &:not(:nth-child(2)) {
+        div.panel-body {
+          background-color: #eee;
+          border-radius: 0 0 4px 4px;
+        }
+      }
+    }
+    h3 {
+      color: #f0f0f0;
+    }
+    div.lcj-p1 {
+      ul {
+        margin: 0 -6px -10px 0;
+        li {
+          width: ~'calc(33.3% - 9px)';
+          line-height: 35px;
+          background-color: #fff;
+          margin: 0 6px 10px 0;
+          text-align: center;
+          &:hover{
+            background-color: sandybrown;
+          }
+        }
+      }
+    }
+    div.lcj-p2 {
+      div.panel-body {
+        margin-bottom: -10px;
+        div.lcj-col {
+          margin-bottom: 10px;
+          text-align: center;
+        }
+      }
+    }
+    div.lcj-p3 {
+      ul {
+        margin: 0 -11px -15px 0;
+        li {
+          width: ~'calc(50% - 13px)';
+          line-height: 35px;
+          background-color: #fff;
+          text-align: center;
+          margin: 0 11px 15px 0;
+          padding-left: 30px;
+          font-family: "microsoft yahei";
+          .insertIcon(@w:21px,@h:20px) {
+            position: absolute;
+            content: '';
+            width: @w;
+            height: @h;
+            margin-top: 7px;
+            margin-left: -30px;
+          }
+          &:nth-child(1):before {
+            .insertIcon();
+            background-image: url("../img/icon1.jpg");
+          }
+          &:nth-child(2):before {
+            .insertIcon(21px, 21px);
+            background-image: url("../img/icon2.jpg");
+          }
+          &:nth-child(3):before {
+            .insertIcon(21px, 22px);
+            background-image: url("../img/icon3.jpg");
+          }
+          &:nth-child(4):before {
+            .insertIcon(19px, 21px);
+            background-image: url("../img/icon4.jpg");
+          }
+        }
+      }
+    }
+  }
+}
+
+footer {
+  background-color: #0e588d;
+  padding: 10px 0;
+  color: white;
+  h4 {
+    margin-bottom: 20px;
+  }
+  li {
+    margin-top: 10px;
+  }
+}
+
+@media (min-width: 1200px) {
+  html {
+    font-size: 16px;
+  }
+  header h1 {
+    margin-left: 20px;
+  }
+
+  main {
+    div.lcj-p3 {
+      li {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@media (min-width: 993px) and (max-width: 1199px) {
+  html {
+    font-size: 14px;
+  }
+
+  header h1 {
+    margin-left: 50px;
+  }
+
+  main {
+    div.lcj-p1 {
+      li {
+        font-size: 12px;
+      }
+    }
+    div.lcj-p3 {
+      li {
+        font-size: 14px;
+      }
+    }
+  }
+
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  html {
+    font-size: 13px;
+  }
+  header h1 {
+    margin-left: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 12px;
+  }
+  header h1 {
+    margin-left: 110px;
+  }
+}

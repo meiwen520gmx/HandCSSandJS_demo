@@ -1,0 +1,620 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+@font-face {
+  font-family: "my_font";
+  src: url("../fonts1/icomoon.eot") format("eot"), url("../fonts1/icomoon.woff") format("woff"), url("../fonts1/icomoon.svg") format("svg"), url("../fonts1/icomoon.ttf") format("ttf");
+  font-style: normal;
+  font-weight: normal;
+}
+.bcenter {
+  width: 1000px;
+  margin: 0 auto;
+  background-color: white;
+}
+.publeft {
+  border: 1px solid #E6E7E6;
+  width: 28%;
+  margin-right: 5px;
+}
+.publeft h4 {
+  padding: 5px 5px 5px 30px;
+  background-image: -webkit-linear-gradient(top left, #9bcdf5, #d1edfc);
+  color: #158aca;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.publeft h4 i {
+  font-style: normal;
+  font-size: 12px;
+  color: #80929B;
+}
+.publeft h4 i:hover {
+  color: blue;
+}
+.publeft h4:before {
+  position: absolute;
+  content: '\f07c';
+  font-family: my_font;
+  margin-left: -20px;
+}
+.publeft ul {
+  padding: 10px;
+  list-style: none;
+  font-size: 14px;
+}
+.publeft ul li {
+  padding-left: 20px;
+  line-height: 30px;
+  border-bottom: 1px dashed #dddddd;
+}
+.publeft ul li a {
+  text-decoration: none;
+  color: #787878;
+}
+.publeft ul li a:hover {
+  color: blue;
+  text-decoration: underline;
+}
+.publeft ul li:before {
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-left-color: #446777;
+  margin-left: -15px;
+  margin-top: 10px;
+}
+body {
+  background-color: #CFD9E7;
+}
+header {
+  width: 1000px;
+  margin: 0 auto;
+  background-color: white;
+}
+header > div.one {
+  background-image: -webkit-linear-gradient(top, #efefef, #ffffff);
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+header > div.one figure {
+  color: #0D4E88;
+  display: flex;
+}
+header > div.one figure img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+header > div.one figure figcaption {
+  padding: 20px 10px;
+}
+header > div.one figure figcaption i {
+  font-weight: bold;
+}
+header > div.one dl {
+  margin-top: 30px;
+  font-size: 14px;
+}
+header > div.one dl dd {
+  padding-bottom: 10px;
+  text-align: right;
+}
+header > div.one dl dd a {
+  color: #6D787E;
+  text-decoration: none;
+}
+header > div.one dl dd a:hover {
+  color: #0A4F91;
+  text-decoration: underline;
+}
+header > div.one dl dd:first-of-type a:first-of-type {
+  border-right: 1px solid #6D787E;
+  padding-right: 5px;
+}
+header nav {
+  background-image: -webkit-linear-gradient(top, #37b7fc, #0e8acb);
+  box-shadow: 0 5px 10px 0 #6BB6E0;
+}
+header nav > ul {
+  padding: 10px 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+header nav > ul > li > a {
+  text-decoration: none;
+  color: white;
+  padding: 0 10px;
+}
+header nav > ul > li > a:hover {
+  color: #08436B;
+}
+header nav > ul > li:not(:last-of-type) a {
+  border-right: 1px solid #6DD7FB;
+}
+main {
+  width: 1000px;
+  margin: 0 auto;
+  background-color: white;
+  margin-top: 10px;
+}
+main div.one {
+  display: flex;
+}
+main div.one section.left {
+  border: 1px solid #E6E7E6;
+  width: 28%;
+  margin-right: 5px;
+}
+main div.one section.left h4 {
+  padding: 5px 5px 5px 30px;
+  background-image: -webkit-linear-gradient(top left, #9bcdf5, #d1edfc);
+  color: #158aca;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main div.one section.left h4 i {
+  font-style: normal;
+  font-size: 12px;
+  color: #80929B;
+}
+main div.one section.left h4 i:hover {
+  color: blue;
+}
+main div.one section.left h4:before {
+  position: absolute;
+  content: '\f07c';
+  font-family: my_font;
+  margin-left: -20px;
+}
+main div.one section.left ul {
+  padding: 10px;
+  list-style: none;
+  font-size: 14px;
+}
+main div.one section.left ul li {
+  padding-left: 20px;
+  line-height: 30px;
+  border-bottom: 1px dashed #dddddd;
+}
+main div.one section.left ul li a {
+  text-decoration: none;
+  color: #787878;
+}
+main div.one section.left ul li a:hover {
+  color: blue;
+  text-decoration: underline;
+}
+main div.one section.left ul li:before {
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-left-color: #446777;
+  margin-left: -15px;
+  margin-top: 10px;
+}
+main div.one div.adv {
+  margin-right: 5px;
+}
+main div.one div.adv ul img {
+  width: 400px;
+  height: 320px;
+}
+main div.one section.right {
+  width: 31%;
+}
+main div.one section.right form {
+  padding: 15px 15px 15px 40px;
+  font-size: 14px;
+  border: 1px solid #E6E7E6;
+  background-image: -webkit-linear-gradient(top, #fcfcfc, #f1f1f1);
+}
+main div.one section.right form h4 {
+  color: #FFC90E;
+  padding-bottom: 10px;
+}
+main div.one section.right form h4:before {
+  position: absolute;
+  content: '\f13e';
+  font-family: my_font;
+  color: #FFC90E;
+  margin-left: -20px;
+  margin-top: 3px;
+}
+main div.one section.right form input {
+  width: 150px;
+  margin-bottom: 15px;
+}
+main div.one section.right form p {
+  text-align: center;
+}
+main div.one section.right form p > button {
+  border: none;
+  padding: 3px 5px;
+  color: white;
+  background-color: #8D8D8D;
+  margin-right: 20px;
+}
+main div.one section.right > button {
+  display: block;
+  width: 250px;
+  background-image: -webkit-linear-gradient(top, #f1f5f7, #dbdfe2, #f2f3fb);
+  font-size: 15px;
+  font-weight: bold;
+  color: #2B4572;
+  border: none;
+  margin: 30px 20px 20px 40px;
+  padding: 10px 0 10px 40px;
+  text-align: left;
+  border-radius: 3px;
+}
+main div.one section.right > button:hover {
+  color: blue;
+}
+main div.one section.right > button:first-of-type:before {
+  position: absolute;
+  content: '\f0f6';
+  font-family: my_font;
+  color: #90C341;
+  font-size: 18px;
+  margin-left: -23px;
+  margin-top: 2px;
+}
+main div.one section.right > button:nth-of-type(2):before {
+  position: absolute;
+  content: '\f058';
+  font-family: my_font;
+  color: #90C341;
+  font-size: 18px;
+  margin-left: -23px;
+  margin-top: 2px;
+}
+main > section {
+  display: flex;
+}
+main > section div.lef {
+  width: 70%;
+}
+main > section div.lef div.two {
+  display: flex;
+  margin-top: 10px;
+}
+main > section div.lef div.two > section.left {
+  border: 1px solid #E6E7E6;
+  width: 28%;
+  margin-right: 5px;
+  width: 40%;
+}
+main > section div.lef div.two > section.left h4 {
+  padding: 5px 5px 5px 30px;
+  background-image: -webkit-linear-gradient(top left, #9bcdf5, #d1edfc);
+  color: #158aca;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main > section div.lef div.two > section.left h4 i {
+  font-style: normal;
+  font-size: 12px;
+  color: #80929B;
+}
+main > section div.lef div.two > section.left h4 i:hover {
+  color: blue;
+}
+main > section div.lef div.two > section.left h4:before {
+  position: absolute;
+  content: '\f07c';
+  font-family: my_font;
+  margin-left: -20px;
+}
+main > section div.lef div.two > section.left ul {
+  padding: 10px;
+  list-style: none;
+  font-size: 14px;
+}
+main > section div.lef div.two > section.left ul li {
+  padding-left: 20px;
+  line-height: 30px;
+  border-bottom: 1px dashed #dddddd;
+}
+main > section div.lef div.two > section.left ul li a {
+  text-decoration: none;
+  color: #787878;
+}
+main > section div.lef div.two > section.left ul li a:hover {
+  color: blue;
+  text-decoration: underline;
+}
+main > section div.lef div.two > section.left ul li:before {
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-left-color: #446777;
+  margin-left: -15px;
+  margin-top: 10px;
+}
+main > section div.lef div.two figure {
+  font-size: 14px;
+  border: 1px solid #E6E7E6;
+  width: 60%;
+}
+main > section div.lef div.two figure div.mid_top {
+  border-bottom: 2px solid #EDE4A9;
+  background-image: -webkit-linear-gradient(top, #fefcff, #ebf4f7);
+  display: flex;
+  justify-content: space-between;
+}
+main > section div.lef div.two figure div.mid_top h4 {
+  margin-top: -5px;
+  background-color: #70C2F2;
+  color: white;
+  padding: 10px 20px 10px 30px;
+  border-radius: 5px 5px 0 0;
+}
+main > section div.lef div.two figure div.mid_top h4:before {
+  position: absolute;
+  content: '\f152';
+  font-family: my_font;
+  color: white;
+  margin-left: -20px;
+  margin-top: 2px;
+}
+main > section div.lef div.two figure div.mid_top > i {
+  padding: 0 10px;
+  color: #787878;
+  font-style: normal;
+  margin-top: 8px;
+  font-size: 12px;
+}
+main > section div.lef div.two figure div.mid_top > i:hover {
+  color: blue;
+}
+main > section div.lef div.two:first-of-type figure figcaption {
+  color: #787878;
+  padding: 10px 5px;
+}
+main > section div.lef div.two:first-of-type figure figcaption img {
+  width: 130px;
+  height: 130px;
+  float: left;
+  margin: 0 5px 5px 0;
+}
+main > section div.lef div.two:first-of-type figure figcaption p {
+  text-align: justify;
+  text-indent: 2em;
+  line-height: 25px;
+}
+main > section div.lef div.two:first-of-type figure figcaption p span {
+  color: blue;
+}
+main > section div.lef div.two:first-of-type figure figcaption p span:hover {
+  color: red;
+}
+main > section div.lef div.two:nth-of-type(2) figure figcaption {
+  color: #787878;
+  padding: 10px 5px;
+}
+main > section div.lef div.two:nth-of-type(2) figure figcaption > ul {
+  list-style: none;
+  font-size: 14px;
+}
+main > section div.lef div.two:nth-of-type(2) figure figcaption > ul li {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20px;
+  line-height: 30px;
+  border-bottom: 1px dashed #dddddd;
+}
+main > section div.lef div.two:nth-of-type(2) figure figcaption > ul li a {
+  text-decoration: none;
+  color: #787878;
+}
+main > section div.lef div.two:nth-of-type(2) figure figcaption > ul li a:hover {
+  color: blue;
+  text-decoration: underline;
+}
+main > section div.lef div.two:nth-of-type(2) figure figcaption > ul li i {
+  font-size: 12px;
+  font-style: normal;
+}
+main > section div.lef div.two:nth-of-type(2) figure figcaption > ul li:before {
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-left-color: #446777;
+  margin-left: -15px;
+  margin-top: 10px;
+}
+main > section div.rit {
+  border: 1px solid #E6E7E6;
+  width: 30%;
+  margin-left: 5px;
+  margin-top: 10px;
+}
+main > section div.rit > h4 {
+  padding: 5px 5px 5px 30px;
+  background-image: -webkit-linear-gradient(top left, #9bcdf5, #d1edfc);
+  color: #158aca;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main > section div.rit > h4 i {
+  font-style: normal;
+  font-size: 12px;
+  color: #80929B;
+}
+main > section div.rit > h4 i:hover {
+  color: blue;
+}
+main > section div.rit > h4:before {
+  position: absolute;
+  content: '\f07c';
+  font-family: my_font;
+  margin-left: -20px;
+}
+main > section div.rit > figure {
+  border-bottom: 1px dashed #ddd;
+  display: flex;
+  padding: 15px;
+  font-size: 14px;
+}
+main > section div.rit > figure img {
+  border: 1px solid #ddd;
+  width: 100px;
+  height: 80px;
+  margin-right: 10px;
+}
+main > section div.rit > figure figcaption {
+  margin-top: 10px;
+}
+main > section div.rit > figure figcaption p {
+  color: #787878;
+}
+main div.three {
+  margin-top: 10px;
+  display: flex;
+}
+main div.three section.left {
+  border: 1px solid #E6E7E6;
+  width: 28%;
+  margin-right: 5px;
+}
+main div.three section.left h4 {
+  padding: 5px 5px 5px 30px;
+  background-image: -webkit-linear-gradient(top left, #9bcdf5, #d1edfc);
+  color: #158aca;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main div.three section.left h4 i {
+  font-style: normal;
+  font-size: 12px;
+  color: #80929B;
+}
+main div.three section.left h4 i:hover {
+  color: blue;
+}
+main div.three section.left h4:before {
+  position: absolute;
+  content: '\f07c';
+  font-family: my_font;
+  margin-left: -20px;
+}
+main div.three section.left ul {
+  padding: 10px;
+  list-style: none;
+  font-size: 14px;
+}
+main div.three section.left ul li {
+  padding-left: 20px;
+  line-height: 30px;
+  border-bottom: 1px dashed #dddddd;
+}
+main div.three section.left ul li a {
+  text-decoration: none;
+  color: #787878;
+}
+main div.three section.left ul li a:hover {
+  color: blue;
+  text-decoration: underline;
+}
+main div.three section.left ul li:before {
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-left-color: #446777;
+  margin-left: -15px;
+  margin-top: 10px;
+}
+main div.three figure {
+  border: 1px solid #E6E7E6;
+  width: 71%;
+}
+main div.three figure div.mid_top {
+  border-bottom: 2px solid #EDE4A9;
+  background-image: -webkit-linear-gradient(top, #fefcff, #ebf4f7);
+  display: flex;
+  justify-content: space-between;
+}
+main div.three figure div.mid_top h4 {
+  margin-top: -5px;
+  background-color: #70C2F2;
+  color: white;
+  padding: 10px 20px 10px 30px;
+  border-radius: 5px 5px 0 0;
+}
+main div.three figure div.mid_top h4:before {
+  position: absolute;
+  content: '\f152';
+  font-family: my_font;
+  color: white;
+  margin-left: -20px;
+  margin-top: 2px;
+}
+main div.three figure div.mid_top > i {
+  padding: 0 10px;
+  color: #787878;
+  font-style: normal;
+  margin-top: 8px;
+  font-size: 12px;
+}
+main div.three figure div.mid_top > i:hover {
+  color: blue;
+}
+main div.three figure figcaption {
+  display: flex;
+  justify-content: space-around;
+  padding: 15px 5px 5px 5px;
+}
+main div.three figure figcaption section img {
+  width: 150px;
+  height: 100px;
+}
+main div.three figure figcaption section p {
+  text-align: center;
+  font-size: 12px;
+  color: #787878;
+}
+main div.three figure figcaption section p:hover {
+  color: blue;
+  text-decoration: underline;
+}
+footer {
+  width: 1000px;
+  margin: 0 auto;
+  background-color: white;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 14px;
+  padding: 20px 0;
+  border-top: 2px solid #DAE4E6;
+  background-image: -webkit-linear-gradient(top, #ededed, #ffffff);
+}
+footer p {
+  color: #787878;
+}
+footer p:not(:last-of-type) {
+  margin-bottom: 10px;
+}
+footer p:hover {
+  color: blue;
+  text-decoration: underline;
+}

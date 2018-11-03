@@ -1,0 +1,213 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "宋体";
+}
+h3,
+h4,
+h5 {
+  font-family: "Microsoft YaHei";
+}
+ul {
+  list-style: none;
+}
+@font-face {
+  font-family: "myicon";
+  src: url("../fonts/icomoon.eot");
+  src: url("../fonts/icomoon.eot?#iefix") format("embedded-opentype"), url("../fonts/icomoon.woff") format("woff"), url("../fonts/icomoon.ttf") format("truetype"), url("../fonts/icomoon.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  
+  /* IE9 兼容模式 */
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover,
+a:visited:hover {
+  text-decoration: underline;
+}
+.center {
+  width: 1000px;
+  margin: 0 auto;
+}
+header.up {
+  background-color: #F7F7F7;
+}
+header.up div {
+  width: 1000px;
+  margin: 0 auto;
+  padding-right: 10px;
+  display: flex;
+  justify-content: space-between;
+  line-height: 32px;
+  font-size: 13px;
+}
+header.up div h4:before {
+  content: "\f005";
+  font-family: "myicon";
+  font-size: 13px;
+  color: #f8b660;
+  margin-left: 5px;
+}
+header.up div span {
+  color: #666;
+}
+header.up div span a {
+  color: #666;
+}
+header.mid {
+  background-color: #1d7ad9;
+}
+header.mid div {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 0 70px 0 50px;
+  box-sizing: border-box;
+  display: flex;
+  line-height: 86px;
+}
+header.mid div img {
+  flex: 1;
+  vertical-align: top;
+  height: 86px;
+}
+header.mid div form {
+  flex: 7;
+  text-align: right;
+}
+header.mid div form input {
+  height: 35px;
+  width: 350px;
+  outline: none;
+  border: none;
+}
+header.mid div form span {
+  position: absolute;
+  font-size: 14px;
+  background-color: #FF8C00;
+  line-height: 35px;
+  width: 60px;
+  margin-top: 27px;
+  text-align: center;
+  color: white;
+}
+header.mid div aside {
+  flex: 2;
+  margin-left: 100px;
+}
+header.mid div aside span:first-child {
+  position: absolute;
+  font-size: 14px;
+  background-color: #FF8C00;
+  line-height: 35px;
+  width: 80px;
+  margin-top: 27px;
+  text-align: center;
+  color: white;
+  text-align: right;
+  padding-right: 5px;
+  box-sizing: border-box;
+  border-right: 1px solid #E27A00;
+}
+header.mid div aside span:first-child:before {
+  position: absolute;
+  content: "\f07a";
+  font-family: "myicon";
+  font-size: 20px;
+  color: #ffffff;
+  margin-left: -25px;
+}
+header.mid div aside span:last-child {
+  position: absolute;
+  font-size: 14px;
+  background-color: #FF8C00;
+  line-height: 35px;
+  width: 55px;
+  margin-top: 27px;
+  text-align: center;
+  color: white;
+  border-left: 1px solid #FF9C01;
+  margin-left: 80px;
+}
+header.mid div aside span:last-child:after {
+  content: "\f150";
+  font-family: "myicon";
+  font-size: 12px;
+  color: #ffffff;
+  margin-left: 5px;
+}
+header.down {
+  background-color: #1369C0;
+  line-height: 35px;
+  color: white;
+  font-family: "Microsoft YaHei";
+}
+header.down div {
+  width: 1000px;
+  margin: 0 auto;
+  display: flex;
+}
+header.down div h3 {
+  width: 200px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 17px;
+}
+header.down div h3:after {
+  content: "\f107";
+  font-family: "myicon";
+  font-size: 17px;
+  color: #ffffff;
+  margin-left: 5px;
+}
+header.down div a,
+header.down div a:visited {
+  width: 100px;
+  color: white;
+  text-align: center;
+}
+header.down div a.active,
+header.down div a:visited.active {
+  background-color: #4593FD;
+}
+footer {
+  background-color: #D4D4D4;
+  height: 220px;
+  margin: 10px 0;
+  border-top: 1px solid #898989;
+}
+footer div.up {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  font-size: 13px;
+}
+footer div.up > *:not(:last-child) {
+  margin-right: 6px;
+  color: black;
+}
+footer div.mid {
+  margin-top: 14px;
+  display: flex;
+  justify-content: center;
+  font-size: 13px;
+}
+footer div.mid > *:not(:last-child) {
+  margin-right: 16px;
+  color: black;
+}
+footer div.down {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  font-size: 13px;
+}
+footer div.down > *:not(:last-child) {
+  margin-right: 25px;
+  color: black;
+}

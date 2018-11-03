@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        form {
+            width: 600px;
+            margin: 20px auto;
+        }
+
+        em {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<form class="cmxForm" id="commentForm" method="post" action="receive.php">
+    <fieldset>
+        <legend>新闻发布</legend>
+        <p>
+            <label for="new_tilte">新闻标题：</label>
+            <input type="text" id="new_tilte" name="new_tilte" size="40" required><em>*</em>
+        </p>
+
+        <p>
+            <label for="new_date">发布日期：</label>
+            <input id="new_date" type="date" name="new_date" min=2015-05-10 max=2018-08-10 required><em>*</em>
+        </p>
+
+        <p>
+            <label for="new_img">新闻图片：</label>
+            <input type="file" id="new_img" name="new_img" size="40">
+        </p>
+
+        <p>
+            <label for="new_con">新闻内容：</label>
+            <textarea id="new_con" name="new_con" cols="40" rows="10" required></textarea><em>*</em>
+        </p>
+        <input class="submit" type="submit" value="提交">
+    </fieldset>
+</form>
+</body>
+</html>

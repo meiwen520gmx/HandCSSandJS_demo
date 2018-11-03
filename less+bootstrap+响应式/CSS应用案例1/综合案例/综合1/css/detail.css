@@ -1,0 +1,112 @@
+.center {
+  width: 1000px;
+  margin: 0 auto;
+}
+div.adv {
+  width: 1000px;
+  margin: 0 auto;
+}
+div.adv img {
+  width: 100%;
+}
+main {
+  margin: 10px 0;
+  width: 1000px;
+  margin: 0 auto;
+  display: flex;
+}
+main > aside {
+  background-color: white;
+  width: 200px;
+  border: 1px solid #E8E8E8;
+}
+main > aside:not(:last-child) {
+  margin-right: 20px;
+}
+main > aside header {
+  height: 35px;
+  line-height: 35px;
+  padding: 0 20px;
+  text-align: left;
+  border-bottom: 1px solid #E8E8E8;
+  font-size: 16px;
+  font-weight: 600;
+}
+main > aside ul {
+  padding: 10px;
+}
+main > aside ul li {
+  line-height: 35px;
+  display: flex;
+  justify-content: space-between;
+}
+main > aside ul li a,
+main > aside ul li a:visited {
+  color: #666;
+  font-size: 14px;
+  text-decoration: none;
+}
+main > aside ul li a:before,
+main > aside ul li a:visited:before {
+  content: "\f0da\ ";
+  font-family: "myicon";
+  color: #666;
+  font-size: 14px;
+}
+main > aside ul li a:hover:before,
+main > aside ul li a:visited:hover:before {
+  color: red;
+}
+main > aside ul li a:hover,
+main > aside ul li a:visited:hover {
+  color: #009cdd;
+}
+main > aside ul li span {
+  font-size: 13px;
+  color: rgba(15, 15, 15, 0.47);
+}
+main section {
+  background-color: white;
+  width: 780px;
+  border: 1px solid #E8E8E8;
+}
+main section:not(:last-child) {
+  margin-right: 20px;
+}
+main section header {
+  height: 35px;
+  line-height: 35px;
+  padding: 0 20px;
+  text-align: center;
+  border-bottom: 1px solid #E8E8E8;
+  font-size: 16px;
+  font-weight: 600;
+}
+main section article {
+  padding: 10px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 25px;
+}
+main section article aside {
+  margin: 14px 0;
+  border-bottom: 1px dashed #cacaca;
+  color: #a7a7a7;
+  font-size: 14px;
+}
+main section article h3,
+main section article h4 {
+  margin: 10px 0;
+  font-weight: 600;
+  color: #0A246A;
+}
+main section article p {
+  text-align: justify;
+  text-indent: 2em;
+  font-size: 14px;
+}
+main section article p.mid {
+  text-align: center;
+  text-indent: 0;
+  margin: 5px 0;
+}

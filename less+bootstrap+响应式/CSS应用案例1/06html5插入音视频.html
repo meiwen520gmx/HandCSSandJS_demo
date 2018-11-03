@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>伸缩固定布局-音视频</title>
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        /*伸缩布局，纵向应用,会自动转块和居中*/
+
+        header, footer {
+            margin: 0 auto;
+            height: 150px;
+            width: 1000px;
+            background: green;
+        }
+
+        section {
+            width: 1000px;
+            margin: 0 auto;
+            display: flex; /* 设置为伸缩，子块排列默认横向*/
+            /*以下设置为纵向，两个方向居中
+                display: -webkit-flex;
+                -webkit-flex-direction: column;
+                -webkit-align-items: center;
+                -webkit-justify-content: center;*/
+            background: lightgoldenrodyellow;
+        }
+
+        section .left, section .right {
+            width: 150px;
+            height: 590px;
+            background: cornflowerblue;
+        }
+
+        section .mid {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        video{
+            width: 100%;
+        }
+
+        .mid audio {
+            margin: 83px 0;
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    header
+</header>
+<section>
+    <div class="left">
+        <p>中华人民共和国中华人民共和国中华人民共和国
+            中华人民共和国中华人民共和国中华人民共和国
+            中华人民共和国中华人民共和国中华人民共和国</p>
+    </div>
+    <div class="mid">
+        <video src="../vedio_audio/vedio-2.mp4" controls></video>
+        <!--可加自动播放autoplay-->
+        <audio src="../vedio_audio/audio-1.mp3" controls loop></audio>
+    </div>
+    <div class="right">
+        中华人民共和国中华人民共和国中华人民共和国
+        中华人民共和国中华人民共和国中华人民共和国
+        中华人民共和国中华人民共和国中华人民共和国
+    </div>
+</section>
+<footer>
+    footpage
+</footer>
+</body>
+</html>

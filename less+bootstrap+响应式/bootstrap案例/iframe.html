@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        dl{
+            position: fixed;
+            right: -120px;
+            bottom: 20%;
+            background-color: rgba(0,255,0,.5);
+            border-radius: 4px;
+            text-align: center;
+            padding: 15px;
+            line-height: 35px;
+            transition: all .3s;
+        }
+        a,a:visited{
+            color: #8b1c4c;
+            text-decoration: none;
+        }
+        dl:hover{
+            right: 0;
+            cursor: pointer;
+        }
+        html,body{
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+        }
+        iframe{
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<dl>
+    <dt>页面导航</dt>
+    <dd><a href="cqwu/index.html" target="main">重庆文理学院</a></dd>
+    <dd><a href="bootstrap_chinese/index.html" target="main">Bootstrap首页</a></dd>
+    <dd><a href="http://www.baidu.com" target="main">百度首页</a></dd>
+    <dd><a href="http://www.baidu.com" target="main">百度首页</a></dd>
+    <dd><a href="http://www.baidu.com" target="main">百度首页</a></dd>
+</dl>
+<iframe src="http://www.baidu.com" name="main" frameborder="0"></iframe>
+</body>
+</html>

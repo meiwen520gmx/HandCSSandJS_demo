@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>三级导航菜单</title>
+    <!--<script src="../jQuery/jquery-1.11.2.js" type="text/javascript"></script>-->
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "微软雅黑";
+        }
+
+        body {
+            padding-top: 50px;
+        }
+
+        navMenu {
+            display: flex;
+            justify-content: center;
+        }
+
+        navMenu dl {
+            position: relative;
+        }
+
+        navMenu dl:first-child dt {
+            border-radius: 5px 0 0 5px;
+        }
+
+        navMenu dl:last-child dt {
+            border-radius: 0 5px 5px 0;
+        }
+
+        navMenu a {
+            display: block;
+            font-size: 14px;
+            text-align: center;
+            padding: 10px 15px;
+            word-break: keep-all; /*保持中文不自动换行*/
+            text-decoration: none;
+        }
+
+        navMenu dt a:visited, navMenu dt, navMenu dl:hover dd a {
+            background-color: #333;
+            color: white;
+        }
+
+        navMenu dl dt {
+            font-size: 16px;
+            text-align: center;
+            padding: 7px 20px;
+            border: 2px solid #333;
+            cursor: pointer;
+        }
+
+        navMenu dl dt > a {
+            font-size: 16px;
+            padding: 0;
+        }
+
+        navMenu dl dd {
+            position: absolute;
+            display: none;
+        }
+
+        navMenu dl dd two {
+            display: block;
+            position: relative;
+        }
+
+        navMenu dl dd two:not(:first-child) {
+            margin-top: 1px;
+        }
+
+        navMenu dl:hover dt, navMenu dl:hover dt a, navMenu dl:hover dd a:hover {
+            background-color: #fff;
+            color: #000;
+        }
+
+        navMenu dl:hover dd {
+            border: 2px solid black;
+            display: block;
+        }
+
+        navMenu dl dd two three {
+            position: absolute;
+            top: 0;
+            left: 100%;
+            border: 2px solid black;
+            display: none;
+        }
+
+        navMenu dl dd two:hover three {
+            display: block;
+        }
+
+        three a:not(:first-child) {
+            margin-top: 1px;
+        }
+
+        div {
+            width: 800px;
+            margin: 100px auto;
+            height: 40px;
+            border: 1px solid red;
+        }
+
+    </style>
+</head>
+<body>
+<navMenu>
+    <dl>
+        <dt><a href="http://www.baidu.com">首页</a></dt>
+    </dl>
+    <dl>
+        <dt>新闻中心</dt>
+        <dd>
+            <two><a href="http://www.cqwu.edu.cn">重庆文理学院</a></two>
+            <two><a href="#">二级菜单条</a></two>
+            <two><a href="#">二级菜单条</a></two>
+            <two><a href="#">二级菜单条</a></two>
+        </dd>
+    </dl>
+    <dl>
+        <dt>活动报道</dt>
+        <dd>
+            <two><a href="#">二级菜单条</a></two>
+            <two><a href="#">二级菜单更多</a>
+                <three>
+                    <a href="http://www.cqwu.edu.cn">重庆文理学院</a>
+                    <a href="#">三级菜单条</a>
+                    <a href="#">三级菜单条</a>
+                    <a href="#">三级菜单条</a>
+                </three>
+            </two>
+            <two><a href="#">二级菜单条</a></two>
+            <two><a href="#">二级菜单条</a></two>
+        </dd>
+    </dl>
+    <dl>
+        <dt>机构设置</dt>
+        <dd>
+            <two><a href="http://www.qq.com">腾讯主页</a></two>
+            <two><a href="#">二级菜单条</a></two>
+            <two><a href="#">二级菜单条</a></two>
+            <two><a href="#">二级菜单条</a></two>
+        </dd>
+    </dl>
+    <dl>
+        <dt>党政工团群</dt>
+        <dd>
+            <two><a href="http://www.qq.com">腾讯主页</a></two>
+            <two><a href="#">二级菜单条</a></two>
+            <two><a href="#">二级菜单条</a></two>
+            <two><a href="#">二级菜单条</a></two>
+        </dd>
+    </dl>
+    <dl>
+        <dt>行政事务</dt>
+        <dd>
+            <two><a href="http://www.qq.com">腾讯主页</a></two>
+            <two><a href="#">二级菜单条</a></two>
+            <two><a href="#">二级菜单条</a></two>
+            <two><a href="#">二级菜单条</a></two>
+        </dd>
+    </dl>
+</navMenu>
+<div>二级菜单采用绝对定位后，对周围元素无影响</div>
+</body>
+</html>

@@ -1,0 +1,287 @@
+@charset "utf-8";
+*{
+  margin: 0;
+  padding: 0;
+}
+@font-face {
+  font-family: "my_icon";
+  src: url("../fonts1/icomoon.woff") format("woff"),
+  url("../fonts1/icomoon.eot") format("eot"),
+  url("../fonts1/icomoon.svg") format("svg"),
+  url("../fonts1/icomoon.ttf") format("ttf");
+  font-style: normal;
+  font-weight: normal;
+}
+header{
+  aside{
+    section{
+      display: flex;
+      height: 22px;
+      line-height: 22px;
+      font-size: 12px;
+      background-image:-webkit-linear-gradient(top,#FAFAFA,#EFEAE6);
+      justify-content: space-between;
+      padding:0 10px;
+      span{
+        a{
+          text-decoration: none;
+          color: black;
+          &:hover{
+            color: red;
+          }
+        }
+
+      }
+    }
+    img{
+      width: 100%;
+      height:330px;
+    }
+  }
+  nav{
+    padding: 7px 50px;
+    background-image:-webkit-linear-gradient(top,#CC171E,#98272B);
+    border:1px solid #C71720;
+    border-radius:5px;
+    ul{
+      list-style: none;
+      display: flex;
+      justify-content: space-around;
+      color: white;
+      font-weight: bold;
+
+      li{
+        padding:0 20px;
+        &:hover{
+          background-color: white;
+          color:#CC171E;
+        }
+        &:last-of-type{
+          font-weight: normal;
+        }
+        &:not(:last-of-type):after{
+          position: absolute;
+          content: '';
+          border-right:1px solid #E03551;
+          width:1px;
+          height: 30px;
+          margin-left: 75px;
+          margin-top: -4px;
+        }
+      }
+
+    }
+  }
+}
+.fs{
+  line-height:25px;
+  font-size: 13px;
+  font-weight: 600;
+}
+.hv{
+  &:hover{
+    color:#D91A32;
+  }
+}
+main{
+  display: flex;
+  padding:0 20px;
+  margin-top: 10px;
+  aside{
+    width: 30%;
+    margin-right: 1%;
+    display: flex;
+    flex-direction: column;
+    div.top{
+      padding:10px;
+      border-radius: 10px;
+      background-color:#DD0D23;
+      >span:first-of-type{
+          display: flex;
+          margin-bottom: 5px;
+          justify-content: space-between;
+          padding:0 0 0 26px;
+          h4{
+            color:white;
+            &:before{
+              position: absolute;
+              content: '\f024';
+              font-family: my_icon;
+              color:#FFDC04;
+              margin-left: -25px;
+              margin-top: 5px;
+            }
+          }
+          i{
+            display: inline-block;
+            font-style: normal;
+            font-size: 12px;
+            padding:3px 2px;
+            color: black;
+            background-color:#F7F9F4;
+            border-radius: 5px;
+          }
+      }
+      >span:last-of-type{
+        box-shadow: 1px 2px 5px #871928, 0px 0px 5px #871928 inset;
+        text-indent: 2em;
+        line-height: 25px;
+        font-weight: 600;
+        font-size: 13px;
+        padding: 10px;
+        display: block;
+        background-color:#FFF;
+        border-radius: 5px;
+        .hv;
+      }
+
+    }
+    div.bottom{
+      margin-top: 10px;
+      border: 1px solid #DD0D23;
+      h4{
+        color: white;
+        aside{
+          text-align: center;
+          background-color:#A0262A;
+          padding:5px 0;
+          border-radius:6px 0 0 0;
+        }
+        background-image:-webkit-linear-gradient(top,#ED1B35,#FFF,#ED1B35);
+      }
+      ul{
+        list-style: none;
+        padding: 10px;
+        li{
+          .fs;
+          border-bottom: 1px dashed #ED1B35;
+          a{
+            color: black;
+            text-decoration: none;
+            .hv;
+          }
+        }
+
+      }
+    }
+  }
+  article{
+    width:69%;
+    background-color:silver;
+    display: flex;
+    flex-direction: column;
+    section.top{
+      display: flex;
+      img{
+        border: 2px solid gainsboro;
+        margin-right: 2%;
+        box-sizing: border-box;
+      }
+      dl{
+        width: 52%;
+        border: 1px solid #DD0D23;
+        dt{
+          display: flex;
+          justify-content: space-between;
+          background-image:-webkit-linear-gradient(top, #ED1B35,#FFF,#ED1B35);
+          span{
+            padding:5px 10px;
+            font-size: 16px;
+            font-weight: 600;
+            color: white;
+            text-align: center;
+            background-color:#A0262A;
+            border-radius: 6px 6px 0 0;
+          }
+          i{
+            font-style: normal;
+            margin: 5px 5px 0 0;
+            &:hover{
+              color:#DD0D23;
+            }
+          }
+        }
+        dd{
+          font-size: 14px;
+          padding:7px 15px;
+          font-weight: 600;
+          position: relative;
+          span{
+            position: absolute;
+            right:15px;
+          }
+          &:hover{
+            color:#D91A32;
+            text-decoration: underline;
+          }
+        }
+      }
+
+    }
+    section.bottom{
+      display: flex;
+      margin-top: 16px;
+      figure{
+        width: 32%;
+        border: 1px solid #DD0D23;
+        h4{
+          padding: 5px 0 5px 20px;
+          background-image:-webkit-linear-gradient(top,#ED1B35,#FFF,#ED1B35);
+          &:after{
+            position: absolute;
+            content: '';
+            width:21.4%;
+            height: 3px;
+            background-color:#99262D;
+            margin-top: 23px;
+            margin-left: -122px;
+          }
+          &:before{
+            position: absolute;
+            content: '\f04b';
+            color:#52B031;
+            font-family: my_icon;
+            margin-left: -15px;
+            font-size: 12px;
+            margin-top: 5px;
+          }
+        }
+        figcaption{
+          padding:10px;
+          .fs;
+          p{
+            .hv;
+          }
+        }
+        &:not(:last-of-type){
+          margin-right: 2%;
+        }
+      }
+    }
+  }
+
+}
+footer{
+  margin-top: 15px;
+  p{
+    border-bottom: 1px solid #DD0D23;
+    border-top: 1px solid #DD0D23;
+    padding:10px;
+    font-size: 14px;
+    span{
+      color: #98272D;
+      font-weight: bold;
+      font-size: 16px;
+    }
+  }
+  div{
+      background: url("../images/yaoqing.jpg") center -250px;
+    span{
+      display: block;
+      padding: 15px 0 5px 0;
+      text-align: center;
+      font-size: 14px;
+      font-weight: bold;
+    }
+  }
+}

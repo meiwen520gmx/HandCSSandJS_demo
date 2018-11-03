@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 1200px;
+            height: 398px;
+            margin: 50px auto;
+            background: url("../images/product.jpg") center center no-repeat;
+            position: relative;
+        }
+        div #time{
+            position: absolute;
+            left: 550px;
+            top: 120px;
+            font-size: 18px;
+            color: darkred;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <i id="time"></i>
+</div>
+<script>
+    var endTime=new Date('2018/10/1,0:0:0');
+    var startTime=new Date();
+    var leftTime=(endTime.getTime()-startTime.getTime())/1000;
+    var day=parseInt(leftTime/(24*3600));
+    var hour=parseInt(leftTime/3600%24);
+    var minute=parseInt(leftTime%3600/60);
+    var second=parseInt(leftTime%60);
+    var i=document.getElementById('time');
+    setInterval(function(){
+        var now=new Date();
+        var leftTime=(endTime.getTime()-now.getTime())/1000;
+        var d=parseInt(leftTime/(24*3600));
+        var h=parseInt(leftTime/3600%24);
+        var m=parseInt(leftTime%3600/60);
+        var s=parseInt(leftTime%60);
+        i.innerText='距团购结束还剩：'+d+'天'+h+'小时'+m+'分钟'+s+'秒'
+    },1000)
+</script>
+</body>
+</html>

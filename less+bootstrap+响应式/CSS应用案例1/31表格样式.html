@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body{
+            background-color: #E6E6FA;
+        }
+        *{
+            margin: 0;
+            padding: 0
+        }
+        div{
+            width: 700px;
+            margin: 50px auto;
+            text-align: center;
+        }
+        label{
+            display: block;
+            line-height: 45px;
+            font-size: 18px;
+            border-bottom: 1px solid #9A9A9A;
+            position: relative;
+            margin-bottom: 20px;
+        }
+        label:after{
+            content: "";
+            width: 700px;
+            left: 0;
+            bottom: -2px;
+            height: 1px;
+            background-color: #f6f5f7;
+            position:absolute ;
+        }
+        label input{
+            height: 20px;
+            width: 260px;
+        }
+        table{
+            width: 700px;
+            background-color: white;
+            border: 1px solid darkblue;
+            border-radius: 5px;
+            line-height: 35px;
+        }
+        caption{
+            font-size: 25px;
+            letter-spacing: 10px;
+            margin-bottom: 8px;
+        }
+        thead th{
+            background-color: #BBDDDD;
+            font-size: 18px;
+        }
+        thead th:first-child{
+            border-radius: 5px 0 0;
+        }
+        thead th:last-child{
+            border-radius: 0 5px 0 0;
+        }
+        tr.parent{
+            background-color:#00A8FF ;
+        }
+        tr.parent td{
+            position: relative;
+        }
+        tr.parent td span:first-child{
+            position: absolute;
+            top: 8px;
+            right: 200px;
+            width: 0;
+            height: 0;
+            border: 7px solid transparent;
+            border-bottom-color: #FFCC00;
+        }
+        tr.parent td span:last-child{
+            position: absolute;
+            top: 18px;
+            right: 200px;
+            width: 0;
+            height: 0;
+            border: 7px solid transparent;
+            border-top-color: #FFCC00;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <label>筛查(输入表中任意数据信息可查员工情况）：
+        <input>
+    </label>
+    <table>
+        <caption>职工基本信息表</caption>
+        <thead>
+            <tr>
+                <th>姓名</th>
+                <th>性别</th>
+                <th>暂住地</th>
+                <th>所属组</th>
+                <th>选择</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr id="group1" class="parent"><td colspan="5">前台设计组(点击可展开或收起)<span></span><span></span></td></tr>
+            <tr class="group1_child">
+                <td>卢成均</td>
+                <td>男</td>
+                <td>重庆永川</td>
+                <td>前台设计</td>
+                <td><input type="checkbox" checked></td>
+            </tr>
+            <tr class="group1_child">
+                <td>李四</td>
+                <td>女</td>
+                <td>重庆万诈</td>
+                <td>前台设计</td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr class="group1_child">
+                <td>张三</td>
+                <td>男</td>
+                <td>重庆永川</td>
+                <td>前台设计</td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr class="group1_child">
+                <td>李四</td>
+                <td>女</td>
+                <td>重庆万诈</td>
+                <td>前台设计</td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr class="parent" id="group2">
+                <td colspan="5">前台开发组(点击可展开或收起)<span></span><span></span></td>
+            </tr>
+            <tr class="group2_child">
+                <td>王五</td>
+                <td>男</td>
+                <td>重庆大足</td>
+                <td>前台开发组</td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr class="group2_child">
+                <td>赵六</td>
+                <td>男</td>
+                <td>重庆铀梁</td>
+                <td>前台开发组</td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr class="group2_child">
+                <td>何七</td>
+                <td>女</td>
+                <td>重庆渝中</td>
+                <td>前台开发组</td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr class="group2_child">
+                <td>赵六</td>
+                <td>男</td>
+                <td>重庆铀梁</td>
+                <td>前台开发组</td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr class="group2_child">
+                <td>何七</td>
+                <td>女</td>
+                <td>重庆渝中</td>
+                <td>前台开发组</td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr class="parent" id="group3">
+                <td colspan="5">后台开发组(点击可展开或收起)<span></span><span></span></td>
+            </tr>
+            <tr class="group3_child">
+                <td>罗八</td>
+                <td>男</td>
+                <td>重庆举杯</td>
+                <td>后台开发组</td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr class="group3_child">
+                <td>刘五</td>
+                <td>女</td>
+                <td>重庆涪陵</td>
+                <td>后台开发组</td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr class="group3_child">
+                <td>罗八</td>
+                <td>男</td>
+                <td>重庆举杯</td>
+                <td>后台开发组</td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr class="group3_child">
+                <td>刘五</td>
+                <td>女</td>
+                <td>重庆涪陵</td>
+                <td>后台开发组</td>
+                <td><input type="checkbox"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

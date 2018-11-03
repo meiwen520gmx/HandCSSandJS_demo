@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>微博效果</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    body{
+        background-color: #e3e3e3;
+    }
+    form.f1{
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+    }
+    form.f1 input{
+        width: 50px;
+        background-color: #9a9c9a;
+        color: #fff;
+        border:none;
+        font-size: 15px;
+    }
+    #ul1{
+        width: 400px;
+        height: 600px;
+        border: 1px solid #787a78;
+        margin: 10px auto;
+        overflow-y:auto;
+    }
+    #ul1 li{
+        display: flex;
+        justify-content:flex-start;
+        align-items: center;
+        border-bottom:1px dashed #999;
+        padding: 5px;
+        list-style: none;
+        overflow: hidden;
+        filter:alpha(opacity:0);
+        opacity: 0;
+    }
+    #ul1 li figure{
+        display: flex;
+    }
+    #ul1 li figure h4{
+        color: blue;
+        display: inline-block;
+    }
+    #ul1 li figure span{
+        color:grey;
+        font-size: 15px;
+    }
+    #ul1 li figure p{
+        color: darkgrey;
+        font-size: 13px;
+    }
+    img{
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+    #ul1 li figure figcaption span{
+        display: block;
+        word-wrap: break-word;
+        word-break: break-all;
+    }
+
+</style>
+<script src="../js/move4.js"></script>
+<script>
+    window.onload= function () {
+        var aName=['懒洋洋','喜洋洋','沸羊羊','美洋洋','灰太狼','村长','迪丽热巴','古力娜扎'];
+        var oUl=document.getElementById('ul1');
+        var oTxt=document.getElementById('txt');
+        var oBtn=document.getElementById('btn');
+        var i= 1,j=0;
+        oBtn.onclick= function () {
+            var oLi=document.createElement('li');
+            if(oTxt.value==''){
+                alert("输入内容不能为空");
+                return false;
+            }
+            var oDate=new Date();
+            var oMinutes=oDate.getMinutes();
+            var oHours=oDate.getHours();
+            oLi.innerHTML='<figure><img src="../images/'+i+'.jpg"> <figcaption> <h4>'+aName[j]+':</h4><span>'+oTxt.value+'</span> <p>'+oHours+':'+oMinutes+'</p> </figcaption> </figure>';
+            j++;
+            i++;
+            oTxt.value='';
+            if(oUl.children.length>0){
+                oUl.insertBefore(oLi,oUl.children[0]);
+            }
+            else{
+                oUl.appendChild(oLi);
+            }
+            //运动
+            var iHeight=oLi.offsetHeight;
+            oLi.style.height='0';
+            startMove(oLi,{height:iHeight}, function () {
+                startMove(oLi,{opacity:100});
+            });
+        }
+    }
+</script>
+<body>
+<form class="f1">
+    <textarea rows="4" cols="60" id="txt"></textarea>
+    <input type="button" value="发布" id="btn">
+</form>
+
+<ul id="ul1">
+    <!--<li>-->
+        <!--<figure>-->
+            <!--<img src="images/1.jpg">-->
+            <!--<figcaption>-->
+                <!--<h4>懒洋洋:</h4><span>今天去了巴黎玩，太开心了~~~</span>-->
+                <!--<p>30分钟前</p>-->
+            <!--</figcaption>-->
+        <!--</figure>-->
+    <!--</li>-->
+</ul>
+
+</body>
+</html>

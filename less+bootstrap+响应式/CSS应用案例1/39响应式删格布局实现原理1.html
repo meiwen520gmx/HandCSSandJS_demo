@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div.container{
+           width: 1200px;
+            margin: 0 auto;
+            font-size: 30px;
+            text-align: center;
+            line-height: 100px;
+        }
+        div.row:after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+        header,footer{
+            background-color: #00A5FF;
+            height: 100px;
+        }
+        div[class^="col"]{
+            float: left;
+            height: 100px;
+            background-color: green;
+            margin: 15px;
+        }
+        div[class="col_left"],div[class="col_right"]{
+            width: 15%;
+        }
+        div[class="col_mid"]{
+            width: calc(70% - 90px);
+        }
+        div.main{
+            margin: 0 -15px;
+        }
+        @media (min-width: 1200px) {
+            div.container{
+                width: 1200px;
+            }
+        }
+        @media (max-width: 1199px) and (min-width: 768px){
+            div.container{
+                width: 768px;
+            }
+        }
+        @media (max-width: 767px){
+            div.container{
+                width: 100%;
+            }
+            div.main{
+                margin: 0;
+            }
+            div[class^="col"]{
+                float: none;
+                width: 100%;
+                margin: 15px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <header>header</header>
+    </div>
+    <div class="row main">
+        <div class="col_left">left</div>
+        <div class="col_mid">mid</div>
+        <div class="col_right">right</div>
+    </div>
+    <div class="row">
+        <footer>footer</footer>
+    </div>
+</div>
+</body>
+</html>

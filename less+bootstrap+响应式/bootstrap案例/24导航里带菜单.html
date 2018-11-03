@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <h2>通过自定义属性事件触发</h2>
+    <h3>示例1</h3>
+    <div class="navbar navbar-default" id="navmenu">
+        <a href="##" class="navbar-brand">首  页</a>
+        <ul class="nav navbar-nav">
+            <li class="dropdown">
+                <a href="##" data-toggle="dropdown" class="dropdown-toggle" role="button" id="tutorial">教程<b
+                        class="caret"></b></a>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="tutorial">
+                    <li role="presentation"><a href="##">CSS3</a></li>
+                    <li role="presentation"><a href="##">HTML5</a></li>
+                    <li role="presentation"><a href="##">Sass</a></li>
+                </ul>
+            </li>
+            <li><a href="##">前端论坛</a></li>
+            <li><a href="##">关于我们</a></li>
+        </ul>
+    </div>
+
+    <h3>示例2</h3>
+    <ul class="nav nav-pills">
+        <li class="active"><a href="##">前端论坛</a></li>
+        <li class="dropdown">
+            <a href="##" data-toggle="dropdown" class="dropdown-toggle" role="button" id="tutoria2">教程<b
+                    class="caret"></b></a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="tutoria2">
+                <li role="presentation"><a href="##">CSS3</a></li>
+                <li role="presentation"><a href="##">HTML5</a></li>
+                <li role="presentation"><a href="##">Sass中华人民共和国</a></li>
+            </ul>
+        </li>
+        <li><a href="##">关于我们</a></li>
+        <li><a href="##">关于我们</a></li>
+        <li><a href="##">关于我们</a></li>
+    </ul>
+</div>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

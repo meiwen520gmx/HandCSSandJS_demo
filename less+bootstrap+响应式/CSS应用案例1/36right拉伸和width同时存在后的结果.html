@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>left/right拉伸和width同时存在</title>
+    <style>
+        .image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 50%;
+        }
+
+        button {
+            display: block;
+            margin: 200px auto;
+            width: 280px;
+            height: 40px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+<img class="image" src="../img/img_g1.jpg" height="191">
+<button
+        onClick="document.getElementsByTagName('img')[0].style.margin = 'auto';">动态添加margin: auto;
+</button>
+</body>
+</html>

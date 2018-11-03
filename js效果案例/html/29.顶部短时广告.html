@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+
+        div.container {
+            width: 929px;
+            margin: 0 auto;
+        }
+        div.container div.adv {
+            height: 0;
+        }
+
+        div.container div.advShort {
+            display: none;
+            position: relative;
+            height: 53px;
+        }
+        div.container div.advShort span {
+            position: absolute;
+            width: 33px;
+            height: 31px;
+            top: 0;
+            right: 0;
+            background: url("../images/icon.jpg") -24px -67px no-repeat;
+        }
+    </style>
+    <script src="../js/move6.js"></script>
+    <script>
+        window.onload=function(){
+            var oAdv=document.getElementById('adv');
+            var oAdvSmall=document.getElementById('advShort');
+            var oClose=document.getElementById('close');
+            startMove(oAdv,{height:373},function(){
+                var that=this
+                var  timer=setTimeout(function(){
+                    startMove(that,{height:53},function(){
+                        that.remove();
+                        oAdvSmall.style.display='block'
+                    })
+                },2000);
+            });
+            oClose.onclick=function(){
+                this.parentNode.remove();
+            }
+        }
+    </script>
+</head>
+<body>
+<div class="container">
+    <div class="adv" id="adv">
+        <img src="../images/adv.png" alt="">
+    </div>
+    <div class="advShort" id="advShort">
+        <img src="../images/current.png" alt="">
+        <span class="close" id="close"></span>
+    </div>
+    <img src="../images/cqwu.jpg" alt="">
+</div>
+</body>
+</html>

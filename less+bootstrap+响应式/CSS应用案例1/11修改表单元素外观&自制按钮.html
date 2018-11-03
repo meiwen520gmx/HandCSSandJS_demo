@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        body {
+            background-color: #daeeff;
+        }
+
+        .container {
+            width: 800px;
+            margin: 20px auto;
+        }
+
+        input {
+            font: 14px arial;
+        }
+
+        /*变普通文本框为单线框*/
+        input[type=text]:first-child {
+            border: none;
+            border-bottom: 1px solid #aaa;
+            background-color: transparent;
+            color: #005aa7;
+            outline: none;
+        }
+
+        /*变默认按钮为文本按钮*/
+        input[type=submit] {
+            background-color: transparent;
+            border: 0;
+        }
+
+        input[type=text]:nth-of-type(3) {
+            height: 28px;
+            margin-right: 25px;
+            outline: none
+        }
+
+        input[type=image] {
+            position: absolute; /*为与前面文本框对齐,默认是基线对齐 */
+        }
+
+        /*利用颜色渐变作按钮*/
+        a {
+            display: inline-block;
+            background-image: linear-gradient(to top, #3f3, #fff, #363);
+            border: 1px solid #000000;
+            padding: 2px 10px;
+            text-decoration: none;
+            color: #000000;
+            border-radius: 3px;
+        }
+
+        a:hover {
+            background-image: linear-gradient(to top, #36f, #fff, #3f3);
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <form method="post" action="#">
+        请输入你的信息：
+        <input type="text" name="name">
+        <input type="submit" name="btnsubmit" value="Submit>>"><br><br><br>
+        <input type="text">
+        <input type="image" src="../jquery效果实现/img/btn-ok_r1_c1.gif">
+    </form>
+    <br><br>
+    <a href="#">确定按钮</a>
+</div>
+</body>
+</html>

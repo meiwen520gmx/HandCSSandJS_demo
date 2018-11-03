@@ -1,0 +1,180 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "myicon";
+  src: url("../fonts/icomoon.eot");
+  src: url("../fonts/icomoon.eot?#iefix") format("embedded-opentype"), url("../fonts/icomoon.woff") format("woff"), url("../fonts/icomoon.ttf") format("truetype"), url("../fonts/icomoon.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  
+  /* IE9 兼容模式 */
+}
+body {
+  padding-top: 40px;
+}
+nav.lcj_nav {
+  min-height: 40px;
+}
+nav.lcj_nav button {
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+nav.lcj_nav a {
+  padding-top: 10px ;
+  padding-bottom: 10px ;
+}
+div.jumbotron {
+  background: url(../images/bs-docs-masthead-pattern.png) center center, linear-gradient(30deg, #030131, #662f4d);
+  margin-bottom: 0;
+}
+div.jumbotron div.container > a {
+  font-size: 14px;
+  color: #938898;
+  transition: all .3s;
+}
+div.jumbotron div.container > a:hover {
+  color: white;
+}
+div.jumbotron h1 {
+  font-size: 100px;
+  font-weight: 700;
+  color: white;
+  letter-spacing: -2px;
+  margin-top: 40px;
+}
+div.jumbotron h2 {
+  font-size: 30px;
+  line-height: 1.25;
+  font-weight: 200;
+  color: white;
+}
+div.jumbotron p {
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+div.jumbotron p a {
+  background-color: #337AB7;
+  padding: 13px 35px 17px;
+  color: white;
+  font-size: 18px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4), 0 0 30px rgba(0, 0, 0, 0.075);
+  box-shadow: 0 4px 0 0 #2A6496;
+  border: none;
+}
+ul.lcj_ul {
+  background-color: #F5F5F5;
+  line-height: 50px;
+  border-bottom: 1px solid #ddd;
+}
+ul.lcj_ul li a {
+  color: #555;
+  display: inline-block;
+}
+ul.lcj_ul li:first-child a {
+  margin-right: 10px;
+}
+ul.lcj_ul li:first-child:before {
+  content: "\f086";
+  display: inline-block;
+  font-family: "myicon";
+  font-size: 16px;
+}
+ul.lcj_ul li:first-child span {
+  color: #CCCFD8;
+}
+ul.lcj_ul li:last-child:before {
+  content: "\f18a";
+  display: inline-block;
+  font-family: "myicon";
+  font-size: 16px;
+}
+div.lcj_main {
+  text-align: center;
+  color: #333;
+}
+div.lcj_main h2 {
+  font-size: 42px;
+  margin-top: 50px;
+}
+div.lcj_main hr {
+  width: 60%;
+  margin-bottom: 40px;
+}
+div.lcj_main figure {
+  height: 335px;
+  border: 1px solid #ddd;
+  padding: 3px;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+div.lcj_main figure img {
+  width: 100%;
+}
+div.lcj_main figure figcaption h3 {
+  margin-top: 30px;
+}
+div.lcj_main figure figcaption a {
+  text-decoration: none;
+}
+div.lcj_main figure figcaption a span {
+  color: #778CBD;
+}
+div.lcj_main figure figcaption p {
+  margin: 15px 10px 20px;
+}
+footer {
+  border-top: 1px solid #E5E5E5;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+footer p {
+  margin-top: 12px;
+}
+footer hr {
+  margin-top: 0;
+}
+footer div.lcj_foot dl {
+  margin-top: 0;
+}
+footer div.lcj_foot dl dt {
+  color: #563D7C;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 7px;
+}
+footer div.lcj_foot dl dd a {
+  color: #777;
+}
+small.lcj_top {
+  position: fixed;
+  right: 20px;
+  bottom: 100px;
+  width: 50px;
+  height: 50px;
+  background-color: #929292;
+  text-align: center;
+}
+small.lcj_top a {
+  font-size: 25px;
+  line-height: 50px;
+  text-decoration: none;
+  color: white;
+}
+small.lcj_top:hover {
+  background-color: #4c4c4c;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  div.jumbotron h1 {
+    font-size: 90px;
+  }
+  div.jumbotron h2 {
+    font-size: 24px;
+  }
+}
+@media (max-width: 767px) {
+  div.jumbotron h1 {
+    font-size: 60px;
+  }
+  div.jumbotron h2 {
+    font-size: 18px;
+  }
+}

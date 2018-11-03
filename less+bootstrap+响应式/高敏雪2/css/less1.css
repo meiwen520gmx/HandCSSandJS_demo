@@ -1,0 +1,172 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.absolute {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+header {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  color: white;
+  background-color: black;
+  line-height: 48px;
+  display: flex;
+  justify-content: space-around;
+}
+header .span {
+  background-size: 20px 20px;
+  width: 48px;
+  display: inline-block;
+  text-indent: -99em;
+  background-position: center;
+}
+header > span {
+  background: url("../images/left%20(2).png") no-repeat;
+  background-size: 20px 20px;
+  width: 48px;
+  display: inline-block;
+  text-indent: -99em;
+  background-position: center;
+}
+header div span:first-child {
+  background: url("../images/sousuo.png") no-repeat;
+  background-size: 20px 20px;
+  width: 48px;
+  display: inline-block;
+  text-indent: -99em;
+  background-position: center;
+}
+header div span:last-child {
+  background: url("../images/jiahao.png") no-repeat;
+  background-size: 20px 20px;
+  width: 48px;
+  display: inline-block;
+  text-indent: -99em;
+  background-position: center;
+}
+header h3 {
+  font-weight: 400;
+}
+aside {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 49px;
+  height: calc(100% / 3);
+}
+aside img {
+  height: 100%;
+  width: 100%;
+}
+main {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(49px + 100% / 3);
+  bottom: 56px;
+  overflow-y: auto;
+  padding: 10px;
+}
+main h4 {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.5;
+  background-color: #EBEBEB;
+  padding: 5px;
+}
+main h4 span {
+  border: 1px solid #22aadd;
+  color: #0086b3;
+}
+main a {
+  display: block;
+  height: 60px;
+  padding-left: 60px;
+  background: url("../images/time.PNG") no-repeat left center;
+  line-height: 30px;
+}
+main a:not(:last-child) {
+  border-bottom: 1px solid gainsboro;
+}
+main a:link,
+main a:visited {
+  color: gray;
+  text-decoration: none;
+}
+main a p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+main a h5 {
+  font-size: 14px;
+  color: gray;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 400;
+}
+main a h5 span {
+  margin-right: 15px;
+  color: gainsboro;
+}
+footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 56px;
+  border-top: 1px solid #aaa;
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+  background-color: #b6d9f2;
+  box-sizing: border-box;
+}
+footer span {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer span i {
+  height: 30px;
+  width: 35px;
+  font-style: normal;
+  font-size: 14px;
+  background: url("../images/tb2.png") no-repeat center top;
+}
+footer span:nth-child(1) i {
+  background-position: center 0px;
+}
+footer span:nth-child(1) i:hover {
+  background-position: center -35px;
+}
+footer span:nth-child(2) i {
+  background-position: center -70px;
+}
+footer span:nth-child(2) i:hover {
+  background-position: center -105px;
+}
+footer span:nth-child(3) i {
+  background-position: center -140px;
+}
+footer span:nth-child(3) i:hover {
+  background-position: center -175px;
+}
+footer span:nth-child(4) i {
+  background-position: center -210px;
+}
+footer span:nth-child(4) i:hover {
+  background-position: center -245px;
+}

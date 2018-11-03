@@ -1,0 +1,324 @@
+@charset "utf-8";
+*{
+  margin: 0;
+  padding: 0;
+}
+@font-face {
+  font-family: "my_font";
+  src: url("../fonts1/icomoon.eot") format("eot"),
+  url("../fonts1/icomoon.woff") format("woff"),
+  url("../fonts1/icomoon.svg") format("svg"),
+  url("../fonts1/icomoon.ttf") format("ttf");
+  font-style: normal;
+  font-weight: normal;
+}
+.bcenter{
+  width: 1000px;
+  margin: 0 auto;
+}
+header{
+  margin-bottom: 15px;
+  section{
+    color:#616161;
+    font-size: 12px;
+    padding:5px 290px;
+    display: flex;
+    justify-content: space-between;
+    background-image:-webkit-linear-gradient(top,#FBFBFB,#EEE);
+    border-bottom: 2px solid #D0D0D0;
+    span:last-of-type{
+      a{
+        display: inline-block;
+        color:#616161;
+        text-decoration: none;
+        padding:0 15px;
+        &:not(:last-of-type){
+          border-right: 1px solid #616161;
+        }
+        &:hover{
+          color:blue;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  div.hd{
+    .bcenter;
+    padding:10px;
+    display: flex;
+    justify-content:space-between;
+    figure{
+      color: #383838;
+      display: flex;
+      img{
+        width: 100px;
+        height: 100px;
+      }
+      figcaption{
+        padding:20px 10px;
+      }
+    }
+    form{
+      padding:35px 0;
+      input{
+        outline: none;
+        height: 25px;
+        width: 160px;
+      }
+      button{
+        height: 29px;
+        width: 60px;
+        border: none;
+        color: white;
+        padding:0 2px 0 15px;
+        letter-spacing:3px;
+        border-radius: 3px;
+        background-image:-webkit-linear-gradient(top,#1D85CE,#85CAF3);
+        &:before{
+          position: absolute;
+          content: '\f002';
+          font-family: my_font;
+          color:white;
+          margin-left: -15px;
+          margin-top: 2px;
+        }
+        &:hover{
+          background-image:-webkit-linear-gradient(top,#1D85CE,#1D85CE);
+        }
+      }
+    }
+  }
+  >nav{
+    background-image:-webkit-linear-gradient(top,#0576C1,#0F89C4);
+    >ul{
+      padding: 0 290px;
+      list-style: none;
+      display: flex;
+      justify-content: space-around;
+      >li{
+        padding: 10px 0;
+        >a{
+          text-decoration: none;
+          color: white;
+          padding: 5px 6px;
+
+        }
+        &:hover{
+          background-color: #08436B;
+        }
+        &:not(:last-of-type) a{
+          border-right:1px solid #6AB1DD;
+        }
+      }
+    }
+  }
+  >img{
+    .bcenter;
+    display: block;
+  }
+}
+.pub{
+  width:35%;
+  border: 1px solid #dbdbdb;
+}
+.pubh4{
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding:5px 5px 5px 10px;
+  background-image:-webkit-linear-gradient(top,#15A5ED,#1388D6);
+  i{
+    margin-top: 3px;
+    font-style: normal;
+    font-size: 12px;
+    &:hover{
+      color: blue;
+    }
+  }
+}
+.pubul{
+  list-style: none;
+  padding: 5px 0 10px 20px;
+  font-size: 14px;
+  li{
+    line-height: 25px;
+    a{
+      color:#616161;
+      text-decoration: none;
+      &:hover{
+        color: blue;
+        text-decoration: underline;
+      }
+    }
+    &:before{
+      position: absolute;
+      content: '';
+      width: 0;
+      height: 0;
+      border: 5px solid transparent;
+      border-left-color: #2084D1;
+      margin-left: -10px;
+      margin-top: 7px;
+    }
+  }
+}
+.pubmid{
+  .pub;
+  margin-right: 5px;
+  h4{
+    color:#616161;
+    padding:5px 5px 5px 10px;
+    border-bottom: 2px solid #A2C9E5;
+  }
+  ul{
+    font-size: 14px;
+    list-style: none;
+    padding: 5px 10px 10px 10px;
+    li{
+      line-height: 25px;
+      display: flex;
+      justify-content: space-between;
+      a{
+        color:#616161;
+        text-decoration: none;
+        &:hover{
+          color: blue;
+          text-decoration: underline;
+        }
+      }
+      i{
+        color:#616161;
+        font-style: normal;
+        font-size: 12px;
+      }
+    }
+  }
+}
+.pubright{
+  .pub;
+  h4{
+    .pubh4;
+  }
+  ul{
+    .pubul;
+  }
+}
+.addweiyuansu(@cont:'\f044'){
+  position: absolute;
+  content:@cont;
+  font-family: my_font;
+  color:white;
+  font-size: 30px;
+  margin-left: -50px;
+  margin-top: -4px;
+}
+main{
+  .bcenter;
+  >p:first-of-type{
+    color:#616161;
+    margin-bottom: 10px;
+    font-size: 14px;
+    span{
+        color: #15A9F0;
+    }
+  }
+  div.up{
+    display: flex;
+    margin-bottom: 10px;
+    section.left{
+      margin-right:5px;
+      .pub;
+      h4{
+        .pubh4;
+      }
+      ul{
+        .pubul;
+      }
+    }
+    section.mid{
+      .pubmid;
+    }
+    section.right{
+      .pubright;
+    }
+  }
+  >img{
+    display: block;
+    .bcenter;
+    margin-bottom: 10px;
+  }
+  div.down{
+    display: flex;
+    form{
+      width: 30%;
+      margin-right: 5px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      button{
+        padding: 0 0 0 30px;
+        background-image:-webkit-linear-gradient(top,#57A8DE,#8DD3F4);
+        box-shadow: 5px 6px 3px rgba(137,138,132,.6);
+        border: none;
+        color: white;
+        font-size: 18px;
+        height: 50px;
+        width: 200px;
+        &:not(:last-of-type){
+          margin-bottom: 10px;
+        }
+        &:first-of-type:before{
+          .addweiyuansu();
+        }
+        &:nth-of-type(2):before{
+          .addweiyuansu('\f25b');
+        }
+        &:nth-of-type(3):before{
+          .addweiyuansu('\f0c0');
+        }
+        &:hover{
+          color: blue;
+        }
+      }
+
+    }
+    >section.middle{
+      .pubmid;
+    }
+    >section.last{
+      width: 38%;
+      .pubright;
+    }
+  }
+  p:last-of-type{
+    margin-top: 10px;
+    font-size: 14px;
+    color:#616161;
+    border: 1px solid #dbdbdb;
+    padding: 5px 0 5px 10px;
+    span{
+      color: #FD9A67;
+    }
+  }
+
+}
+footer{
+  margin-top:10px;
+  text-align: center;
+  font-size: 14px;
+  padding: 15px 0;
+  background-image:-webkit-linear-gradient(top,#01538C,#0167AF);
+  p{
+    color: white;
+    &:not(:last-of-type){
+      margin-bottom: 10px;
+    }
+    &:hover{
+      color: blue;
+      text-decoration: underline;
+    }
+
+  }
+
+}

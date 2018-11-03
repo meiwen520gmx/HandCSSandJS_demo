@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            background-color: #fff;
+        }
+        form {
+            width: 1000px;
+            margin: 50px auto 0;
+        }
+
+        label {
+            display: inline-block;
+            width: 230px;
+        }
+    </style>
+</head>
+<body>
+<form>
+    <fieldset id="fdt">
+        <legend>请选择歌星和你喜欢的歌曲</legend>
+        <!--<label>宋小宝:-->
+            <!--<select id="gx1">-->
+                <!--<option value="010">天路</option>-->
+                <!--<option value="011">苦苦追求</option>-->
+                <!--<option value="012">我的祖国</option>-->
+            <!--</select>-->
+        <!--</label>-->
+    </fieldset>
+</form>
+</body>
+<script src="../js/eventCompatible.js"></script>
+<script>
+    //obj对象,遍历对象用for------in------
+    var obj = {
+        宋小宝: [{id: '010', name: '天路'}, {id: '011', name: '苦苦追求'}, {id: '012', name: '我的祖国'}],
+        刘德华: [{id: '001', name: '谢谢你的爱'}, {id: '002', name: '冰雨'}, {id: '003', name: '中国人'}]
+    };
+    obj['张学友'] = [{id: '004', name: '吻别'}, {id: '005', name: '祝福'}, {id: '006', name: '饿狼传说'}];
+    obj['Jackson'] = [{id: '007', name: 'Black And White'}, {id: '008', name: 'Dangerous'}, {id: '009', name: 'Thriller'}];
+    var oFieldset=document.getElementById('fdt');
+    var oLabel,oSelect,option;
+    for(var key in obj){
+        oLabel=document.createElement('label');
+        oLabel.innerText=key+":";
+        oSelect=document.createElement('select');
+        oSelect.className='star';
+        option=new Option('-请选择-','-1');
+        oSelect.appendChild(option);
+        obj[key].forEach(function(el){
+            option=new Option(el.name,el.id);
+            oSelect.appendChild(option);
+        });
+        oLabel.appendChild(oSelect);
+        oFieldset.appendChild(oLabel);
+    }
+    eventCompatible.agentEvent(oFieldset,'change',['select','star'], function () {
+//        var index=this.selectedIndex;//点击那一项的顺序号
+        var oParent=this.parentNode;
+        var sName=oParent.innerText;//用text不会把select取出来，只取文本
+        alert(sName.replace(':','')+'的歌曲编号为:'+this.value);
+    });
+</script>
+</html>

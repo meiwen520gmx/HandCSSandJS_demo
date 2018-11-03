@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>变宽布局-边框应用</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        header,nav,article,footer {
+            margin: 0 auto;
+            width: 85%;
+            min-width: 500px;
+        }
+
+        header, footer {
+            margin-bottom: 5px;
+            height: 100px;
+            background-color: darkseagreen;
+        }
+
+        nav {
+            height: 40px;
+            background-color: #000000;
+            margin-bottom: 5px;
+            color: #fff;
+        }
+
+        article.a1{
+            margin-bottom: 5px;
+            background-color: darkgrey;
+        }
+
+        .a1 left {
+            float: left;
+            width: 20%;
+        }
+
+        .a1 middleRight {
+            display: inline-block;
+            width: 80%;
+            background-color: lightblue;
+        }
+
+        .a1 middleRight right {
+            float: right;
+            width: 20%;
+        }
+
+        .a1 middleRight main {
+            width: 80%;
+            padding: 20px;
+            border: 2px solid #ff0000;
+            box-sizing: border-box;
+            background-color: burlywood;
+        }
+
+        .a2 {
+            margin-bottom: 5px;
+            background-color: lightblue;
+        }
+
+        .a2 left {
+            float: left;
+            width: 140px;
+        }
+
+        .a2 right {
+            float: right;
+            width: 150px;
+        }
+
+        .a2 main {
+            margin-left: -150px;
+            width: 100%;
+        }
+
+        .a2 main content {
+            display: block;
+            margin-left: 290px;
+            border: 1px solid #ff0000;
+            padding: 20px;
+            background-color: oldlace;
+        }
+
+        .a3 {
+            display: -webkit-flex; /*横向伸缩分布*/
+            /*-webkit-align-items: center;纵向居中*/
+            /*-webkit-justify-content: center; 横向居中*/
+            margin-bottom: 5px;
+        }
+
+        .a3 left {
+            width: 10%;
+            background-color: cornflowerblue;
+        }
+
+        .a3 main {
+            width: 70%;
+            border: 1px solid #ff0000;
+            padding: 20px;
+            background-color: oldlace;
+        }
+
+        .a3 right {
+            width: 20%;
+            background-color: sandybrown;
+        }
+
+        h1, h3 {
+            text-align: center;
+        }
+
+        .a4 > * {
+            float: left;
+        }
+        .a4 main {
+            width: 100%;
+            outline: 1px solid black;
+            background-color: #0060BF;
+        }
+        .a4 main div {
+            padding: 15px;
+            margin-left: 190px;
+            margin-right: 230px;
+            background-color: lightblue;
+            height: 300px;
+        }
+        .a4 left {
+            width: 190px;
+            margin-left: -100%;
+        }
+        .a4 right {
+            width: 230px;
+            margin-left: -230px;
+        }
+        .a4:after{
+            display: block;
+            content: '';
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>页面头部区域</h1>
+    </header>
+    <nav>
+        <h1>页面导航区域</h1>
+    </nav>
+    <article class="a1">
+        <left>
+            <h2> float: left<br>
+                width: 20%</h2>
+        </left>
+        <middleRight>
+            <right>
+                <h2>float: right<br>
+                    width: 20%</h2>
+            </right>
+            <main>
+                <h3>width: 80%应用了：右中区域display: inline-block;<br>
+                    注意：需确保内容列为未浮动标准列，且高度值最大，这样才能把背景撑开
+                    注意：需确保内容列为未浮动标准列，且高度值最大，这样才能把背景撑开
+                    注意：需确保内容列为未浮动标准列，且高度值最大，这样才能把背景撑开
+                    注意：需确保内容列为未浮动标准列，且高度值最大，这样才能把背景撑开
+                    注意：需确保内容列为未浮动标准列，且高度值最大，这样才能把背景撑开
+
+                </h3>
+            </main>
+        </middleRight>
+    </article>
+    <article class="a2">
+        <left>
+            <h2>float: left<br>
+                width: 140</h2>
+        </left>
+        <right>
+            <h2>float: right<br>
+                width: 150</h2>
+        </right>
+        <main>
+            <content>
+                <h3>应用了margin-left: -150px;也就是改变边界的方式完成<br>
+                    中间变宽内容区域中间变宽内容区域中间变宽内容区域中间变宽内容区域中间变宽内容区域
+                    中间变宽内容区域中间变宽内容区域中间变宽内容区域中间变宽内容区域中间变宽内容区域
+                    中间变宽内容区域中间变宽内容区域中间变宽内容区域中间变宽内容区域中间变宽内容区域
+                    中间变宽内容区域中间变宽内容区域中间变宽内容区域中间变宽内容区域中间变宽内容区域
+                    中间变宽内容区域中间变宽内容区域中间变宽内容区域中间变宽内容区域中间变宽内容区域
+                </h3>
+            </content>
+        </main>
+    </article>
+    <article class="a3">
+        <left>
+            <h2>width: 10%</h2>
+        </left>
+        <main>
+            <h3>width: 70%应用了display: -webkit-flex; /*横向伸缩分布*/<br>
+                中间变宽内容区域中间变宽内容区域中间变宽内容区域中间变宽内容区域中间变宽内容区域
+                中间变宽内容区域中间变宽内容区域中间变宽内容区域中间变宽内容区域中间变宽内容区域
+                中间变宽内容区域中间变宽内容区域中间变宽内容区域中间变宽内容区域中间变宽内容区域
+                中间变宽内容区域中间变宽内容区域中间变宽内容区域中间变宽内容区域中间变宽内容区域
+                中间变宽内容区域中间变宽内容区域中间变宽内容区域中间变宽内容区域中间变宽内容区域
+            </h3>
+        </main>
+        <right>
+            <h2>width: 20%</h2>
+        </right>
+    </article>
+    <article class="a4">
+        <main>
+            <div>padding: 15px;margin-left: 190px;margin-right: 230px;background-color: lightblue;<br>
+                这种布局可以保证主要内容(main)在整个文档中靠前出现，这样在网速比较慢时重要内容也能率先渲染出来。中间变宽内容区域中间变宽内容区域
+            </div>
+        </main>
+        <left>
+            <h2>width: 190px<br>
+                margin-left: -100%
+            </h2>
+        </left>
+        <right>
+            <h2>width: 230px<br>
+                margin-left: -230px
+            </h2>
+        </right>
+    </article>
+    <footer>
+        <h1>页脚区域</h1>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,340 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+@font-face {
+  font-family: "my-icon";
+  src: url("../fonts/icomoon.eot") format("eot"), url("../fonts/icomoon.woff") format("woff"), url("../fonts/icomoon.svg") format("svg"), url("../fonts/icomoon.ttf") format("ttf");
+  font-style: normal;
+  font-weight: normal;
+}
+.astyle {
+  text-decoration: none;
+  color: white;
+  font-family: 'my-icon';
+  line-height: 40px;
+  margin-left: 15px;
+}
+.abspos {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+header {
+  background-color: darkblue;
+  height: 40px;
+}
+header nav.big {
+  display: none;
+}
+header nav.small {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+}
+header nav.small a,
+header nav.small a:visited {
+  text-decoration: none;
+  color: white;
+  font-family: 'my-icon';
+  line-height: 40px;
+  margin-left: 15px;
+}
+header nav.small h1 {
+  color: white;
+  line-height: 40px;
+  font-size: 16px;
+  font-weight: normal;
+  margin-left: 30px;
+}
+header nav.small aside {
+  margin-right: 15px;
+}
+div.adv {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 40px;
+  height: calc(100% / 6);
+}
+div.adv img {
+  width: 100%;
+  height: 100%;
+}
+main {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(100% / 6 + 40px);
+  bottom: 50px;
+  padding: 10px;
+  overflow: auto;
+}
+main h3 {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 25px;
+  margin-bottom: 10px;
+}
+main h3 span {
+  border: 1px solid blue;
+  color: #24b3de;
+}
+main a,
+main a:visited {
+  text-decoration: none;
+  display: block;
+  height: 48px;
+  padding: 6px 0 6px 54px;
+  background: url("../images/icon2.jpg") no-repeat;
+}
+main a h5,
+main a:visited h5 {
+  display: flex;
+  justify-content: space-between;
+  color: #666;
+  font-weight: normal;
+  font-size: 15px;
+}
+main a h5 span,
+main a:visited h5 span {
+  font-size: 13px;
+  color: #aaa;
+}
+main a p,
+main a:visited p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 14px;
+  color: #999;
+}
+footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 5px 0;
+  height: 40px;
+  line-height: 20px;
+  background-color: #2ea7e0;
+  border: 1px solid #012269;
+}
+footer div.big {
+  display: none;
+}
+footer div.small {
+  display: flex;
+  justify-content: space-around;
+}
+footer div.small a,
+footer div.small a:visited {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer div.small a i,
+footer div.small a:visited i {
+  font-family: my-icon;
+  font-style: normal;
+  font-size: 18px;
+}
+footer div.small a:active,
+footer div.small a:visited:active {
+  color: red;
+}
+footer div.small a:hover,
+footer div.small a:visited:hover {
+  color: red;
+}
+@media (min-width: 1000px) {
+  .page_w {
+    left: 10%;
+    right: 10%;
+  }
+  header {
+    left: 10%;
+    right: 10%;
+  }
+  header nav.small {
+    display: none;
+  }
+  header nav.big {
+    color: white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    line-height: 40px;
+  }
+  header nav.big dl {
+    margin: 0 30px;
+  }
+  header nav.big dl dd {
+    display: none;
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    top: 40px;
+    height: 40px;
+    background-color: rgba(10, 30, 255, 0.4);
+    text-align: center;
+  }
+  header nav.big dl dd a,
+  header nav.big dl dd a:visited {
+    padding: 10px 50px;
+    color: white;
+  }
+  header nav.big dl:hover dd {
+    display: block;
+  }
+  header nav.big a,
+  header nav.big a:visited {
+    text-decoration: none;
+    color: white;
+  }
+  header nav.big form {
+    display: block;
+  }
+  header nav.big form span {
+    font-family: 'my-icon';
+  }
+  header nav.big form input {
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    background-color: #8091B4;
+    vertical-align: middle;
+    margin-bottom: 6px;
+  }
+  div.adv {
+    left: 10%;
+    right: 10%;
+    height: calc(100% / 5);
+  }
+  main {
+    left: 10%;
+    right: 10%;
+    border: 1px solid #ddd;
+    top: calc(100% / 5 + 40px);
+    bottom: 80px;
+  }
+  footer {
+    height: 80px;
+    background: url("../images/footer_bg.jpg");
+  }
+  footer div.small {
+    display: none;
+  }
+  footer div.big {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: white;
+  }
+  footer div.big ul {
+    list-style: none;
+    display: flex;
+  }
+}
+@media (max-width: 999px) and (min-width: 560px) {
+  .page_w {
+    left: 0;
+    right: 0;
+  }
+  header {
+    left: 0;
+    right: 0;
+  }
+  header nav.small {
+    display: none;
+  }
+  header nav.big {
+    color: white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    line-height: 40px;
+  }
+  header nav.big dl {
+    margin: 0 30px;
+  }
+  header nav.big dl dd {
+    display: none;
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    top: 40px;
+    height: 40px;
+    background-color: rgba(10, 30, 255, 0.4);
+    text-align: center;
+  }
+  header nav.big dl dd a,
+  header nav.big dl dd a:visited {
+    padding: 10px 50px;
+    color: white;
+  }
+  header nav.big dl:hover dd {
+    display: block;
+  }
+  header nav.big a,
+  header nav.big a:visited {
+    text-decoration: none;
+    color: white;
+  }
+  header nav.big form {
+    display: none;
+  }
+  header nav.big form span {
+    font-family: 'my-icon';
+  }
+  header nav.big form input {
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    background-color: #8091B4;
+    vertical-align: middle;
+    margin-bottom: 6px;
+  }
+  div.adv {
+    left: 0;
+    right: 0;
+    height: calc(100% / 5);
+  }
+  main {
+    left: 0;
+    right: 0;
+    border: 1px solid #ddd;
+    top: calc(100% / 5 + 40px);
+    bottom: 80px;
+  }
+  footer {
+    height: 80px;
+    background: url("../images/footer_bg.jpg");
+  }
+  footer div.small {
+    display: none;
+  }
+  footer div.big {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: white;
+  }
+  footer div.big ul {
+    list-style: none;
+    display: flex;
+  }
+}

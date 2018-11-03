@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <!--让IE采用最新的渲染模式,让它支持CSS3的新功能-->
+    <style>
+        nav{
+            margin-top: 150px;
+            display: flex;
+            justify-content: center;
+        }
+        a,a:visited{
+            font-size: 22px;
+            margin-right: 10px;
+            padding: 10px 20px;
+            background-color: #d8fafa;
+            border-radius: 5px;
+            text-decoration: none;
+            color: #0A246A;
+            box-shadow: 0 0 5px 2px rgba(0,0,0,.2);
+            position: relative;
+        }
+        a:before{
+            content: "";
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            background: url("images/logo.png") center center no-repeat;
+            left: calc(50% - 40px);
+            top: -90px;
+            opacity: 1;
+            transition: all .7s;
+        }
+        a:nth-child(1):before{
+            transform: rotateZ(30deg);
+            transform-origin: center bottom;
+        }
+        a:nth-child(2):before{
+            transform: translateY(10px);
+        }
+        a:nth-child(3):before{
+            transform: rotateY(90deg);
+        }
+        a:nth-child(4):before{
+            transform: translateY(-30px);
+        }
+        a:hover:before{
+            opacity: 1;
+            transform: translate3D(0,0,0);
+        }
+        a:nth-child(2):hover:before{
+            transform: translateY(-10px);
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <a href="#">Home
+    </a>
+    <a href="#">About me
+    </a>
+    <a href="#">Photography
+    </a>
+    <a href="#">Work
+    </a>
+    <a href="#">Contact
+    </a>
+</nav>
+</body>
+</html>

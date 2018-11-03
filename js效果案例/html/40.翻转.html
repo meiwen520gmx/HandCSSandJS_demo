@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div.box{
+            perspective: 800px;/*最佳观看距离*/
+            perspective-origin: 70% 50%;/*模拟假定某个方向*/
+        }
+        div.box ul{
+            list-style: none;
+            width: 400px;
+            margin: 50px auto;
+            height: 400px;
+            transform-style: preserve-3d;
+            position: relative;
+        }
+        div.box li{
+            position: absolute;
+            width: inherit;
+            height: inherit;
+            border: 1px solid black;
+            background-color: #ffae19;
+            font-size: 300px;
+            color: white;
+            text-align: center;
+            transform-origin: bottom;
+            transition: transform .7s;
+        }
+        div.box li:not(:first-child){
+            transform: rotateX(90deg);
+        }
+        #first{
+            margin-left: 80%;
+        }
+        #last{
+            margin-left: 5%;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+    </ul>
+    <button id="first">前翻</button>
+    <button id="last">后翻</button>
+</div>
+<script>
+   var oBtn1=document.getElementById('first');
+   var oBtn2=document.getElementById('last');
+   var aLi=document.querySelectorAll('div.box li');
+   var i=0;
+   oBtn1.onclick= function () {
+       if(i<aLi.length-1){
+           aLi[i].style.transform='rotateX(-90deg)';
+           aLi[i+1].style.transform='rotateX(0deg)';
+           i++;
+       }
+   }
+   oBtn2.onclick= function () {
+       if(i>0){
+           aLi[i].style.transform='rotateX(90deg)';
+           aLi[i-1].style.transform='rotateX(0deg)';
+           i--;
+       }
+   }
+</script>
+</body>
+</html>

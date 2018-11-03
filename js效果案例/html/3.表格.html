@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表格(隔行变色，添加删除一行)</title>
+    <style>
+        div.div1{
+           margin-top: 20px;
+            text-align: center;
+        }
+        div.div1 table{
+            margin: 20px auto 0;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var oTab=document.getElementById('tab1');
+            var oldColor='';
+            var oBtn=document.getElementById('btn1');
+            var oName=document.getElementById('name');
+            var oAge=document.getElementById('age');
+            var oAddName=document.getElementById('addname');
+            var oBtn2=document.getElementById('btn2');
+            var oSelect=document.getElementById('select');
+            var oBtn3=document.getElementById('btn3');
+            var id=oTab.tBodies[0].rows.length+1;
+            for(var i=0;i<oTab.tBodies[0].rows.length;i++){
+                oTab.tBodies[0].rows[i].onmouseover=function(){
+                    oldColor=this.style.background;
+                    this.style.background='yellow';
+                }
+                oTab.tBodies[0].rows[i].onmouseout=function(){
+                    this.style.background=oldColor;
+                }
+                if(i%2){
+                    oTab.tBodies[0].rows[i].style.background='#ccc';
+                }
+                else{
+                    oTab.tBodies[0].rows[i].style.background='';
+                }
+            }
+            oBtn.onclick= function () {
+                var oTr=document.createElement('tr');
+                var oTd=document.createElement('td');
+                oTd.innerHTML=id++;
+                oTr.appendChild(oTd);
+                var oTd=document.createElement('td');
+                oTd.innerHTML=oName.value;
+                oTr.appendChild(oTd);
+                var oTd=document.createElement('td');
+                oTd.innerHTML=oAge.value;
+                oTr.appendChild(oTd);
+                var oTd=document.createElement('td');
+                oTd.innerHTML='<a href="javascript:;">删除</a>';
+                oTr.appendChild(oTd);
+                oTd.getElementsByTagName('a')[0].onclick= function () {
+                    oTab.tBodies[0].removeChild(this.parentNode.parentNode);
+                }
+                oTab.tBodies[0].appendChild(oTr);
+            }
+            oBtn2.onclick=function(){
+                for(var i=0;i<oTab.tBodies[0].rows.length;i++){
+                    var sTab=oTab.tBodies[0].rows[i].cells[1].innerHTML.toLowerCase();//忽略大小写来进行搜索
+                    var sTxt=oAddName.value.toLowerCase();//忽略大小写来进行搜索
+                    var arr=sTxt.split(' ');
+                    oTab.tBodies[0].rows[i].style.background='';
+                    for(var j=0;j<arr.length;j++){
+                        if(sTab.search(arr[j])!=-1){//模糊搜索
+                            oTab.tBodies[0].rows[i].style.background='red';
+                        }
+                    }
+
+                }
+            };
+            oBtn3.onclick=function(){
+                for(var i=0;i<oTab.tBodies[0].rows.length;i++){
+                    var sTab=oTab.tBodies[0].rows[i].cells[1].innerHTML.toLowerCase();//忽略大小写来进行搜索
+                    var sTxt=oSelect.value.toLowerCase();//忽略大小写来进行搜索
+                    var arr=sTxt.split(' ');
+                    oTab.tBodies[0].rows[i].style.display='none';
+                    for(var j=0;j<arr.length;j++){
+                        if(sTab.search(arr[j])!=-1){//模糊搜索
+                            oTab.tBodies[0].rows[i].style.display='block';
+                        }
+                    }
+
+                }
+            };
+        };
+    </script>
+</head>
+<body>
+<div class="div1">
+    姓名：<input type="text" id="name">
+    年龄：<input type="text" id="age">
+    <input id="btn1" type="button" value="添加">
+    <input type="text" id="addname"><input type="button" value="搜索" id="btn2">
+    <input type="text" id="select"><input type="button" value="筛选" id="btn3">
+    <table id="tab1" border="1" width="700px" style="text-align: center">
+        <thead>
+        <td>ID</td>
+        <td>姓名</td>
+        <td>年龄</td>
+        <td>操作</td>
+        </thead>
+        <tbody>
+        <tr>
+            <td>1</td>
+            <td>gao</td>
+            <td>22</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>张三</td>
+            <td>23</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>李四</td>
+            <td>18</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>小王</td>
+            <td>26</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>小李子</td>
+            <td>20</td>
+            <td></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>

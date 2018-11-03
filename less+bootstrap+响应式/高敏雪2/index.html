@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>total1</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+
+        html,body{
+            height: 100%;
+            overflow: hidden;
+            font: 15px/2 "Arail";
+        }
+        main{
+            height: 100%;
+            position: relative;
+        }
+        main aside{
+            position: absolute;
+            left: -250px;
+            top:0;
+            height:100%;
+            background-color: rgba(30, 94, 162, 0.8);
+            z-index: 10;
+           /*在aside中的z轴产生滚动条*/
+        }
+        main aside:hover{
+            left: 0;
+            overflow-y:auto;
+        }
+        main iframe{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            border: none;
+        }
+        main aside a{
+            display: block;
+            padding: 5px 10px 5px 30px;
+
+        }
+        a,a:visited{
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            font-weight:bold;
+        }
+        aside h2{
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <aside>
+            <h2>css案例</h2>
+            <a href="html/3D旋转菜单.html" target="main">1.3D旋转菜单</a>
+            <a href="html/3D透视原理.html" target="main">2.3D透视原理</a>
+            <a href="html/css动画式导航条.html" target="main">3.css动画式导航条</a>
+            <a href="html/css应用案例.html" target="main">4.css应用案例</a>
+            <a href="html/less绝对定位响应式整页布局.html" target="main">20.less绝对定位响应式整页布局</a>
+            <a href="html/注册表单.html" target="main">21.注册表单</a>
+            <h2>15个页面</h2>
+            <a href="html/demo1.html" target="main">5.demo1.html</a>
+            <a href="html/demo2.html" target="main">6.demo2.html</a>
+            <a href="html/demo3.html" target="main">7.demo3.html</a>
+            <a href="html/demo4.html" target="main">8.demo4.html</a>
+            <a href="html/demo5.html" target="main">9.demo5.html</a>
+            <a href="html/demo6.html" target="main">10.demo6.html</a>
+            <a href="html/demo7.html" target="main">11.demo7.html</a>
+            <a href="html/demo8.html" target="main">12.demo8.html</a>
+            <a href="html/demo9.html" target="main">13.demo9.html</a>
+            <a href="html/demo10.html" target="main">14.demo10.html</a>
+            <a href="html/demo11.html" target="main">15.demo11.html</a>
+            <a href="html/demo12.html" target="main">16.demo12.html</a>
+            <a href="html/demo13.html" target="main">17.demo13.html</a>
+            <a href="html/demo14.html" target="main">18.demo14.html</a>
+            <a href="html/demo15.html" target="main">19.demo15.html</a>
+            <h2>手风琴效果</h2>
+            <a href="手风琴效果/手风琴效果.html" target="main">22.手风琴效果</a>
+            <h2>电商网站</h2>
+            <a href="电商网站/detail.html" target="main">23.电商网站详情页</a>
+            <a href="电商网站/index.html" target="main">24.电商网站之商品分类页1</a>
+            <a href="电商网站/login.html" target="main">25.电商网站之登录页</a>
+            <a href="电商网站/product.html" target="main">26.电商网站之商品分类页2</a>
+            <a href="电商网站/regist.html" target="main">27.电商网站之注册页</a>
+            <a href="电商网站/筛选页.html" target="main">28.电商网站之筛选页</a>
+            <a href="电商网站/购物车和结算页.html" target="main">29.电商网站之购物车和结算页</a>
+            <h2>移动端</h2>
+            <a href="移动端/移动端.html" target="main">30.移动端</a>
+            <h2>综合案例</h2>
+            <a href="综合案例/detail.html" target="main">31.综合案例之详情页</a>
+            <a href="综合案例/list.html" target="main">32.综合案例之列表页</a>
+            <a href="综合案例/index1.html" target="main">33.综合案例之主页</a>
+            <h2>bootstrap案例</h2>
+            <a href="bootstrap/飘城网/information.html" target="main">34.飘城网之旅游资讯</a>
+            <a href="bootstrap/飘城网/订票系统.html" target="main">35.飘城网之订票系统</a>
+            <a href="bootstrap/bootstrap中文网.html" target="main">36.bootstrap中文网</a>
+            <a href="bootstrap/仿V2.bootcss.html" target="main">37.仿V2.bootcss</a>
+            <a href="bootstrap/仿v4.bootcss.html" target="main">38.仿v4.bootcss</a>
+            <a href="bootstrap/手机动画.html" target="main">39.手机动画</a>
+            <a href="bootstrap/文理新闻中心.html" target="main">40.文理新闻中心</a>
+            <a href="bootstrap/文理详情页.html" target="main">41.文理详情页</a>
+            <a href="bootstrap/滚动监控案例1.html" target="main">42.滚动监控案例1</a>
+            <a href="bootstrap/滚动监控案例2.html" target="main">43.滚动监控案例2</a>
+            <a href="bootstrap/滚动监控案例3.html" target="main">44.滚动监控案例3</a>
+            <a href="bootstrap/滚动监控案例4.html" target="main">45.滚动监控案例4</a>
+            <a href="bootstrap/管理控制台界面-选项卡.html" target="main">46.管理控制台界面-选项卡</a>
+            <a href="bootstrap/综合案例方法.html" target="main">47.管理控制台综合案例方法</a>
+            <a href="bootstrap/重庆文理学院.html" target="main">48.重庆文理学院主界面</a>
+        </aside>
+        <iframe src="http://www.cqwu.edu.cn" name="main">div</iframe>
+    </main>
+</body>
+</html>

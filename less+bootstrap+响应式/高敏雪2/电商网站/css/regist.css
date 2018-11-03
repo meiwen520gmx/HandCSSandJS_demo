@@ -1,0 +1,82 @@
+@charset "utf-8";
+.bcenter {
+  width: 580px;
+  margin: 15px auto;
+}
+.box {
+  width: 260px;
+  height: 25px;
+}
+section {
+  width: 580px;
+  margin: 15px auto;
+}
+section form {
+  padding: 40px 10px 40px 120px;
+  border: 1px solid #EEE;
+}
+section form label {
+  color: #B9B9B9;
+  display: block;
+  margin-bottom: 30px;
+  position: relative;
+}
+section form label:nth-of-type(2),
+section form label:nth-of-type(3) {
+  margin-left: -32px;
+}
+section form label:nth-of-type(4),
+section form label:nth-of-type(5) {
+  margin-left: 16px;
+}
+section form label:first-of-type:after {
+  position: absolute;
+  content: '\f007';
+  font-family: my_icon;
+  z-index: 10;
+  color: #DBDBDB;
+  margin-left: -20px;
+  margin-top: 7px;
+}
+section form label:nth-of-type(2):after,
+section form label:nth-of-type(3):after,
+section form label:nth-of-type(4):after {
+  position: absolute;
+  content: '\f13e';
+  font-family: my_icon;
+  z-index: 10;
+  color: #DBDBDB;
+  margin-left: -20px;
+  margin-top: 7px;
+}
+section form label input {
+  width: 260px;
+  height: 25px;
+  outline: none;
+  margin-left: 10px;
+}
+section form label:before {
+  position: absolute;
+  content: "*";
+  color: red;
+  margin-left: -9px;
+  margin-top: 6px;
+}
+section form > p {
+  margin-left: 70px;
+  font-size: 14px;
+  padding: 10px 0 25px 0;
+}
+section form > p span {
+  color: #1D7AD9;
+}
+section form button {
+  width: 260px;
+  height: 25px;
+  margin-left: 70px;
+  height: 30px;
+  border-color: #EAF3FB;
+  color: #5F5F5F;
+  font-size: 15px;
+  background-image: -webkit-linear-gradient(top, #f8fbfc, #d0d0d0);
+}

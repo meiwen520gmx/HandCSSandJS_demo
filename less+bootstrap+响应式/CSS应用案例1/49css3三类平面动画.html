@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>css3平面动画效果</title>
+    <style type="text/css">
+        attr, transform, animation {
+            display: block;
+        }
+
+        /*属性改变动画*/
+        attr {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            margin: 20px auto;
+            -webkit-transition: all 1s ease-out .1s;
+            /*还可有linear(线性) ease（先慢后快然后再慢）
+             ease-in（先慢后快） ease-out（先快后慢） ease-in-out等变化曲线*/
+        }
+
+        attr:hover {
+            background-color: blue;
+            width: 50%;
+            height: 300px;
+            border-radius: 50%;
+            opacity: 0.1;
+        }
+
+        /*变形动画*/
+        transform {
+            width: 300px;
+            height: 100px;
+            background-color: #008000;
+            margin: 20px auto;
+            -webkit-transition: all 1s ease-out .1s;
+        }
+
+        transform:hover {
+            /*以下表示旋转，还可有位移translate，缩放scale，扭曲skew*/
+            -webkit-transform: rotate(30deg);
+        }
+
+        /*自定义动画,以下可用第二类的任意变化*/
+        @-webkit-keyframes move {
+            0% {
+                transform: translate(0);
+            }
+            15% {
+                transform: translate(-100px, 180px); /*移动后的坐标，起点为0*/
+            }
+            30% {
+                transform: translate(150px, 0);
+            }
+            45% {
+                transform: translate(250px, 180px);
+            }
+            60% {
+                transform: translate(300px, 0);
+            }
+            75% {
+                transform: translate(450px, 180px);
+            }
+            100% {
+                transfrom: translate(480px, 0);
+            }
+        }
+
+        animation {
+            width: 500px;
+            height: 200px;
+            border: 1px solid red;
+            margin: 20px auto;
+        }
+
+        animation ball {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background: green;
+            border-radius: 50%;
+            -webkit-animation: move 10s ease 1s infinite alternate;
+            /*以下为详细写法
+            -webkit-animation-name:move;
+            -webkit-animation-direction:alternate;交替
+            -webkit-animation-duration: 10s;延续时间
+            -webkit-animation-timing-function:ease;渐慢
+            -webkit-animation-delay:.1s;开始时间
+            -webkit-animation-play-state:paused;停止
+            -webkit-animation-iteration-count:infinite;无限次播放*/
+        }
+
+        animation:hover ball {
+            -webkit-animation-play-state:paused ;
+        }
+    </style>
+</head>
+<body>
+<attr></attr>
+<transform></transform>
+<animation>
+    <ball></ball>
+</animation>
+</body>
+</html>

@@ -1,0 +1,114 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+@font-face {
+  font-family: "my_icon";
+  src: url("../fonts/icomoon.woff") format("woff"), url("../fonts/icomoon.eot") format("eot"), url("../fonts/icomoon.svg") format("svg"), url("../fonts/icomoon.ttf") format("ttf");
+  font-style: normal;
+  font-weight: normal;
+}
+.bcenter {
+  width: 430px;
+  margin: 15px auto;
+}
+.box {
+  width: 260px;
+  height: 25px;
+}
+header {
+  width: auto;
+  margin: 0 auto;
+  background-color: #1D7AD9;
+  height: 79px;
+}
+header section {
+  display: flex;
+  justify-content: center;
+}
+header section img {
+  height: 79px;
+  margin-right: 25px;
+}
+header section span {
+  color: #E9F3F8;
+  font-size: 20px;
+  line-height: 79px;
+}
+header section span:hover {
+  color: yellow;
+}
+main {
+  width: 430px;
+  margin: 15px auto;
+}
+main form {
+  padding: 40px 60px 20px 80px;
+  border: 1px solid #EEE;
+}
+main form > span {
+  display: block;
+  color: #B9B9B9;
+  font-size: 13px;
+}
+main form label {
+  display: block;
+  margin-bottom: 10px;
+  position: relative;
+}
+main form label:first-of-type:after {
+  position: absolute;
+  content: '\f007';
+  font-family: my_icon;
+  z-index: 10;
+  color: #DBDBDB;
+  margin-left: -20px;
+  margin-top: 7px;
+}
+main form label:last-of-type:after {
+  position: absolute;
+  content: '\f13e';
+  font-family: my_icon;
+  z-index: 10;
+  color: #DBDBDB;
+  margin-left: -20px;
+  margin-top: 7px;
+}
+main form label input {
+  width: 260px;
+  height: 25px;
+  outline: none;
+}
+main form > p:nth-of-type(1) {
+  font-size: 14px;
+  padding: 5px 0 20px 0;
+}
+main form button {
+  width: 260px;
+  height: 25px;
+  height: 30px;
+  border-color: #EAF3FB;
+  color: #5F5F5F;
+  font-size: 15px;
+  background-image: -webkit-linear-gradient(top, #f8fbfc, #d0d0d0);
+}
+main form > p:nth-of-type(2) {
+  margin: 20px 0 5px 0;
+  color: #B9B9B9;
+  font-size: 13px;
+}
+main form > p:last-of-type {
+  font-size: 12px;
+}
+main form > p:last-of-type span {
+  font-family: my_icon;
+  font-weight: normal !important;
+}
+main > button {
+  margin-left: 300px;
+  border: none;
+  background-color: #7DBE56;
+  color: white;
+  padding: 8px 20px;
+}

@@ -1,0 +1,43 @@
+@charset "UTF-8";
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  padding-top: 70px;
+  padding-bottom: 10px;
+}
+
+main {
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  div.lcj-panel {
+    position: fixed;
+    top: 30vh;
+    width: 8.7vw;
+    ul.lcj-nav{
+      border: none;
+      > li {
+        a {
+          margin-right: 0;
+          text-align: center;
+        }
+        &.active {
+          >a, >a:hover {
+            background: #c6ccc2;
+            border-radius: 4px;
+          }
+        }
+      }
+    }
+  }
+  footer {
+    background-color: #ddd;
+  }
+}
+
+
+

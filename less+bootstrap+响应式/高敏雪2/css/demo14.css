@@ -1,0 +1,412 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+@font-face {
+  font-family: "my_font";
+  src: url("../fonts1/icomoon.eot") format("eot"), url("../fonts1/icomoon.woff") format("woff"), url("../fonts1/icomoon.svg") format("svg"), url("../fonts1/icomoon.ttf") format("ttf");
+  font-style: normal;
+  font-weight: normal;
+}
+.bcenter {
+  width: 1000px;
+  margin: 0 auto;
+}
+header {
+  width: 1000px;
+  margin: 0 auto;
+}
+header > figure {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header > figure figcaption span {
+  display: block;
+  font-size: 18px;
+  color: black;
+}
+header > figure figcaption i {
+  color: #B52F3C;
+  font-size: 30px;
+  font-weight: bold;
+}
+header > figure figcaption:before {
+  position: absolute;
+  content: '\f095';
+  font-family: my_font;
+  color: #B52F3C;
+  font-size: 45px;
+  margin-left: -30px;
+  margin-top: 5px;
+  transform: rotateZ(40deg);
+}
+header nav {
+  background-color: #2A58AE;
+}
+header nav ul {
+  padding: 5px 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+header nav ul li {
+  padding: 5px 8px;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: white;
+  padding: 5px 8px;
+  font-weight: bold;
+}
+header nav ul li a:hover {
+  color: #FFC90E;
+}
+header aside {
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  background-color: #EBEBEB;
+}
+header aside figure {
+  display: flex;
+}
+header aside figure p {
+  margin-right: 10px;
+  width: 120px;
+  text-align: center;
+}
+header aside figure p img {
+  margin-left: 10px;
+  display: block;
+}
+header aside figure p span {
+  display: block;
+  font-size: 13px;
+  font-weight: bold;
+  padding-top: 5px;
+}
+header aside figure p span:hover {
+  color: red;
+}
+header aside figure figcaption a {
+  display: inline-block;
+  padding: 5px 10px 5px 0;
+  color: #595959;
+  text-decoration: none;
+  font-size: 13px;
+}
+header aside figure figcaption a:hover {
+  color: red;
+  text-decoration: underline;
+}
+.public {
+  margin-top: 10px;
+  border: 1px solid #ddd;
+}
+.public h4 {
+  font-size: 15px;
+  color: #383838;
+  padding: 10px 0 10px 10px;
+  border-bottom: 1px solid #ddd;
+}
+.public > section {
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+.public ul {
+  padding: 10px 10px 15px 25px;
+  list-style: none;
+}
+.public ul li {
+  line-height: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+.public ul li a {
+  text-decoration: none;
+  color: #525252;
+  font-size: 14px;
+}
+.public ul li a:hover {
+  color: black;
+  text-decoration: underline;
+}
+.public ul li:before {
+  position: absolute;
+  content: '';
+  border: 4px solid transparent;
+  border-left-color: #2681FA;
+  margin-left: -13px;
+  margin-top: 7px;
+}
+main {
+  width: 1000px;
+  margin: 0 auto;
+  margin-top: 10px;
+  display: flex;
+}
+main article {
+  width: 70%;
+  margin-right: 5px;
+}
+main article div.top {
+  border: 1px solid #ddd;
+}
+main article div.top h4 {
+  font-size: 15px;
+  color: #383838;
+  padding: 10px 0 10px 25px;
+  border-bottom: 1px solid #ddd;
+}
+main article div.top h4:before {
+  position: absolute;
+  content: '';
+  border: 20px solid transparent;
+  border-bottom-color: #707070;
+  transform: rotateZ(-45deg);
+  margin-left: -45px;
+  margin-top: -30px;
+}
+main article div.top h4:after {
+  position: absolute;
+  content: '\f175';
+  font-family: my_font;
+  color: white;
+  transform: rotateZ(-45deg);
+  margin-top: -8px;
+  margin-left: -380px;
+  font-size: 14px;
+}
+main article div.top section {
+  padding: 20px;
+}
+main article div.top section h1 {
+  padding: 10px 0 15px 0;
+  color: #FB6102;
+  text-align: center;
+}
+main article div.top section p:first-of-type {
+  text-align: center;
+  font-size: 14px;
+}
+main article div.top section p:first-of-type a {
+  color: #696969;
+  display: inline-block;
+  text-decoration: none;
+}
+main article div.top section p:first-of-type a:first-of-type {
+  margin-right: 30px;
+}
+main article div.top section h3 {
+  margin: 30px 0 10px 15px;
+}
+main article div.top section p:nth-of-type(2) {
+  color: #505050;
+  text-align: justify;
+  text-indent: 2em;
+  line-height: 25px;
+  font-size: 14px;
+}
+main article div.top section b {
+  text-align: right;
+  margin: 30px 0;
+  display: block;
+}
+main article div.top section ul {
+  padding: 20px;
+}
+main article div.top section ul li {
+  font-size: 14px;
+  line-height: 25px;
+}
+main article div.top section ul li span {
+  color: #5D5D5D;
+}
+main article div.mid {
+  margin-top: 10px;
+  border: 1px solid #ddd;
+}
+main article div.mid h4 {
+  font-size: 15px;
+  color: #383838;
+  padding: 10px 0 10px 10px;
+  border-bottom: 1px solid #ddd;
+}
+main article div.mid > section {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 0;
+}
+main article div.mid > section p {
+  color: #5D5D5D;
+  font-size: 14px;
+}
+main article div.down {
+  margin-top: 10px;
+  border: 1px solid #ddd;
+}
+main article div.down h4 {
+  font-size: 15px;
+  color: #383838;
+  padding: 10px 0 10px 10px;
+  border-bottom: 1px solid #ddd;
+}
+main > aside {
+  width: 30%;
+}
+main > aside div.one {
+  border: 1px solid #ddd;
+}
+main > aside div.one h4 {
+  font-size: 15px;
+  color: #383838;
+  padding: 10px 0 10px 10px;
+  border-bottom: 1px solid #ddd;
+}
+main > aside div.one ul {
+  padding: 15px 10px 15px 25px;
+  list-style: none;
+}
+main > aside div.one ul li {
+  line-height: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+main > aside div.one ul li a {
+  text-decoration: none;
+  color: #525252;
+  font-size: 14px;
+}
+main > aside div.one ul li a:hover {
+  color: black;
+  text-decoration: underline;
+}
+main > aside div.one ul li i {
+  font-style: normal;
+  font-size: 12px;
+  color: #B5B5B5;
+}
+main > aside div.one ul li i:hover {
+  color: red;
+}
+main > aside div.one ul li:before {
+  position: absolute;
+  content: '';
+  border: 4px solid transparent;
+  border-left-color: #2681FA;
+  margin-left: -13px;
+  margin-top: 7px;
+}
+main > aside div.two {
+  margin-top: 10px;
+  border: 1px solid #ddd;
+}
+main > aside div.two h4 {
+  font-size: 15px;
+  color: #383838;
+  padding: 10px 0 10px 10px;
+  border-bottom: 1px solid #ddd;
+}
+main > aside div.two > section {
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+main > aside div.two ul {
+  padding: 10px 10px 15px 25px;
+  list-style: none;
+}
+main > aside div.two ul li {
+  line-height: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+main > aside div.two ul li a {
+  text-decoration: none;
+  color: #525252;
+  font-size: 14px;
+}
+main > aside div.two ul li a:hover {
+  color: black;
+  text-decoration: underline;
+}
+main > aside div.two ul li:before {
+  position: absolute;
+  content: '';
+  border: 4px solid transparent;
+  border-left-color: #2681FA;
+  margin-left: -13px;
+  margin-top: 7px;
+}
+main > aside div.three {
+  margin-top: 10px;
+  border: 1px solid #ddd;
+}
+main > aside div.three h4 {
+  font-size: 15px;
+  color: #383838;
+  padding: 10px 0 10px 10px;
+  border-bottom: 1px solid #ddd;
+}
+main > aside div.three > section {
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+main > aside div.three ul {
+  padding: 10px 10px 15px 25px;
+  list-style: none;
+}
+main > aside div.three ul li {
+  line-height: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+main > aside div.three ul li a {
+  text-decoration: none;
+  color: #525252;
+  font-size: 14px;
+}
+main > aside div.three ul li a:hover {
+  color: black;
+  text-decoration: underline;
+}
+main > aside div.three ul li:before {
+  position: absolute;
+  content: '';
+  border: 4px solid transparent;
+  border-left-color: #2681FA;
+  margin-left: -13px;
+  margin-top: 7px;
+}
+footer {
+  width: 1000px;
+  margin: 0 auto;
+  margin-top: 10px;
+  border-top: 3px solid #6E98EA;
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px 0 20px 15px;
+}
+footer figure {
+  margin-right: 15px;
+}
+footer figure img {
+  padding-left: 10px;
+}
+footer figure figcaption {
+  text-align: center;
+  display: block;
+  font-size: 13px;
+}
+footer dl dd a {
+  display: block;
+  font-size: 13px;
+  text-decoration: none;
+  margin: 8px;
+  color: black;
+}

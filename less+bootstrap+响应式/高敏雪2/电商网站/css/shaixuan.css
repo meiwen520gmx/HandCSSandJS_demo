@@ -1,0 +1,233 @@
+@charset "utf-8";
+main {
+  width: 1000px;
+  margin: 15px auto 40px;
+  display: flex;
+  border-bottom: 1px solid #d9d9d9;
+}
+main aside {
+  width: 190px;
+  margin: 0 15px 105% 0;
+  border: 1px solid #CDCDCD;
+  box-sizing: border-box;
+  background-color: #F3F3F3;
+}
+main aside header {
+  padding: 7px 0;
+  border-bottom: 1px solid #CDCDCD;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+main aside dl {
+  padding: 10px;
+  border-bottom: 1px dashed #ddd;
+  line-height: 25px;
+  font-size: 13px;
+}
+main aside dl:last-of-type {
+  border-bottom-style: solid;
+}
+main aside dl dt {
+  font-weight: bold;
+}
+main aside dl a,
+main aside dl a:visited {
+  display: block;
+  font-size: 12px;
+  color: #585858;
+  padding-left: 10px;
+}
+main aside div {
+  padding: 10px 15px;
+  background-color: white;
+}
+main aside div figure {
+  display: flex;
+  margin-bottom: 15px;
+}
+main aside div figure a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 61px;
+  height: 60px;
+}
+main aside div figure figcaption {
+  flex: 1;
+  font-size: 12px;
+  line-height: 20px;
+  color: #9BA6BB;
+  font-weight: normal;
+  margin-left: 5px;
+}
+main aside div figure figcaption b {
+  color: #666469;
+}
+main section {
+  flex: 1;
+}
+main section div.up dl {
+  line-height: 33px;
+  font-size: 12px;
+  border-bottom: 1px dashed #ddd;
+}
+main section div.up dl dt {
+  width: 80px;
+  color: #9A9A9A;
+  float: left;
+  text-align: right;
+  margin-right: 40px;
+}
+main section div.up dl dd {
+  overflow: hidden;
+  display: flex;
+}
+main section div.up dl dd a,
+main section div.up dl dd a:visited {
+  color: #227ED3;
+  font-size: 12px;
+  margin-right: 20px;
+}
+main section div.up dl dd a:hover,
+main section div.up dl dd a:visited:hover {
+  text-decoration: underline;
+}
+main section div.up dl dd span.w1 {
+  flex: 1;
+}
+main section div.up dl dd span.w1:first-child a {
+  background: #1f76dd;
+  color: white;
+}
+main section div.up dl dd span.w1:last-of-type a {
+  color: #343434;
+  font-family: my_icon;
+}
+main section div.up dl dd span.w1:last-of-type a:after {
+  position: absolute;
+  content: '\f078';
+  color: grey;
+}
+main section div.up dl dd > a:first-child {
+  margin-right: 110px;
+}
+main section div.up dl dd span.w4 {
+  flex: 8;
+}
+main section div.up dl dd span.w4 a {
+  display: inline-block;
+  padding-right: 30px;
+}
+main section div.up dl dd.more {
+  display: flex;
+  margin: 10px 0;
+}
+main section div.up dl dd.more select {
+  border-color: #DEDEDE;
+  outline: none;
+  height: 23px;
+  width: 90px;
+  margin-right: 10px;
+}
+main section div.up dl:first-child,
+main section div.up dl:last-child {
+  border-bottom: 1px solid #ddd;
+}
+main section div.mid header {
+  margin-top: 15px;
+  padding: 5px 0 5px 10px;
+  background-color: #F5F5F5;
+  border: 1px solid #D9D9D9;
+  font-size: 12px;
+  color: #343434;
+}
+main section div.mid header select {
+  height: 23px;
+  outline: none;
+  border: 1px solid #BFBFBF;
+  margin-right: 380px;
+}
+main section div.mid header input {
+  vertical-align: middle;
+}
+main section div.mid header b {
+  color: red;
+}
+main section div.mid div {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 12px;
+  padding-left: 51px;
+}
+main section div.mid div figure {
+  width: 248px;
+  padding-right: 50px;
+  box-sizing: border-box;
+  line-height: 20px;
+}
+main section div.mid div figure > a {
+  height: 260px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+main section div.mid div figure > a.hot:after {
+  position: absolute;
+  content: '\f0a3';
+  color: #FF7200;
+  font-family: my_icon;
+  font-size: 60px;
+  right: -10px;
+  top: 47px;
+}
+main section div.mid div figure > a.hot:before {
+  position: absolute;
+  content: '人气';
+  color: white;
+  font-size: 12px;
+  right: 4px;
+  top: 48px;
+  z-index: 10;
+}
+main section div.mid div figure > a.hot.price:before {
+  content: '特价';
+}
+main section div.mid div figure figcaption p:nth-child(2) {
+  margin: 5px 0;
+}
+main section div.mid div figure figcaption p:nth-child(2) span:first-child {
+  color: red;
+  margin-right: 20px;
+}
+main section div.mid div figure figcaption p:nth-child(2) span:nth-child(2) {
+  color: #1F7AD3;
+}
+main section div.mid div figure figcaption a,
+main section div.mid div figure figcaption a:visited {
+  display: inline-block;
+  padding: 3px 5px;
+  border: 1px solid #C2D5E6;
+  color: #347FB9;
+  font-family: my_icon;
+}
+main section div.down {
+  display: flex;
+  font-size: 12px;
+  margin: 50px 0 50px 50px;
+  line-height: 28px;
+}
+main section div.down span {
+  padding: 0 10px;
+  border: 1px solid #C8C8C8;
+  margin-right: 5px;
+}
+main section div.down span.active {
+  background-color: #2266BB;
+  color: white;
+}
+main section div.down span.ok {
+  background-color: #E8E8E8;
+}

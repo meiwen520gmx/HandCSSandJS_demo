@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    </style>
+</head>
+<body>
+<script>
+    var a = [99, true, "min", undefined, "xue", 100, window,'gao'];
+    var b = ["gao", 45, false, "6", null, "89", undefined,90];
+    if(a.length== b.length){
+        var flag;
+        for(var i=0;i< a.length;i++){
+            flag=false;
+            for(var j=0;j< b.length;j++){
+                if(typeof(a[i])==typeof(b[j])){
+                    b.splice(j,1);
+                    flag=true;
+                    break;
+                }
+            }
+            if(!flag){
+                console.log('两数组不相似');
+                break;
+            }
+        }
+        if(flag){
+            console.log('两数组相似');
+        }
+    }
+    else{
+        console.log('两数组不相似');
+    }
+
+</script>
+</body>
+</html>

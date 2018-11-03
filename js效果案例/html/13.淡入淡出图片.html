@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>淡入淡出图片</title>
+    <style>
+        body{
+            background-color: darkseagreen;
+        }
+        #div1{
+            margin: 150px auto 100px;
+            position: relative;
+        }
+        #div1 img{
+            position: absolute;
+            width:300px;
+            height: 350px;
+            box-shadow:1px 1px 5px 5px rgba(255,255,255,.3);
+            opacity: .6;
+            filter:alpha(opacity:60);
+        }
+        #div1 img:first-child{
+            top: 50px;
+            left: 150px;
+            transform:rotateZ(-20deg);
+        }
+        #div1 img:nth-child(2){
+            top: 80px;
+            left: 550px;
+        }
+        #div1 img:nth-child(3){
+            top:50px;
+            right: 100px;
+            transform:rotateZ(20deg);
+        }
+    </style>
+    <script src="../js/move4.js"></script>
+    <script>
+        window.onload= function () {
+            var oDiv=document.getElementById('div1');
+            var aImg=oDiv.getElementsByTagName('img');
+            for(var i=0;i<aImg.length;i++){
+                aImg[i].index=i;
+                aImg[i].onmouseover= function () {
+                    for(var j=0;j<aImg.length;j++){
+                        this.style.filter="alpha(opacity:60)"
+                        this.style.opacity=.6;
+                    }
+                    startMove(aImg[this.index],{opacity:100});
+                }
+                aImg[i].onmouseout= function () {
+                    startMove(aImg[this.index],{opacity:60});
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<div id="div1">
+    <img src="../images/1.jpg">
+    <img src="../images/3.jpg">
+    <img src="../images/4.jpg">
+</div>
+</body>
+</html>

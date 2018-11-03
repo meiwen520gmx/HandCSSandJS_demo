@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
+    <title>边框-投影</title>
+    <style type="text/css">
+        div {
+            margin: 10px auto;
+        }
+
+        #div2 {
+            width: 40%;
+            border: 2px solid red;
+            border-radius: 15px;
+            box-shadow: 2px 2px 6px #444;
+            text-align: center;
+        }
+
+        #div2 p:first-child {
+            margin-top: 0;
+        }
+
+        #div2 p:last-child {
+            margin-bottom: 0;
+        }
+
+        #div2 p:nth-child(2n) {
+            /*n从0开始计算，小于等于0不选择*/
+            background-color: blanchedalmond;
+        }
+
+        #div2 p:nth-last-child(3) {
+            /*仍可为n*/
+            width: 400px;
+            border: 1px solid royalblue;
+            background-color: lavender;
+            margin: auto;
+        }
+
+        #div2 p span:first-of-type {
+            /*选择类型为span标签的第一个元素*/
+            font-size: 18px;
+            border: 1px solid red;
+        }
+
+        #div1 {
+            background-color: #daeeff;
+            width: 40%;
+            border: 20px;
+            border-image: url("../jquery效果实现/img/border.gif") 20 round;
+            box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.6), 0px 0px 50px #667 inset; /*内部四边阴影*/
+        }
+
+        .wrapper {
+            margin: 0 auto;
+            width: 500px;
+            text-align: center;
+        }
+
+        .wrapper p:nth-child(2n) {
+            background-color: silver;
+        }
+
+        .wrapper p:nth-of-type(2n) {
+            border: 5px solid blue;
+        }
+    </style>
+</head>
+
+<body>
+<div id="div2">
+    <p>华人民共和国中中华人民共和国</p>
+
+    <p>
+        华人民共
+        <span>毛泽东</span>
+        <span>刘少奇</span>
+        <span>周恩来</span>
+        华人民共和国
+    </p>
+
+    <p>华人民共和国中中华人民共和国</p>
+
+    <p>华人民共和国中中华人民共和国</p>
+
+    <p>华人民共和国中中华人民共和国</p>
+
+    <p>华人民共和国中中华人民共和国</p>
+
+    <p>华人民共和人民共和国</p>
+
+    <p>华人民共和国中中华人民共和国</p>
+
+    <p>华人民共和国中中华人民共和国</p>
+
+    <p>华人民共和国中中华人民共和国</p>
+
+    <p>华人民共和国中中华人民共和国</p>
+</div>
+<div id="div1">
+    <p>中华人民共和国中中华人民共和国中华人民共和国中华人民共和国中华人民共和国中华人民共和国中华人民共和国中华人民共和国中华人民共和国中华人民共和
+        国中华人民共和国中华人民共和国中华人民共和国中华人民共和国中华人民共和国中华人民共和国中华人民共和国中华人民共和国中华人民共和国中华人民共和
+        国中华人民共和国华人民共和国中华人民共和国中华人民共和国华人民共和国中中华人民共和国中华人民共和国中华人民共和国中华人民共和国中华人民共和国中华人民共和国中华人民共和国中华人民共和国中华人民共和
+        国中华人民共和国中华人民共和国中华人民共和国中华人民共和国中华人民共和国中华人民共和国中华人民共和国中华人民共和国中华人民共和国中华人民共和
+        国中华人民共和国华人民共和国中华人民共和国中华人民共和华人民共和国中中华人民共和国中华人民共和国中华人民共和国中华人民共和国中华人民共和国中华人民共和国中华人民共和国中华人民共和国中华人民共和
+        国中华人民共和国中华人民共和国中华人民共和国中华人民共和国中华人民共和国中华人民共和国中华人民共和国中华人民共和国中华人民共和国中华人民共和
+        国中华人民共和国华人民共和国中华人民共和国中华人民共和</p>
+</div>
+<div class="wrapper">
+    <div>我是一个Div元素</div>
+    <p>我是一个段落元素</p>
+
+    <div>我是一个Div元素</div>
+    <p>我是一个段落</p>
+
+    <div>我是一个Div元素</div>
+    <p>我是一个段落</p>
+
+    <div>我是一个Div元素</div>
+    <p>我是一个段落</p>
+
+    <div>我是一个Div元素</div>
+    <p>我是一个段落</p>
+
+    <div>我是一个Div元素</div>
+    <p>我是一个段落</p>
+
+    <div>我是一个Div元素</div>
+    <p>我是一个段落</p>
+
+    <div>我是一个Div元素</div>
+    <p>我是一个段落</p>
+</div>
+</body>
+</html>

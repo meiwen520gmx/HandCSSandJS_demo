@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>侧边栏(总)</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+        html,body{
+            height: 100%;
+            overflow: hidden;
+            font: 15px/2 "Arail";
+            position: relative;
+            background-image: -webkit-linear-gradient(top,#DAE5EC,#D6E2E9);
+        }
+        main{
+            height: 100%;
+            width: 100%;
+        }
+        main #div1{
+            position: absolute;
+            left: -300px;
+            height:100%;
+        }
+        main #div1 aside{
+            position: absolute;
+            width: 300px;
+            height: 100%;
+            background-color: rgba(71, 134, 179, 0.6);
+            z-index: 10;
+            overflow-y:auto;
+        }
+        main #div1 span{
+            position: absolute;
+            width: 25px;
+            top: 300px;
+            left: 300px;
+            padding: 5px;
+            text-align: center;
+            background-color:cornflowerblue;
+            color: #fff;
+            z-index: 1000;
+            border-radius: 0 5px 5px 0;
+        }
+        main iframe{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            border: none;
+        }
+        main aside a{
+            display: block;
+            padding: 5px 50px;
+        }
+        a,a:visited{
+            text-decoration: none;
+            color: white;
+            font-size: 15px;
+        }
+    </style>
+    <script src="js/move4.js"></script>
+    <script>
+        window.onload= function () {
+            var oDiv=document.getElementById('div1');
+            oDiv.onmouseover= function () {
+                startMove(oDiv,{left:0});
+            }
+            oDiv.onmouseout= function () {
+                startMove(oDiv,{left:-300});
+            }
+        }
+    </script>
+</head>
+<body>
+<main>
+    <div id="div1">
+        <span>请欣赏</span>
+        <aside>
+            <a href="html/1.商品分类导航实现.html" target="main">1.商品分类导航实现</a>
+            <a href="html/2.指向跟随鼠标显示大图.html" target="main">2.指向跟随鼠标显示大图</a>
+            <a href="html/3.旋转式抽奖原理.html" target="main">3.旋转式抽奖原理</a>
+            <a href="html/4.无缝滚动字幕实现横向.html" target="main">4.无缝滚动字幕实现横向</a>
+            <a href="html/5.显示隐藏广告1.html" target="main">5.显示隐藏广告</a>
+            <a href="html/6.表格应用.html" target="main">6.表格应用</a>
+            <a href="html/7.表格式数据编辑事件代理.html" target="main">7.表格式数据编辑事件代理</a>
+            <a href="html/8.记住帐号密码实现.html" target="main">8.记住帐号密码实现</a>
+            <a href="html/9.轮播广告.html" target="main">9..轮播广告</a>
+            <a href="html/10.页面内容定位.html" target="main">10.页面内容定位</a>
+            <a href="html/11.QQ空间时光轴.html" target="main">11.QQ空间时光轴</a>
+            <a href="html/12.二级菜单显示与隐藏.html" target="main">12.二级菜单显示与隐藏</a>
+            <a href="html/13评分星星.html" target="main">13.评分星星</a>
+            <a href="html/14.瀑布流法动态生成相册.html" target="main">14.瀑布流法动态生成相册</a>
+            <a href="html/15焦点轮播图.html" target="main">15.焦点轮播图</a>
+            <a href="html/16.视频缩图轮播.html" target="main">16.视频缩图轮播</a>
+            <a href="html/17.购物车.html" target="main">17.购物车</a>
+        </aside>
+    </div>
+    <iframe src="html/slow.html" name="main">
+    </iframe>
+</main>
+</body>
+</html>

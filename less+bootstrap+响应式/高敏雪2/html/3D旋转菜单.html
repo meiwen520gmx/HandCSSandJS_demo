@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3D旋转菜单</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        nav{
+            margin-top: 100px;
+            display: flex;
+            justify-content: center;
+            font-size: 23px;
+            color: white;
+        }
+        nav dl{
+            padding: 10px 20px;
+            position: relative;
+            perspective:5000px; /*透视效果，对下一元素起作用*/
+            cursor: pointer;
+        }
+        nav dl dt{
+           transform-style: preserve-3d; /*孩子，子元素跟着dt转动，让子元素有3D效果*/
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            transform: translateZ(-25px);
+            transition: transform .5s;
+        }
+        nav>dl>dd{
+            position: absolute;
+            left: 0;
+            top: 50px;
+            display: none;
+            white-space: nowrap;
+
+
+        }
+        nav dl dt span{
+            position: absolute;
+            padding: 10px 20px;
+            top: 0;
+            left:0;
+        }
+        nav dl dt span.front{
+           transform: translateZ(25px);
+            background-color:#51938f;
+        }
+        nav dl dt span.bottom{
+            transform: rotateX(-90deg) translateZ(25px);
+            background-color: #003366;
+        }
+        nav dl dt:hover{
+            transform: translateZ(-25px) rotateX(90deg);
+        }
+        nav>dl:hover>dd{
+            display: block;
+        }
+        nav>dl>dd>dl.gap,nav>dl>dd>dl.gap span{
+            padding: 10px 9px 10px 8px;
+        }
+        nav>dl>dd>dl{
+            margin-top: 1px;
+        }
+        nav>dl:first-child span{
+           border-radius: 5px 0 0 5px;
+        }
+        nav>dl:last-child span{
+            border-radius: 0 5px 5px 0;
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <dl>
+            Home
+            <dt>
+                <span class="front">Home</span><span class="bottom">Home</span>
+            </dt>
+
+        </dl>
+        <dl>
+            Services
+            <dt>
+                <span class="front">Services</span><span class="bottom">Services</span>
+            </dt>
+            <dd>
+                <dl>
+                    机构设置
+                    <dt>
+                        <span class="front">机构设置</span><span class="bottom">机构设置</span>
+                    </dt>
+                </dl>
+                <dl>
+                    教学工作
+                    <dt>
+                        <span class="front">教学工作</span><span class="bottom">教学工作</span>
+                    </dt>
+                </dl>
+                <dl>
+                    后勤保障
+                    <dt>
+                        <span class="front">后勤保障</span><span class="bottom">后勤保障</span>
+                    </dt>
+                </dl>
+                <dl>
+                    学生工作
+                    <dt>
+                        <span class="front">学生工作</span><span class="bottom">学生工作</span>
+                    </dt>
+                </dl>
+            </dd>
+        </dl>
+        <dl>
+            Products
+            <dt>
+                <span class="front">Products</span><span class="bottom">Products</span>
+            </dt>
+        </dl>
+        <dl>
+            About
+            <dt>
+                <span class="front">About</span><span class="bottom">About</span>
+            </dt>
+        </dl>
+        <dl>
+            Contact
+            <dt>
+                <span class="front">Contact</span><span class="bottom">Contact</span>
+            </dt>
+            <dd>
+                <dl class="gap">
+                    机械工业部
+                    <dt>
+                        <span class="front">机械工业部</span><span class="bottom">机械工业部</span>
+                    </dt>
+                </dl>
+                <dl>
+                    教学部门
+                    <dt>
+                        <span class="front">教学部门</span><span class="bottom">教学部门</span>
+                    </dt>
+                </dl>
+                <dl>
+                    后勤部门
+                    <dt>
+                        <span class="front">后勤部门</span><span class="bottom">后勤部门</span>
+                    </dt>
+                </dl>
+                <dl>
+                    学生工作
+                    <dt>
+                        <span class="front">学生工作</span><span class="bottom">学生工作</span>
+                    </dt>
+                </dl>
+            </dd>
+        </dl>
+        <dl>
+            Shop On-line
+            <dt>
+                <span class="front">Shop On-line</span><span class="bottom">Shop On-line</span>
+            </dt>
+        </dl>
+    </nav>
+</body>
+</html>

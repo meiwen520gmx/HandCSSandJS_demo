@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../css/water.css">
+</head>
+<body>
+<template>
+    <div class="div_{num}">
+        <figure>
+            <img src='../img/{image}'>
+            <p>{info}</p>
+        </figure>
+    </div>
+</template>
+<main>
+    <section  style="height: 20px" id="sec"></section>
+</main>
+<script type="text/javascript" src="../jquery-3.3.1/jquery-2.1.3.js"></script>
+<script type="text/javascript">
+    var data = [
+        {"src": '0.jpg', info: '文字描述'},
+        {"src": '1.jpg', info: '文字描述'},
+        {"src": '2.jpg', info: '文字描述'},
+        {"src": '3.jpg', info: '文字描述'},
+        {"src": '4.jpg', info: '文字描述'},
+        {"src": '5.jpg', info: '文字描述'},
+        {"src": '6.jpg', info: '文字描述'},
+        {"src": '7.jpg', info: '文字描述'},
+        {"src": '8.jpg', info: '文字描述'},
+        {"src": '9.jpg', info: '文字描述'},
+        {"src": '10.jpg', info: '文字描述'},
+        {"src": '11.jpg', info: '文字描述'},
+        {"src": '12.jpg', info: '文字描述'},
+        {"src": '13.jpg', info: '文字描述'},
+        {"src": '14.jpg', info: '文字描述'},
+        {"src": '15.jpg', info: '文字描述'},
+        {"src": '16.jpg', info: '文字描述'},
+        {"src": '17.jpg', info: '文字描述'},
+        {"src": '18.jpg', info: '文字描述'},
+        {"src": '19.jpg', info: '文字描述'},
+        {"src": '20.jpg', info: '文字描述'},
+        {"src": '21.jpg', info: '文字描述'},
+        {"src": '22.jpg', info: '文字描述'},
+        {"src": '23.jpg', info: '文字描述'},
+        {"src": '24.jpg', info: '文字描述'},
+        {"src": '25.jpg', info: '文字描述'},
+        {"src": '26.jpg', info: '文字描述'},
+        {"src": '27.jpg', info: '文字描述'}
+    ];
+    var data1 = [
+        {"src": '28.jpg', info: '文字描述'},
+        {"src": '29.jpg', info: '文字描述'},
+        {"src": '30.jpg', info: '文字描述'},
+        {"src": '31.jpg', info: '文字描述'},
+        {"src": '32.jpg', info: '文字描述'},
+        {"src": '33.jpg', info: '文字描述'},
+        {"src": '34.jpg', info: '文字描述'},
+        {"src": '35.jpg', info: '文字描述'},
+        {"src": '36.jpg', info: '文字描述'},
+        {"src": '37.jpg', info: '文字描述'},
+        {"src": '38.jpg', info: '文字描述'},
+        {"src": '39.jpg', info: '文字描述'}
+    ];
+    var temp=$('template').html();
+    var html;
+//    var num=1;
+    var arr=[];
+    function addPhoto(array,num,func){
+        var len=array.length;
+        array.forEach(function (el,i){
+            html=temp.replace('{image}',el.src).replace('{info}',el.info).replace('{num}',num);
+            $('#sec').append(html);
+            if(i==len-1){
+                if(func) func();
+            }
+        });
+    }
+    addPhoto(data,1);
+    var divW=$('#sec div:first').outerWidth();
+    var len=parseInt($(window).width()/divW);
+    $('main').css('width',divW*len);
+
+    function waterFall(divs,first){
+        divs.each(function (i) {
+            if(first && i<len){
+                arr.push($(this).outerHeight());
+            }
+            else{
+                var min_h=Math.min.apply(null,arr);
+                var j= $.inArray(min_h,arr);
+                $(this).css({position:'absolute',top:min_h,left:divW*j});
+                arr[j]+=$(this).outerHeight();
+            }
+        });
+    }
+    var $div_1=$('#sec div.div_1');
+    waterFall($div_1,true);
+    var $lastH=$div_1.eq($div_1.length-1).outerHeight();
+    var top=$div_1.eq($div_1.length-1).position().top;
+    var flag=true;
+    $(window).scroll(function () {
+        if(flag && $('html,body').scrollTop+$(window).height()>$lastH/2+top){
+            addPhoto(data1,2, function () {
+                setTimeout(function () {
+                    waterFall($('#sec div.div_2'),false);
+                },100);
+
+            });
+            flag=false;
+        }
+    });
+    $('section').on('click','img', function () {
+       var src=$(this).attr('src');
+       var idx=$(this).closest('div').index();
+        $('<aside><figure><div><span class="prev">上一页</span><span class="next">下一页</span>' +
+                '</div><img src="'+src+'">单击图片任意位置关闭</figure></aside>').appendTo('body');
+        var $fig=$('aside figure');
+        $fig.css('left',($(window).width()-$fig.outerWidth())/2);
+        $('aside span').click(function (e) {
+            e.stopPropagation();
+            if(this.className=='prev'){
+                idx--;
+            }
+            else{
+                if(idx==$('section div').length-1)
+                  idx=0;
+                else
+                  idx++;
+            }
+            var src=$('section div').eq(idx).find('img').attr('src');
+            $(this).parent().next().attr('src',src);
+            $fig.css('left',($(window).width()-$fig.outerWidth())/2);
+        });
+        $('aside img').one('click',function (e) {
+            e.stopPropagation();
+            $(this).closest('aside').remove();
+        });
+    });
+</script>
+</body>
+</html>

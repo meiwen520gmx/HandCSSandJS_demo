@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <!--让IE采用最新的渲染模式,让它支持CSS3的新功能-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!--让页面宽度强制适应设备宽度，初始缩放比例设置为1，不产生滚动条-->
+    <style>
+        html {
+            -webkit-text-size-adjust: none; /* 设备旋转的时候，文字大小不要发生改变*/
+        }
+
+        body {
+            background: #47c9af;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 200px;
+            perspective: 250px; /*透视效果,对下一元素起作用*/
+        }
+
+        nav a {
+            margin-right: 1em;
+            font-size: 27px;
+            font-weight: 700; /*字体加粗7倍*/
+            text-shadow:  0 0 12px rgba(0, 0, 0, 0.6);
+            text-decoration: none;
+            position: relative;
+            -webkit-transition: color 1s; /*设置滑过时颜色过渡1秒钟*/
+        }
+        nav a:last-child{
+            margin-right: 0;
+        }
+
+        nav a:hover {
+            color: white; /*指向超级链接后变为白色不透明*/
+        }
+
+        nav a circle {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: url("images/logo.png");
+            bottom: 100%;
+            left: 50%;
+            margin-left: -40px;
+            margin-bottom: 20px;
+            opacity: 0;
+            -webkit-transition: opacity 1s, -webkit-transform 1s; /*设置滑过时透明度和变换都过渡1秒钟*/
+            /*-webkit-transition: all 1s;*//*可以只写时间，不写属性，是所有变换了的属性*/
+        }
+
+        nav a circle:after {
+            content: '';
+            display: block;
+            width: 30px;
+            height: 20px;
+            background: url("images/arrow.png") no-repeat center center;
+            position: absolute; /*相对于circle定位*/
+            bottom: -16px;
+            left: 25px;
+        }
+
+        /*以下为设置各个汽泡的初始状态*/
+        nav a:nth-child(1) circle {
+            -webkit-transform: translate3d(0, 10px, 0) rotate3d(1, 1, 1, 45deg); /*向下移动10像素，每个轴旋转45度*/
+            -webkit-transform-origin: center bottom; /*定义旋转中心点为底部中间，等价于 50% 100% */
+        }
+
+        nav a:nth-child(2) circle {
+            -webkit-transform: translate3d(0, 20px, 0);
+        }
+
+        nav a:nth-child(3) circle {
+            -webkit-transform: translate3d(0, 10px, 0) rotate3d(0, 1, 0, 90deg);
+            -webkit-transform-origin: center bottom;
+        }
+
+        nav a:nth-child(4) circle {
+            -webkit-transform: translate3d(0, -20px, 0);
+        }
+
+        nav a:nth-child(5) circle {
+            -webkit-transform: scale3d(0, 0, 1); /*X，Y轴方向缩放比例到0，Z轴不变或变为0，实际是看不到了*/
+        }
+
+        /*以下为指向超级链接后汽泡的状态*/
+        nav a:hover circle {
+            opacity: 1;
+            transform: translate3d(0, 0, 0) rotate3d(1, 1, 1, 0deg) scale3d(1, 1, 1); /*滑过时回到原位，不移动，不旋转，不缩放*/
+        }
+
+    </style>
+</head>
+<body>
+<nav>
+    <a href="#">Home
+        <circle></circle>
+    </a>
+    <a href="#">About me
+        <circle></circle>
+    </a>
+    <a href="#">Photography
+        <circle></circle>
+    </a>
+    <a href="#">Work
+        <circle></circle>
+    </a>
+    <a href="#">Contact
+        <circle></circle>
+    </a>
+</nav>
+</body>
+</html>

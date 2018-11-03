@@ -1,0 +1,224 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+@font-face {
+  font-family: "my_font";
+  src: url("../fonts1/icomoon.eot") format("eot"), url("../fonts1/icomoon.woff") format("woff"), url("../fonts1/icomoon.svg") format("svg"), url("../fonts1/icomoon.ttf") format("ttf");
+  font-style: normal;
+  font-weight: normal;
+}
+.bcenter {
+  width: 1000px;
+  margin: 0 auto;
+}
+header div img {
+  width: 1599px;
+  height: 300px;
+}
+header div:before {
+  position: absolute;
+  content: '';
+  background: url("../images/demo10_biankaung.PNG");
+  width: 1599px;
+  height: 15px;
+}
+header nav {
+  background-color: #EBEBEB;
+  border-top: 2px solid #4B4A4B;
+  border-bottom: 2px solid #4B4A4B;
+}
+header nav > ul {
+  padding: 0 300px;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+header nav > ul li {
+  padding: 8px 10px;
+}
+header nav > ul li a {
+  text-decoration: none;
+  color: #515151;
+  font-weight: bold;
+}
+header nav > ul li:hover,
+header nav > ul li:hover a {
+  background-color: #515151;
+  color: white;
+}
+.pubfont {
+  color: #686868;
+  font-size: 14px;
+}
+main {
+  display: flex;
+  width: 1000px;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+main section.left {
+  width: 70%;
+  margin-right: 10px;
+}
+main section.left > h4 {
+  margin-bottom: 20px;
+  padding: 5px 5px 5px 40px;
+  background-color: #EFEFEF;
+  display: flex;
+  color: #686868;
+  justify-content: space-between;
+}
+main section.left > h4 i {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: normal;
+}
+main section.left > h4 i:hover {
+  color: black;
+}
+main section.left > h4:before {
+  position: absolute;
+  content: '\f19c';
+  font-family: my_font;
+  color: #686868;
+  margin-left: -25px;
+}
+main section.left figure {
+  border-bottom: 2px dashed #ddd;
+  display: flex;
+  padding: 10px;
+}
+main section.left figure img {
+  width: 300px !important;
+  height: 150px;
+  margin-right: 5px;
+}
+main section.left figure figcaption {
+  margin-top: 15px;
+}
+main section.left figure figcaption h4 {
+  color: #11296A;
+  margin-bottom: 10px;
+}
+main section.left figure figcaption h4:hover {
+  color: #0000ff;
+  text-decoration: underline;
+}
+main section.left figure figcaption p {
+  color: #686868;
+  font-size: 14px;
+  text-align: justify;
+  text-indent: 2em;
+  line-height: 30px;
+}
+main section.left figure figcaption p:hover {
+  color: #000000;
+  text-decoration: underline;
+}
+main section.left figure figcaption span {
+  display: block;
+  text-align: right;
+  color: #686868;
+  font-size: 14px;
+  margin-top: 10px;
+  color: #0060BF;
+}
+main section.left figure figcaption span:hover {
+  color: #000000;
+  text-decoration: underline;
+}
+main section.right {
+  width: 30%;
+}
+main section.right > h4 {
+  background: url("../images/demo10_bg.JPG") no-repeat left top;
+  padding: 5px 5px 5px 15px;
+  background-color: #F2F2F2;
+  color: white;
+  margin-bottom: 15px;
+}
+main section.right > h4:nth-of-type(2) {
+  margin: 20px 0 10px 0;
+}
+main section.right button {
+  width: 250px;
+  height: 35px;
+  background-image: -webkit-linear-gradient(top, #e7e7e9, #cfd0d2);
+  margin: 10px 30px;
+  padding: 5px 50px;
+  color: #686868;
+  border: none;
+  font-size: 15px;
+  font-weight: bold;
+}
+main section.right button:hover {
+  color: #000000;
+  text-decoration: underline;
+}
+main section.right div.mid {
+  background-color: #EDEDED;
+  text-align: center;
+  padding: 10px;
+}
+main section.right div.mid img {
+  width: 260px;
+  height: 150px;
+  margin: 5px 0;
+}
+main section.right div.mid p {
+  font-size: 14px;
+  color: #3B5074;
+}
+main section.right div.mid ul {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 10px 10px 30px;
+}
+main section.right div.mid ul li {
+  line-height: 30px;
+}
+main section.right div.mid ul li a {
+  color: #686868;
+  font-size: 14px;
+  overflow: hidden;
+  text-decoration: none;
+}
+main section.right div.mid ul li a:hover {
+  color: #000000;
+  text-decoration: underline;
+}
+main section.right div.mid > span {
+  color: #686868;
+  font-size: 14px;
+  padding: 10px 10px 10px 0;
+  display: block;
+  text-align: right;
+}
+footer {
+  text-align: center;
+  font-size: 14px;
+  padding-top: 10px;
+}
+footer dl {
+  background-color: #333333;
+  display: flex;
+  justify-content: center;
+}
+footer dl dd {
+  padding: 10px 0;
+}
+footer dl dd a {
+  padding: 0 20px;
+  color: white;
+  text-decoration: none;
+  border-right: 1px solid #fff;
+}
+footer dl dd a:hover {
+  color: blue;
+  text-decoration: underline;
+}
+footer p {
+  margin: 15px 0;
+  color: #686868;
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../js/move4.js"></script>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            background-color: powderblue;
+        }
+        #div1{
+            margin: 150px auto 0;
+            position: relative;
+            overflow: hidden;
+        }
+        #div1 ol{
+            position: absolute;
+            list-style: none;
+            top: 0;
+        }
+        #div1,#div1 ol,#div1 ol li,#div1 ol img{
+            width: 450px;
+            height: 370px;
+        }
+        #div1 ul{
+            position: absolute;
+            right: 15px;
+            bottom: 15px;
+            list-style: none;
+            display: flex;
+        }
+        #div1 ul li{
+            margin: 5px;
+            padding: 3px 6px;
+            background-color: #FEEEC5;
+            color:#D39968;
+            text-decoration: none;
+            border: 1px solid #D39968;
+        }
+        #div1 ul li.active{
+            background-color:#FFB33F;
+            color: white;
+        }
+
+
+    </style>
+    <script>
+        window.onload= function () {
+            var oDiv=document.getElementById('div1');
+            var oOl=oDiv.getElementsByTagName('ol')[0];
+            var oUl=oDiv.getElementsByTagName('ul')[0];
+            var aLi2=oUl.getElementsByTagName('li');
+            var now=0;
+            for(var i=0;i<aLi2.length;i++){
+                aLi2[i].index=i;
+                aLi2[i].onclick=function(){
+                    now=this.index;
+                     tab();
+                }
+            }
+            function tab(){
+                for(var j=0;j<aLi2.length;j++){
+                    aLi2[j].className='';
+                }
+                aLi2[now].className='active';
+                startMove(oOl,{top:-370*now});
+            }
+            function next(){
+                now++;
+                if(now==aLi2.length){now=0;}
+                tab();
+            }
+            var timer=setInterval(next,2000);
+            oDiv.onmouseover= function () {
+                clearInterval(timer);
+            }
+            oDiv.onmouseout= function () {
+                timer=setInterval(next,2000);
+            }
+        }
+    </script>
+</head>
+<body>
+<div id="div1">
+    <ol>
+        <li><a href="#" alt=""><img src="../images/img2.jpg"></a></li>
+        <li><a href="#" alt=""><img src="../images/img3.jpg"></a></li>
+        <li><a href="#" alt=""><img src="../images/img5.jpg"></a></li>
+        <li><a href="#" alt=""><img src="../images/img6.jpg"></a></li>
+        <li><a href="#" alt=""><img src="../images/img4.jpg"></a></li>
+    </ol>
+    <ul>
+        <li class="active">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+</div>
+
+</body>
+</html>

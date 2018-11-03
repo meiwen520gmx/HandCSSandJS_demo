@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>图处提示，内容显示隐藏</title>
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            background-color: #b6d9f2;
+        }
+        section {
+            width: 360px;
+            margin: 50px auto;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        section img{
+            border: 2px solid #fff;
+            width: 60px;
+            height: 80px;
+            cursor: default;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <img src="../images/2_img.jpg"/>
+        <img src="../images/2_img2.jpg"/>
+        <img src="../images/2_img3.jpg"/>
+        <img src="../images/2_img4.jpg"/>
+    </section>
+</body>
+<script src="../jquery-3.3.1/jquery-1.11.2.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $('section').on('mouseenter','img',function(e){
+        var $this=$(this);
+        var src=$this.attr('src');
+        var $imgBig=$('<img src="'+src+'"/>');
+        $imgBig.css({
+            position:'absolute',
+            left: e.pageX+10,
+            top: e.pageY+10,
+            borderRadius:'50%'
+        });
+        $('body').append($imgBig);
+        $this.mousemove(function (e) {
+            $imgBig.css({
+                left: e.pageX+10,
+                top: e.pageY+10
+            });
+        }).mouseleave(function () {
+            $imgBig.remove();
+            $this.off();
+        });
+//        $this.on('mousemove',function(e){
+//            $imgBig.css({left: e.pageX+10,top: e.pageY+10});
+//        });
+//        $this.on('mouseleave',function(){
+//            $imgBig.remove();
+//            $this.off();
+//        })
+    });
+</script>
+</html>

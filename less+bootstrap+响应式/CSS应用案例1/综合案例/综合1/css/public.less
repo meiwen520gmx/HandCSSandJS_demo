@@ -1,0 +1,151 @@
+@charset "UTF-8";
+*{
+  margin: 0;
+  padding: 0;
+}
+@font-face {
+  font-family: "myicon";
+  src: url("../fonts/icomoon.eot"); /* IE9 兼容模式 */
+  src: url("../fonts/icomoon.eot?#iefix") format("embedded-opentype"),
+  url("../fonts/icomoon.woff") format("woff"),
+  url("../fonts/icomoon.ttf") format("truetype"),
+  url("../fonts/icomoon.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+a,a:visited{
+  text-decoration: none;
+  &:hover{
+    text-decoration: underline;
+  }
+}
+body{
+  background-color: #F5F5F5;
+}
+ul{
+  list-style: none;
+}
+.center{
+  width: 1000px;
+  margin: 0 auto;
+}
+header{
+  div.head1{
+    background-color: #9c9c9c;
+    border-bottom: 1px solid black;
+    aside{
+      .center;
+      height: 40px;
+      text-align: right;
+      font-size: 14px;
+      a,a:visited{
+        display: inline-block;
+        line-height: 40px;
+        color: white;
+        text-decoration: none;
+        margin-right: 10px;
+        &:before{
+          content: attr(data-icon);
+          font-family: myicon;
+          color: #dddddd;
+          margin-right: 3px;
+        }
+      }
+    }
+  }
+  div.head2{
+    .center;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+    box-sizing: border-box;
+    background-color: white;
+    line-height: 67px;
+    aside{
+      margin-top: 10px;
+      color: #B9B9B9;
+      &:before{
+        content: attr(data-icon);
+        position: absolute;
+        margin-left: -30px;
+        font-family: "myicon";
+        font-size: 30px;
+      }
+      strong{
+        font-size: 25px;
+        color: #CC0000;
+      }
+    }
+  }
+  nav{
+    .center;
+    display: flex;
+    justify-content: space-around;
+    background-color: #766D66;
+    line-height: 40px;
+    a,a:visited{
+      color: white;
+      &:hover{
+        color: rgb(255, 118, 21);
+      }
+    }
+    form{
+      width: 260px;
+      margin:0 40px;
+      input{
+        width: 100%;
+        padding-right: 20px;
+        box-sizing: border-box;
+        display: block;
+        outline: none;
+        border: none;
+        height: 24px;
+        margin: 8px 0 ;
+        border-radius: 3px;
+      }
+      &:after{
+        content: attr(data-icon);
+        font-family: "myicon";
+        position: absolute;
+        margin-top: -40px;
+        margin-left: 235px;
+        color: #BABABA;
+        font-size: 20px;
+      }
+    }
+  }
+}
+footer{
+  background-color: #9c9c9c;
+  border-top: 1px solid black;
+  padding: 10px 0;
+  text-align: center;
+  div.up{
+    .center;
+    display: flex;
+    justify-content: space-around;
+    dt{
+      margin-bottom: 8px;
+    }
+    a{
+      display: block;
+      line-height: 25px;
+      font-size: 15px;
+      color: #2e2e2e;
+    }
+    dl:last-child dd{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      span{
+        padding-left: 23px;
+        background: url("../images/weixin.png") left center no-repeat;
+        background-size: 20px 20px;
+        margin-bottom: 5px;
+      }
+    }
+  }
+  address{
+    font-style:normal;
+  }
+}

@@ -1,0 +1,228 @@
+@charset "UTF-8";
+body {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+h1,
+h2,
+h3,
+h4,
+small {
+  font-family: "microsoft yahei";
+}
+nav.lcj-nav {
+  background-color: #282c37;
+}
+nav.lcj-nav div.lcj-head a {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+nav.lcj-nav div.lcj-head a img {
+  height: 50px;
+}
+header {
+  position: relative;
+}
+header img {
+  width: 100%;
+}
+header div.lcj-con {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+header div.lcj-con h1 {
+  color: white;
+  font-size: 5.5vw;
+}
+header div.lcj-con h1 small {
+  font-size: 3vw;
+  margin-top: 25px;
+  color: #ddd;
+}
+main {
+  margin: 50px 0;
+}
+main div.left div.panel-primary {
+  border-color: #2b91d9;
+}
+main div.left div.panel-primary div.panel-heading {
+  border-color: #2b91d9;
+  background-color: #2b91d9;
+}
+main div.left li.active {
+  background-color: darkgreen;
+  border-radius: 2px;
+  color: white;
+}
+main div.left form {
+  margin-right: 10px;
+}
+main div.left form button {
+  font-family: "microsoft yahei";
+  margin-left: -10px;
+}
+main div.left table {
+  border: none;
+}
+main div.left table tr:last-child td {
+  border: none;
+}
+main div.left table td,
+main div.left table th {
+  text-align: center;
+  vertical-align: middle;
+}
+main div.left table td.price,
+main div.left table th.price {
+  color: #ffc444;
+}
+main div.right div.panel-info {
+  border-color: #417aa3;
+}
+main div.right div.panel-info div.panel-heading {
+  border-color: #417aa3;
+  background-color: #417aa3;
+}
+main div.right div.panel-info:not( :nth-child(2)) div.panel-body {
+  background-color: #eee;
+  border-radius: 0 0 4px 4px;
+}
+main div.right h3 {
+  color: #f0f0f0;
+}
+main div.right div.lcj-p1 ul {
+  margin: 0 -6px -10px 0;
+}
+main div.right div.lcj-p1 ul li {
+  width: calc(33.3% - 9px);
+  line-height: 35px;
+  background-color: #fff;
+  margin: 0 6px 10px 0;
+  text-align: center;
+}
+main div.right div.lcj-p1 ul li:hover {
+  background-color: sandybrown;
+}
+main div.right div.lcj-p2 div.panel-body {
+  margin-bottom: -10px;
+}
+main div.right div.lcj-p2 div.panel-body div.lcj-col {
+  margin-bottom: 10px;
+  text-align: center;
+}
+main div.right div.lcj-p3 ul {
+  margin: 0 -11px -15px 0;
+}
+main div.right div.lcj-p3 ul li {
+  width: calc(50% - 13px);
+  line-height: 35px;
+  background-color: #fff;
+  text-align: center;
+  margin: 0 11px 15px 0;
+  padding-left: 30px;
+  font-family: "microsoft yahei";
+}
+main div.right div.lcj-p3 ul li:nth-child(1):before {
+  position: absolute;
+  content: '';
+  width: 21px;
+  height: 20px;
+  margin-top: 7px;
+  margin-left: -30px;
+  background-image: url("../img/icon1.jpg");
+}
+main div.right div.lcj-p3 ul li:nth-child(2):before {
+  position: absolute;
+  content: '';
+  width: 21px;
+  height: 21px;
+  margin-top: 7px;
+  margin-left: -30px;
+  background-image: url("../img/icon2.jpg");
+}
+main div.right div.lcj-p3 ul li:nth-child(3):before {
+  position: absolute;
+  content: '';
+  width: 21px;
+  height: 22px;
+  margin-top: 7px;
+  margin-left: -30px;
+  background-image: url("../img/icon3.jpg");
+}
+main div.right div.lcj-p3 ul li:nth-child(4):before {
+  position: absolute;
+  content: '';
+  width: 19px;
+  height: 21px;
+  margin-top: 7px;
+  margin-left: -30px;
+  background-image: url("../img/icon4.jpg");
+}
+footer {
+  background-color: #0e588d;
+  padding: 10px 0;
+  color: white;
+}
+footer h4 {
+  margin-bottom: 20px;
+}
+footer li {
+  margin-top: 10px;
+}
+@media (min-width: 1200px) {
+  html {
+    font-size: 16px;
+  }
+  header h1 {
+    margin-left: 20px;
+  }
+  main div.lcj-p3 li {
+    font-size: 16px;
+  }
+}
+@media (min-width: 993px) and (max-width: 1199px) {
+  html {
+    font-size: 14px;
+  }
+  header h1 {
+    margin-left: 50px;
+  }
+  main div.lcj-p1 li {
+    font-size: 12px;
+  }
+  main div.lcj-p3 li {
+    font-size: 14px;
+  }
+}
+@media (min-width: 769px) and (max-width: 992px) {
+  html {
+    font-size: 13px;
+  }
+  header h1 {
+    margin-left: 80px;
+  }
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 12px;
+  }
+  header h1 {
+    margin-left: 110px;
+  }
+}

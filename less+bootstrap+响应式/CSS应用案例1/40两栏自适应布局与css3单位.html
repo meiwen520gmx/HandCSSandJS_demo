@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        html{
+            font-size: 62.5%; /*默认大小是16px,62.5%刚好就是10px*/
+        }
+        body{
+            font-size: 16px;
+            line-height: 2em;  /*带单位的行高具有继承性，会将计算后的32px传给子元素
+            不带单位的行高如2不具继承性，会用子元素的字体大小进行计算作为行高值*/
+            margin: 0;
+        }
+
+        section {
+            width: calc(100% - (30px + 1px) * 2);
+            width: -webkit-calc(100% - (30px + 1px) * 2);
+            border: 1px solid red;
+            padding: 30px;
+            resize: both;
+            overflow: hidden;
+        }
+
+        section > * {
+            border: 1px dotted black;
+            padding: 10px;
+            text-align: justify;
+        }
+
+        left {
+            float: left;
+            font-size: 1.4rem;  /*以html设定值为参照*/
+            line-height: 1.4286;   /*14*1.4286=20,经验值，行高刚好20px*/
+            text-indent: 2em;
+            margin-right: 20px;
+            width: -webkit-calc(50% - (20px + (1px + 10px) * 2));
+            width: calc(50% - (20px + (1px + 10px) * 2));
+        }
+
+        right {
+            display: block;
+            overflow: hidden; /*有从浮动影响中脱离出来的作用*/
+            /*white-space: nowrap;*/
+            /*text-overflow: ellipsis;*/
+            text-indent: 4vw; /*与视口的宽度成比例*/
+            font-size: 2vw;
+        }
+
+        button {
+            /*white-space: nowrap;*/
+            /*text-overflow: ellipsis;*/
+            /*overflow: hidden;*/
+            /*width: 200px;*/
+            font-size: 1em;  /*16*1=16px*/
+            margin: 30px auto;
+            display: block; /*转成块级元素才能利用auto实现居中*/
+        }
+        div{
+            /*行高继承自body,为32px,字体大小也继承自body,为16*0.625=10px*/
+            font-size: 0.625em;
+            width: 30%;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+<section>
+    <left>
+        CSS的单位及css3的calc()及line-height百分比,
+        http://www.haorooms.com/post/css_unit_calc
+        CSS的单位及css3的calc()及line-height百分比,
+        http://www.haorooms.com/post/css_unit_calc
+        CSS的单位及css3的calc()及line-height百分比,
+        http://www.haorooms.com/post/css_unit_calc
+    </left>
+    <right>
+        中华人民共和国中华人民共和国中华人民共和国中华人民共和国
+        中华人民共和国中华人民共和国中华人民共和国中华人民共和国
+    </right>
+</section>
+<button>我是一个按钮，宽度是200px</button>
+<div>
+    中华人民共和国中华人民共和国中华人民共和国中华人民共和国
+    中华人民共和国中华人民共和国中华人民共和国中华人民共和国
+</div>
+
+</body>
+</html>

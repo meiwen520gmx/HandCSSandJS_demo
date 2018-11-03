@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{margin: 0;padding: 0}
+        nav{
+            position: fixed;
+            top: 70px;
+            width: 80px;
+            border: 1px solid black;
+            background-color: #cde8ff;
+        }
+        nav a,nav a:visited{
+            display: block;
+            line-height: 35px;
+            text-align: center;
+            cursor: pointer;
+            text-decoration: none;
+            color: #0A246A;
+        }
+        nav a.on{
+            background-color: #002c49;
+            color: white;
+        }
+        div.container{
+            width: 992px;
+            margin: auto;
+        }
+        div.container h2{
+            line-height: 50px;
+            font-size: 35px;
+            text-align: center;
+        }
+        div.container div{
+            border: 1px dashed #00aa00;
+            padding: 50px 0 10px 15px;
+            background-color: #1d86cf;
+            position: relative;
+            margin-bottom: 15px;
+        }
+        div.container div:before{
+            position: absolute;
+            margin-top: -40px;
+            margin-left: -15px;
+            background-color: red;
+            width: 100%;
+            line-height: 40px;
+            font-size: 25px;
+            color: white;
+            text-align: center;
+        }
+        div.container div.f0:before{
+            content: '1F';
+        }
+        div.container div.f1:before{
+            content: '2F';
+        }
+        div.container div.f2:before{
+            content: '3F';
+        }
+        div.container div.f3:before{
+            content: '4F';
+        }
+        div.container div.f4:before{
+            content: '5F';
+        }
+        div.container div img{
+            margin-right: 15px;
+            width: 310px;
+        }
+    </style>
+</head>
+<body>
+<nav id="nav">
+    <a href="javascript:;" class="on">1F 男装</a>
+    <a href="javascript:;">2F 女装</a>
+    <a href="javascript:;">3F 美妆</a>
+    <a href="javascript:;">4F 数码</a>
+    <a href="javascript:;">5F 母婴</a>
+</nav>
+<div class="container" id="box">
+    <h2>地狗购物网</h2>
+    <div class="f0" id="f0">
+        <img src="../images/1F.jpg"><img src="../images/1F.jpg"><img src="../images/1F.jpg">
+        <img src="../images/1F.jpg"><img src="../images/1F.jpg"><img src="../images/1F.jpg">
+        <img src="../images/1F.jpg"><img src="../images/1F.jpg"><img src="../images/1F.jpg">
+    </div>
+    <div class="f1" id="f1">
+        <img src="../images/2F.jpg"><img src="../images/2F.jpg"><img src="../images/2F.jpg">
+        <img src="../images/2F.jpg"><img src="../images/2F.jpg"><img src="../images/2F.jpg">
+        <img src="../images/2F.jpg"><img src="../images/2F.jpg"><img src="../images/2F.jpg">
+    </div>
+    <div class="f2" id="f2">
+        <img src="../images/3F.jpg"><img src="../images/3F.jpg"><img src="../images/3F.jpg">
+        <img src="../images/3F.jpg"><img src="../images/3F.jpg"><img src="../images/3F.jpg">
+        <img src="../images/3F.jpg"><img src="../images/3F.jpg"><img src="../images/3F.jpg">
+    </div>
+    <div class="f3" id="f3">
+        <img src="../images/4F.png"><img src="../images/4F.png"><img src="../images/4F.png">
+        <img src="../images/4F.png"><img src="../images/4F.png"><img src="../images/4F.png">
+        <img src="../images/4F.png"><img src="../images/4F.png"><img src="../images/4F.png">
+    </div>
+    <div class="f4"  id="f4">
+        <img src="../images/5F.jpg"><img src="../images/5F.jpg"><img src="../images/5F.jpg">
+        <img src="../images/5F.jpg"><img src="../images/5F.jpg"><img src="../images/5F.jpg">
+        <img src="../images/5F.jpg"><img src="../images/5F.jpg"><img src="../images/5F.jpg">
+    </div>
+</div>
+
+<script>
+    var oNav=document.getElementById('nav');
+    var aA=oNav.querySelectorAll('a');
+    var oBox=document.getElementById('box');
+    var aDiv=oBox.querySelectorAll('div');
+    var i;
+    var timer=null;
+    function getTop(el){
+        var top=el.offsetTop;
+        while(el=el.offsetParent){
+            top+=el.offsetTop;
+        }
+        return top;
+    }
+    oNav.style.left=oBox.offsetLeft+oBox.offsetWidth+10+'px';
+    window.onresize= function () {
+        oNav.style.left=oBox.offsetLeft+oBox.offsetWidth+10+'px';
+    };
+    function cleanClass(){
+        for(var j=0;j<aA.length;j++){
+            if(aA[j].className=='on'){
+                aA[j].className='';
+                break;
+            }
+        }
+    };
+    window.onscroll= function () {
+        i=0;
+        while(aDiv.length>i && getTop(aDiv[i])<document.documentElement.scrollTop+window.innerHeight/2){
+            i++;
+        }
+        cleanClass();
+        aA[--i].className='on';
+    };
+    [].forEach.call(aA, function (el,i) {
+                el.onclick= function () {
+                    clearInterval(timer);
+                    timer=setInterval(function () {
+                        var scrollTop=document.documentElement.scrollTop;
+                        var step=(getTop(aDiv[i])-scrollTop)/10;
+                        step=step>=0?Math.ceil(step):Math.floor(step);
+                        console.log(step);
+                        if(getTop(aDiv[i])!==scrollTop){
+                            window.scrollTo(0,scrollTop+step);
+                            if(step=='-0')clearInterval(timer);
+                        }
+                        else{
+                            clearInterval(timer);
+                        }
+                    },30);
+                }
+            });
+</script>
+</body>
+
+</html>

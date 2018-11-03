@@ -1,0 +1,370 @@
+body {
+  background-color: #f0f0f0;
+}
+main {
+  width: 1000px;
+  margin: auto;
+}
+main nav {
+  padding: 25px 0 15px;
+}
+main nav a {
+  font-size: 12px;
+  color: #555555;
+  font-family: simsun;
+  margin-right: 5px;
+}
+main nav a:first-child {
+  font-weight: bold;
+}
+main section.up {
+  background-color: white;
+  border: 1px solid #ccc;
+  display: flex;
+}
+main section.up > dl {
+  width: 310px;
+  border-right: 1px solid #ccc;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+main section.up > dl dt {
+  height: 340px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main section.up > dl dd {
+  height: 55px;
+  border: 1px solid #ccc;
+  display: flex;
+}
+main section.up > dl dd a {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main section.up > dl dd a:not(:last-child) {
+  border-right: 1px solid #ccc;
+}
+main section.up > dl dd a:hover {
+  outline: 1px solid #317ee7;
+}
+main section.up article {
+  flex: 1;
+  padding: 25px 10px;
+}
+main section.up article h3 {
+  padding-left: 15px;
+  font-size: 14px;
+  line-height: 20px;
+}
+main section.up article p {
+  padding-left: 15px;
+  font-size: 10px;
+  line-height: 35px;
+  font-family: simsun;
+  color: #666;
+}
+main section.up article p price {
+  font-size: 14px;
+  color: red;
+  margin-left: 22px;
+}
+main section.up article p span {
+  margin-left: 32px;
+  padding-left: 62px;
+}
+main section.up article p span:before {
+  content: '';
+  position: absolute;
+  width: 56px;
+  height: 20px;
+  background-image: url("../images/icon11.jpg");
+  margin-left: -60px;
+  margin-top: 6px;
+}
+main section.up article div {
+  padding: 20px 15px;
+  font-size: 10px;
+  color: #666;
+  background-color: #f2f2f2;
+}
+main section.up article div dl {
+  display: flex;
+  align-items: center;
+  line-height: 50px;
+}
+main section.up article div dl dt {
+  width: 60px;
+}
+main section.up article div dl dd {
+  margin-right: 10px;
+}
+main section.up article div dl span {
+  width: 85px;
+  line-height: 32px;
+  text-align: center;
+  background-color: white;
+  color: black;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+}
+main section.up article div dl span.active {
+  outline: 1px solid #317ee7;
+}
+main section.up article div dl:last-child span {
+  margin-right: 0;
+  background-color: #f3f3f3;
+}
+main section.up article div dl:last-child span:nth-child(2) {
+  width: 15px;
+  border-right: none;
+}
+main section.up article div dl:last-child span:nth-child(3) {
+  width: 50px;
+  background-color: white;
+  border-right: none;
+}
+main section.up article div dl:last-child span:nth-child(4) {
+  width: 15px;
+  margin-right: 10px;
+}
+main section.up article aside.up {
+  margin: 20px 0 30px 20px;
+  font-size: 10px;
+  color: #666666;
+  font-weight: bold;
+}
+main section.up article aside.up a {
+  color: #0479ca;
+}
+main section.up article button {
+  margin: 0 0 30px 75px;
+  border: none;
+  outline: none;
+  width: 185px;
+  line-height: 50px;
+  text-align: center;
+  background-color: #fd8900;
+  color: white;
+  font-size: 20px;
+  padding-left: 37px;
+  box-sizing: border-box;
+  font-family: "microsoft yahei";
+}
+main section.up article button:before {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 20px;
+  margin-left: -37px;
+  margin-top: 15px;
+  background-image: url("../images/icon12.jpg");
+}
+main section.up article aside.down {
+  margin-left: 20px;
+  font-size: 10px;
+  color: #999;
+}
+main section.down {
+  margin-top: 15px;
+  display: flex;
+}
+main section.down aside {
+  width: 188px;
+  margin-right: 25px;
+}
+main section.down aside figure {
+  border: 1px solid #ccc;
+  border-top: 3px solid #1d86cf;
+  background-color: white;
+}
+main section.down aside figure h3 {
+  line-height: 40px;
+  color: #333;
+  padding-left: 15px;
+  font-family: simsun;
+  background-color: #f3f3f3;
+  border-bottom: 1px solid #ccc;
+}
+main section.down aside figure a {
+  display: block;
+  padding: 0 17px;
+}
+main section.down aside figure a div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+}
+main section.down aside figure a p {
+  font-size: 12px;
+  font-family: simsun;
+  color: #999;
+  line-height: 20px;
+  word-wrap: break-word;
+}
+main section.down aside figure a p price {
+  display: block;
+  color: #e02626;
+  font-weight: bold;
+}
+main section.down aside figure.down {
+  margin-top: 10px;
+}
+main section.down article {
+  flex: 1;
+}
+main section.down article input {
+  position: absolute;
+  width: 390px;
+  height: 40px;
+  opacity: 0;
+}
+main section.down article input:nth-child(2) {
+  margin-left: 390px;
+}
+main section.down article input:nth-child(1):checked ~ div.up {
+  display: block;
+}
+main section.down article input:nth-child(1):checked ~ button:nth-of-type(1) {
+  background-color: #0479ca;
+  color: white;
+}
+main section.down article input:nth-child(2):checked ~ div.up {
+  display: none;
+}
+main section.down article input:nth-child(2):checked ~ button:nth-of-type(2) {
+  color: white;
+  background-color: #0479ca;
+}
+main section.down article button {
+  width: 50%;
+  line-height: 40px;
+  outline: none;
+  text-align: center;
+  padding-left: 30px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  background-color: #eee;
+}
+main section.down article button:nth-of-type(1):before {
+  content: '';
+  position: absolute;
+  width: 22px;
+  height: 17px;
+  background-image: url("../images/icon13.jpg");
+  margin-left: -34px;
+  margin-top: 12px;
+}
+main section.down article button:nth-of-type(2) {
+  margin-left: -5px;
+}
+main section.down article button:nth-of-type(2):before {
+  content: '';
+  position: absolute;
+  width: 22px;
+  height: 17px;
+  background-image: url("../images/icon14.jpg");
+  margin-left: -34px;
+  margin-top: 12px;
+}
+main section.down article div {
+  border: 1px solid #ccc;
+  background-color: white;
+  padding: 0 15px;
+}
+main section.down article div.up {
+  text-align: center;
+}
+main section.down article div.up img {
+  margin: 30px 0 45px;
+}
+main section.down article div.up h3 {
+  text-align: left;
+  font-family: "microsoft yahei";
+  font-size: 16px;
+  font-weight: normal;
+  color: #3e67ad;
+  border-bottom: 2px solid #d7d7d7;
+  line-height: 30px;
+}
+main section.down article div.up h3:before {
+  content: '';
+  position: absolute;
+  width: 75px;
+  height: 2px;
+  background-color: #2457a6;
+  margin-top: 30px;
+}
+main section.down article div.up h3 span {
+  color: #8c8c8c;
+  font-size: 12px;
+  margin-left: 10px;
+}
+main section.down article div.up p {
+  margin: 20px 0 60px;
+  font-size: 14px;
+  font-family: simsun;
+  line-height: 24px;
+  color: #666;
+  text-align: left;
+}
+main section.down article div.mid {
+  margin-top: 15px;
+}
+main section.down article div.mid h3 {
+  line-height: 40px;
+  margin-left: 10px;
+  color: #666;
+  font-size: 14px;
+  font-family: simsun;
+}
+main section.down article div.mid count {
+  display: inline-block;
+  line-height: 90px;
+  color: #ff8f00;
+  font-size: 40px;
+  vertical-align: middle;
+}
+main section.down article div.mid count span {
+  font-size: 16px;
+}
+main section.down article div.mid aside {
+  display: inline-block;
+  width: 450px;
+  line-height: 24px;
+  font-size: 10px;
+  vertical-align: middle;
+}
+main section.down article div.mid aside div {
+  border: none;
+}
+main section.down article div.mid aside div.up {
+  display: flex;
+  justify-content: space-around;
+  color: white;
+  background-color: #bdbdbd;
+}
+main section.down article div.mid aside div.up:before {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 15px;
+  background-color: #7f7f7f;
+  margin-left: 350px;
+  margin-top: -25px;
+}
+main section.down article div.mid aside div.up:after {
+  content: '';
+  position: absolute;
+  border: 7px solid transparent;
+  border-top-color: #7f7f7f;
+  margin-left: -18px;
+  margin-top: -11px;
+}
+main section.down article div.mid aside div.down {
+  color: #66667d;
+}
